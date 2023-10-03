@@ -47,8 +47,9 @@ You can find most documentation in the [docs](./docs/) folder. Below is a list o
 
 ## License
 
-Distributed under the terms of the [MIT license][LICENSE.md],
-_Event Maturity Matrix_ is free and open source software.
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this
+file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 ## Security
 
