@@ -1,0 +1,18 @@
+{
+    "action_at": "2023-07-12T19:07:57.569196+00:00",
+    "action_data":
+    {
+        "md_kind": "core.aoaudit.auditdata",
+        "md_version": 1,
+        "policy_id": 410860,
+        "policy_name": "Test Salesforce Policy",
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+        "user_ip": "198.51.100.4",
+        "user_username": "bob@example.com"
+    },
+    "action_type": "policy_deleted",
+    "log_id": "d4b105e8-d29b-436e-947e-52a6be5f58de",
+    "org_id": 176,
+    "service_type": "sfdc",
+    "user_id": 3187
+}

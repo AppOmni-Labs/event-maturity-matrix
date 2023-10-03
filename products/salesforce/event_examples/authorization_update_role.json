@@ -1,0 +1,15 @@
+{
+    "action": "SetupEntityAccessAudit_Profile_ConnectedApplication_EnabledStandard",
+    "delegate_user": null,
+    "display": "Changed profile System Administrator: SEAM connected app is enabled",
+    "record_id": "000000000000123AbC",
+    "section": "Manage Users",
+    "sfdc_created_by_id": "000000000000123AbC",
+    "sfdc_created_by_name": "John Doe",
+    "sfdc_created_by_username": "john@example.com",
+    "sfdc_created_date": "2023-03-09T18:56:52+00:00"
+}
+
+
+
+

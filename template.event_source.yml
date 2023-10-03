@@ -1,0 +1,693 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: [SaaS Platform Name]
+  collection_sources:
+    - [Unique ID(s) from product YAML file that represent the audit log collection source]
+name: [Provide a name for the Event Source]
+description: [Provide a description for the Event Source]
+references:
+  - id: [Provide a unique ID that represents the reference for the Event Source schema]
+    name: [Provide a name for the Event Source schema]
+    url: [Provide a URL to the reference source regarding the Event Source schema]
+retention:
+  duration: [Provide the number of days that the Event Source is retained by the SaaS platform]
+  comments: [Provide any additional context regarding audit log retention]
+latency:
+  duration: [Provide the timeframe that the Event Source is delayed from the time of the event]
+  comments: [Provide any additional context regarding audit log collection latency]
+licensing:
+  comments: [Provide context regarding licensing, cost, and general availability regarding audit logs]
+mappings:
+  - category: C0001
+    event_type: ET0001
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0013:
+      A0014:
+      A0015:
+    examples: 
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0001
+    event_type: ET0002
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0001
+    event_type: ET0003
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0016:
+      A0017:
+      A0018:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0004
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0019:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0005
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0019:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0006
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0019:
+      A0020:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0007
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0019:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0008
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0021:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0009
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0021:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0010
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0021:
+      A0020:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0011
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0021:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0012
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0021:
+      A0019:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0013
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0021:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0014
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0022:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0015
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0022:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0016
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0022:
+      A0020:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0017
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0022:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0018
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0023:
+      A0024:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0019
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0023:
+      A0024:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0020
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0025:
+      A0019:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0002
+    event_type: ET0021
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0025:
+      A0019:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0003
+    event_type: ET0022
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0026:
+      A0027:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0003
+    event_type: ET0023
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0027:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0003
+    event_type: ET0024
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0026:
+      A0027:
+      A0028:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0003
+    event_type: ET0025
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0026:
+      A0027:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0003
+    event_type: ET0026
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0029:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0003
+    event_type: ET0027
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0029:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0003
+    event_type: ET0028
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0029:
+      A0026:
+      A0028:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0003
+    event_type: ET0029
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0029:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0004
+    event_type: ET0030
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0030:
+      A0031:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0004
+    event_type: ET0031
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0030:
+      A0031:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0004
+    event_type: ET0032
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0030:
+      A0031:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0004
+    event_type: ET0033
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0030:
+      A0031:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"
+  - category: C0004
+    event_type: ET0034
+    attributes:
+      A0001:
+      A0002:
+      A0003:
+      A0004:
+      A0005:
+      A0006:
+      A0007:
+      A0008:
+      A0009:
+      A0010:
+      A0011:
+      A0012:
+      A0032:
+      A0030:
+      A0031:
+    examples:
+      - type: success
+        location: "./event_examples/some_sample.json"

@@ -1,0 +1,42 @@
+{
+    "action_by": null,
+    "additional_details":
+    {
+        "collab_id": "44582741378",
+        "is_performed_by_admin": false,
+        "type": "box://event/additional_details/collaboration",
+        "version_id": "1328658101408"
+    },
+    "created_at": "2023-05-18T12:47:09-07:00",
+    "created_by":
+    {
+        "id": "18863648385",
+        "login": "john@example.com",
+        "name": "John Doe",
+        "type": "user"
+    },
+    "event_id": "052e68a2-7a29-4694-a77f-fec5713cb26f",
+    "event_type": "COLLABORATION_REMOVE",
+    "ip_address": "198.51.100.1",
+    "session_id": null,
+    "source":
+    {
+        "file_id": "1209733707368",
+        "file_name": "a_sample_file.doc",
+        "owned_by":
+        {
+            "id": "18863648385",
+            "login": "john@example.com",
+            "name": "John Doe",
+            "type": "user"
+        },
+        "parent":
+        {
+            "id": "206846635609",
+            "name": "My Box Notes",
+            "type": "folder"
+        },
+        "user_email": "alice@example.com"
+    },
+    "type": "event"
+}

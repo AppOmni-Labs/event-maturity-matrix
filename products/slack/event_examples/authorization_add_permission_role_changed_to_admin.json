@@ -1,0 +1,41 @@
+{
+    "action": "role_change_to_admin",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "alice@example.com",
+            "id": "A012BCDDAB",
+            "name": "Alice Brown",
+            "team": "A01111TD4"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.4",
+        "location":
+        {
+            "domain": "acme",
+            "id": "A01111TD4",
+            "name": "Acme",
+            "type": "workspace"
+        },
+        "session_id": 5000109189123,
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+    },
+    "date_create": 1692081890,
+    "details": null,
+    "entity":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "john@example.com",
+            "id": "U01AAAB33QT",
+            "name": "John Doe",
+            "team": "A01111TD4"
+        }
+    },
+    "id": "a940a000-a0d0-00df-a123-b8b899ca6e31"
+}

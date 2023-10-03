@@ -1,0 +1,41 @@
+{
+    "action": "user_deactivated",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "jane@example.com",
+            "id": "U7A1SSBCD",
+            "name": "Jane Miller",
+            "team": "T00111AA2"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.5",
+        "location":
+        {
+            "domain": "acme",
+            "id": "T00111AA2",
+            "name": "Acme",
+            "type": "workspace"
+        },
+        "session_id": 5750000001234,
+        "ua": "OKTA Slack Integration"
+    },
+    "date_create": 1691800883,
+    "details": null,
+    "entity":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "bob@example.com",
+            "id": "U05MA2B2CAA",
+            "name": "Bob Smith",
+            "team": "T00111AA2"
+        }
+    },
+    "id": "18ab534a-0000-4100-a123-aa12bb32ff35"
+}

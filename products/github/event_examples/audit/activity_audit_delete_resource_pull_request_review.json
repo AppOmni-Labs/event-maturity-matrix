@@ -1,0 +1,24 @@
+{
+  "@timestamp": 1686092779312,
+  "_document_id": "2AAQbnEVxg_qkh4S5XcQDg",
+  "action": "pull_request_review.delete",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_ip": "198.51.100.1",
+  "actor_location": {
+    "country_code": "US"
+  },
+  "business": "acme",
+  "business_id": 1122,
+  "created_at": 1686092779312,
+  "operation_type": "remove",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "public_repo": false,
+  "pull_request_id": 1376005422,
+  "pull_request_title": "Release 2345",
+  "pull_request_url": "https://github.com/acme-inc/example-repo/pull/965",
+  "repo": "acme-inc/example-repo",
+  "repo_id": 100056789,
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
+}

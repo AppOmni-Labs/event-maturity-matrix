@@ -1,0 +1,53 @@
+{
+    "action": "app_installed",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "mallory@example.com",
+            "id": "U05ABC123EF",
+            "name": "Mallory Jones",
+            "team": "T01234AB5"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.3",
+        "location":
+        {
+            "domain": "acme",
+            "id": "T01234AB5",
+            "name": "Acme",
+            "type": "workspace"
+        },
+        "session_id": 5123453809333,
+        "ua": "java-http/10.2.10"
+    },
+    "date_create": 1692199107,
+    "details":
+    {
+        "is_internal_integration": false,
+        "is_token_rotation_enabled_app": false
+    },
+    "entity":
+    {
+        "app":
+        {
+            "id": "A01234567AB",
+            "is_directory_approved": true,
+            "is_distributed": true,
+            "is_workflow_app": false,
+            "name": "Sample App",
+            "scopes":
+            [
+                "channels:read",
+                "groups:read",
+                "links:read",
+                "links:write"
+            ]
+        },
+        "type": "app"
+    },
+    "id": "51d1abc1-0000-Ae1B-c2d3-65b5b0000a12"
+}

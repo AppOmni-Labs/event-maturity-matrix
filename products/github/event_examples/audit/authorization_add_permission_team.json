@@ -1,0 +1,39 @@
+{
+  "@timestamp": 1686215687636,
+  "_document_id": "TrmGicxMRvbKCHwf3vmJdD",
+  "action": "team.update_repository_permission",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_ip": "198.51.100.1",
+  "actor_location": {
+    "country_code": "US"
+  },
+  "business": "acme",
+  "business_id": 1122,
+  "created_at": 1686215687636,
+  "hashed_token": "mZp8g+OGBjSnsxiRAjcYhBTpoXi5BfdF2d8F1+kLW4M=",
+  "new_repo_base_role": null,
+  "new_repo_permission": "maintain",
+  "old_permissions": {
+    "admin": true,
+    "maintain": true,
+    "pull": true,
+    "push": true,
+    "triage": true
+  },
+  "old_repo_base_role": null,
+  "old_repo_permission": "admin",
+  "operation_type": "modify",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "programmatic_access_type": "Personal access token (classic)",
+  "public_repo": false,
+  "repo": "acme-inc/example-repo",
+  "repo_id": 641582886,
+  "team": "acme-inc/dev-leads",
+  "token_id": 720527199,
+  "token_scopes": "admin:enterprise,admin:gpg_key,admin:org,admin:org_hook,admin:public_key,admin:repo_hook,delete:packages,delete_repo,gist,notifications,project,repo,user,workflow,write:discussion,write:packages",
+  "user": "gh-automate-prod",
+  "user_agent": "python-requests/2.25.0",
+  "user_id": 92325258
+}

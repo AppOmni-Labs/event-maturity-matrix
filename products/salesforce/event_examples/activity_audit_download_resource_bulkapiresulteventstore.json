@@ -1,0 +1,39 @@
+{
+    "channel": "/event/BulkApiResultEvent",
+    "data":
+    {
+        "event":
+        {
+            "replayId": ""
+        },
+        "payload":
+        {
+            "CreatedDate": "2023-03-22T15:07:23.864+0000",
+            "EvaluationTime": 0.0,
+            "EventDate": "2023-03-22T15:07:16.240+0000",
+            "EventIdentifier": "abcdefgh-1234-0000-0000-000000000001",
+            "Id": "000000000000000AAA",
+            "LoginHistoryId": "000123000abc0004",
+            "LoginKey": "9870000000012300",
+            "PolicyId": null,
+            "PolicyOutcome": null,
+            "Query": "Select name, record, status__c, from Account where LastModifiedDate >= 2023-01-01T12:00:00Z ORDER BY LastModifiedDate ASC",
+            "RelatedEventIdentifier": null,
+            "SessionKey": "9870000000012300",
+            "SessionLevel": "STANDARD",
+            "SourceIp": "198.51.100.1",
+            "UserId": "000000000000123AbC",
+            "Username": "john@example.com",
+            "attributes":
+            {
+                "type": "BulkApiResultEventStore",
+                "url": "/services/data/v55.0/sobjects/BulkApiResultEventStore/000000000000000AAA"
+            }
+        },
+        "schema": "AppOmni"
+    }
+}
+
+
+
+

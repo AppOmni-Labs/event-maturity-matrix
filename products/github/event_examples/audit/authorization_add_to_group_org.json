@@ -1,0 +1,21 @@
+{
+  "@timestamp": 1686151363489,
+  "_document_id": "rLVAJb3ZtiugVygHs84Agw",
+  "action": "org.add_member",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_ip": "198.51.100.1",
+  "actor_location": {
+    "country_code": "US"
+  },
+  "business": "acme",
+  "business_id": 1122,
+  "created_at": 1686151363489,
+  "operation_type": "create",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "permission": "read",
+  "user": "alice.brown",
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+  "user_id": 98490879
+}

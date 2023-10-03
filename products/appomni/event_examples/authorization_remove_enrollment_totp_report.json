@@ -1,0 +1,11 @@
+{
+    "identifier": "34628772-1560-46da-81d0-2371c5cc3106",
+    "action_at": "2023-06-23T20:12:09+0000",
+    "action": "User MFA Disabled",
+    "username": "pmcandrew_test10",
+    "service_type": "None",
+    "service_id": null,
+    "extra": "target_user_id: 12893, target_user_username: pmcandrew_test10, new_value: +1 401-867-5309",
+    "user_ip": "198.51.100.3",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+}

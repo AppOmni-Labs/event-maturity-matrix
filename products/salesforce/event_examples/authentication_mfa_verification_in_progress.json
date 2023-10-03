@@ -1,0 +1,46 @@
+
+// in progress event
+{
+    "channel": "/event/IdentityVerificationEvent",
+    "data":
+    {
+        "event":
+        {
+            "replayId": ""
+        },
+        "payload":
+        {
+            "Activity": "Login",
+            "City": "Carbondale",
+            "Country": "United States",
+            "CountryIso": "US",
+            "CreatedDate": "2023-03-16T16:00:24.838+0000",
+            "EventDate": "2023-03-16T16:00:23.934+0000",
+            "EventGroup": "000000020",
+            "EventIdentifier": "abcdefgh-1234-0000-0000-000000000001",
+            "Id": "000000000000000AAA",
+            "Latitude": 38.1112,
+            "LoginHistoryId": "120000033000123AbC",
+            "LoginKey": "987abc0000012400",
+            "Longitude": 38.1112,
+            "Policy": "TwoFactorAuthentication",
+            "PostalCode": "81623",
+            "Remarks": null,
+            "ResourceId": null,
+            "SessionKey": "987abc0000012400",
+            "SessionLevel": "STANDARD",
+            "SourceIp": "2001db8fffffffffffffffffffffffa",
+            "Status": "InProgress",
+            "Subdivision": "New York",
+            "UserId": "120000033000123AbC",
+            "Username": "alice@example.com",
+            "VerificationMethod": "Totp",
+            "attributes":
+            {
+                "type": "IdentityVerificationEvent",
+                "url": "/services/data/v55.0/sobjects/IdentityVerificationEvent/000000000000000AAA"
+            }
+        },
+        "schema": "AppOmni"
+    }
+}

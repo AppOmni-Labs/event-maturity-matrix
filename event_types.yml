@@ -1,0 +1,182 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_types
+description: |
+  Event types represent logical buckets of different types of events. These event types
+  are associated with a defined category and will typically have attributes associated with them.
+version: "1.0.0"
+meta:
+items:
+  - id: ET0001
+    name: Account Login
+    categories:
+      - C0001
+    description: An account attempted to login to a system.
+    tags:
+      - user
+  - id: ET0002
+    name: Account Logout
+    categories:
+      - C0001
+    description: An account attempted to logout of a system.
+  - id: ET0003
+    name: MFA Verification
+    categories:
+      - C0001
+    description: Enter or acknowledge an MFA factor which indicates success or failure.
+  - id: ET0004
+    name: Create User
+    categories:
+      - C0002
+    description: Creates a user.
+  - id: ET0005
+    name: Read User
+    categories:
+      - C0002
+    description: Reads information about a user.
+  - id: ET0006
+    name: Update User
+    categories:
+      - C0002
+    description: Updates information about a user.
+  - id: ET0007
+    name: Delete User
+    categories:
+      - C0002
+    description: Removes or deletes a user.
+  - id: ET0008
+    name: Create Group
+    categories:
+      - C0002
+    description: Creates a logical group.
+  - id: ET0009
+    name: Read Group
+    categories:
+      - C0002
+    description: Reads a group.
+  - id: ET0010
+    name: Update Group
+    categories:
+      - C0002
+    description: Updates a group.
+  - id: ET0011
+    name: Delete Group
+    categories:
+      - C0002
+    description: Removes or deletes a group.
+  - id: ET0012
+    name: Add To Group
+    categories:
+      - C0002
+    description: Adds a service, user or account to a group.
+  - id: ET0013
+    name: Remove From Group
+    categories:
+      - C0002
+    description: Removes a service, user or account from a group.
+  - id: ET0014
+    name: Create Role
+    categories:
+      - C0002
+    description: Creates a new role.
+  - id: ET0015
+    name: Read Role
+    categories:
+      - C0002
+    description: Reads a role.
+  - id: ET0016
+    name: Update Role
+    categories:
+      - C0002
+    description: Updates a role.
+  - id: ET0017
+    name: Delete Role
+    categories:
+      - C0002
+    description: Removes or deletes a role.
+  - id: ET0018
+    name: Add Permission
+    categories:
+      - C0002
+    description: Adds a permission to a resource.
+  - id: ET0019
+    name: Remove Permission
+    categories:
+      - C0002
+    description: Removes a permission from a resource.
+  - id: ET0020
+    name: Add Enrollment
+    categories:
+      - C0002
+    description: A MFA enrollment was added to an account.
+  - id: ET0021
+    name: Remove Enrollment
+    categories:
+      - C0002
+    description: A MFA enrollment was rmeoved from an account.
+  - id: ET0022
+    name: Create Security Configuration
+    categories:
+      - C0003
+    description: Creates a security configuration policy or enables settings.
+  - id: ET0023
+    name: Read Security Configuration
+    categories:
+      - C0003
+    description: Reads a security configuration policy or settings.
+  - id: ET0024
+    name: Update Security Configuration
+    categories:
+      - C0003
+    description: Updates a security configuration policy or settings.
+  - id: ET0025
+    name: Delete Security Configuration
+    categories:
+      - C0003
+    description: Removes or deletes a security configuration policy or setting.
+  - id: ET0026
+    name: Create Integration
+    categories:
+      - C0003
+    description: Creates a new integration.
+  - id: ET0027
+    name: Read Integration
+    categories:
+        - C0003
+    description: Reads an existing integration.
+  - id: ET0028
+    name: Update Integration
+    categories:
+      - C0003
+    description: Updates an existing integration.
+  - id: ET0029
+    name: Delete Integration
+    categories:
+      - C0003
+    description: Removes or deletes an existing integration.
+  - id: ET0030
+    name: Create Resource
+    categories:
+      - C0004
+    description: A resource was created.
+  - id: ET0031
+    name: Read Resource
+    categories:
+      - C0004
+    description: A resource was read.
+  - id: ET0032
+    name: Update Resource
+    categories:
+      - C0004
+    description: A resource was updated.
+  - id: ET0033
+    name: Delete Resource
+    categories:
+      - C0004
+    description: A resource was removed or deleted.
+  - id: ET0034
+    name: Download Resource
+    categories:
+      - C0004
+    description: A resource was downloaded.

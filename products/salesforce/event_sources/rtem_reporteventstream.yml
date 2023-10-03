@@ -1,0 +1,59 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: Salesforce
+  collection_sources:
+    - streaming_api
+name: Real-Time Event Monitoring ReportEventStream
+description: Tracks report-related actions, such as when a user runs or exports a report.
+references: 
+  - id: report_event_stream
+    name: ReportEventStream
+    url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_reporteventstream.htm
+retention:
+  duration: 6 Months
+  comments: N/A
+latency:
+  duration: Real-Time
+  comments: N/A
+licensing:
+  comments: Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
+mappings:
+  - category: C0004
+    event_type: ET0031
+    attributes:
+      A0001: EventDate
+      A0002: EventIdentifier
+      A0003: Operation
+      A0004: PolicyOutcome
+      A0005: Username
+      A0006: UserId
+      A0008: SessionKey
+      A0009: SourceIp
+      A0012: EventSource
+      A0030: Name
+      A0031: QueriedEntities
+    examples:
+      - type: read
+        location: "./event_examples/activity_audit_read_resource_reporteventstream.json"
+  - category: C0004
+    event_type: ET0034
+    attributes:
+      A0001: EventDate
+      A0002: EventIdentifier
+      A0003: Operation
+      A0004: PolicyOutcome
+      A0005: Username
+      A0006: UserId
+      A0008: SessionKey
+      A0009: SourceIp
+      A0012: EventSource
+      A0032: RowsProcessed
+      A0030: Name
+      A0031: QueriedEntities
+    examples:
+      - type: download
+        location: "./event_examples/activity_audit_download_resource_reporteventstream.json"

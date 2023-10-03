@@ -1,0 +1,56 @@
+{
+    "channel": "/event/ApiEventStream",
+    "data":
+    {
+        "event":
+        {
+            "replayId": ""
+        },
+        "payload":
+        {
+            "AdditionalInfo": "{}",
+            "ApiType": "REST",
+            "ApiVersion": 50.0,
+            "Application": "N/A",
+            "Client": null,
+            "ConnectedAppId": null,
+            "CreatedDate": "2023-03-21T10:04:45.101+0000",
+            "ElapsedTime": 430,
+            "EvaluationTime": 0.0,
+            "EventDate": "2023-03-21T10:04:39.747+0000",
+            "EventIdentifier": "abcdefgh-1234-0000-0000-000000000001",
+            "LoginHistoryId": "000123000abc0004",
+            "LoginKey": "9870000000012300",
+            "Operation": "QueryMore",
+            "Platform": "Unknown",
+            "PolicyId": null,
+            "PolicyOutcome": null,
+            "QueriedEntities": "Customer_Account__c",
+            "Query": "Select name, record, status__c, from Account where LastModifiedDate >= 2023-01-01T12:00:00Z ORDER BY LastModifiedDate ASC",
+            "Records": "{\"totalSize\":1000,\"done\":false,\"records\":[{\"attributes\":{\"type\":\"Account\"},\"Id\":\"0000G000000000123\",\"Name\":\"Sample Account 1\"},{\"attributes\":{\"type\":\"Account\"},\"Id\":\"0000G000000000124\",\"Name\":\"Sample Account 2\"}]}",
+            "RelatedEventIdentifier": null,
+            "RowsProcessed": 1000364.0,
+            "SessionKey": "9870000000012300",
+            "SessionLevel": "STANDARD",
+            "SourceIp": "198.51.100.1",
+            "UserAgent": "python-requests/2.28.2",
+            "UserId": "000000000000123AbC",
+            "Username": "john@example.com",
+            "attributes":
+            {
+                "type": "ApiEvent",
+                "url": "/services/data/v55.0/sobjects/ApiEvent/000000000000000AAA"
+            }
+        },
+        "schema": "AppOmni"
+    }
+}
+
+
+
+
+
+
+
+
+

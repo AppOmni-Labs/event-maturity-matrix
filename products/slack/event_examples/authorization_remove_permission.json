@@ -1,0 +1,46 @@
+{
+    "action": "permissions_removed",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "jane@example.com",
+            "id": "U01A2ABCDAB",
+            "name": "Jane Miller",
+            "team": "A01111TD4"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.5",
+        "location":
+        {
+            "domain": "acme",
+            "id": "A01111TD4",
+            "name": "Acme",
+            "type": "workspace"
+        },
+        "session_id": 5750000001234,
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+    },
+    "date_create": 1692096526,
+    "details":
+    {
+        "changed_permissions":
+        [
+            "CREATE_PRIVATE_CHANNEL"
+        ],
+        "target_entity_id": "A01111TD4"
+    },
+    "entity":
+    {
+        "account_type_role":
+        {
+            "id": 1003,
+            "name": "MULTI_CHANNEL_GUEST"
+        },
+        "type": "account_type_role"
+    },
+    "id": "036ccefd-0000-abcd-bb11-000dd2140ae0"
+}

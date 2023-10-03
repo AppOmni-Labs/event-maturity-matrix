@@ -1,0 +1,58 @@
+{
+    "channel": "/event/LightningUriEventStream",
+    "data":
+    {
+        "event":
+        {
+            "replayId": ""
+        },
+        "payload":
+        {
+            "AppName": "one:one",
+            "ConnectionType": null,
+            "CreatedDate": "2023-03-21T19:30:14.117+0000",
+            "DeviceId": null,
+            "DeviceModel": null,
+            "DevicePlatform": "SFX:BROWSER:DESKTOP",
+            "DeviceSessionId": "0000000000000000000000000000000000000001",
+            "Duration": 0.0,
+            "EffectivePageTime": 0.0,
+            "EventDate": "2023-03-21T19:30:05.644+0000",
+            "EventIdentifier": "abcdefgh-1234-0000-0000-000000000001",
+            "LoginKey": "9870000000012300",
+            "Operation": "Delete",
+            "OsName": "WINDOWS",
+            "OsVersion": "10",
+            "PageStartTime": "2023-03-21T19:17:24.981+0000",
+            "PageUrl": "/lightning/o/Case/new?count=1",
+            "PreviousPageAppName": null,
+            "PreviousPageEntityId": null,
+            "PreviousPageEntityType": null,
+            "PreviousPageUrl": null,
+            "QueriedEntities": "Customer_Account__c",
+            "RecordId": "000000000000123AbC",
+            "RelatedEventIdentifier": null,
+            "SdkAppType": null,
+            "SdkAppVersion": null,
+            "SdkVersion": null,
+            "SessionKey": "9870000000012300",
+            "SessionLevel": "HIGH_ASSURANCE",
+            "SourceIp": "198.51.100.1",
+            "UserId": "000000000000123AbC",
+            "UserType": "Standard",
+            "Username": "john@example.com",
+            "attributes":
+            {
+                "type": "LightningUriEvent",
+                "url": "/services/data/v55.0/sobjects/LightningUriEvent/000000000000000AAA"
+            }
+        },
+        "schema": "AppOmni"
+    }
+}
+
+
+
+
+
+

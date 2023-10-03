@@ -1,0 +1,24 @@
+{
+    "action_by": null,
+    "additional_details": null,
+    "created_at": "2023-05-09T09:35:58-07:00",
+    "created_by":
+    {
+        "id": "12345648385",
+        "login": "bob@example.com",
+        "name": "Bob Smith",
+        "type": "user"
+    },
+    "event_id": "00000000-abcd-1234-9c97-5e32f323b9f0",
+    "event_type": "DELETE_USER",
+    "ip_address": "198.51.100.4",
+    "session_id": null,
+    "source":
+    {
+        "id": "18863123456",
+        "login": "jane@example.com",
+        "name": "Jane Miller",
+        "type": "user"
+    },
+    "type": "event"
+}

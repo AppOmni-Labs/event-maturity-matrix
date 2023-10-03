@@ -1,0 +1,44 @@
+{
+    "action": "file_downloaded",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "mallory@example.com",
+            "id": "U01ABA99AB3",
+            "name": "Mallory Jones",
+            "team": "ATBSDEF001"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.3",
+        "location":
+        {
+            "domain": "acme",
+            "id": "ATBSDEF001",
+            "name": "Acme",
+            "type": "enterprise"
+        },
+        "session_id": 5700000123453,
+        "ua": "Mozilla/5.0 (Windows NT 10.0.22621; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Slack/4.33.84 Chrome/114.0.5735.134 Safari/537.36"
+    },
+    "date_create": 1692202187,
+    "details":
+    {
+        "url_private": "https://files.slack.com/files/ATBSDEF001-F01A2AABCAA/dataset.xlsx"
+    },
+    "entity":
+    {
+        "file":
+        {
+            "filetype": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "id": "F01A2AABCAA",
+            "name": "dataset.xlsx",
+            "title": "dataset.xlsx"
+        },
+        "type": "file"
+    },
+    "id": "0ab1d7aa-00dc-0ef0-a0b1-0011a55ff12b"
+}

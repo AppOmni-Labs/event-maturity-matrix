@@ -1,0 +1,126 @@
+{
+    "actor":
+    {
+        "alternateId": "alice@example.com",
+        "detailEntry": null,
+        "displayName": "Alice Brown",
+        "id": "00ua1aaaa1abc0A0B123",
+        "type": "User"
+    },
+    "authenticationContext":
+    {
+        "authenticationProvider": null,
+        "authenticationStep": 0,
+        "credentialProvider": null,
+        "credentialType": null,
+        "externalSessionId": "10234ABC123abc1234abc1234",
+        "interface": null,
+        "issuer": null
+    },
+    "client":
+    {
+        "device": "Computer",
+        "geographicalContext":
+        {
+            "city": "San Francisco",
+            "country": "United States",
+            "geolocation":
+            {
+                "lat": 37.8199,
+                "lon": 122.4783
+            },
+            "postalCode": "94016",
+            "state": "California"
+        },
+        "id": null,
+        "ipAddress": "198.51.100.1",
+        "userAgent":
+        {
+            "browser": "CHROME",
+            "os": "Mac OS X",
+            "rawUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
+        },
+        "zone": "null"
+    },
+    "debugContext":
+    {
+        "debugData":
+        {
+            "dtHash": "123aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requestId": "ABCD111111111111111111111111",
+            "requestUri": "/api/internal/users/me/report-suspicious-activity",
+            "suspiciousActivityBrowser": "CHROME",
+            "suspiciousActivityEventCity": "San Francisco",
+            "suspiciousActivityEventCountry": "United States",
+            "suspiciousActivityEventId": "11111111-0000-2222-0000-aaaaaaaaaaaa",
+            "suspiciousActivityEventIp": "198.51.100.2",
+            "suspiciousActivityEventLatitude": "37.8199",
+            "suspiciousActivityEventLongitude": "122.4783",
+            "suspiciousActivityEventState": "California",
+            "suspiciousActivityEventTransactionId": "1111111111111111111111111111",
+            "suspiciousActivityEventType": "system.email.new_device_notification.sent_message",
+            "suspiciousActivityOs": "Mac OS X",
+            "suspiciousActivityTimestamp": "2023-09-14T19:06:50.770Z",
+            "url": "/api/internal/users/me/report-suspicious-activity?i=xxxxxxxx"
+        }
+    },
+    "displayMessage": "User report suspicious activity",
+    "eventType": "user.account.report_suspicious_activity_by_enduser",
+    "outcome":
+    {
+        "reason": null,
+        "result": "SUCCESS"
+    },
+    "published": "2023-09-14T19:07:28.185Z",
+    "request":
+    {
+        "ipChain":
+        [
+            {
+                "geographicalContext":
+                {
+                    "city": "San Francisco",
+                    "country": "United States",
+                    "geolocation":
+                    {
+                        "lat": 37.8199,
+                        "lon": 122.4783
+                    },
+                    "postalCode": "94016",
+                    "state": "California"
+                },
+                "ip": "198.51.100.1",
+                "source": null,
+                "version": "V4"
+            }
+        ]
+    },
+    "securityContext":
+    {
+        "asNumber": 14618,
+        "asOrg": "amazon corporate llc",
+        "domain": "amazon.com",
+        "isProxy": false,
+        "isp": "amazon.com inc"
+    },
+    "severity": "WARN",
+    "target":
+    [
+        {
+            "alternateId": "alice@example.com",
+            "detailEntry": null,
+            "displayName": "Alice Brown",
+            "id": "00ua1aaaa1abc0A0B123",
+            "type": "User"
+        }
+    ],
+    "transaction":
+    {
+        "detail":
+        {},
+        "id": "111111111111111111111111111",
+        "type": "WEB"
+    },
+    "uuid": "11111111-2222-3333-4444-abcdef111111111111",
+    "version": 0
+}

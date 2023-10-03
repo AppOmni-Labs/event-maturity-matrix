@@ -1,0 +1,44 @@
+{
+    "channel": "/event/IdentityVerificationEvent",
+    "data":
+    {
+        "event":
+        {
+            "replayId": ""
+        },
+        "payload":
+        {
+            "Activity": "Login",
+            "City": "San Francisco",
+            "Country": "United States",
+            "CountryIso": "US",
+            "CreatedDate": "2023-03-08T16:50:51.554+0000",
+            "EventDate": "2023-03-08T16:50:46.153+0000",
+            "EventGroup": "000000033",
+            "EventIdentifier": "abcdefgh-1234-0000-0000-000000000001",
+            "Id": "000000000000000AAA",
+            "Latitude": 38.1111,
+            "LoginHistoryId": "000000000000123AbC",
+            "LoginKey": "9870000000012300",
+            "Longitude": 38.1111,
+            "Policy": "TwoFactorAuthentication",
+            "PostalCode": "94107",
+            "Remarks": null,
+            "ResourceId": null,
+            "SessionKey": "9870000000012300",
+            "SessionLevel": "STANDARD",
+            "SourceIp": "2001db8fffffffffffffffffffffffa",
+            "Status": "Succeeded",
+            "Subdivision": "New York",
+            "UserId": "000000000000123AbC",
+            "Username": "john@example.com",
+            "VerificationMethod": "Totp",
+            "attributes":
+            {
+                "type": "IdentityVerificationEvent",
+                "url": "/services/data/v55.0/sobjects/IdentityVerificationEvent/000000000000000AAA"
+            }
+        },
+        "schema": "AppOmni"
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "@timestamp": 1686089206322,
+  "_document_id": "4qrOaf_n_cB0BEUfoTXeyw",
+  "action": "hook.destroy",
+  "active": true,
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_ip": "198.51.100.1",
+  "actor_location": {
+    "country_code": "US"
+  },
+  "business": "acme",
+  "business_id": 1122,
+  "config": {
+    "content_type": "form",
+    "insecure_ssl": "0"
+  },
+  "created_at": 1686089206322,
+  "events": [],
+  "hook_id": 418246386,
+  "name": "webhook",
+  "operation_type": "remove",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "public_repo": false,
+  "repo": "acme-inc/example-repo",
+  "repo_id": 100056789,
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+}

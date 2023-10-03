@@ -1,0 +1,28 @@
+{
+    "action_by": null,
+    "additional_details":
+    {
+        "group_id": "15297703631",
+        "group_name": "a_sample_group"
+    },
+    "created_at": "2023-05-09T10:24:15-07:00",
+    "created_by":
+    {
+        "id": "18863648385",
+        "login": "bob@example.com",
+        "name": "Bob Smith",
+        "type": "user"
+    },
+    "event_id": "f0545aa9-4be4-451e-a8d2-3c56aa257b8a",
+    "event_type": "GROUP_ADD_USER",
+    "ip_address": "198.51.100.3",
+    "session_id": null,
+    "source":
+    {
+        "id": "18863890488",
+        "login": "mallory@example.com",
+        "name": "Mallory Jones",
+        "type": "user"
+    },
+    "type": "event"
+}

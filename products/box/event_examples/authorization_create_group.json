@@ -1,0 +1,22 @@
+{
+    "action_by": null,
+    "additional_details": null,
+    "created_at": "2023-05-09T09:36:36-07:00",
+    "created_by":
+    {
+        "id": "18863648385",
+        "login": "John Doe",
+        "name": "john@example.com",
+        "type": "user"
+    },
+    "event_id": "00000000-abcd-1234-a8a6-6f5474e5d86d",
+    "event_type": "GROUP_CREATION",
+    "ip_address": "198.51.100.3",
+    "session_id": null,
+    "source":
+    {
+        "group_id": "15297703631",
+        "group_name": "my_sample_group"
+    },
+    "type": "event"
+}

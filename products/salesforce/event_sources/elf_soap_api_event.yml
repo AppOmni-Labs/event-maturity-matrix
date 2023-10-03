@@ -1,0 +1,101 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: Salesforce
+  collection_sources:
+    - rest_api
+    - soap_api
+name: EventLogFile SOAP API Event Type
+description: Provides details about a Salesforce org's SOAP API request activity.
+references: 
+  - id: soap_api
+    name: EventLogFile SOAP API
+    url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_api.htm
+retention:
+  duration: 30 Days
+  comments: N/A
+latency:
+  duration: 3 Hours
+  comments: Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of the event to be available in the hourly log file.
+licensing:
+  comments: Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
+mappings:
+  - category: C0004
+    event_type: ET0030
+    attributes:
+      A0001: TIMESTAMP_DERIVED
+      A0003: EVENT_TYPE
+      A0004: REQUEST_STATUS
+      A0006: USER_ID
+      A0007: USER_TYPE
+      A0008: SESSION_KEY
+      A0009: CLIENT_IP
+      A0012: API_TYPE
+      A0031: ENTITY_NAME
+    examples:
+      - type: create
+        location: "./event_examples/activity_audit_create_resource_soapapi.json"
+  - category: C0004
+    event_type: ET0031
+    attributes:
+      A0001: TIMESTAMP_DERIVED
+      A0003: EVENT_TYPE
+      A0004: REQUEST_STATUS
+      A0006: USER_ID
+      A0007: USER_TYPE
+      A0008: SESSION_KEY
+      A0009: CLIENT_IP
+      A0012: API_TYPE
+      A0031: ENTITY_NAME
+    examples:
+      - type: read
+        location: "./event_examples/activity_audit_read_resource_soapapi.json"
+  - category: C0004
+    event_type: ET0032
+    attributes:
+      A0001: TIMESTAMP_DERIVED
+      A0003: EVENT_TYPE
+      A0004: REQUEST_STATUS
+      A0006: USER_ID
+      A0007: USER_TYPE
+      A0008: SESSION_KEY
+      A0009: CLIENT_IP
+      A0012: API_TYPE
+      A0031: ENTITY_NAME
+    examples:
+      - type: update
+        location: "./event_examples/activity_audit_update_resource_soapapi.json"
+  - category: C0004
+    event_type: ET0033
+    attributes:
+      A0001: TIMESTAMP_DERIVED
+      A0003: EVENT_TYPE
+      A0004: REQUEST_STATUS
+      A0006: USER_ID
+      A0007: USER_TYPE
+      A0008: SESSION_KEY
+      A0009: CLIENT_IP
+      A0012: API_TYPE
+      A0031: ENTITY_NAME
+    examples:
+      - type: delete
+        location: "./event_examples/activity_audit_delete_resource_soapapi.json"
+  - category: C0004
+    event_type: ET0034
+    attributes:
+      A0001: TIMESTAMP_DERIVED
+      A0003: EVENT_TYPE
+      A0004: REQUEST_STATUS
+      A0006: USER_ID
+      A0007: USER_TYPE
+      A0008: SESSION_KEY
+      A0009: CLIENT_IP
+      A0012: API_TYPE
+      A0032: ROWS_PROCESSED
+      A0031: ENTITY_NAME
+    examples:
+      - type: download
+        location: "./event_examples/activity_audit_download_resource_soapapi.json"

@@ -1,0 +1,24 @@
+{
+    "action_by": null,
+    "additional_details": null,
+    "created_at": "2023-05-09T09:27:03-07:00",
+    "created_by":
+    {
+        "id": "18863648385",
+        "login": "alice@example.com",
+        "name": "Alice Brown",
+        "type": "user"
+    },
+    "event_id": "7fd655c7-5a4a-4e13-8375-dc08cd2cf8b9",
+    "event_type": "MULTI_FACTOR_AUTH_ENABLE",
+    "ip_address": "Unknown IP",
+    "session_id": null,
+    "source":
+    {
+        "id": "18863648385",
+        "login": "alice@example.com",
+        "name": "Alice Brown",
+        "type": "user"
+    },
+    "type": "event"
+}

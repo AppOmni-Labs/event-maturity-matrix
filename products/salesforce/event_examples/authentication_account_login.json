@@ -1,0 +1,56 @@
+{
+    "channel": "/event/LoginEventStream",
+    "data":
+    {
+        "event":
+        {
+            "replayId": ""
+        },
+        "payload":
+        {
+            "AdditionalInfo": "{}",
+            "ApiType": "N/A",
+            "ApiVersion": "N/A",
+            "Application": "Browser",
+            "AuthServiceId": "000000000000123AbC",
+            "Browser": "Chrome 110",
+            "CipherSuite": "ECDHE-RSA-AES256-GCM-SHA384",
+            "City": "San Francisco",
+            "ClientVersion": "N/A",
+            "Country": "United States",
+            "CountryIso": "US",
+            "CreatedDate": "2023-03-08T18:16:15.886+0000",
+            "EvaluationTime": 0.0,
+            "EventDate": "2023-03-08T18:16:11.493+0000",
+            "EventIdentifier": "abcdefgh-1234-0000-0000-000000000001",
+            "HttpMethod": "POST",
+            "LoginGeoId": "000000000000123AbC",
+            "LoginHistoryId": "000000000000123AbC",
+            "LoginKey": "987abc0000012400",
+            "LoginLatitude": 38.1111,
+            "LoginLongitude": 38.1111,
+            "LoginType": "SAML Sfdc Initiated SSO",
+            "LoginUrl": "my.login.salesforce.com",
+            "Platform": "Windows 10",
+            "PolicyId": null,
+            "PolicyOutcome": null,
+            "PostalCode": "94107",
+            "RelatedEventIdentifier": null,
+            "SessionKey": null,
+            "SessionLevel": "STANDARD",
+            "SourceIp": "198.51.100.1",
+            "Status": "Success",
+            "Subdivision": "Ohio",
+            "TlsProtocol": "TLS 1.2",
+            "UserId": "000000000000123AbC",
+            "UserType": "Standard",
+            "Username": "john@example.com",
+            "attributes":
+            {
+                "type": "LoginEvent",
+                "url": "/services/data/v55.0/sobjects/LoginEvent/000000000000000AAA"
+            }
+        },
+        "schema": "AppOmni"
+    }
+}

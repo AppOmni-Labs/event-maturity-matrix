@@ -1,0 +1,11 @@
+{
+    "identifier": "49fc4cd2-653e-4261-bb59-25dc6ee7a1c0",
+    "action_at": "2023-06-22T20:48:41+0000",
+    "action": "User Logout",
+    "username": "bob@example.com",
+    "service_type": "None",
+    "service_id": null,
+    "extra": "",
+    "user_ip": "198.51.100.2",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+}

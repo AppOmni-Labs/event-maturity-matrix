@@ -1,0 +1,16 @@
+{
+  "@timestamp": 1689093550092,
+  "_document_id": "IrAm5tty1DHWLJG7uRCusA",
+  "action": "integration.destroy",
+  "actor": "bspcgcg",
+  "actor_id": 12345678,
+  "business": "acme",
+  "business_id": 120,
+  "created_at": 1689093550092,
+  "integration": "Acme: integration 1",
+  "name": "Acme: integration 1",
+  "operation_type": "remove",
+  "org": "acme",
+  "org_id": 1234000,
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+}

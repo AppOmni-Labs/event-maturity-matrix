@@ -1,0 +1,132 @@
+{
+    "actor":
+    {
+        "alternateId": "alice@example.com",
+        "detailEntry": null,
+        "displayName": "Alice Brown",
+        "id": "00ua1aaaa1abc0A0B123",
+        "type": "User"
+    },
+    "authenticationContext":
+    {
+        "authenticationProvider": "ACTIVE_DIRECTORY",
+        "authenticationStep": 0,
+        "credentialProvider": null,
+        "credentialType": "PASSWORD",
+        "externalSessionId": "10234ABC123abc1234abc1234",
+        "interface": "AD APP Instance",
+        "issuer": null
+    },
+    "client":
+    {
+        "device": "Computer",
+        "geographicalContext":
+        {
+            "city": "San Francisco",
+            "country": "United States",
+            "geolocation":
+            {
+                "lat": 37.8199,
+                "lon": 122.4783
+            },
+            "postalCode": "94016",
+            "state": "California"
+        },
+        "id": null,
+        "ipAddress": "198.51.100.1",
+        "userAgent":
+        {
+            "browser": "CHROME",
+            "os": "Windows 10",
+            "rawUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "zone": "null"
+    },
+    "debugContext":
+    {
+        "debugData":
+        {
+            "actionid": "rpc::app.active_directory.agent.reply.internal//1234567890123//aaaaaaaaaaaaaaaaaaaaaaaaaa:00000000-1111-2222-3333-abcdefghijklm",
+            "agentid": "a123aaaaaaaaaaaaaa",
+            "authnRequestId": "ABCDEF_1111111111111",
+            "behaviors": "{New Geo-Location=NEGATIVE, New Device=NEGATIVE, New IP=NEGATIVE, New State=NEGATIVE, New Country=NEGATIVE, Velocity=NEGATIVE, New City=NEGATIVE}",
+            "delauthtimeout": "18000",
+            "delauthtimespentatagent": "275",
+            "delauthtimespentatdomaincontroller": "256",
+            "delauthtimetotal": "779",
+            "deviceFingerprint": "11111111111111111111111111111111",
+            "dtHash": "123aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requestId": "ABCD111111111111111111111111",
+            "requestUri": "/api/v1/authn/factors/password/verify",
+            "risk": "{level=LOW}",
+            "threatSuspected": "false",
+            "url": "/api/v1/authn/factors/password/verify?rememberDevice=false"
+        }
+    },
+    "displayMessage": "Authenticate user with AD agent",
+    "eventType": "user.authentication.auth_via_AD_agent",
+    "outcome":
+    {
+        "reason": null,
+        "result": "SUCCESS"
+    },
+    "published": "2023-09-14T17:31:21.520Z",
+    "request":
+    {
+        "ipChain":
+        [
+            {
+                "geographicalContext":
+                {
+                    "city": "San Francisco",
+                    "country": "United States",
+                    "geolocation":
+                    {
+                        "lat": 37.8199,
+                        "lon": 122.4783
+                    },
+                    "postalCode": "94016",
+                    "state": "California"
+                },
+                "ip": "198.51.100.1",
+                "source": null,
+                "version": "V4"
+            }
+        ]
+    },
+    "securityContext":
+    {
+        "asNumber": 14618,
+        "asOrg": "amazon corporate llc",
+        "domain": "amazon.com",
+        "isProxy": false,
+        "isp": "amazon.com inc"
+    },
+    "severity": "INFO",
+    "target":
+    [
+        {
+            "alternateId": "alice@example.com",
+            "detailEntry": null,
+            "displayName": "Alice Brown",
+            "id": "00ua1aaaa1abc0A0BCDE",
+            "type": "User"
+        },
+        {
+            "alternateId": "corp.example.com",
+            "detailEntry": null,
+            "displayName": "Active Directory",
+            "id": "00ua1aaaa1abc0A0B987",
+            "type": "AppInstance"
+        }
+    ],
+    "transaction":
+    {
+        "detail":
+        {},
+        "id": "111111111111111111111111111",
+        "type": "WEB"
+    },
+    "uuid": "11111111-2222-3333-4444-abcdef111111111111",
+    "version": 0
+}

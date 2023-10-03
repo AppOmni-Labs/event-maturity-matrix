@@ -1,0 +1,46 @@
+{
+    "action": "app_uninstalled",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "mallory@example.com",
+            "id": "U05ABC123EF",
+            "name": "Mallory Jones",
+            "team": "T01234AB5"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.3",
+        "location":
+        {
+            "domain": "acme",
+            "id": "T01234AB5",
+            "name": "Acme",
+            "type": "workspace"
+        },
+        "session_id": 5123453809333,
+        "ua": "sample-api (workflow builder)"
+    },
+    "date_create": 1692197604,
+    "details": null,
+    "entity":
+    {
+        "app":
+        {
+            "id": "A01234567AB",
+            "is_directory_approved": false,
+            "is_distributed": false,
+            "is_workflow_app": true,
+            "name": "Sample App",
+            "scopes":
+            [
+                "bot"
+            ]
+        },
+        "type": "app"
+    },
+    "id": "51d1abc1-0000-Ae1B-c2d3-65b5b0000a12"
+}

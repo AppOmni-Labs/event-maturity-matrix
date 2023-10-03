@@ -1,0 +1,29 @@
+{
+    "ACTION_MESSAGE": "1$aura://RecordUiController/ACTION$getObjectInfo=4",
+    "CLIENT_IP": "198.51.100.1",
+    "CPU_TIME": "17",
+    "DB_TOTAL_TIME": "1112793",
+    "EVENT_TYPE": "AuraRequest",
+    "LOGIN_KEY": "9870000000012300",
+    "ORGANIZATION_ID": "000ABC000000123",
+    "REQUEST_ID": "1230000000000000000-12",
+    "REQUEST_METHOD": "POST",
+    "REQUEST_STATUS": "",
+    "RUN_TIME": "20",
+    "SESSION_KEY": "9870000000012300",
+    "TIMESTAMP": "20230317172646.960",
+    "TIMESTAMP_DERIVED": "2023-03-17T17:26:46.960Z",
+    "URI": "/aura",
+    "URI_ID_DERIVED": "",
+    "USER_AGENT": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/198.51.100.2 Safari/537.36",
+    "USER_ID": "000000000000123",
+    "USER_ID_DERIVED": "000000000000123AbC",
+    "USER_TYPE": "Standard"
+}
+
+
+
+
+
+
+

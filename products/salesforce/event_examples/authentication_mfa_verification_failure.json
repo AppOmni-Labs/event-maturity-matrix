@@ -1,0 +1,44 @@
+{
+    "channel": "/event/IdentityVerificationEvent",
+    "data":
+    {
+        "event":
+        {
+            "replayId": ""
+        },
+        "payload":
+        {
+            "Activity": "Login",
+            "City": "Lexington",
+            "Country": "United States",
+            "CountryIso": "US",
+            "CreatedDate": "2023-03-16T14:37:59.453+0000",
+            "EventDate": "2023-03-16T14:37:56.275+0000",
+            "EventGroup": "0000000885",
+            "EventIdentifier": "abcdefgh-1234-0000-0000-000000000001",
+            "Id": "000000000000000AAA",
+            "Latitude": 38.1113,
+            "LoginHistoryId": "123000000000123AbC",
+            "LoginKey": "9870000000012300",
+            "Longitude": 38.1113,
+            "Policy": "TwoFactorAuthentication",
+            "PostalCode": "40513",
+            "Remarks": null,
+            "ResourceId": null,
+            "SessionKey": "987abc0000012400",
+            "SessionLevel": "STANDARD",
+            "SourceIp": "2001db8fffffffffffffffffffffffa",
+            "Status": "FailedInvalidCode",
+            "Subdivision": "Massachusetts",
+            "UserId": "123000000000123AbC",
+            "Username": "bob@example.com",
+            "VerificationMethod": "Totp",
+            "attributes":
+            {
+                "type": "IdentityVerificationEvent",
+                "url": "/services/data/v55.0/sobjects/IdentityVerificationEvent/000000000000000AAA"
+            }
+        },
+        "schema": "AppOmni"
+    }
+}

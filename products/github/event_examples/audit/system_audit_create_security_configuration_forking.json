@@ -1,0 +1,20 @@
+{
+  "@timestamp": 1686011086644,
+  "_document_id": "RxxlJ0MRNMQR8olkdIgPvQ",
+  "action": "private_repository_forking.enable",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_location": {
+    "country_code": "US"
+  },
+  "created_at": 1686011086644,
+  "operation_type": "modify",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "public_repo": false,
+  "repo": "acme-inc/example-repo",
+  "repo_id": 649922249,
+  "user": "john.doe",
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+  "user_id": 12345678
+}

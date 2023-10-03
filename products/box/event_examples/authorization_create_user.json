@@ -1,0 +1,24 @@
+{
+    "action_by": null,
+    "additional_details": null,
+    "created_at": "2023-05-09T09:34:43-07:00",
+    "created_by":
+    {
+        "id": "12345648385",
+        "login": "bob@example.com",
+        "name": "Bob Smith",
+        "type": "user"
+    },
+    "event_id": "00000000-abcd-1234-92ad-46f2f69e45cd",
+    "event_type": "NEW_USER",
+    "ip_address": "198.51.100.3",
+    "session_id": null,
+    "source":
+    {
+        "id": "25512345631",
+        "login": "mallory@example.com",
+        "name": "Mallory Jones",
+        "type": "user"
+    },
+    "type": "event"
+}

@@ -1,0 +1,78 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+$id: https://json-schema.org/draft/2020-12/schema
+title: Event Maturity Matrix - Attributes
+description: A schema that defines the structure of attributes in the event-maturity-matrix 
+properties:
+  entity_name:
+    description: The name of the entity itself.
+    type: string
+  description:
+    description: The description for the attributes entity.
+    type: string
+  version:
+    description: A semantic version of the defined document.
+    type: string
+  meta:
+    description: An object that contains meta information about the definiton.
+    type: ["null", "object"]
+  items:
+    description: An array of attributes.
+    type: array
+    items:
+      $ref: "#/$defs/attribute"
+    minItems: 1
+    uniqueItems: true
+additionalProperties: false
+required:
+  - entity_name
+  - description
+  - version
+  - items
+$defs:
+  attribute:
+    type: object
+    required:
+      - id
+      - name
+      - type
+      - description
+    properties:
+      id:
+        description: A unique ID for the attribute which starts with A and contains 4 numbers sequentially.
+        type: string
+      name:
+        description: Name of a field attribute found in telemetry and audit logging.
+        type: string
+      type:
+        description: Defines the value type for the given attribute field.
+        type: string
+        enum: 
+          - string
+          - array
+          - integer
+      description:
+        description: The description of the attribute
+        type: string
+      examples:
+        description: An example of the attribute being defined
+        type: array
+        unique: true
+        items:
+          type: ["string", "integer"]
+      maturity:
+        description: A maturity score.
+        type: integer
+      include:
+        description: A list of categories this field would be included in.
+        type: array
+        unique: true
+        items:
+          type: string
+      exclude:
+        description: A list of event types this field is excluded from.
+        type: array
+        unique: true
+        items:
+          type: string

@@ -1,0 +1,24 @@
+{
+  "@timestamp": 1686163479794,
+  "_document_id": "HxMMNJg2Ek8AJoNUGZ_6Yw",
+  "action": "pull_request_review.submit",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_ip": "198.51.100.1",
+  "actor_location": {
+    "country_code": "US"
+  },
+  "business": "acme",
+  "business_id": 1122,
+  "created_at": 1686163479794,
+  "operation_type": "modify",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "public_repo": false,
+  "pull_request_id": 1383147660,
+  "pull_request_title": "Release 2345",
+  "pull_request_url": "https://github.com/acme-inc/dice-instl-reset-password-ui/pull/159",
+  "repo": "acme-inc/example-repo",
+  "repo_id": 343699946,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+}

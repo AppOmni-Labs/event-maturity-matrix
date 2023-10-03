@@ -1,0 +1,24 @@
+{
+    "action": "PermSetEnableUserPerm",
+    "delegate_user": null,
+    "display": "Changed permission set App_Service_User: View All Users permission was changed from disabled to enabled",
+    "record_id": "000000000000123AbC",
+    "section": "Manage Users",
+    "sfdc_created_by_id": "000000000000123AbC",
+    "sfdc_created_by_name": "John Doe",
+    "sfdc_created_by_username": "bob@example.com",
+    "sfdc_created_date": "2023-03-08T18:43:00+00:00"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

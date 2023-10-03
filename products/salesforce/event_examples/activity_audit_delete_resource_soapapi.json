@@ -1,0 +1,32 @@
+{
+    "API_TYPE": "E",
+    "API_VERSION": "54.0",
+    "CLIENT_IP": "198.51.100.1",
+    "CLIENT_NAME": "vendor/integration_app",
+    "CPU_TIME": "253",
+    "DB_BLOCKS": "5356",
+    "DB_CPU_TIME": "140",
+    "DB_TOTAL_TIME": "228432560",
+    "ENTITY_NAME": "Customer_Account__c",
+    "EVENT_TYPE": "API",
+    "EXCEPTION_MESSAGE": "",
+    "LOGIN_KEY": "9870000000012300",
+    "METHOD_NAME": "delete",
+    "ORGANIZATION_ID": "000ABC000000123",
+    "REQUEST_ID": "1230000000000000000-12",
+    "REQUEST_SIZE": "690",
+    "REQUEST_STATUS": "",
+    "RESPONSE_SIZE": "464",
+    "ROWS_PROCESSED": "0",
+    "RUN_TIME": "498",
+    "SESSION_KEY": "9870000000012300",
+    "TIMESTAMP": "20230320051932.701",
+    "TIMESTAMP_DERIVED": "2023-03-20T05:19:32.701Z",
+    "URI": "Api",
+    "URI_ID_DERIVED": "",
+    "USER_ID": "000000000000123",
+    "USER_ID_DERIVED": "000000000000123AbC",
+    "USER_TYPE": "Standard"
+}
+
+

@@ -1,0 +1,32 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: product
+version: "1.0.0"
+name: Slack
+logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/slack_square.svg
+description: |
+  Slack is a cloud-based collaboration platform that facilitates communication between individuals and groups 
+  through channels, direct messaging, file sharing, and integrations with third-party applications.
+  
+  The Slack Audit Logs API allows organizations to access and retrieve audit logs related to user activity and security events within their Slack workspaces.
+collection:
+  - id: slack_audit_logs
+    name: Enterprise Events
+    description: Documentation on collecting events from the Audit Logs API
+    references:
+      - id: about_audit_log
+        name: About the Audit Log
+        description: Audit logs on Enterprise Grid
+        url: https://slack.com/help/articles/360000394286-Audit-logs-on-Enterprise-Grid
+      - id: audit_log_api
+        name: Monitoring audit events
+        description: Audit Logs API documentation
+        url: https://api.slack.com/admins/audit-logs
+      - id: calling_audit_log_api
+        name: Calling the Audit Logs API
+        description: Audit Logs API endpoint documentation
+        url: https://api.slack.com/admins/audit-logs-call
+
+
+

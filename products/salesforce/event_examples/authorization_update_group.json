@@ -1,0 +1,11 @@
+{
+    "action": "updatedgroup",
+    "delegate_user": "john@example.com",
+    "display": "Updated Public Group API Group: Changed DoesIncludeBosses from 1 to 0",
+    "record_id": "000000000000123AbC",
+    "section": "Groups",
+    "sfdc_created_by_id": "000000000000123AbC",
+    "sfdc_created_by_name": "John Doe",
+    "sfdc_created_by_username": "alice@example.com",
+    "sfdc_created_date": "2023-03-07T13:18:30+00:00"
+}

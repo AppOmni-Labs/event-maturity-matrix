@@ -1,0 +1,11 @@
+{
+    "action": "createduser",
+    "delegate_user": null,
+    "display": "Created new user Bob Example",
+    "record_id": "000000000000123AbC",
+    "section": "Manage Users",
+    "sfdc_created_by_id": "000000000000123AbC",
+    "sfdc_created_by_name": "John Doe",
+    "sfdc_created_by_username": "john@example.com",
+    "sfdc_created_date": "2023-03-09T16:51:17+00:00"
+}

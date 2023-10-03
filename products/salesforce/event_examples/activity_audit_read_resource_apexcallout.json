@@ -1,0 +1,28 @@
+{
+    "CLIENT_IP": "198.51.100.1",
+    "CPU_TIME": "13",
+    "EVENT_TYPE": "ApexCallout",
+    "LOGIN_KEY": "9870000000012300",
+    "METHOD": "GET",
+    "ORGANIZATION_ID": "000ABC000000123",
+    "REQUEST_ID": "1230000000000000000-12",
+    "REQUEST_SIZE": "-1",
+    "RESPONSE_SIZE": "40407",
+    "RUN_TIME": "279",
+    "SESSION_KEY": "9870000000012300",
+    "SUCCESS": "1",
+    "TIME": "246",
+    "TIMESTAMP": "20230321171017.871",
+    "TIMESTAMP_DERIVED": "2023-03-21T17:10:17.871Z",
+    "TYPE": "REST",
+    "URI": "CALLOUT-LOG",
+    "URI_ID_DERIVED": "",
+    "URL": "https://prod-api.example.com/api/v1/",
+    "USER_ID": "000000000000123",
+    "USER_ID_DERIVED": "000000000000123AbC"
+}
+
+
+
+
+

@@ -1,0 +1,44 @@
+{
+    "action_by": null,
+    "additional_details":
+    {
+        "access_token_identifier": "16c1948d38e23d80203df77a0273928ff0eb50bad8b62fcc6b4fe73e03482a11",
+        "ekm_id": "fb01c788-3be7-444d-b165-89a52741235f",
+        "service_id": "553530",
+        "service_name": "Box Elements (used in Box Web App)",
+        "size": 2584,
+        "version_id": "1319684204015"
+    },
+    "created_at": "2023-05-09T11:16:00-07:00",
+    "created_by":
+    {
+        "id": "18863648385",
+        "login": "jane@example.com",
+        "name": "Jane Miller",
+        "type": "user"
+    },
+    "event_id": "80ddc3b3-dd44-4377-9fe7-a634228cc952",
+    "event_type": "CONTENT_ACCESS",
+    "ip_address": "198.51.100.5",
+    "session_id": null,
+    "source":
+    {
+        "item_id": "1209714644015",
+        "item_name": "a_sample_file.csv",
+        "item_type": "file",
+        "owned_by":
+        {
+            "id": "18863648385",
+            "login": "jane@example.com",
+            "name": "Jane Miller",
+            "type": "user"
+        },
+        "parent":
+        {
+            "id": "206849236842",
+            "name": "Test Folder",
+            "type": "folder"
+        }
+    },
+    "type": "event"
+}

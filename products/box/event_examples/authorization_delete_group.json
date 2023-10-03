@@ -1,0 +1,22 @@
+{
+    "action_by": null,
+    "additional_details": null,
+    "created_at": "2023-05-09T10:46:19-07:00",
+    "created_by":
+    {
+        "id": "18863648385",
+        "login": "alice@example.com",
+        "name": "Alice Brown",
+        "type": "user"
+    },
+    "event_id": "24ada35a-a9e9-4c67-8fc9-33b5b9f9b52b",
+    "event_type": "GROUP_DELETION",
+    "ip_address": "198.51.100.2",
+    "session_id": null,
+    "source":
+    {
+        "group_id": "15299083860",
+        "group_name": "a_sample_group"
+    },
+    "type": "event"
+}

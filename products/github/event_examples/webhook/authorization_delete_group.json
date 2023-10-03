@@ -1,0 +1,69 @@
+{
+  "X-GitHub-Event": "team",
+  "action": "deleted",
+  "enterprise": {
+    "avatar_url": "https://avatars.githubusercontent.com/b/2070",
+    "created_at": "2020-01-23T22:48:48Z",
+    "description": null,
+    "html_url": "https://github.com/enterprises/acme-inc",
+    "id": 2077,
+    "name": "Acme",
+    "node_id": "MDEwOkVudGVycHJpc2UyMDc3",
+    "slug": "acme-inc",
+    "updated_at": "2023-02-28T01:36:46Z",
+    "website_url": null
+  },
+  "installation": {
+    "id": 11045851,
+    "node_id": "MDIzOkludGVncmF0aW9uSW5zdGFsbGF0aW9uMTEwNDU4NTE="
+  },
+  "organization": {
+    "avatar_url": "https://avatars.githubusercontent.com/u/123456",
+    "description": "",
+    "events_url": "https://api.github.com/orgs/acme-inc/events",
+    "hooks_url": "https://api.github.com/orgs/acme-inc/hooks",
+    "id": 123456,
+    "issues_url": "https://api.github.com/orgs/acme-inc/issues",
+    "login": "acme-inc",
+    "members_url": "https://api.github.com/orgs/acme-inc/members{/member}",
+    "node_id": "MDEyOk9yZ2FuaXphdGlvbjM2MjQ2MA==",
+    "public_members_url": "https://api.github.com/orgs/acme-inc/public_members{/member}",
+    "repos_url": "https://api.github.com/orgs/acme-inc/repos",
+    "url": "https://api.github.com/orgs/acme-inc"
+  },
+  "sender": {
+    "avatar_url": "https://avatars.githubusercontent.com/u/74208070",
+    "events_url": "https://api.github.com/users/john.doe/events{/privacy}",
+    "followers_url": "https://api.github.com/users/john.doe/followers",
+    "following_url": "https://api.github.com/users/john.doe/following{/other_user}",
+    "gists_url": "https://api.github.com/users/john.doe/gists{/gist_id}",
+    "gravatar_id": "",
+    "html_url": "https://github.com/john.doe",
+    "id": 74208074,
+    "login": "john.doe",
+    "node_id": "MDQ6VXNlcjc0MjA4MDc0",
+    "organizations_url": "https://api.github.com/users/john.doe/orgs",
+    "received_events_url": "https://api.github.com/users/john.doe/received_events",
+    "repos_url": "https://api.github.com/users/john.doe/repos",
+    "site_admin": false,
+    "starred_url": "https://api.github.com/users/john.doe/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/john.doe/subscriptions",
+    "type": "User",
+    "url": "https://api.github.com/users/john.doe"
+  },
+  "team": {
+    "description": "",
+    "html_url": "https://github.com/orgs/acme-inc/teams/repo-admin",
+    "id": 7304304,
+    "members_url": "https://api.github.com/organizations/123456/team/7304304/members{/member}",
+    "name": "repo-admin",
+    "node_id": "T_kwDOAAWH3M4Ab3Rw",
+    "notification_setting": "notifications_enabled",
+    "parent": null,
+    "permission": "pull",
+    "privacy": "closed",
+    "repositories_url": "https://api.github.com/organizations/123456/team/7304304/repos",
+    "slug": "repo-admin",
+    "url": "https://api.github.com/organizations/123456/team/7304304"
+  }
+}

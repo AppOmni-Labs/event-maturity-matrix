@@ -1,0 +1,36 @@
+{
+  "@timestamp": 1686158250381,
+  "_document_id": "_I3yfAxtGRuNaaiuffqtvA",
+  "action": "hook.config_changed",
+  "active": true,
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_location": {
+    "country_code": "US"
+  },
+  "config": {
+    "content_type": "json",
+    "insecure_ssl": "0",
+    "url": "https://webhook.acme.com/deliver/fghij"
+  },
+  "config_was": {
+    "content_type": "json",
+    "insecure_ssl": "0",
+    "url": "https://webhook.acme.com/deliver/abcde"
+  },
+  "created_at": 1686158250381,
+  "events": [
+    "deployment",
+    "pull_request",
+    "push"
+  ],
+  "hook_id": 418200273,
+  "name": "webhook",
+  "operation_type": "modify",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "public_repo": false,
+  "repo": "acme-inc/example-repo",
+  "repo_id": 649951183,
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
+}

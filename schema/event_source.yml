@@ -1,0 +1,158 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+$id: https://json-schema.org/draft/2020-12/schema
+title: Event Maturity Matrix - Event Source
+description: |
+  A schema that defines the structure of an event source in the event-maturity-matrix.
+  Event sources are product specific defintions which defines the categories, event types and attributes
+  for that specicic event source.
+properties:
+  entity_name:
+    description: The entity type.
+    type: string
+    enum: ["event_source"]
+  version:
+    description: A semantic version of the defined document.
+    type: string
+  product:
+    description: The name of the product / product.
+    type: object
+    properties:
+      name:
+        description: The name of the product.
+        type: string
+      collection_sources:
+        description: References to collection IDs in the product definiton.
+        type: array
+        items:
+          type: string
+    required:
+      - name
+  name:
+    description: The name of the event source.
+    type: string
+  description:
+    description: The description for the event source.
+    type: string
+  comments:
+    description: A generic field which can contain comments or notes.
+    type: string
+  tags:
+    description: One or more tags for this event source.
+    type: array
+    items:
+      type: string
+    uniqueItems: true
+  retention:
+    description: Defined retention periods for a given event source.
+    $ref: "#/$defs/base"
+  latency:
+    description: Any observed or documented latency for an event source.
+    $ref: "#/$defs/base"
+  references:
+    description: One or more collection references for this event source.
+    type: array
+    items:
+      $ref: "#/$defs/reference"
+    uniqueItems: true
+  licensing:
+    description: General licensing information if known.
+    type: object
+    properties:
+      comments:
+        description: General comments about licensing.
+        type: string
+    required:
+      - comments
+  mappings:
+    description: A list of mappings for an event source. Mappings are in {category}.{event_type}.{attribute} order.
+    type: array
+    items:  
+      $ref: "#/$defs/mapping"
+    uniqueItems: true
+  meta:
+    description: An object that contains meta information about the definiton.
+    type: ["null", "object"]
+  examples:
+    description: References one or more example files (relative path expected) containing a JSON response from the defined service.
+    type: ["array", "null"] # This means it is NOT required.
+    items:
+      type: string
+    uniqueItems: true
+     # pattern: "file:file2.json"
+additionalProperties: false
+required:
+  - entity_name
+  - name
+  - product
+  - description
+  - version
+  - references
+  - retention
+  - latency
+  - mappings
+  # - examples
+$defs:
+  base:
+    type: object
+    properties:
+      duration:
+        description: The retention duration.
+        type: string
+      comments:
+        description: Comments about the retention.
+        type: string
+  mapping:
+    type: object
+    required:
+      - category
+      - event_type
+      - attributes
+    properties:
+      category:
+        description: The category ID of this mapping
+        type: string
+      event_type:
+        description: The event_type ID of this mapping
+        type: string
+      attributes:
+        unique: true
+        description: A list of attributes mapped to the name of the actual field in the provided example file.
+        type: object
+        patternProperties:
+          "^A[0-9]{4}$":
+            description: Starts with an attribute id.
+            type: ["array", "string"]
+            items:
+              type: string
+      examples:
+        type: array
+        items:
+          $ref: '#/$defs/example'
+        uniqueItems: true
+  example:
+    type: object
+    properties:
+      type:
+        description: The type of event example this references.
+        type: string
+      location:
+        description: The location of an example event which is santized.
+        type: string
+  reference:
+    type: object
+    required:
+      - id
+      - name
+      - url
+    properties:
+      id:
+        description: A unique id for this reference.
+        type: string
+      name:
+        description: A reference name. 
+        type: string
+      url:
+        description: A URL pointing to the reference.
+        type: string

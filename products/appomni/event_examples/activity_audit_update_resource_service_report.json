@@ -1,0 +1,11 @@
+{
+    "identifier": "ea080b00-2cf0-49fe-b1ba-6081f17a66ff",
+    "action_at": "2023-06-22T20:05:09+0000",
+    "action": "Monitored Service Detection Ingest Disabled",
+    "username": "jane@example.com",
+    "service_type": "box",
+    "service_id": 35781,
+    "extra": "",
+    "user_ip": null,
+    "user_agent": null
+}

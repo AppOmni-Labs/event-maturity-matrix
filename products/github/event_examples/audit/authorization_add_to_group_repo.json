@@ -1,0 +1,25 @@
+{
+  "@timestamp": 1686159261336,
+  "_document_id": "8s0hw2CW8Y44_rjiM9yNkw",
+  "action": "repo.add_member",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_ip": "198.51.100.1",
+  "actor_location": {
+    "country_code": "US"
+  },
+  "business": "acme",
+  "business_id": 1122,
+  "created_at": 1686159261336,
+  "operation_type": "create",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "permission": "admin",
+  "public_repo": false,
+  "repo": "acme-inc/example-repo",
+  "repo_id": 100056789,
+  "user": "alice.brown",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0",
+  "user_id": 24304531,
+  "visibility": "private"
+}

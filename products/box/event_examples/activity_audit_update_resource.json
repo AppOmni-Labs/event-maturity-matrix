@@ -1,0 +1,46 @@
+{
+    "action_by": null,
+    "additional_details":
+    {
+        "file_hash": "0d012f12345678de3df12345b0b123a59f123456",
+        "file_path": "/SAMPLE/Reference Documents",
+        "hash_type": "sha1",
+        "service_id": "254429",
+        "service_name": "Box Drive",
+        "size": 4398971,
+        "version_id": "1319736874242"
+    },
+    "created_at": "2023-05-09T11:30:38-07:00",
+    "created_by":
+    {
+        "id": "12345678124",
+        "login": "john@example.com",
+        "name": "John Doe",
+        "type": "user"
+    },
+    "event_id": "00000000-abcd-1234-8b08-418033e43a4b",
+    "event_type": "RENAME",
+    "ip_address": "198.51.100.1",
+    "session_id": null,
+    "source":
+    {
+        "item_id": "12012345678942",
+        "item_name": "a_sample_file.pdf",
+        "item_type": "file",
+        "owned_by":
+        {
+            "id": "12345678124",
+            "login": "john@example.com",
+            "name": "John Doe",
+            "type": "user"
+        },
+        "parent":
+        {
+            "id": "1234567807873",
+            "name": "Reference Documents",
+            "type": "folder"
+        }
+    },
+    "type": "event"
+}
+

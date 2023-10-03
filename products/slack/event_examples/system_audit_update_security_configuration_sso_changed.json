@@ -1,0 +1,44 @@
+{
+    "action": "pref.sso_setting_changed",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "john@example.com",
+            "id": "U01ABCA1AAA",
+            "name": "John Doe",
+            "team": "E0123DTABCDE"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.1",
+        "location":
+        {
+            "domain": "acme",
+            "id": "E0123DTABCDE",
+            "name": "Acme",
+            "type": "enterprise"
+        },
+        "session_id": 1005842004700,
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+    },
+    "date_create": 1693253139,
+    "details":
+    {
+        "new_value": "SSO_REQUIRED",
+        "previous_value": "SSO_REQUIRED_EXCEPT_GUESTS"
+    },
+    "entity":
+    {
+        "enterprise":
+        {
+            "domain": "acme",
+            "id": "E0123DTABCDE",
+            "name": "Acme"
+        },
+        "type": "enterprise"
+    },
+    "id": "be00a00b-3200-4400-8ab0-000de3868a00"
+}

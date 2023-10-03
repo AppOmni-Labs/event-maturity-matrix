@@ -1,0 +1,117 @@
+{
+    "actor":
+    {
+        "alternateId": "alice@example.com",
+        "detailEntry": null,
+        "displayName": "Alice Brown",
+        "id": "00ua1aaaa1abc0A0B123",
+        "type": "User"
+    },
+    "authenticationContext":
+    {
+        "authenticationProvider": null,
+        "authenticationStep": 0,
+        "credentialProvider": null,
+        "credentialType": null,
+        "externalSessionId": "10234ABC123abc1234abc1234",
+        "interface": null,
+        "issuer": null
+    },
+    "client":
+    {
+        "device": "Computer",
+        "geographicalContext":
+        {
+            "city": "San Francisco",
+            "country": "United States",
+            "geolocation":
+            {
+                "lat": 37.8199,
+                "lon": 122.4783
+            },
+            "postalCode": "94016",
+            "state": "California"
+        },
+        "id": null,
+        "ipAddress": "198.51.100.1",
+        "userAgent":
+        {
+            "browser": "CHROME",
+            "os": "Mac OS X",
+            "rawUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
+        },
+        "zone": "null"
+    },
+    "debugContext":
+    {
+        "debugData":
+        {
+            "dtHash": "123aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requestId": "ABCD111111111111111111111111",
+            "requestUri": "/api/v1/behaviors/00ua1aaaa1abc0A0B987",
+            "url": "/api/v1/behaviors/00ua1aaaa1abc0A0B987?"
+        }
+    },
+    "displayMessage": "A behavior setting was deleted",
+    "eventType": "security.behavior.settings.delete",
+    "outcome":
+    {
+        "reason": null,
+        "result": "SUCCESS"
+    },
+    "published": "2023-09-14T20:34:41.030Z",
+    "request":
+    {
+        "ipChain":
+        [
+            {
+                "geographicalContext":
+                {
+                    "city": "San Francisco",
+                    "country": "United States",
+                    "geolocation":
+                    {
+                        "lat": 37.8199,
+                        "lon": 122.4783
+                    },
+                    "postalCode": "94016",
+                    "state": "California"
+                },
+                "ip": "198.51.100.1",
+                "source": null,
+                "version": "V4"
+            }
+        ]
+    },
+    "securityContext":
+    {
+        "asNumber": 14618,
+        "asOrg": "amazon corporate llc",
+        "domain": "amazon.com",
+        "isProxy": false,
+        "isp": "amazon.com inc"
+    },
+    "severity": "INFO",
+    "target":
+    [
+        {
+            "alternateId": "unknown",
+            "detailEntry":
+            {
+                "behaviorType": "ANOMALOUS_LOCATION"
+            },
+            "displayName": "Adding Location Behavior",
+            "id": "00ua1aaaa1abc0A0B987",
+            "type": "BehaviorSettings"
+        }
+    ],
+    "transaction":
+    {
+        "detail":
+        {},
+        "id": "111111111111111111111111111",
+        "type": "WEB"
+    },
+    "uuid": "11111111-2222-3333-4444-abcdef111111111111",
+    "version": 0
+}

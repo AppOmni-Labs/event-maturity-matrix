@@ -1,0 +1,45 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: product
+version: "1.0.0"
+name: Salesforce
+logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/sfdc_square.svg
+description: |
+  Salesforce is a cloud-based customer relationship management (CRM) platform. It is designed to help organizations manage their customer relationships, sales processes, marketing activities, and more.
+  
+  Salesforce audit logs are collected via objects, namely the SetupAuditTrail object, EventLogFile object, or Real-Time Event Monitoring objects. These objects are accessible via the Salesforce API.
+
+  Salesforce supports a wide range of APIs, however with regards to audit logs, the primary APIs include the REST API, SOAP API, or Streaming API.
+collection:
+  - id: rest_api
+    name: REST API
+    description: A REST interface that can be used to access Salesforce data without using the Salesforce user interface
+    references:
+      - id: rest_api_documentation
+        name: REST API Documentation
+        description: REST API documentation
+        url: https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_what_is_rest_api.htm
+      - id: rest_api_event_monitoring_documentation
+        name: Event Monitoring and REST API Documentation
+        description: Using the REST API to access the EventLogFile Object
+        url: https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/using_resources_event_log_files.htm
+  - id: soap_api
+    name: SOAP API
+    description: An interface that can be used to access Salesforce data using the SOAP protocol
+    references:
+      - id: soap_api_documentation
+        name: SOAP API Documentation
+        description: SOAP API documentation
+        url: https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_quickstart_intro.htm
+  - id: streaming_api
+    name: Streaming API
+    description: An API that provides a subscription mechanism for receiving events in near real-time
+    references:
+      - id: streaming_api_documentation
+        name: Streaming API Documentation
+        url: https://developer.salesforce.com/docs/atlas.en-us.api_streaming.meta/api_streaming/intro_stream.htm
+      - id: streaming_api_event_monitoring_objects
+        name: Real-Time Event Monitoring Objects
+        description: Using the Streaming API to access Real-Time Event Monitoring Objects
+        url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_objects_monitoring.htm

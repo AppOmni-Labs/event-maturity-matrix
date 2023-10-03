@@ -1,0 +1,34 @@
+{
+    "API_TYPE": "P",
+    "API_VERSION": "54.0",
+    "CLIENT_IP": "198.51.100.1",
+    "CLIENT_NAME": "vendor/integration_app",
+    "CPU_TIME": "48",
+    "DB_BLOCKS": "5251",
+    "DB_CPU_TIME": "20",
+    "DB_TOTAL_TIME": "46672557",
+    "ENTITY_NAME": "Customer_Account__c",
+    "EVENT_TYPE": "API",
+    "EXCEPTION_MESSAGE": "",
+    "LOGIN_KEY": "9870000000012300",
+    "METHOD_NAME": "query",
+    "ORGANIZATION_ID": "000ABC000000123",
+    "REQUEST_ID": "1230000000000000000-12",
+    "REQUEST_SIZE": "1382",
+    "REQUEST_STATUS": "",
+    "RESPONSE_SIZE": "38019",
+    "ROWS_PROCESSED": "27",
+    "RUN_TIME": "97",
+    "SESSION_KEY": "9870000000012300",
+    "TIMESTAMP": "20230320145933.958",
+    "TIMESTAMP_DERIVED": "2023-03-20T14:59:33.958Z",
+    "URI": "Api",
+    "URI_ID_DERIVED": "",
+    "USER_ID": "000000000000123",
+    "USER_ID_DERIVED": "000000000000123AbC",
+    "USER_TYPE": "Standard"
+}
+
+
+
+

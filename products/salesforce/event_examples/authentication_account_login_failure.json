@@ -1,0 +1,56 @@
+{
+    "channel": "/event/LoginEventStream",
+    "data":
+    {
+        "event":
+        {
+            "replayId": ""
+        },
+        "payload":
+        {
+            "AdditionalInfo": "{}",
+            "ApiType": "SOAP Partner",
+            "ApiVersion": "42.0",
+            "Application": "N/A",
+            "AuthServiceId": null,
+            "Browser": "Unknown",
+            "CipherSuite": "ECDHE-RSA-AES256-GCM-SHA384",
+            "City": "Carbondale",
+            "ClientVersion": "N/A",
+            "Country": "United States",
+            "CountryIso": "US",
+            "CreatedDate": "2023-03-09T15:08:06.302+0000",
+            "EvaluationTime": 0.0,
+            "EventDate": "2023-03-09T15:08:03.054+0000",
+            "EventIdentifier": "abcdefgh-1234-0000-0000-000000000001",
+            "HttpMethod": "Unknown",
+            "LoginGeoId": "120000033000123AbC",
+            "LoginHistoryId": "120000033000123AbC",
+            "LoginKey": "987abc0000012400",
+            "LoginLatitude": 38.1112,
+            "LoginLongitude": 38.1112,
+            "LoginType": "Other Apex API",
+            "LoginUrl": "login.salesforce.com",
+            "Platform": "Unknown",
+            "PolicyId": null,
+            "PolicyOutcome": null,
+            "PostalCode": "81623",
+            "RelatedEventIdentifier": null,
+            "SessionKey": null,
+            "SessionLevel": null,
+            "SourceIp": "198.51.100.2",
+            "Status": "Password Lockout",
+            "Subdivision": "Oregon",
+            "TlsProtocol": "TLS 1.2",
+            "UserId": "120000033000123AbC",
+            "UserType": "Standard",
+            "Username": "alice@example.com",
+            "attributes":
+            {
+                "type": "LoginEvent",
+                "url": "/services/data/v55.0/sobjects/LoginEvent/000000000000000AAA"
+            }
+        },
+        "schema": "AppOmni"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "action": "passwordexpiry",
+    "delegate_user": null,
+    "display": "Changed password expiry policy from 90 days to 180 days",
+    "record_id": "000000000000123AbC",
+    "section": "Password Policies",
+    "sfdc_created_by_id": "000000000000123AbC",
+    "sfdc_created_by_name": "John Doe",
+    "sfdc_created_by_username": "john@example.com",
+    "sfdc_created_date": "2023-03-15T13:11:50+00:00"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

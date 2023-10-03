@@ -1,0 +1,18 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: product
+version: "1.0.0"
+name: [SaaS Platform Name]
+logo_link: url
+description: |
+  Document a description of the SaaS platform including the types of services it provides to customers and the types of data it stores.
+collection:
+  - id: [Provide a unique ID that represents the audit log collection source]
+    name: [Provide a name for the audit log collection source]
+    description: [Describe the audit log collection source]
+    references:
+      - id: [Provide a unique ID that represents the reference source]
+        name: [Provide a name for the reference source]
+        description: [Describe the reference source]
+        url: [Provide a URL to the reference source regarding audit log collection]

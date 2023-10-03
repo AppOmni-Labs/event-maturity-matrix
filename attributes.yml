@@ -1,0 +1,295 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: attributes
+description: |
+  Attributes are associated with many event types. These attributes describe logging fields in a source platform.
+version: "1.0.0"
+meta:
+items:
+  - id: A0001
+    name: Timestamp
+    description: The timestamp of when the event first occurred.
+    type: string
+    examples:
+      - "2022-11-17T06:34:18.429Z"
+    maturity: 1
+  - id: A0002
+    name: Event ID
+    description: A unique event ID to describe the event.
+    type: string
+    examples:
+      - "312b0a2d-a7a3-4529-bd61-bf3c2e2ba11d"
+    maturity: 1
+  - id: A0003
+    name: Event Code / Type
+    description: |
+      Identification code for this event, if one exists. Some event sources use event codes to identify messages unambiguously, regardless of message language or wording adjustments over time.
+    type: string
+    examples:
+      - "8080"
+  - id: A0004
+    name: Result
+    description: Describes whether an event action succeeded or failed.
+    type: string
+    examples:
+      - "Success"
+      - "Failure"
+    maturity: 1
+  - id: A0005
+    name: Username
+    description: The username used when this event occurred.
+    type: string
+    examples:
+      - first.lastname
+      - first.lastname@company.com
+    maturity: 1
+  - id: A0006
+    name: User ID
+    description: Unique ID of the user associated with this event.
+    type: string
+    examples:
+      - "ABCDEFG123456"
+  - id: A0007
+    name: User Type / Role
+    description: The role of the user at the time of the event.
+    type: string
+    examples:
+      - "administrator"
+      - "guest"
+  - id: A0008
+    name: Session ID
+    description: Unique ID of the session.
+    type: string
+    examples:
+      - "abc123def456"
+  - id: A0009
+    name: IP Address 
+    description: The IP address of the source or destination. This is dependent on each service provider.
+    type: string
+    examples:
+      - "192.0.0.1"
+  - id: A0010
+    name: IP Geolocation / ASN
+    description: General IP geolocation information and unique number assigned to the autonomous system.
+    type: string
+    examples:
+      - "{'lon': -73.614830, 'lat': 45.505918}"
+      - "15169"
+  - id: A0011
+    name: User Agent Name
+    description: Name of the user agent.
+    type: string
+    examples:
+      - "Mozilla/5.0 (Macintosh; Intel Mac OS X)"
+  - id: A0012
+    name: Device/Client Type
+    description: The type of device or client used during the event.
+    type: string
+    examples:
+      - "Mobile"
+  - id: A0013
+    name: Failure Context
+    include:
+      - ET0001
+    description: Additional failure context may be provided by the service.
+    type: string
+    examples:
+      - "Invalid username or password"
+  - id: A0014
+    name: Credential Context
+    include:
+      - ET0001
+    description: Credential context may provide more details about the credentials used during the event.
+    type: string
+    examples:
+      - "Password"
+  - id: A0015
+    name: Identity Service Provider Context
+    include:
+      - ET0001
+    description: Identity service provider (ISP) context related to the request.
+    type: string
+    examples:
+      - "Okta Single Sign-On"
+  - id: A0016
+    name: Verification Method
+    include:
+      - ET0003
+    description: The method used for verification.
+    type: string
+    examples:
+      - "MFA Push"
+  - id: A0017
+    name: Verification Flagged
+    include:
+      - ET0003
+    description: Whether or not MFA verification was flagged
+    type: string
+    examples:
+      - "The user denied the verification request and flagged the notification as fraudulent."
+  - id: A0018
+    name: Activity Performed
+    include:
+      - ET0003
+    description: The activity or operation that required MFA verification.
+    type: string
+    examples:
+      - "Authentication"
+      - "Resource Access"
+      - "Configuration Change"
+  - id: A0019
+    name: Target Username
+    include:
+      - C0002
+    exclude:
+      - ET0008
+      - ET0009
+      - ET0010
+      - ET0011
+      - ET0014
+      - ET0015
+      - ET0016
+      - ET0017
+      - ET0018
+      - ET0019
+      - ET0020
+    description: The target username of activity within a service provider.
+    type: string
+    examples:
+      - first.lastname
+      - first.lastname@company.com
+  - id: A0020
+    name: Target Attribute Context
+    include:
+      - ET0006
+      - ET0010
+    description: Context regarding the target attribute that was changed during a user, group, or role modification.
+    type: string
+    examples:
+      - "The user's email address was changed"
+  - id: A0021
+    name: Target Group Name
+    include:
+      - ET0008
+      - ET0009
+      - ET0010
+      - ET0011
+      - ET0012
+      - ET0013
+    description: The target group name of activity within a service provider. A group signifies a collection of users.
+    type: string
+    examples:
+      - "Administrators"
+  - id: A0022
+    name: Target Role Name
+    include:
+      - ET0014
+      - ET0015
+      - ET0016
+      - ET0017
+    description: The target role name of activity within a service provider. A role signifies a collection of permissions.
+    type: string
+    examples:
+      - "Administrators"
+  - id: A0023
+    name: Permission Name
+    include:
+      - ET0018
+      - ET0019
+      - ET0020
+    description: The name of a permission specified within an event.
+    type: string
+    examples:
+      - "Read"
+      - "Write"
+  - id: A0024
+    name: Target Resource Name
+    include:
+      - ET0018
+      - ET0019
+      - ET0020
+    description: The target resource of an action or operation within a service provider.
+    type: string
+    examples:
+      - "Report Name"
+      - "API Name"
+  - id: A0025
+    name: Enrollment Type
+    include:
+      - ET0021
+      - ET0023
+    description: The enrollment type of MFA authentication within a service provider.
+    type: string
+    examples:
+      - "Authenticator App"
+      - "Time-based One-time Password (TOTP)"
+  - id: A0026
+    name: Configuration / Setting Name
+    include:
+      - ET0022
+      - ET0023
+      - ET0024
+      - ET0025
+    description: The name of a service setting or configuration option.
+    type: string
+    examples:
+      - "Password Policy"
+      - "MFA Policy"
+  - id: A0027
+    name: Configuration / Setting Value
+    include:
+      - ET0022
+      - ET0024
+      - ET0025
+      - ET0028
+    description: The value of the setting or configuration that was changed.
+    type: string
+    examples:
+      - "Password expiration policy was changed to 90 days"
+  - id: A0028
+    name: Previous Configuration / Setting Value
+    include:
+      - ET0024
+      - ET0028
+    description: The previous value of the setting or configuration that was changed.
+    type: string
+    examples:
+      - "Password expiration policy was changed from 90 days to 60 days"
+  - id: A0029
+    name: Integration / App Name
+    include:
+      - ET0026
+      - ET0027
+      - ET0028
+      - ET0029
+    description: The name of an integration or OAuth application.
+    type: string
+    examples:
+      - "Slack"
+  - id: A0030
+    name: Resource Name
+    include:
+      - C0004
+    description: The name of a resource within a service provider.
+    type: string
+    examples:
+      - "Report Name"
+      - "API Name"
+  - id: A0031
+    name: Resource Type
+    include:
+      - C0004
+    description: The type of resource within a service provider.
+    type: string
+    examples:
+      - "Report"
+      - "API"
+  - id: A0032
+    name: Resource Metadata
+    include:
+      - ET0034
+    description: Metadata about the resource that was created, modified, or deleted.
+    type: string
+    examples:
+      - "The report was 1,000 rows and 25Mb in size"

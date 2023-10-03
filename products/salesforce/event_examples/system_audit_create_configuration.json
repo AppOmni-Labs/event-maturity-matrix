@@ -1,0 +1,37 @@
+{
+    "action": "tenantSecretCreated",
+    "delegate_user": null,
+    "display": "Generated tenant secret: Key version 1",
+    "record_id": "000000000000123AbC",
+    "section": "Platform Encryption",
+    "sfdc_created_by_id": "000000000000123AbC",
+    "sfdc_created_by_name": "John Doe",
+    "sfdc_created_by_username": "john@example.com",
+    "sfdc_created_date": "2023-03-15T07:14:10+00:00"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

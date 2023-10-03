@@ -1,0 +1,64 @@
+{
+    "action": "user_profile_updated",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "jane@example.com",
+            "id": "U7A1SSBCD",
+            "name": "Jane Miller",
+            "team": "T00111AA2"
+        }
+    },
+    "context":
+    {
+        "app":
+        {
+            "creator": "U1A2ABCDE",
+            "id": "A1A4ABCDE5",
+            "name": "Okta",
+            "scopes":
+            [],
+            "scopes_bot":
+            [],
+            "team": "T00111AA2"
+        },
+        "ip_address": "198.51.100.5",
+        "location":
+        {
+            "domain": "acme",
+            "id": "T00111AA2",
+            "name": "Acme",
+            "type": "workspace"
+        },
+        "session_id": 5750000001234,
+        "ua": "OKTA Slack Integration"
+    },
+    "date_create": 1692023286,
+    "details":
+    {
+        "new_profile":
+        {
+            "first_name": "Janet",
+            "real_name": "Janet Miller"
+        },
+        "previous_profile":
+        {
+            "first_name": "Jane",
+            "real_name": "Jane Miller"
+        }
+    },
+    "entity":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "jane@example.com",
+            "id": "U7A1SSBCD",
+            "name": "Jane Miller",
+            "team": "T00111AA2"
+        }
+    },
+    "id": "18ab534a-0000-4100-a123-aa12bb32ff35"
+}

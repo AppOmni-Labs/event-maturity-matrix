@@ -1,0 +1,44 @@
+{
+    "action": "role_assigned",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "Mallory@example.com",
+            "id": "A012ABCDEFG",
+            "name": "Mallory Jones",
+            "team": "A01111TD4"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.5",
+        "location":
+        {
+            "domain": "acme",
+            "id": "A01111TD4",
+            "name": "Acme",
+            "type": "enterprise"
+        },
+        "session_id": 5000189189123,
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+    },
+    "date_create": 1691650836,
+    "details":
+    {
+        "target_entity": "A01111TD4", 
+        "target_user": "A01B56012"
+    },
+    "entity":
+    {
+        "role":
+        {
+            "id": "Rl0E",
+            "name": "Message Activity Manager",
+            "type": "0"
+        },
+        "type": "role"
+    },
+    "id": "00dba123-63a1-4564-bb11-000dd2140ae0"
+}

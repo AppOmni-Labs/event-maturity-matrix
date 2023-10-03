@@ -1,0 +1,16 @@
+{
+  "@timestamp": 1685981286101,
+  "_document_id": "mdvjC2kuRvXW_3Gkg7ni7Q",
+  "action": "org.sso_response",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_location": {
+    "country_code": "US"
+  },
+  "created_at": 1685981286101,
+  "issuer": "https://accounts.google.com/o/saml2?idpid=C02abcd01",
+  "operation_type": "authentication",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/198.51.100.1 Safari/537.36"
+}

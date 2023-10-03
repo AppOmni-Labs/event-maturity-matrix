@@ -1,0 +1,106 @@
+{
+    "action": "app_scopes_expanded",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "mallory@example.com",
+            "id": "U05ABC123EF",
+            "name": "Mallory Jones",
+            "team": "T01234AB5"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.3",
+        "location":
+        {
+            "domain": "acme",
+            "id": "T01234AB5",
+            "name": "Acme",
+            "type": "enterprise"
+        },
+        "session_id": 5123453809333,
+        "ua": "@slack:web-api/6.8.1 node/18.16.1 linux/5.10.162+"
+    },
+    "date_create": 1692192765,
+    "details":
+    {
+        "granular_bot_token": true,
+        "is_internal_integration": false,
+        "is_token_rotation_enabled_app": false,
+        "new_scopes":
+        [
+            "app_mentions:read",
+            "channels:read",
+            "chat:write",
+            "chat:write.public",
+            "commands",
+            "files:read",
+            "files:write",
+            "groups:read",
+            "im:read",
+            "im:write",
+            "links:read",
+            "links:write",
+            "mpim:read",
+            "remote_files:read",
+            "remote_files:share",
+            "remote_files:write",
+            "team:read",
+            "users:read",
+            "users:read.email"
+        ],
+        "previous_scopes":
+        [
+            "app_mentions:read",
+            "channels:read",
+            "chat:write.public",
+            "commands",
+            "files:read",
+            "files:write",
+            "groups:read",
+            "im:read",
+            "im:write",
+            "links:read",
+            "remote_files:read",
+            "remote_files:share"
+        ]
+    },
+    "entity":
+    {
+        "app":
+        {
+            "id": "A01234567AB",
+            "is_directory_approved": true,
+            "is_distributed": true,
+            "is_workflow_app": false,
+            "name": "Sample App",
+            "scopes":
+            [
+                "app_mentions:read",
+                "channels:read",
+                "chat:write",
+                "chat:write.public",
+                "commands",
+                "files:read",
+                "files:write",
+                "groups:read",
+                "im:read",
+                "im:write",
+                "links:read",
+                "links:write",
+                "mpim:read",
+                "remote_files:read",
+                "remote_files:share",
+                "remote_files:write",
+                "team:read",
+                "users:read",
+                "users:read.email"
+            ]
+        },
+        "type": "app"
+    },
+    "id": "51d1abc1-0000-Ae1B-c2d3-65b5b0000a12"
+}

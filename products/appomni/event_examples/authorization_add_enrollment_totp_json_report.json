@@ -1,0 +1,11 @@
+{
+    "identifier": "7ed13faf-9e3c-4905-839d-ff44309c2f72",
+    "action_at": "2023-06-14T22:00:24+0000",
+    "action": "User MFA Enabled",
+    "username": "pmcandrew_test10",
+    "service_type": "None",
+    "service_id": null,
+    "extra": "detail_str: TOTP, target_user_id: 12893, target_user_username: pmcandrew_test10",
+    "user_ip": "198.51.100.3",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+}

@@ -1,0 +1,25 @@
+{
+    "action": "deletedLoginIpRange_withProfile",
+    "delegate_user": null,
+    "display": "Deleted Login Ip Range to Read-Only HR User from 198.51.100.1 to 198.51.100.2",
+    "record_id": "000000000000123AbC",
+    "section": null,
+    "sfdc_created_by_id": "000000000000123AbC",
+    "sfdc_created_by_name": "John Doe",
+    "sfdc_created_by_username": "john@example.com",
+    "sfdc_created_date": "2023-03-15T09:50:12+00:00"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+{
+  "@timestamp": 1686096308885,
+  "_document_id": "SwDxpQo4Gs5NMybfaD9mig",
+  "action": "team.add_member",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_ip": "198.51.100.1",
+  "actor_location": {
+    "country_code": "US"
+  },
+  "business": "acme",
+  "business_id": 1122,
+  "created_at": 1686096308885,
+  "hashed_token": "mZp8g+OGBjSnsxiRSjcYhBTpoXi5BfdF2q8F1+kPW4M=",
+  "operation_type": "create",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "programmatic_access_type": "Personal access token (classic)",
+  "team": "acme-inc/approvers",
+  "token_id": 720527199,
+  "token_scopes": "admin:enterprise,admin:gpg_key,admin:org,admin:org_hook,admin:public_key,admin:repo_hook,delete:packages,delete_repo,gist,notifications,project,repo,user,workflow,write:discussion,write:packages",
+  "user": "alice.brown",
+  "user_agent": "python-requests/2.25.1",
+  "user_id": 87766365
+}

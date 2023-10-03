@@ -1,0 +1,11 @@
+{
+    "identifier": "27a26249-fe8b-4689-bca4-c7f646d274d8",
+    "action_at": "2023-06-22T19:53:09+0000",
+    "action": "Monitored Service Removed",
+    "username": "bob@example.com",
+    "service_type": "box",
+    "service_id": 32506,
+    "extra": "",
+    "user_ip": null,
+    "user_agent": null
+}

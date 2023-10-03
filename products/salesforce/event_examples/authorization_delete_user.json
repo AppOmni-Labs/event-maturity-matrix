@@ -1,0 +1,11 @@
+{
+    "action": "deactivateduser",
+    "delegate_user": null,
+    "display": "Deactivated user Jame Example (UserID: [000c00000123ab])",
+    "record_id": "000000000000123AbC",
+    "section": "Manage Users",
+    "sfdc_created_by_id": "000000000000123AbC",
+    "sfdc_created_by_name": "John Doe",
+    "sfdc_created_by_username": "john@example.com",
+    "sfdc_created_date": "2023-03-09T17:50:17+00:00"
+}

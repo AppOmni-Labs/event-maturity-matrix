@@ -1,0 +1,65 @@
+{
+    "channel": "/event/ListViewEventStream",
+    "data":
+    {
+        "event":
+        {
+            "replayId": ""
+        },
+        "payload":
+        {
+            "AppName": null,
+            "ColumnHeaders": "Name,Sales_Strategy_Name__c,Customer__c.Name,Sales___c,Status__c",
+            "CreatedDate": "2023-03-20T16:26:00.349+0000",
+            "DeveloperName": "All_Sales_Strategy_Plans",
+            "EvaluationTime": 0.0,
+            "EventDate": "2023-03-20T16:25:52.850+0000",
+            "EventIdentifier": "abcdefgh-1234-0000-0000-000000000001",
+            "EventSource": "Classic",
+            "ExecutionIdentifier": "abcdefgh-1234-5678-0000-000000000001",
+            "FilterCriteria": "{\"whereCondition\":{\"type\":\"soqlCondition\",\"field\":\"RecordTypeId\",\"operator\":\"equals\",\"values\":[\"'0128000000000000\"]}}",
+            "ListViewId": "00B440000000000000",
+            "LoginHistoryId": "000123000abc0004",
+            "LoginKey": "9870000000012300",
+            "Name": "All Sales Call Plans",
+            "NumberOfColumns": 7,
+            "OrderBy": "[CreatedBy.Name ASC NULLS FIRST, Id ASC NULLS FIRST]",
+            "OwnerId": "000000000000000MAC",
+            "PolicyId": null,
+            "PolicyOutcome": null,
+            "QueriedEntities": "Customer_Account__c",
+            "Records": "{\"totalSize\":1000,\"done\":false,\"records\":[{\"attributes\":{\"type\":\"Account\"},\"Id\":\"0000G000000000123\",\"Name\":\"Sample Account 1\"},{\"attributes\":{\"type\":\"Account\"},\"Id\":\"0000G000000000124\",\"Name\":\"Sample Account 2\"}]}",
+            "RelatedEventIdentifier": null,
+            "RowsProcessed": 1000.0,
+            "Scope": "everything",
+            "Sequence": 4,
+            "SessionKey": "9870000000012300",
+            "SessionLevel": "HIGH_ASSURANCE",
+            "SourceIp": "198.51.100.1",
+            "UserId": "000000000000123AbC",
+            "Username": "john@example.com",
+            "attributes":
+            {
+                "type": "ListViewEvent",
+                "url": "/services/data/v55.0/sobjects/ListViewEvent/000000000000000AAA"
+            }
+        },
+        "schema": "AppOmni"
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

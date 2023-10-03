@@ -1,0 +1,552 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: Okta
+  collection_sources:
+    - system_log_api
+name: System Log API
+description: The Okta System Log API provides near real-time, read-only access to an organization's system log.
+references:
+  - id: system_log_api_documentation
+    name: System Log API Event Schema and Documentation
+    url: https://developer.okta.com/docs/reference/api/system-log/
+  - id: system_log_api_event_types
+    name: System Log API Event Types
+    url: https://developer.okta.com/docs/reference/api/event-types/
+retention:
+  duration: System Log events are retained in Okta for a period of 90 days.
+  comments: https://support.okta.com/help/s/article/Customer-Data-Retention-Policy?language=en_US
+latency:
+  duration: Near real-time
+  comments: N/A
+licensing:
+  comments: A paid Okta license is required to access the System Log API.
+mappings:
+  - category: C0001
+    event_type: ET0001
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0005: target.alternateId
+      A0006: target.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0013: outcome.reason
+      A0014: authenticationContext.credentialType
+      A0015: authenticationContext.authenticationProvider
+    examples:
+      - type: success
+        location: "./event_examples/authentication_account_login_session_success.json"
+      - type: failure
+        location: "./event_examples/authentication_account_login_session_failure.json"
+  - category: C0001
+    event_type: ET0002
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+    examples:
+      - type: success
+        location: "./event_examples/authentication_account_logout.json"
+  - category: C0001
+    event_type: ET0003
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0016: debugContext.debugData.factor
+      A0017: debugContext.debugData
+    examples:
+      - type: success
+        location: "./event_examples/authentication_mfa_verification.json"
+      - type: flagged
+        location: "./event_examples/authentication_mfa_verification_flagged.json"
+  - category: C0002
+    event_type: ET0004
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0019: target.alternativeId
+    examples:
+      - type: success
+        location: "./event_examples/authorization_create_user.json"
+  - category: C0002
+    event_type: ET0006
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0019: target.alternativeId
+      A0020: debugContext.debugData.changedAttributes
+    examples:
+      - type: success
+        location: "./event_examples/authorization_update_user.json"
+  - category: C0002
+    event_type: ET0007
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0019: target.alternativeId
+    examples:
+      - type: success
+        location: "./event_examples/authorization_delete_user.json"
+  - category: C0002
+    event_type: ET0008
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0021: target.displayName
+    examples:
+      - type: success
+        location: "./event_examples/authorization_create_group.json"
+  - category: C0002
+    event_type: ET0010
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0021: target.displayName
+      A0020: target.displayName
+    examples:
+      - type: success
+        location: "./event_examples/authorization_update_group.json"
+  - category: C0002
+    event_type: ET0011
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0021: target.displayName
+    examples:
+      - type: success
+        location: "./event_examples/authorization_delete_group.json"
+  - category: C0002
+    event_type: ET0012
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0021: target.displayName
+      A0019: target.displayName
+    examples:
+      - type: success
+        location: "./event_examples/authorization_add_to_group.json"
+  - category: C0002
+    event_type: ET0013
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0021: target.displayName
+      A0019: target.displayName
+    examples:
+      - type: success
+        location: "./event_examples/authorization_remove_from_group.json"
+  - category: C0002
+    event_type: ET0014
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0022: target.displayName
+    examples:
+      - type: success
+        location: "./event_examples/authorization_create_role.json"
+  - category: C0002
+    event_type: ET0016
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0022: target.displayName
+      A0020: target.displayName
+    examples:
+      - type: success
+        location: "./event_examples/authorization_update_role.json"
+  - category: C0002
+    event_type: ET0017
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0022: target.displayName
+    examples:
+      - type: success
+        location: "./event_examples/authorization_delete_role.json"
+  - category: C0002
+    event_type: ET0018
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0023: debugContext.debugData.privilegeGranted
+      A0024: target.alternateId
+    examples:
+      - type: success
+        location: "./event_examples/authorization_add_permission.json"
+  - category: C0002
+    event_type: ET0019
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0023: debugContext.debugData.privilegeGranted
+      A0024: target.alternateId
+    examples:
+      - type: success
+        location: "./event_examples/authorization_remove_permission.json"
+  - category: C0002
+    event_type: ET0020
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0025: outcome.reason
+      A0019: target.alternativeId
+    examples:
+      - type: success
+        location: "./event_examples/authorization_add_enrollment.json"
+  - category: C0002
+    event_type: ET0021
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0025: outcome.reason
+      A0019: target.alternativeId
+    examples:
+      - type: success
+        location: "./event_examples/authorization_remove_enrollment.json"
+  - category: C0003
+    event_type: ET0022
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0026: target.displayName
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_create_security_configuration_idp.json"
+  - category: C0003
+    event_type: ET0024
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0026: target.displayName
+      A0027: debugData.debugData.zoneData
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_update_security_configuration_zone.json"
+  - category: C0003
+    event_type: ET0025
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0026: target.displayName
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_delete_security_configuration_behavior.json"
+  - category: C0003
+    event_type: ET0026
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0029: target.displayName
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_create_integration.json"
+  - category: C0003
+    event_type: ET0028
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0029: target.displayName
+      A0026: debugContext.debugData.newSignonModeType
+      A0028: debugContext.debugData.oldSignonModeType
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_update_integration.json"
+  - category: C0003
+    event_type: ET0029
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0029: target.displayName
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_delete_integration.json"
+  - category: C0004
+    event_type: ET0030
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0030: target.displayName
+      A0031: target.type
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_create_resource.json"
+  - category: C0004
+    event_type: ET0032
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0030: target.displayName
+      A0031: target.type
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_update_resource.json"
+  - category: C0004
+    event_type: ET0033
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0030: target.displayName
+      A0031: target.type
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_delete_resource.json"
+  - category: C0004
+    event_type: ET0034
+    attributes:
+      A0001: published
+      A0002: uuid
+      A0003: eventType
+      A0004: outcome.result
+      A0005: actor.alternateId
+      A0006: actor.id
+      A0008: authenticationContext.externalSessionId
+      A0009: client.ipAddress
+      A0010: client.geographicalContext
+      A0011: client.userAgent
+      A0012: client.device
+      A0030: target.displayName
+      A0031: target.type
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_download_resource.json"

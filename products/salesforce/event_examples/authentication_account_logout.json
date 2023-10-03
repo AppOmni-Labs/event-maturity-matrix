@@ -1,0 +1,28 @@
+{
+    "channel": "/event/LogoutEventStream",
+    "data":
+    {
+        "event":
+        {
+            "replayId": ""
+        },
+        "payload":
+        {
+            "CreatedDate": "2023-03-01T19:33:54.885+0000",
+            "EventDate": "2023-03-01T19:33:50.037+0000",
+            "EventIdentifier": "abcdefgh-1234-0000-0000-000000000001",
+            "LoginKey": "9870000000012300",
+            "SessionKey": "9870000000012300",
+            "SessionLevel": "HIGH_ASSURANCE",
+            "SourceIp": "198.51.100.1",
+            "UserId": "000000000000123AbC",
+            "Username": "john@example.com",
+            "attributes":
+            {
+                "type": "LogoutEvent",
+                "url": "/services/data/v55.0/sobjects/LogoutEvent/000000000000000AAA"
+            }
+        },
+        "schema": "AppOmni"
+    }
+}

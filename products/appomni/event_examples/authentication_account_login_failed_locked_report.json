@@ -1,0 +1,11 @@
+{
+    "identifier": "f224b33b-70bf-4147-b440-4c3785e85b40",
+    "action_at": "2023-06-22T21:22:50+0000",
+    "action": "User Locked",
+    "username": "bob@example.com",
+    "service_type": "None",
+    "service_id": null,
+    "extra": "target_user_id: 13148, target_user_username: pmcandrew_test11",
+    "user_ip": null,
+    "user_agent": null
+}

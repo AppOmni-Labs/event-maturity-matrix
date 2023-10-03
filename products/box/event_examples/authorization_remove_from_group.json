@@ -1,0 +1,28 @@
+{
+    "action_by": null,
+    "additional_details":
+    {
+        "group_id": "9744086129",
+        "group_name": "a_sample_group"
+    },
+    "created_at": "2023-05-09T10:45:45-07:00",
+    "created_by":
+    {
+        "id": "18863648385",
+        "login": "mallory@example.com",
+        "name": "Mallory Jones",
+        "type": "user"
+    },
+    "event_id": "56ae6ebb-7d6c-418e-bdeb-98d067c52af2",
+    "event_type": "GROUP_REMOVE_USER",
+    "ip_address": "198.51.100.4",
+    "session_id": null,
+    "source":
+    {
+        "id": "18863890488",
+        "login": "jane@example.com",
+        "name": "Jane Miller",
+        "type": "user"
+    },
+    "type": "event"
+}

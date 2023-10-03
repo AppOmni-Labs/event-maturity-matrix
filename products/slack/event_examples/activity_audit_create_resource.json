@@ -1,0 +1,41 @@
+{
+    "action": "file_uploaded",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "alice@example.com",
+            "id": "U01ABA99AB1",
+            "name": "Alice Brown",
+            "team": "ATBSDEF001"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.1",
+        "location":
+        {
+            "domain": "acme",
+            "id": "ATBSDEF001",
+            "name": "Acme",
+            "type": "enterprise"
+        },
+        "session_id": 5700000123450,
+        "ua": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+    },
+    "date_create": 1692201912,
+    "details": null,
+    "entity":
+    {
+        "file":
+        {
+            "filetype": "",
+            "id": "F01N2AAB3CD",
+            "name": "image.png",
+            "title": "image.png"
+        },
+        "type": "file"
+    },
+    "id": "0ab1d7aa-00dc-0ef0-a0b1-0011a55ff12e"
+}

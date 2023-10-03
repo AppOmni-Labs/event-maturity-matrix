@@ -1,0 +1,23 @@
+{
+  "@timestamp": 1685999458723,
+  "_document_id": "7IscVOcqIFzcj5OSXLDtig",
+  "action": "org.remove_member",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_ip": "198.51.100.1",
+  "actor_location": {
+    "country_code": "US"
+  },
+  "business": "acme",
+  "business_id": 1122,
+  "created_at": 1685999458723,
+  "hashed_token": "zQVfYwWXODOOEd4WcNdcJCBfPDJBrFXRGvmX25Q7ZjU=",
+  "operation_type": "remove",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "programmatic_access_type": "GitHub App server-to-server token",
+  "token_id": 47105702648,
+  "user": "alice.brown",
+  "user_agent": "PyGithub/Python",
+  "user_id": 01234567
+}

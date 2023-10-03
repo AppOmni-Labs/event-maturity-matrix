@@ -1,0 +1,110 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+$id: https://json-schema.org/draft/2020-12/schema
+title: Event Maturity Matrix - Product
+description: |
+  A schema that defines the structure of a product in the event-maturity-matrix.
+  Product data files are specific defintions which is used or referenced by event_sources, as well as describe the product.
+properties:
+  entity_name:
+    description: The entity type.
+    type: string
+    enum: ["product"]
+  version:
+    description: A semantic version of the defined document.
+    type: string
+  logo_link:
+    description: A link to a logo for the product.
+    type: string
+  name:
+    description: The name of the event product.
+    type: string
+  description:
+    description: The description for the product.
+    type: string
+  comments:
+    description: A generic field which can contain comments and or notes.
+    type: string
+  tags:
+    description: One or more tags for this product.
+    type: array
+    items:
+      type: string
+    uniqueItems: true
+  collection:
+    description: One or more collection methods and their difficulty.
+    type: array
+    items:
+      $ref: "#/$defs/collection"
+    uniqueItems: true
+  meta:
+    description: An object that contains meta information about the definiton.
+    type: ["null", "object"]
+  event_sources:
+    description: References one or more example files (relative path expected) containing a JSON response from the defined service.
+    type: ["array", "null"] # This means it is NOT required.
+    items:
+      type: string
+    uniqueItems: true
+additionalProperties: false
+required:
+  - entity_name
+  - name
+  - description
+  - version
+  - collection
+$defs:
+  reference:
+    type: object
+    required:
+      - id
+      - name
+      - url
+    properties:
+      id:
+        description: A unique ID for a given reference.
+        type: string
+      name:
+        description: The name of the reference.
+        type: string
+      description:
+        description: Description for the reference.
+        type: string
+      url:
+        description: A URL to the reference.
+        type: string
+      type:
+        description: The type of the reference.
+        type: string
+      comments:
+        description: Comments about the reference.
+        type: string
+  collection:
+    type: object
+    required:
+      - id
+      - name
+      - references
+    properties:
+      id:
+        description: A unique ID for a collection definiton. This ID will be referenced from event_sources.
+        type: string
+      name:
+        description: The name of a product collection source.
+        type: string
+      method:
+        description: A collection method name.
+        type: string
+      difficulty:
+        description: A collection methods difficulty.
+        type: string
+      comments:
+        description: General comments or notes about the collection source.
+        type: string
+      references:
+        description: One or references regarding this collection source.
+        type: array
+        items:
+          $ref: "#/$defs/reference"
+        uniqueItems: true

@@ -1,0 +1,11 @@
+{
+    "identifier": "76812b0e-d9b0-4730-b5a1-5d4169743e2e",
+    "action_at": "2023-06-23T20:11:06+0000",
+    "action": "User MFA - TOTP Challenge",
+    "username": "pmcandrew_test10",
+    "service_type": "None",
+    "service_id": null,
+    "extra": "target_user_id: 12893, target_user_username: pmcandrew_test10",
+    "user_ip": "198.51.100.3",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+}

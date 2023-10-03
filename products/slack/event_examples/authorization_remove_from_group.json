@@ -1,0 +1,53 @@
+{
+    "action": "user_removed_from_usergroup",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "jane@example.com",
+            "id": "U01AB2C34EA",
+            "name": "Jane Miller",
+            "team": "A01111TD4"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.2",
+        "location":
+        {
+            "domain": "acme",
+            "id": "A01111TD4",
+            "name": "Acme",
+            "type": "workspace"
+        },
+        "session_id": 1231123412345,
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+    },
+    "date_create": 1692042606,
+    "details":
+    {
+        "kicker":
+        {
+            "type": "user",
+            "user":
+            {
+                "email": "bob@example.com",
+                "id": "U0AA1BBC2AB",
+                "name": "Bob Smith",
+                "team": "A01111TD4"
+            }
+        },
+        "type": "KICKED"
+    },
+    "entity":
+    {
+        "type": "usergroup",
+        "usergroup":
+        {
+            "id": "S01ABABCDA3",
+            "name": "Developers"
+        }
+    },
+    "id": "fde9d000-a1b2-3cc4-0000-aed1e3123f10"
+}

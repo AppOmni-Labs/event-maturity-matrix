@@ -1,0 +1,63 @@
+{
+    "channel": "/event/ReportEventStream",
+    "data":
+    {
+        "event":
+        {
+            "replayId": ""
+        },
+        "payload":
+        {
+            "ColumnHeaders": "[CASE_NUMBER, CREATED_DATE, LAST_UPDATE, Case.BusinessUnit__c, Case.ProductMarket__c, Case.Market__c, OWNER, LAST_UPDATE_BY, STATUS, SUBJECT, Case.Brand__c, Case.Code__c]",
+            "CreatedDate": "2023-03-22T13:18:56.686+0000",
+            "DashboardId": null,
+            "DashboardName": null,
+            "Description": null,
+            "EvaluationTime": 0.0,
+            "EventDate": "2023-03-22T13:18:46.826+0000",
+            "EventIdentifier": "abcdefgh-1234-0000-0000-000000000001",
+            "EventSource": "Lightning",
+            "ExecutionIdentifier": "8f831c68-3d87-4518-bb5b-c0550a2284d7",
+            "ExportFileFormat": null,
+            "Format": "Tabular",
+            "IsScheduled": false,
+            "LoginHistoryId": "000123000abc0004",
+            "LoginKey": "9870000000012300",
+            "Name": "Identify cases assigned to inactive user",
+            "NumberOfColumns": 12,
+            "Operation": "ReportExported",
+            "OwnerId": "0054J000004rPTUQA2",
+            "PolicyId": null,
+            "PolicyOutcome": null,
+            "QueriedEntities": "Customer_Account__c",
+            "Records": "{\"totalSize\":1000,\"done\":false,\"records\":[{\"attributes\":{\"type\":\"Account\"},\"Id\":\"0000G000000000123\",\"Name\":\"Sample Account 1\"},{\"attributes\":{\"type\":\"Account\"},\"Id\":\"0000G000000000124\",\"Name\":\"Sample Account 2\"}]}",
+            "RelatedEventIdentifier": null,
+            "ReportId": "987000000abc0004A",
+            "RowsProcessed": 20680.0,
+            "Scope": "organization",
+            "Sequence": 51,
+            "SessionKey": "9870000000012300",
+            "SessionLevel": "STANDARD",
+            "SourceIp": "198.51.100.1",
+            "UserId": "000000000000123AbC",
+            "Username": "john@example.com",
+            "attributes":
+            {
+                "type": "ReportEvent",
+                "url": "/services/data/v55.0/sobjects/ReportEvent/000000000000000AAA"
+            }
+        },
+        "schema": "AppOmni"
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

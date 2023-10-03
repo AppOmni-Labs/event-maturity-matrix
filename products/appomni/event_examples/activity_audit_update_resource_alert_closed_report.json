@@ -1,0 +1,11 @@
+{
+    "identifier": "ec74534a-c7bb-4d78-b628-42f707181489",
+    "action_at": "2023-06-22T21:34:21+0000",
+    "action": "Threat Detection Alert Set to Closed",
+    "username": "john@example.com",
+    "service_type": "None",
+    "service_id": null,
+    "extra": "detection_alert_id: b175da54-ef48-5416-a4cd-018e57618a4b",
+    "user_ip": null,
+    "user_agent": null
+}

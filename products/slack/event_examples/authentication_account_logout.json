@@ -1,0 +1,41 @@
+{
+    "action": "user_logout",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "bob@example.com",
+            "id": "U0123456ABC",
+            "name": "Bob Smith",
+            "team": "01CDEFGHI"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.3",
+        "location":
+        {
+            "domain": "acme",
+            "id": "ETFABCDEF",
+            "name": "Acme",
+            "type": "workspace"
+        },
+        "session_id": null,
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+    },
+    "date_create": 1692033072,
+    "details": null,
+    "entity":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "bob@example.com",
+            "id": "U0123456ABC",
+            "name": "Bob Smith",
+            "team": "01CDEFGHI"
+        }
+    },
+    "id": "44a8993d-0000-abcd-1e2f-9e7accba9876"
+}

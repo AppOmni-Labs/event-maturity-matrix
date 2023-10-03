@@ -1,0 +1,11 @@
+{
+    "identifier": "7020a41b-0c95-4929-a846-17a751e9a48d",
+    "action_at": "2023-06-22T20:21:13+0000",
+    "action": "Threat Detection Rule Disabled",
+    "username": "jane@example.com",
+    "service_type": "None",
+    "service_id": null,
+    "extra": "detection_rule_id: 62a684c4-9946-422d-b40a-ee06ba0df53a, detection_rule_name: EMM Test Rule",
+    "user_ip": null,
+    "user_agent": null
+}

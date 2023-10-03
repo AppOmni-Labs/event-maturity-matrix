@@ -1,0 +1,14 @@
+{
+    "action": "changedemail",
+    "delegate_user": null,
+    "display": "Changed email for user Sally Example (UserID: [00500000000000A]) from john@example.com to alice@example.com",
+    "record_id": "000000000000123AbC",
+    "section": "Manage Users",
+    "sfdc_created_by_id": "000000000000123AbC",
+    "sfdc_created_by_name": "John Doe",
+    "sfdc_created_by_username": "bob@example.com",
+    "sfdc_created_date": "2023-03-09T17:41:59+00:00"
+}
+
+
+

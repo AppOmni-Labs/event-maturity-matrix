@@ -1,0 +1,39 @@
+{
+  "@timestamp": 1686078595170,
+  "_document_id": "sMyjmd8KUm6uTtRwQJ1hsw",
+  "action": "hook.create",
+  "active": true,
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_ip": "198.51.100.1",
+  "actor_location": {
+    "country_code": "US"
+  },
+  "business": "acme",
+  "business_id": 1122,
+  "config": {
+    "content_type": "json",
+    "insecure_ssl": "0",
+    "secret": "********",
+    "url": "https://us-west-2.webhooks.aws/trigger"
+  },
+  "created_at": 1686078595170,
+  "events": [
+    "push"
+  ],
+  "hashed_token": "DfeiN4v7CaRl56/VnmeKJ3+U9G9A1/zW9IFvFB3r268=",
+  "hook_id": 418227875,
+  "name": "webhook",
+  "oauth_application": null,
+  "oauth_application_id": null,
+  "operation_type": "create",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "programmatic_access_type": "Personal access token (classic)",
+  "public_repo": false,
+  "repo": "acme-inc/example-repo",
+  "repo_id": 100056789,
+  "token_id": 610414153,
+  "token_scopes": "admin:repo_hook,repo",
+  "user_agent": "AWS CodePipeline"
+}

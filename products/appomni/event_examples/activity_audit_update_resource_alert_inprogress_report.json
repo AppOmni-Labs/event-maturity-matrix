@@ -1,0 +1,11 @@
+{
+    "identifier": "4681667a-5099-42e3-9dbe-6958ba333659",
+    "action_at": "2023-06-22T21:34:10+0000",
+    "action": "Threat Detection Alert Set to In-Progress",
+    "username": "alice@example.com",
+    "service_type": "None",
+    "service_id": null,
+    "extra": "detection_alert_id: b175da54-ef48-5416-a4cd-018e57618a4b",
+    "user_ip": null,
+    "user_agent": null
+}

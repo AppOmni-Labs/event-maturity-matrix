@@ -1,0 +1,277 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: GitHub
+  collection_sources:
+    - audit_events
+name: Audit Logs
+description: GitHub enterprise audit logs that provide an audit trail of user and system activity.
+references:
+  - id: enterprise_event_schema
+    name: Enterprise Event Schema
+    url: https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/exporting-audit-log-activity-for-your-enterprise
+retention:
+  duration: Infinite
+  comments: Can be changed by an enterprise admin
+latency:
+  duration: Near Real-Time
+  comments: N/A
+licensing:
+  comments: Included with GitHub Enterprise accounts.
+mappings:
+  - category: C0001
+    event_type: ET0001
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0014: action
+      A0015: issuer
+    examples:
+      - type: success
+        location: "./event_examples/audit/authentication_account_login.json"
+  - category: C0002
+    event_type: ET0008
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0021: [org, team]
+    examples:
+      - type: success
+        location: "./event_examples/audit/authorization_create_group_team.json"
+  - category: C0002
+    event_type: ET0010
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0021: [org, team]
+    examples:
+      - type: success
+        location: "./event_examples/audit/authorization_update_group_team.json"
+  - category: C0002
+    event_type: ET0012
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0019: user
+      A0021: [org, team, repo]
+    examples:
+      - type: success
+        location: "./event_examples/audit/authorization_add_to_group_org.json"
+      - type: success
+        location: "./event_examples/audit/authorization_add_to_group_repo.json"
+      - type: success
+        location: "./event_examples/audit/authorization_add_to_group_team.json"
+  - category: C0002
+    event_type: ET0013
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0019: user
+      A0021: [org, team, repo]
+    examples:
+      - type: success
+        location: "./event_examples/audit/authorization_remove_from_group_org.json"
+      - type: success
+        location: "./event_examples/audit/authorization_remove_from_group_repo.json"
+      - type: success
+        location: "./event_examples/audit/authorization_remove_from_group_team.json"
+  - category: C0002
+    event_type: ET0018
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0023: new_repo_permission
+      A0024: [org, team, repo]
+    examples:
+      - type: success
+        location: "./event_examples/audit/authorization_add_permission_team.json"
+  - category: C0002
+    event_type: ET0019
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0023: old_repo_permission
+      A0024: [org, team, repo]
+    examples:
+      - type: success
+        location: "./event_examples/audit/authorization_remove_permission_team.json"
+  - category: C0003
+    event_type: ET0022
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0026: action
+      A0027: action
+    examples:
+      - type: success
+        location: "./event_examples/audit/system_audit_create_security_configuration_forking.json"
+  - category: C0003
+    event_type: ET0024
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0026: name
+      A0027: config
+      A0028: config_was
+    examples:
+      - type: success
+        location: "./event_examples/audit/system_audit_update_security_configuration_hook_config.json"
+      - type: success
+        location: "./event_examples/audit/system_audit_update_security_configuration_merge_setting.json"
+  - category: C0003
+    event_type: ET0026
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0029: integration
+    examples:
+      - type: success
+        location: "./event_examples/audit/system_audit_create_integration.json"
+  - category: C0004
+    event_type: ET0030
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0030: [org, business, repo]
+      A0031: action
+    examples:
+      - type: success
+        location: "./event_examples/audit/activity_audit_create_resource_hook.json"
+      - type: success
+        location: "./event_examples/audit/activity_audit_create_resource_pull_request.json"
+      - type: success
+        location: "./event_examples/audit/activity_audit_create_resource_pull_request_review.json"
+      - type: success
+        location: "./event_examples/audit/activity_audit_create_resource_pull_request_review_comment.json"
+      - type: success
+        location: "./event_examples/audit/activity_audit_create_resource_repo.json"
+      - type: success
+        location: "./event_examples/audit/activity_audit_create_resource_secret.json"
+      - type: success
+        location: "./event_examples/audit/activity_audit_create_resource_workflow.json"
+  - category: C0004
+    event_type: ET0032
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0030: [org, business, repo]
+      A0031: action
+    examples:
+      - type: success
+        location: "./event_examples/audit/activity_audit_update_resource_pull_request.json"
+      - type: success
+        location: "./event_examples/audit/activity_audit_update_resource_pull_request_review_comment.json"
+      - type: success
+        location: "./event_examples/audit/activity_audit_update_resource_repo.json"
+  - category: C0004
+    event_type: ET0033
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0030: [org, business, repo]
+      A0031: action
+    examples:
+      - type: success
+        location: "./event_examples/audit/activity_audit_delete_resource_hook.json"
+      - type: success
+        location: "./event_examples/audit/activity_audit_delete_resource_pull_request_review.json"
+      - type: success
+        location: "./event_examples/audit/activity_audit_delete_resource_pull_request_review_comment.json"
+      - type: success
+        location: "./event_examples/audit/activity_audit_delete_resource_repo.json"
+  - category: C0004
+    event_type: ET0034
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0030: repo
+      A0031: action
+    examples:
+      - type: success
+        location: "./event_examples/audit/activity_audit_download_resource_repo.json"

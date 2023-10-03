@@ -1,0 +1,51 @@
+{
+    "accessible_by":
+    {
+        "id": "25575650631",
+        "login": "john@example.com",
+        "name": "John Doe",
+        "type": "user"
+    },
+    "action_by": null,
+    "additional_details":
+    {
+        "collab_id": "44582004179",
+        "is_performed_by_admin": false,
+        "role": "Editor",
+        "type": "box://event/additional_details/collaboration",
+        "version_id": "1328658101408"
+    },
+    "created_at": "2023-05-18T12:57:12-07:00",
+    "created_by":
+    {
+        "id": "18863648385",
+        "login": "jane@example.com",
+        "name": "Jane Miller",
+        "type": "user"
+    },
+    "event_id": "15f0f70a-4502-496a-badf-5a0b12e49656",
+    "event_type": "COLLABORATION_INVITE",
+    "ip_address": "198.51.100.5",
+    "session_id": null,
+    "source":
+    {
+        "file_id": "1209733707368",
+        "file_name": "a_sample_file.doc",
+        "owned_by":
+        {
+            "id": "18863648385",
+            "login": "jane@example.com",
+            "name": "Jane Miller",
+            "type": "user"
+        },
+        "parent":
+        {
+            "id": "206846635609",
+            "name": "My Box Notes",
+            "type": "folder"
+        },
+        "user_id": "25575650631",
+        "user_name": "John Doe"
+    },
+    "type": "event"
+}

@@ -1,0 +1,41 @@
+{
+    "action": "user_login_failed",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "john@example.com",
+            "id": "U0123456ABC",
+            "name": "John Doe",
+            "team": "01CDEFGHI"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.1",
+        "location":
+        {
+            "domain": "acme",
+            "id": "ETFABCDEF",
+            "name": "Acme",
+            "type": "enterprise"
+        },
+        "session_id": null,
+        "ua": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+    },
+    "date_create": 1692033735,
+    "details": null,
+    "entity":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "john@example.com",
+            "id": "U0123456ABC",
+            "name": "John Doe",
+            "team": "01CDEFGHI"
+        }
+    },
+    "id": "44a8993d-0000-abcd-1e2f-9e7accba9876"
+}

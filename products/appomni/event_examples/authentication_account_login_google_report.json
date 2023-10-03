@@ -1,0 +1,11 @@
+{
+    "identifier": "ad9ddec3-8542-4d5a-b710-67928321abdc",
+    "action_at": "2023-06-22T19:06:47+0000",
+    "action": "User Login via Google Auth",
+    "username": "bob@example.com",
+    "service_type": "None",
+    "service_id": null,
+    "extra": "",
+    "user_ip": "198.51.100.5",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+}

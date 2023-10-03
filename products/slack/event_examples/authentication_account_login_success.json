@@ -1,0 +1,41 @@
+{
+    "action": "user_login",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "alice@example.com",
+            "id": "U0123456ABC",
+            "name": "Alice Brown",
+            "team": "01CDEFGHI"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.2",
+        "location":
+        {
+            "domain": "acme",
+            "id": "ETFABCDEF",
+            "name": "Acme",
+            "type": "workspace"
+        },
+        "session_id": 5267511593910,
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5_0) AppleWebKit/537.36 (KHTML, like Gecko) Slack/4.33.84 Chrome/114.0.5735.134 Electron/25.2.0 Safari/537.36 AppleSilicon Sonic Slack_SSB/4.33.84"
+    },
+    "date_create": 1692033908,
+    "details": null,
+    "entity":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "alice@example.com",
+            "id": "U0123456ABC",
+            "name": "Alice Brown",
+            "team": "01CDEFGHI"
+        }
+    },
+    "id": "44a8993d-0000-abcd-1e2f-9e7accba9876"
+}

@@ -1,0 +1,16 @@
+{
+  "@timestamp": 1686093901098,
+  "_document_id": "-hMpj-RFDXOlc43Zf9woMw",
+  "action": "integration.create",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "business": "acme",
+  "business_id": 1122,
+  "created_at": 1686093901098,
+  "integration": "Acme: integration 001",
+  "name": "Acme: integration 001",
+  "operation_type": "create",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+}

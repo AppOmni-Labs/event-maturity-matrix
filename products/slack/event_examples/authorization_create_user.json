@@ -1,0 +1,41 @@
+{
+    "action": "user_created",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "jane@example.com",
+            "id": "U1A1AABCD",
+            "name": "Jane Miller",
+            "team": "T00111AA2"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.5",
+        "location":
+        {
+            "domain": "acme",
+            "id": "T00111AA2",
+            "name": "Acme",
+            "type": "workspace"
+        },
+        "session_id": 5750000001234,
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5_0) AppleWebKit/537.36 (KHTML, like Gecko) Slack/4.33.84 Chrome/114.0.5735.134 Electron/25.2.0 Safari/537.36 AppleSilicon Sonic Slack_SSB/4.33.84"
+    },
+    "date_create": 1691752039,
+    "details": null,
+    "entity":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "bob@example.com",
+            "id": "U01AA2B2CAA",
+            "name": "Bob Smith",
+            "team": "T00111AA2"
+        }
+    },
+    "id": "18ab534a-0000-4100-a123-aa12bb32ff35"
+}

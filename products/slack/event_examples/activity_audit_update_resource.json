@@ -1,0 +1,42 @@
+{
+    "action": "public_channel_converted_to_private",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "jane@example.com",
+            "id": "U01ABA99AB1",
+            "name": "Jane Miller",
+            "team": "ATBSDEF001"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.4",
+        "location":
+        {
+            "domain": "acme",
+            "id": "ATBSDEF001",
+            "name": "Acme",
+            "type": "enterprise"
+        },
+        "session_id": 5700000123454,
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+    },
+    "date_create": 1693247607,
+    "details": null,
+    "entity":
+    {
+        "channel":
+        {
+            "id": "C01A2AABC00",
+            "is_org_shared": false,
+            "is_shared": false,
+            "name": "test-channel",
+            "privacy": "private"
+        },
+        "type": "channel"
+    },
+    "id": "0ab1d7aa-00dc-0ef0-a0b1-0011a55ff121"
+}

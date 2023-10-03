@@ -1,0 +1,11 @@
+{
+    "action": "groupMembership",
+    "delegate_user": null,
+    "display": "Changed membership of Group All Company Internal Users ",
+    "record_id": "000000000000123AbC",
+    "section": "Groups",
+    "sfdc_created_by_id": "000000000000123AbC",
+    "sfdc_created_by_name": "John Doe",
+    "sfdc_created_by_username": "john@example.com",
+    "sfdc_created_date": "2023-03-09T19:15:35+00:00"
+}

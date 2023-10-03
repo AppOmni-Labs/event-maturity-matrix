@@ -1,0 +1,17 @@
+name: "Validate EMM Data Definitions"
+description: "Validates EMM data definitions"
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.10"
+
+    - name: Validate definitions
+      id: validate_definitions
+      shell: bash
+      run: |
+        set -x
+        new_path=$(python -c "print('${{ github.action_path }}'.replace('./.', '.'))")
+        resp=$(python $new_path/validate-definitions.py)

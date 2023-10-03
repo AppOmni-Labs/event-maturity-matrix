@@ -1,0 +1,49 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+$id: https://json-schema.org/draft/2020-12/schema
+title: Event Maturity Matrix - Categories
+description: A schema that defines the structure of categories in the event-maturity-matrix 
+properties:
+  entity_name:
+    description: The name of the entity itself.
+    type: string
+  description:
+    description: The description of the categories entity.
+    type: string
+  version:
+    description: A semantic version of the defined document.
+    type: string
+  meta:
+    description: An object that contains meta information about the definiton.
+    type: ["null", "object"]
+  items:
+    description: An array of categories.
+    type: array
+    items:
+      $ref: "#/$defs/category"
+    minItems: 1
+    uniqueItems: true
+additionalProperties: false
+required:
+  - entity_name
+  - description
+  - version
+  - items
+$defs:
+  category:
+    type: object
+    required:
+      - id
+      - name
+      - description
+    properties:
+      id:
+        description: A unique ID for the attribute which starts with A and contains 4 numbers sequentially.
+        type: string
+      name:
+        description: Name of a field attribute found in telemetry and audit logging.
+        type: string
+      description:
+        description: The description of the attribute
+        type: string

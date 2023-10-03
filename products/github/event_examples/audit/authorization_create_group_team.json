@@ -1,0 +1,18 @@
+{
+  "@timestamp": 1686001364120,
+  "_document_id": "FLl6thHIizqa55S1P1tjIA",
+  "action": "team.create",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_location": {
+    "country_code": "US"
+  },
+  "created_at": 1686001364120,
+  "operation_type": "create",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "team": "acme-inc/approvers",
+  "user": "alice.brown",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+  "user_id": 95659676
+}

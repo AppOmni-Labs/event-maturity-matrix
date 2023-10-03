@@ -1,0 +1,11 @@
+    {
+        "identifier": "d4b105e8-d29b-436e-947e-52a6be5f58de",
+        "action_at": "2023-07-12T19:07:57+0000",
+        "action": "Policy Deleted",
+        "username": "mallory@example.com",
+        "service_type": "sfdc",
+        "service_id": null,
+        "extra": "policy_id: 410860, policy_name: Test Salesforce Policy",
+        "user_ip": "198.51.100.2",
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+    }

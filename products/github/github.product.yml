@@ -1,0 +1,38 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: product
+version: "1.0.0"
+name: GitHub
+logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/github_square.svg
+description: |
+  GitHub is a cloud-based service that provides a range of services related to version control, software development, and collaboration.
+  
+  The GitHub audit log API provides a feed for events that have been generated across the enterprise. If an organization does not use Enterprise Managed Users, the audit log only includes events related to the enterprise account and the organizations within the enterprise account. If an organization uses Enterprise Managed Users, the audit log also includes user events for managed user accounts.
+  
+  GitHub webhooks provide a way for notifications to be delivered to an external web server whenever certain events occur on GitHub.
+collection:
+  - id: audit_events
+    name: Enterprise Audit Events
+    description: To collect enterprise events, use the audit log API.
+    references:
+      - id: about_audit_log
+        name: About the Audit Log
+        description: Audit log documentation
+        url: https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/about-the-audit-log-for-your-enterprise
+      - id: audit_log_api
+        name: Using the Audit Log API
+        description: Audit log API documentation
+        url: https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/using-the-audit-log-api-for-your-enterprise
+      - id: audit_log_events
+        name: Audit log events
+        description: Audit log events documentation
+        url: https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/audit-log-events-for-your-enterprise
+  - id: webhook_events
+    name: Webhook Events
+    description: To collect webhook events, create and configure a webhook(s).
+    references:
+      - id: about_webhook_events
+        name: About Webhook Events
+        description: Webhooks documentation
+        url: https://docs.github.com/en/webhooks-and-events/webhooks/about-webhooks

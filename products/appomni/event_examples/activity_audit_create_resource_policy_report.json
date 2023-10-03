@@ -1,0 +1,11 @@
+{
+    "identifier": "cb89b034-2f3b-4b41-9a34-6fdb289f4a6a",
+    "action_at": "2023-06-22T20:21:55+0000",
+    "action": "Policy Created",
+    "username": "john@example.com",
+    "service_type": "box",
+    "service_id": null,
+    "extra": "policy_id: 442431, policy_name: EMM Test Policy",
+    "user_ip": "198.51.100.5",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+}

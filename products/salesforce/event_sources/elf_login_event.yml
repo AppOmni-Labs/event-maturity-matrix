@@ -1,0 +1,43 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: Salesforce
+  collection_sources:
+    - rest_api
+    - soap_api
+name: EventLogFile Login Event
+description: This event source is to track login events in Salesforce.
+references:
+  - id: login_event
+    name: EventLogFile Login Event
+    url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_login.htm
+retention:
+  duration: 1 Day
+  comments: Available for free with 1 day retention, otherwise requires an add-on subscription for 30 day retention.
+latency:
+  duration: 3 Hours
+  comments: Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of the event to be available in the hourly log file.
+licensing:
+  comments: Available for free with 1 day retention, otherwise requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
+mappings:
+  - category: C0001
+    event_type: ET0001
+    attributes:
+      A0001: TIMESTAMP_DERIVED
+      A0003: EVENT_TYPE
+      A0004: LOGIN_STATUS
+      A0005: USER_NAME 
+      A0006: USER_ID
+      A0007: USER_TYPE
+      A0008: LOGIN_KEY
+      A0009: SOURCE_IP
+      A0011: BROWSER_TYPE
+      A0013: LOGIN_STATUS
+      A0014: LOGIN_TYPE
+      A0015: AUTHENTICATION_METHOD_REFERENCE
+    examples: 
+      - type: success
+        location: "./event_examples/authentication_account_login_elf.json"

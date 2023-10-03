@@ -1,0 +1,92 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: Salesforce
+  collection_sources:
+    - streaming_api
+name: Real-Time Event Monitoring UriEventStream
+description: Detects when a user creates, accesses, updates, or deletes a record in Salesforce Classic only.
+references: 
+  - id: uri_event_stream
+    name: UriEventStream
+    url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_urieventstream.htm
+retention:
+  duration: 6 Months
+  comments: N/A
+latency:
+  duration: Real-Time
+  comments: N/A
+licensing:
+  comments: Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
+mappings:
+  - category: C0004
+    event_type: ET0030
+    attributes:
+      A0001: EventDate
+      A0002: EventIdentifier
+      A0003: Operation
+      A0004: OperationStatus
+      A0005: UserName
+      A0006: UserId
+      A0007: UserType
+      A0008: SessionKey
+      A0009: SourceIp
+      A0030: Name
+      A0031: QueriedEntities
+    examples:
+      - type: create
+        location: "./event_examples/activity_audit_create_resource_urieventstream.json"
+  - category: C0004
+    event_type: ET0031
+    attributes:
+      A0001: EventDate
+      A0002: EventIdentifier
+      A0003: Operation
+      A0004: OperationStatus
+      A0005: UserName
+      A0006: UserId
+      A0007: UserType
+      A0008: SessionKey
+      A0009: SourceIp
+      A0030: Name
+      A0031: QueriedEntities
+    examples:
+      - type: read
+        location: "./event_examples/activity_audit_read_resource_urieventstream.json"
+  - category: C0004
+    event_type: ET0032
+    attributes:
+      A0001: EventDate
+      A0002: EventIdentifier
+      A0003: Operation
+      A0004: OperationStatus
+      A0005: UserName
+      A0006: UserId
+      A0007: UserType
+      A0008: SessionKey
+      A0009: SourceIp
+      A0030: Name
+      A0031: QueriedEntities
+    examples:
+      - type: update
+        location: "./event_examples/activity_audit_update_resource_urieventstream.json"
+  - category: C0004
+    event_type: ET0033
+    attributes:
+      A0001: EventDate
+      A0002: EventIdentifier
+      A0003: Operation
+      A0004: OperationStatus
+      A0005: UserName
+      A0006: UserId
+      A0007: UserType
+      A0008: SessionKey
+      A0009: SourceIp
+      A0030: Name
+      A0031: QueriedEntities
+    examples:
+      - type: delete
+        location: "./event_examples/activity_audit_delete_resource_urieventstream.json"

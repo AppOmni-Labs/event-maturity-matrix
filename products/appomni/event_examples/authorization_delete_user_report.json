@@ -1,0 +1,11 @@
+{
+    "identifier": "7f75c117-f8f8-4739-bfcf-cac8a728d486",
+    "action_at": "2023-06-15T02:02:19+0000",
+    "action": "User Disabled",
+    "username": "john@example.com",
+    "service_type": "None",
+    "service_id": null,
+    "extra": "target_user_id: 12893, target_user_username: pmcandrew_test10",
+    "user_ip": "198.51.100.3",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+}

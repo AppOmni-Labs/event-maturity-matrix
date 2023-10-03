@@ -1,0 +1,14 @@
+{
+  "@timestamp": 1686079082576,
+  "_document_id": "GohZoGvnLxIsTepkIgnPuA",
+  "action": "pull_request_review_comment.create",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "business": "acme",
+  "business_id": 1122,
+  "created_at": 1686079082576,
+  "operation_type": "create",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+}

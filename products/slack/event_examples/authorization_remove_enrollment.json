@@ -1,0 +1,44 @@
+{
+    "action": "pref.two_factor_auth_changed",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "john@example.com",
+            "id": "U01A2ABCDNG",
+            "name": "John Doe",
+            "team": "A01111TD4"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.2",
+        "location":
+        {
+            "domain": "acme",
+            "id": "A01111TD4",
+            "name": "Acme",
+            "type": "workspace"
+        },
+        "session_id": 1234443505912,
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/198.51.100.1 Safari/537.36"
+    },
+    "date_create": 1657550802,
+    "details":
+    {
+        "new_value": "TWO_FACTOR_DISABLED",
+        "previous_value": "TWO_FACTOR_ENABLED"
+    },
+    "entity":
+    {
+        "type": "workspace",
+        "workspace":
+        {
+            "domain": "acme",
+            "id": "A01111TD4",
+            "name": "Acme"
+        }
+    },
+    "id": "1234f70-0fb0-00b1-00eb-95ab9a123d12"
+}

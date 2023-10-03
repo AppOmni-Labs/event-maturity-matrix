@@ -1,0 +1,11 @@
+{
+    "identifier": "15056a73-6535-43e8-ad73-6fab6c46a364",
+    "action_at": "2023-06-14T21:59:11+0000",
+    "action": "User MFA Enabled",
+    "username": "pmcandrew_test10",
+    "service_type": "None",
+    "service_id": null,
+    "extra": "detail_str: SMS +1 401-867-5309, target_user_id: 12893, target_user_username: pmcandrew_test10, new_value: +1 401-867-5309",
+    "user_ip": "198.51.100.5",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+}

@@ -1,0 +1,23 @@
+{
+  "@timestamp": 1686092778658,
+  "_document_id": "ySsAv7blcNhEhRvlw2cnbQ",
+  "action": "repo.rename",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_ip": "198.51.100.1",
+  "actor_location": {
+    "country_code": "US"
+  },
+  "business": "acme",
+  "business_id": 1122,
+  "created_at": 1686092778658,
+  "old_name": "copy-s3-objects",
+  "operation_type": "modify",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "public_repo": false,
+  "repo": "acme-inc/example-repo",
+  "repo_id": 100056789,
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15",
+  "visibility": "private"
+}

@@ -1,0 +1,59 @@
+{
+    "channel": "/event/LightningUriEventStream",
+    "data":
+    {
+        "event":
+        {
+            "replayId": ""
+        },
+        "payload":
+        {
+            "AppName": "one:one",
+            "ConnectionType": null,
+            "CreatedDate": "2023-03-21T20:59:37.010+0000",
+            "DeviceId": null,
+            "DeviceModel": null,
+            "DevicePlatform": "SFX:BROWSER:DESKTOP",
+            "DeviceSessionId": "0000000000000000000000000000000000000001",
+            "Duration": 7029.0,
+            "EffectivePageTime": 0.0,
+            "EventDate": "2023-03-21T20:59:33.069+0000",
+            "EventIdentifier": "abcdefgh-1234-0000-0000-000000000001",
+            "LoginKey": "9870000000012300",
+            "Operation": "Read",
+            "OsName": "OSX",
+            "OsVersion": "10.15.7",
+            "PageStartTime": "2023-03-21T20:57:39.770+0000",
+            "PageUrl": "/lightning/o/Case/new?count=1",
+            "PreviousPageAppName": "LightningSales",
+            "PreviousPageEntityId": "345000000mnp0004",
+            "PreviousPageEntityType": "Account",
+            "PreviousPageUrl": "/lightning/r/Account/001300000000000000/view",
+            "QueriedEntities": "Customer_Account__c",
+            "RecordId": "000000000000123AbC",
+            "RelatedEventIdentifier": null,
+            "SdkAppType": null,
+            "SdkAppVersion": null,
+            "SdkVersion": null,
+            "SessionKey": "9870000000012300",
+            "SessionLevel": "STANDARD",
+            "SourceIp": "198.51.100.1",
+            "UserId": "000000000000123AbC",
+            "UserType": "Standard",
+            "Username": "john@example.com",
+            "attributes":
+            {
+                "type": "LightningUriEvent",
+                "url": "/services/data/v55.0/sobjects/LightningUriEvent/000000000000000AAA"
+            }
+        },
+        "schema": "AppOmni"
+    }
+}
+
+
+
+
+
+
+

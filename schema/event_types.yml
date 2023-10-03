@@ -1,0 +1,56 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+$id: https://json-schema.org/draft/2020-12/schema
+title: Event Maturity Matrix - Event Types
+description: A schema that defines the structure of event types in the event-maturity-matrix 
+properties:
+  entity_name:
+    description: The name of the entity itself.
+    type: string
+  description:
+    description: The description for the entity types.
+    type: string
+  version:
+    description: A semantic version of the defined document.
+    type: string
+  meta:
+    description: An object that contains meta information about the definiton.
+    type: ["null", "object"]
+  items:
+    description: An array of event types.
+    type: array
+    items:
+      $ref: "#/$defs/event_type"
+    minItems: 1
+    uniqueItems: true
+additionalProperties: false
+required:
+  - entity_name
+  - description
+  - version
+  - items
+$defs:
+  event_type:
+    type: object
+    required:
+      - id
+      - name
+      - description
+      - categories
+    properties:
+      id:
+        description: A unique ID for the event types which starts with ET and contains 4 numbers sequentially.
+        type: string
+      name:
+        description: Name of a field attribute found in telemetry and audit logging.
+        type: string
+      description:
+        description: The description of the attribute
+        type: string
+      categories:
+        description: A list of categories that this event type belongs to.
+        type: array
+        items:
+            type: string
+        uniqueItems: true    

@@ -1,0 +1,40 @@
+{
+    "channel": "/event/UriEventStream",
+    "data":
+    {
+        "event":
+        {
+            "replayId": ""
+        },
+        "payload":
+        {
+            "CreatedDate": "2023-03-21T22:51:46.037+0000",
+            "EventDate": "2023-03-21T22:51:43.042+0000",
+            "EventIdentifier": "abcdefgh-1234-0000-0000-000000000001",
+            "LoginKey": "9870000000012300",
+            "Message": null,
+            "Name": "Customer Account Name",
+            "Operation": "Update",
+            "OperationStatus": "Initiated",
+            "QueriedEntities": "Customer_Account__c",
+            "RecordId": "000000000000123AbC",
+            "RelatedEventIdentifier": null,
+            "SessionKey": "9870000000012300",
+            "SessionLevel": "HIGH_ASSURANCE",
+            "SourceIp": "198.51.100.1",
+            "UserId": "000000000000123AbC",
+            "UserType": "Standard",
+            "Username": "john@example.com",
+            "attributes":
+            {
+                "type": "UriEvent",
+                "url": "/services/data/v55.0/sobjects/UriEvent/000000000000000AAA"
+            }
+        },
+        "schema": "AppOmni"
+    }
+}
+
+
+
+

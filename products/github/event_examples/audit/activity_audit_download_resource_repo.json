@@ -1,0 +1,25 @@
+{
+  "@timestamp": 1686153022502,
+  "_document_id": "TaE7QBpn7eLwzy62M2_I8g",
+  "action": "repo.download_zip",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_ip": "198.51.100.1",
+  "actor_location": {
+    "country_code": "US"
+  },
+  "business": "acme",
+  "business_id": 1122,
+  "created_at": 1686153022502,
+  "hashed_token": "wEEhJjHXoWXUrZ2RjPughm1z3SFJBMM1P7ezCwNHUtM=",
+  "operation_type": "access",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "programmatic_access_type": "GitHub App server-to-server token",
+  "public_repo": false,
+  "repo": "acme-inc/example-repo",
+  "repo_id": 100056789,
+  "token_id": 57266916082,
+  "user_agent": "AWS CodeStar Connections",
+  "visibility": "internal"
+}

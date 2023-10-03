@@ -1,0 +1,267 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: Salesforce
+  collection_sources:
+    - rest_api
+    - soap_api
+name: SetupAuditTrail
+description: The SetupAuditTrail object provides an audit trail of changes to user profiles, permission sets, security settings, custom objects, and other settings.
+references:
+  - id: setup_audit_trail
+    name: SetupAuditTrail
+    url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_setupaudittrail.htm
+retention:
+  duration: 180 Days
+  comments: N/A
+latency:
+  duration: Real-Time
+  comments: N/A
+licensing:
+  comments: Free
+mappings:
+  - category: C0002
+    event_type: ET0004
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+    examples:
+      - type: create
+        location: "./event_examples/authorization_create_user.json"
+  - category: C0002
+    event_type: ET0006
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0020: display
+    examples:
+      - type: update
+        location: "./event_examples/authorization_update_user.json"
+  - category: C0002
+    event_type: ET0008
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0021: display
+    examples:
+      - type: create
+        location: "./event_examples/authorization_create_group.json"
+  - category: C0002
+    event_type: ET0010
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0021: display
+      A0020: display
+    examples:
+      - type: update
+        location: "./event_examples/authorization_update_group.json"
+  - category: C0002
+    event_type: ET0011
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0021: display
+    examples:
+      - type: delete
+        location: "./event_examples/authorization_delete_group.json"
+  - category: C0002
+    event_type: ET0012
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0021: display
+    examples:
+      - type: add
+        location: "./event_examples/authorization_add_to_group.json"
+  - category: C0002
+    event_type: ET0013
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0021: display
+    examples:
+      - type: remove
+        location: "./event_examples/authorization_remove_fom_group.json"
+  - category: C0002
+    event_type: ET0014
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0022: display
+    examples:
+      - type: create
+        location: "./event_examples/authorization_create_role.json"
+  - category: C0002
+    event_type: ET0016
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0022: display
+      A0020: display
+    examples:
+      - type: update
+        location: "./event_examples/authorization_update_role.json"
+  - category: C0002
+    event_type: ET0017
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0022: display
+  - category: C0002
+    event_type: ET0018
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0023: display
+      A0024: display
+    examples:
+      - type: add
+        location: "./event_examples/authorization_add_permission.json"
+  - category: C0002
+    event_type: ET0019
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0023: display
+      A0024: display
+    examples:
+      - type: remove
+        location: "./event_examples/authorization_remove_permission.json"
+  - category: C0002
+    event_type: ET0020
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0025: display
+      A0019: display
+    examples:
+      - type: add
+        location: "./event_examples/authorization_add_enrollment.json"
+  - category: C0002
+    event_type: ET0021
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0025: display
+      A0019: display
+    examples:
+      - type: remove
+        location: "./event_examples/authorization_remove_enrollment.json"
+  - category: C0003
+    event_type: ET0022
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0026: display
+    examples:
+      - type: create
+        location: "./event_examples/system_audit_create_configuration.json"
+  - category: C0003
+    event_type: ET0024
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0026: display
+    examples:
+      - type: update
+        location: "./event_examples/system_audit_update_configuration.json"
+  - category: C0003
+    event_type: ET0025
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0026: display
+    examples:
+      - type: delete
+        location: "./event_examples/system_audit_delete_configuration.json"
+  - category: C0003
+    event_type: ET0026
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0029: display
+    examples:
+      - type: create
+        location: "./event_examples/system_audit_create_integration.json"
+  - category: C0003
+    event_type: ET0028
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0029: display
+    examples:
+      - type: update
+        location: "./event_examples/system_audit_update_integration.json"
+  - category: C0003
+    event_type: ET0029
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0029: display
+    examples:
+      - type: delete
+        location: "./event_examples/system_audit_delete_integration.json"

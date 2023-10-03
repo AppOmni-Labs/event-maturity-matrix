@@ -1,0 +1,18 @@
+{
+    "action": "PermSetDisableUserPerm",
+    "delegate_user": null,
+    "display": "Changed permission set Management: View All Data permission was changed from enabled to disabled",
+    "record_id": "000000000000123AbC",
+    "section": "Manage Users",
+    "sfdc_created_by_id": "000000000000123AbC",
+    "sfdc_created_by_name": "John Doe",
+    "sfdc_created_by_username": "alice@example.com",
+    "sfdc_created_date": "2023-03-09T08:59:49+00:00"
+}
+
+
+
+
+
+
+

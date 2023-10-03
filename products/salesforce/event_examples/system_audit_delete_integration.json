@@ -1,0 +1,19 @@
+{
+    "action": "uninstalledpackagingapp",
+    "delegate_user": null,
+    "display": "Uninstalled AppExchange package: Sales_App_Name",
+    "record_id": "000000000000123AbC",
+    "section": "Custom Apps",
+    "sfdc_created_by_id": "000000000000123AbC",
+    "sfdc_created_by_name": "John Doe",
+    "sfdc_created_by_username": "john@example.com",
+    "sfdc_created_date": "2023-03-14T14:50:28+00:00"
+}
+
+
+
+
+
+
+
+

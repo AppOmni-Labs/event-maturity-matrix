@@ -1,0 +1,187 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: AppOmni
+  collection_sources:
+    - audit_logs_api
+    - event_sink
+    - scheduled_reports
+name: Audit Logs
+description: AppOmni audit logs that provide a record of user activity.
+references:
+  - id: audit_log_schema
+    name: Audit Log Schema
+    url: N/A
+retention:
+  duration: 180 days
+  comments: Historical audit logs are stored for 180 days.
+latency:
+  duration: Near Real-Time
+  comments: Logs are available in near real-time.
+licensing:
+  comments: N/A
+mappings:
+  - category: C0001
+    event_type: ET0001
+    attributes:
+      A0001: action_at
+      A0002: log_id
+      A0003: action_type
+      A0004: action_type
+      A0005: action_data.user_username
+      A0006: user_id
+      A0009: action_data.user_ip
+      A0011: action_data.user_agent
+      A0015: action_type
+    examples:
+      - type: success
+        location: "./event_examples/authentication_account_login_google.json"
+      - type: failure
+        location: "./event_examples/authentication_account_login_failed.json"
+  - category: C0001
+    event_type: ET0002
+    attributes:
+      A0001: action_at
+      A0002: log_id
+      A0003: action_type
+      A0004: action_type
+      A0005: action_data.user_username
+      A0006: user_id
+      A0009: action_data.user_ip
+      A0011: action_data.user_agent
+    examples:
+      - type: success
+        location: "./event_examples/authentication_account_logout.json"
+  - category: C0001
+    event_type: ET0003
+    attributes:
+      A0001: action_at
+      A0002: log_id
+      A0003: action_type
+      A0005: action_data.user_username
+      A0006: user_id
+      A0009: action_data.user_ip
+      A0011: action_data.user_agent
+      A0016: action_type
+    examples:
+      - type: challenge
+        location: "./event_examples/authentication_account_login_challenge_totp.json"
+  - category: C0002
+    event_type: ET0004
+    attributes:
+      A0001: action_at
+      A0002: log_id
+      A0003: action_type
+      A0005: action_data.user_username
+      A0006: user_id
+      A0009: action_data.user_ip
+      A0011: action_data.user_agent
+      A0019: action_data.target_user_username
+    examples:
+      - type: success
+        location: "./event_examples/authorization_create_user.json"
+  - category: C0002
+    event_type: ET0007
+    attributes:
+      A0001: action_at
+      A0002: log_id
+      A0003: action_type
+      A0005: user_username
+      A0006: user_id
+      A0009: action_data.user_ip
+      A0011: action_data.user_agent
+      A0019: action_data.user_username
+    examples:
+      - type: success
+        location: "./event_examples/authorization_delete_user.json"
+  - category: C0002
+    event_type: ET0020
+    attributes:
+      A0001: action_at
+      A0002: log_id
+      A0003: action_type
+      A0005: action_data.user_username
+      A0006: user_id
+      A0009: action_data.user_ip
+      A0011: action_data.user_agent
+      A0025: action_data.detail_str
+      A0019: action_data.target_user_username
+    examples:
+      - type: success
+        location: "./event_examples/authorization_add_enrollment_totp_json.json"
+  - category: C0002
+    event_type: ET0021
+    attributes:
+      A0001: action_at
+      A0002: log_id
+      A0003: action_type
+      A0005: action_data.target_user_username
+      A0006: user_id
+      A0009: action_data.user_ip
+      A0011: act_data.user_agent
+      A0019: action_data.target_user_username
+    examples:
+      - type: success
+        location: "./event_examples/authorization_remove_enrollment_totp.json"
+  - category: C0003
+    event_type: ET0024
+    attributes:
+      A0001: action_at
+      A0002: log_id
+      A0003: action_type
+      A0005: action_data.user_username
+      A0006: user_id
+      A0009: action_data.user_ip
+      A0011: action_data.user_agent
+      A0026: action_data.setting_name
+      A0027: action_data.new_value
+      A0028: action_data.old_value
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_update_configuration.json"
+  - category: C0004
+    event_type: ET0030
+    attributes:
+      A0001: action_at
+      A0002: log_id
+      A0003: action_type
+      A0005: action_data.user_username
+      A0006: user_id
+      A0009: action_data.user_ip
+      A0011: action_data.user_agent
+      A0030: service_name
+      A0031: service_type
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_create_resource_policy.json"
+  - category: C0004
+    event_type: ET0032
+    attributes:
+      A0001: action_at
+      A0002: log_id
+      A0003: action_type
+      A0005: action_data.user_username
+      A0006: user_id
+      A0030: service_name
+      A0031: service_type
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_update_resource_service.json"
+  - category: C0004
+    event_type: ET0033
+    attributes:
+      A0001: action_at
+      A0002: log_id
+      A0003: action_type
+      A0005: action_data.user_username
+      A0006: user_id
+      A0009: action_data.user_ip
+      A0011: action_data.user_agent
+      A0030: service_name
+      A0031: service_type
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_delete_resource_policy.json"

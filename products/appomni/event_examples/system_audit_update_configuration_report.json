@@ -1,0 +1,11 @@
+{
+    "identifier": "d2c46cde-44f7-43ac-84f5-79b8184c8105",
+    "action_at": "2023-06-22T15:51:50+0000",
+    "action": "AppOmni System Setting Change",
+    "username": "mallory@example.com",
+    "service_type": "None",
+    "service_id": null,
+    "extra": "setting_name: Direct Auth Enabled, old_value: False, new_value: True",
+    "user_ip": "198.51.100.5",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+}

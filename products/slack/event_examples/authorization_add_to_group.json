@@ -1,0 +1,53 @@
+{
+    "action": "user_added_to_usergroup",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "john@example.com",
+            "id": "U03EABCDE0A",
+            "name": "John Doe",
+            "team": "A01111TD4"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.1",
+        "location":
+        {
+            "domain": "acme",
+            "id": "A01111TD4",
+            "name": "Acme",
+            "type": "workspace"
+        },
+        "session_id": 5690023232312,
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5_0) AppleWebKit/537.36 (KHTML, like Gecko) Slack/4.33.84 Chrome/114.0.5735.134 Electron/25.2.0 Safari/537.36"
+    },
+    "date_create": 1691766194,
+    "details":
+    {
+        "inviter":
+        {
+            "type": "user",
+            "user":
+            {
+                "email": "mallory@example.com",
+                "id": "A01AAB1A5",
+                "name": "Mallory Jones",
+                "team": "A01111TD4"
+            }
+        },
+        "type": "INVITED"
+    },
+    "entity":
+    {
+        "type": "usergroup",
+        "usergroup":
+        {
+            "id": "S02ABABCDA3",
+            "name": "Developers"
+        }
+    },
+    "id": "1c0c1a15-5a11-4ac1-97a9-123fafa3f000"
+}
