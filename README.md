@@ -51,6 +51,8 @@ This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this
 file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+Additionally, you can view the license in the [LICENSE.md](./LICENSE.md) file.
+
 ## Security
 
 Security concerns are a top priority for us, please review our [Security Policy](SECURITY.md).
