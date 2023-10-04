@@ -1,6 +1,4 @@
-# Event Maturity Matrix
-
-![](./images/emm-logo.svg)
+<img src="./images/emm-logo.svg" alt="logo" width="600"/>
 
 > You can view the Event Maturity Matrix at [https://eventmaturitymatrix.com/](https://eventmaturitymatrix.com/)
 
@@ -8,15 +6,14 @@ The Event Maturity Matrix (EMM) is a comprehensive framework that provides clari
 
 > If you have not read our blog post, [Introducing the SaaS Event Maturity Matrix](https://appomni.com/blog_post/introducing-the-saas-event-maturity-matrix), we recommend doing so before proceeding.
 
-- [Event Maturity Matrix](#event-maturity-matrix)
-  - [Scope](#scope)
-  - [Matrix Overview](#matrix-overview)
-  - [Documentation](#documentation)
-  - [License](#license)
-  - [Security](#security)
-  - [Issues](#issues)
-  - [Credits](#credits)
-  - [Roadmap](#roadmap)
+- [Scope](#scope)
+- [Matrix Overview](#matrix-overview)
+- [Documentation](#documentation)
+- [License](#license)
+- [Security](#security)
+- [Issues](#issues)
+- [Credits](#credits)
+- [Roadmap](#roadmap)
 
 ## Scope
 
