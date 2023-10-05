@@ -146,17 +146,6 @@ items:
       - ET0013
       - ET0020
       - ET0021
-    exclude:
-      - ET0008
-      - ET0009
-      - ET0010
-      - ET0011
-      - ET0014
-      - ET0015
-      - ET0016
-      - ET0017
-      - ET0018
-      - ET0019
     description: The target username of activity within a service provider.
     type: string
     examples:
@@ -167,6 +156,7 @@ items:
     include:
       - ET0006
       - ET0010
+      - ET0016
     description: Context regarding the target attribute that was changed during a user, group, or role modification.
     type: string
     examples:
