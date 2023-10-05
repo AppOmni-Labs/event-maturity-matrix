@@ -13,7 +13,6 @@ items:
     type: string
     examples:
       - "2022-11-17T06:34:18.429Z"
-    maturity: 1
   - id: A0002
     name: Event ID
     description: A unique event ID to describe the event.
@@ -35,7 +34,6 @@ items:
     examples:
       - "Success"
       - "Failure"
-    maturity: 1
   - id: A0005
     name: Username
     description: The username used when this event occurred.
@@ -43,7 +41,6 @@ items:
     examples:
       - first.lastname
       - first.lastname@company.com
-    maturity: 1
   - id: A0006
     name: User ID
     description: Unique ID of the user associated with this event.
@@ -141,7 +138,14 @@ items:
   - id: A0019
     name: Target Username
     include:
-      - C0002
+      - ET0004
+      - ET0005
+      - ET0006
+      - ET0007
+      - ET0012
+      - ET0013
+      - ET0020
+      - ET0021
     exclude:
       - ET0008
       - ET0009
@@ -153,7 +157,6 @@ items:
       - ET0017
       - ET0018
       - ET0019
-      - ET0020
     description: The target username of activity within a service provider.
     type: string
     examples:
@@ -197,7 +200,6 @@ items:
     include:
       - ET0018
       - ET0019
-      - ET0020
     description: The name of a permission specified within an event.
     type: string
     examples:
@@ -208,7 +210,6 @@ items:
     include:
       - ET0018
       - ET0019
-      - ET0020
     description: The target resource of an action or operation within a service provider.
     type: string
     examples:
@@ -217,8 +218,8 @@ items:
   - id: A0025
     name: Enrollment Type
     include:
+      - ET0020
       - ET0021
-      - ET0023
     description: The enrollment type of MFA authentication within a service provider.
     type: string
     examples:
@@ -228,9 +229,9 @@ items:
     name: Configuration / Setting Name
     include:
       - ET0022
-      - ET0023
       - ET0024
       - ET0025
+      - ET0028
     description: The name of a service setting or configuration option.
     type: string
     examples:
@@ -240,9 +241,9 @@ items:
     name: Configuration / Setting Value
     include:
       - ET0022
+      - ET0023
       - ET0024
       - ET0025
-      - ET0028
     description: The value of the setting or configuration that was changed.
     type: string
     examples:
@@ -270,7 +271,11 @@ items:
   - id: A0030
     name: Resource Name
     include:
-      - C0004
+      - ET0030
+      - ET0031
+      - ET0032
+      - ET0033
+      - ET0034
     description: The name of a resource within a service provider.
     type: string
     examples:
@@ -279,7 +284,11 @@ items:
   - id: A0031
     name: Resource Type
     include:
-      - C0004
+      - ET0030
+      - ET0031
+      - ET0032
+      - ET0033
+      - ET0034
     description: The type of resource within a service provider.
     type: string
     examples:
