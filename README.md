@@ -4,7 +4,7 @@
 
 The Event Maturity Matrix (EMM) is a comprehensive framework that provides clarity regarding the capabilities and nuances of SaaS audit logging. EMM is a valuable resource for security practitioners who want to obtain visibility into the different types of user activities that are logged, see real-world examples of SaaS audit logs, and use these insights to guide security monitoring and operational objectives.
 
-> If you have not read our blog post, [Introducing the SaaS Event Maturity Matrix](https://appomni.com/blog_post/introducing-the-saas-event-maturity-matrix), we recommend doing so before proceeding.
+> If you have not read our blog post, [Introducing the SaaS Event Maturity Matrix](https://appomni.com/blog_post/appomni-saas-event-maturity-matrix/), we recommend doing so before proceeding.
 
 - [Scope](#scope)
 - [Matrix Overview](#matrix-overview)
