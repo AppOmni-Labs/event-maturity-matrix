@@ -53,4 +53,19 @@ $defs:
         type: array
         items:
             type: string
-        uniqueItems: true    
+        uniqueItems: true
+      frameworks:
+        description: A list of frameworks that this event type relates to.
+        type: array
+        items:
+            type: object
+            properties:
+              type:
+                description: The type of framework.
+                type: string
+              display_name:
+                description: The display name of the technique.
+                type: string
+              url:
+                description: The URL of the technique.
+                type: string

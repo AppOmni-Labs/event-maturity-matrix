@@ -13,170 +13,340 @@ items:
     categories:
       - C0001
     description: An account attempted to login to a system.
-    tags:
-      - user
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Initial Access: Trusted Relationship"
+        url: https://attack.mitre.org/techniques/T1199/
+      - type: MITRE ATT&CK
+        display_name: "Initial Access: Valid Accounts"
+        url: https://attack.mitre.org/techniques/T1078/
+      - type: MITRE ATT&CK
+        display_name: "Initial Access: Brute Force"
+        url: https://attack.mitre.org/techniques/T1110/ 
   - id: ET0002
     name: Account Logout
     categories:
       - C0001
     description: An account attempted to logout of a system.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Impact: Account Access Removal"
+        url: https://attack.mitre.org/techniques/T1531/
   - id: ET0003
     name: MFA Verification
     categories:
       - C0001
     description: Enter or acknowledge an MFA factor which indicates success or failure.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Credential Access: Multi-Factor Authentication Interception"
+        url: https://attack.mitre.org/techniques/T1111/
+      - type: MITRE ATT&CK
+        display_name: "Credential Access: Multi-Factor Authentication Request Generation"
+        url: https://attack.mitre.org/techniques/T1621/
   - id: ET0004
     name: Create User
     categories:
       - C0002
     description: Creates a user.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Create Account"
+        url: https://attack.mitre.org/techniques/T1136/
   - id: ET0005
     name: Read User
     categories:
       - C0002
     description: Reads information about a user.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Discovery: Account Discovery"
+        url: https://attack.mitre.org/techniques/T1087/
   - id: ET0006
     name: Update User
     categories:
       - C0002
     description: Updates information about a user.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Account Manipulation"
+      - url: https://attack.mitre.org/techniques/T1098/
   - id: ET0007
     name: Delete User
     categories:
       - C0002
     description: Removes or deletes a user.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Impact: Account Removal"
+        url: https://attack.mitre.org/techniques/T1531/
   - id: ET0008
     name: Create Group
     categories:
       - C0002
     description: Creates a logical group.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Account Manipulation" 
+        url: https://attack.mitre.org/techniques/T1098/
   - id: ET0009
     name: Read Group
     categories:
       - C0002
     description: Reads a group.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Discovery: Permission Groups Discovery"
+        url: https://attack.mitre.org/techniques/T1069/
   - id: ET0010
     name: Update Group
     categories:
       - C0002
     description: Updates a group.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Account Manipulation" 
+        url: https://attack.mitre.org/techniques/T1098/
   - id: ET0011
     name: Delete Group
     categories:
       - C0002
     description: Removes or deletes a group.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Account Manipulation"
+        url: https://attack.mitre.org/techniques/T1098/
   - id: ET0012
     name: Add To Group
     categories:
       - C0002
     description: Adds a service, user or account to a group.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Account Manipulation"
+        url: https://attack.mitre.org/techniques/T1098/
   - id: ET0013
     name: Remove From Group
     categories:
       - C0002
     description: Removes a service, user or account from a group.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Account Manipulation"
+        url: https://attack.mitre.org/techniques/T1098/
   - id: ET0014
     name: Create Role
     categories:
       - C0002
     description: Creates a new role.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Account Manipulation"
+        url: https://attack.mitre.org/techniques/T1098/
   - id: ET0015
     name: Read Role
     categories:
       - C0002
     description: Reads a role.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Discovery: Permission Groups Discovery"
+        url: https://attack.mitre.org/techniques/T1069/
   - id: ET0016
     name: Update Role
     categories:
       - C0002
     description: Updates a role.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Account Manipulation"
+        url: https://attack.mitre.org/techniques/T1098/
   - id: ET0017
     name: Delete Role
     categories:
       - C0002
     description: Removes or deletes a role.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Account Manipulation"
+        url: https://attack.mitre.org/techniques/T1098/
   - id: ET0018
     name: Add Permission
     categories:
       - C0002
     description: Adds a permission to a resource.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Account Manipulation"
+        url: https://attack.mitre.org/techniques/T1098/
   - id: ET0019
     name: Remove Permission
     categories:
       - C0002
     description: Removes a permission from a resource.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Account Manipulation"
+        url: https://attack.mitre.org/techniques/T1098/
   - id: ET0020
     name: Add Enrollment
     categories:
       - C0002
     description: A MFA enrollment was added to an account.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Account Manipulation"
+        url: https://attack.mitre.org/techniques/T1098/
+      - type: MITRE ATT&CK
+        display_name: "Credential Access: Multi-Factor Authentication Interception"
+        url: https://attack.mitre.org/techniques/T1111/
   - id: ET0021
     name: Remove Enrollment
     categories:
       - C0002
     description: A MFA enrollment was rmeoved from an account.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Account Manipulation"
+        url: https://attack.mitre.org/techniques/T1098/
+      - type: MITRE ATT&CK
+        display_name: "Impact: Account Access Removal"
+        urlL: https://attack.mitre.org/techniques/T1531/
   - id: ET0022
     name: Create Security Configuration
     categories:
       - C0003
     description: Creates a security configuration policy or enables settings.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence/Defense Evasion: Modify Authentication Process"
+        url: https://attack.mitre.org/techniques/T1556/
   - id: ET0023
     name: Read Security Configuration
     categories:
       - C0003
     description: Reads a security configuration policy or settings.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Discover: Software Discovery"
+        url: https://attack.mitre.org/techniques/T1518/
   - id: ET0024
     name: Update Security Configuration
     categories:
       - C0003
     description: Updates a security configuration policy or settings.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence/Defense Evasion: Modify Authentication Process"
+        url: https://attack.mitre.org/techniques/T1556/
+      - type: MITRE ATT&CK
+        display_name: "Defense Evasion: Impair Defenses"
+        url: https://attack.mitre.org/techniques/T1562/
   - id: ET0025
     name: Delete Security Configuration
     categories:
       - C0003
     description: Removes or deletes a security configuration policy or setting.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence/Defense Evasion: Modify Authentication Process"
+        url: https://attack.mitre.org/techniques/T1556/
+      - type: MITRE ATT&CK
+        display_name: "Defense Evasion: Impair Defenses"
+        url: https://attack.mitre.org/techniques/T1562/
   - id: ET0026
     name: Create Integration
     categories:
       - C0003
     description: Creates a new integration.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Persistence: Create Account"
+        url: https://attack.mitre.org/techniques/T1528/
+      - type: MITRE ATT&CK
+        display_name: "Credential Access: Steal Application Access Token"
+        url: https://attack.mitre.org/techniques/T1528/
   - id: ET0027
     name: Read Integration
     categories:
         - C0003
     description: Reads an existing integration.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Discover: Software Discovery"
+        url: https://attack.mitre.org/techniques/T1518/
   - id: ET0028
     name: Update Integration
     categories:
       - C0003
     description: Updates an existing integration.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Defense Evasion/Lateral Movement: Use Alternate Authentication Material"
+        url: https://attack.mitre.org/techniques/T1550/
+      - type: MITRE ATT&CK
+        display_name: "Credential Access: Steal Application Access Token"
+        url: https://attack.mitre.org/techniques/T1528/
   - id: ET0029
     name: Delete Integration
     categories:
       - C0003
     description: Removes or deletes an existing integration.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Defense Evasion: Impair Defenses"
+        url: https://attack.mitre.org/techniques/T1080/
   - id: ET0030
     name: Create Resource
     categories:
       - C0004
     description: A resource was created.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Lateral Movement: Taint Shared Content"
+        url: https://attack.mitre.org/techniques/T1080/
   - id: ET0031
     name: Read Resource
     categories:
       - C0004
     description: A resource was read.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Collection: Automated Collection"
+        url: https://attack.mitre.org/techniques/T1119/
+      - type: MITRE ATT&CK
+        display_name: "Collection: Data from Information Repositories"
+        url: https://attack.mitre.org/techniques/T1213/
   - id: ET0032
     name: Update Resource
     categories:
       - C0004
     description: A resource was updated.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Lateral Movement: Taint Shared Content"
+        url: https://attack.mitre.org/techniques/T1080/
+      - type: MITRE ATT&CK
+        display_name: "Impact: Data Manipulation"
+        url: https://attack.mitre.org/techniques/T1565/
   - id: ET0033
     name: Delete Resource
     categories:
       - C0004
     description: A resource was removed or deleted.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Impact: Data Destruction"
+        url: https://attack.mitre.org/techniques/T1485/
+      - type: MITRE ATT&CK
+        display_name: "Impact: Data Manipulation"
+        url: https://attack.mitre.org/techniques/T1565/
   - id: ET0034
     name: Download Resource
     categories:
       - C0004
     description: A resource was downloaded.
+    frameworks:
+      - type: MITRE ATT&CK
+        display_name: "Exfiltration: Exfiltration Over Alternative Protocol"
+        url: https://attack.mitre.org/techniques/T1048/
