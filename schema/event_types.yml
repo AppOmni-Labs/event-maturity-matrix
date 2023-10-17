@@ -2,8 +2,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 $id: https://json-schema.org/draft/2020-12/schema
-title: Event Maturity Matrix - Event Types
-description: A schema that defines the structure of event types in the event-maturity-matrix 
+title: Event Maturity Matrix Event Types
+description: A schema that defines the structure of event types in the event-maturity-matrix
 properties:
   entity_name:
     description: The name of the entity itself.
@@ -15,7 +15,7 @@ properties:
     description: A semantic version of the defined document.
     type: string
   meta:
-    description: An object that contains meta information about the definiton.
+    description: An object that contains meta information about the definition.
     type: ["null", "object"]
   items:
     description: An array of event types.

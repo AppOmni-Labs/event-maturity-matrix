@@ -5,7 +5,7 @@ entity_name: event_types
 description: |
   Event types represent logical buckets of different types of events. These event types
   are associated with a defined category and will typically have attributes associated with them.
-version: "1.0.0"
+version: "0.0.1"
 meta:
 items:
   - id: ET0001
@@ -114,7 +114,7 @@ items:
     name: Remove Enrollment
     categories:
       - C0002
-    description: A MFA enrollment was rmeoved from an account.
+    description: A MFA enrollment was removed from an account.
   - id: ET0022
     name: Create Security Configuration
     categories:

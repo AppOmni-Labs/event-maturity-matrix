@@ -1,19 +1,20 @@
 <img src="./images/emm-logo.svg" alt="logo" width="600"/>
 
-> You can view the Event Maturity Matrix at [https://eventmaturitymatrix.com/](https://eventmaturitymatrix.com/)
+### You can view the Event Maturity Matrix at [https://eventmaturitymatrix.com/](https://eventmaturitymatrix.com/)
 
 The Event Maturity Matrix (EMM) is a comprehensive framework that provides clarity regarding the capabilities and nuances of SaaS audit logging. EMM is a valuable resource for security practitioners who want to obtain visibility into the different types of user activities that are logged, see real-world examples of SaaS audit logs, and use these insights to guide security monitoring and operational objectives.
 
 > If you have not read our blog post, [Introducing the SaaS Event Maturity Matrix](https://appomni.com/blog_post/appomni-saas-event-maturity-matrix/), we recommend doing so before proceeding.
 
-- [Scope](#scope)
-- [Matrix Overview](#matrix-overview)
-- [Documentation](#documentation)
-- [License](#license)
-- [Security](#security)
-- [Issues](#issues)
-- [Credits](#credits)
-- [Roadmap](#roadmap)
+- [Event Maturity Matrix](#event-maturity-matrix)
+  - [Scope](#scope)
+  - [Matrix Overview](#matrix-overview)
+  - [Documentation](#documentation)
+  - [License](#license)
+  - [Security](#security)
+  - [Issues](#issues)
+  - [Credits](#credits)
+  - [Roadmap](#roadmap)
 
 ## Scope
 
@@ -25,32 +26,29 @@ This problem led to the creation of the SaaS Event Maturity Matrix (EMM): a comp
 
 ## Matrix Overview
 
-> **Note:** We recommend reviewing our [Terminology & Definitions](./docs/terminology.md) section before proceeding.
+### **Note:** We recommend reviewing our [Terminology & Definitions](./docs/terminology.md) section before proceeding.
 
 The SaaS Event Maturity Matrix (EMM) was developed with the defensive security practitioner in mind. As such, the matrix’s overarching theme is to provide context regarding the depth of visibility as it pertains to security monitoring use cases. The matrix consists of the following concepts:
 
-* [Products: represent the different SaaS platforms](./docs/data-defintion-reference.md#products)
-* [Event Sources: represent the different audit log files / sources that can be queried and collected](./docs/data-defintion-reference.md#event-sources)
-* [Event Categories: represent the primary, top level categories of SaaS audit logging](./docs/data-defintion-reference.md#event-categories)
-* [Event Types: represent the different types of activity that's audited, organized by categories](./docs/data-defintion-reference.md#event-types)
-* [Event Attributes: represent the the individual fields or keys from different event types](./docs/data-defintion-reference.md#event-attributes)
+* [Products: represent the different SaaS platforms](./docs/data-definition-reference.md#products)
+* [Event Sources: represent the different audit log files / sources that can be queried and collected](./docs/data-definition-reference.md#event-sources)
+* [Event Categories: represent the primary, top level categories of SaaS audit logging](./docs/data-definition-reference.md#event-categories)
+* [Event Types: represent the different types of activity that's audited, organized by categories](./docs/data-definition-reference.md#event-types)
+* [Event Attributes: represent the the individual fields or keys from different event types](./docs/data-definition-reference.md#event-attributes)
 
-The EMM is built using various yml files and JSON schema docs. You can read more about these definitions, as well as their relationships, in the [Data Defintion Reference](./docs/data-defintion-reference.md) section.
+The EMM is built using various yml files and JSON schema docs. You can read more about these definitions, as well as their relationships, in the [Data Definition Reference](./docs/data-definition-reference.md) section.
 
 ## Documentation
 
 You can find most documentation in the [docs](./docs/) folder. Below is a list of helpful documentation:
 
-* [Terminology & Defintions](./docs/terminology.md)
-* [Data Defintion Reference](./docs/data-defintion-reference.md)
+* [Terminology & Definitions](./docs/terminology.md)
+* [Data Definition Reference](./docs/data-definition-reference.md)
 
 ## License
 
-This Source Code Form is subject to the terms of the Mozilla Public
-License, v. 2.0. If a copy of the MPL was not distributed with this
-file, You can obtain one at https://mozilla.org/MPL/2.0/.
-
-Additionally, you can view the license in the [LICENSE.md](./LICENSE.md) file.
+Distributed under the terms of the [MIT license][LICENSE.md],
+_Event Maturity Matrix_ is free and open source software.
 
 ## Security
 
