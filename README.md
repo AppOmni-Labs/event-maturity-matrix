@@ -59,7 +59,7 @@ Security concerns are a top priority for us, please review our [Security Policy]
 ## Issues
 
 If you encounter any problems,
-please [file an issue](https://github.com/appomni/event_maturity_matrix/issues/new) along with a detailed description.
+please [file an issue](https://github.com/AppOmni-Labs/event-maturity-matrix/issues/new) along with a detailed description.
 
 ## Credits
 
@@ -67,7 +67,7 @@ This project was developed by the Threat Detection team at [AppOmni](https://app
 
 ## Roadmap
 
-We currently have identified the following roadmap items. If you have any suggestions, please [file an issue](https://github.com/appomni/event-maturity-matrix/issues/new).
+We currently have identified the following roadmap items. If you have any suggestions, please [file an issue](https://github.com/AppOmni-Labs/event-maturity-matrix/issues/new).
 
 * [ ] Add Microsoft as a product
 * [ ] Add Google Workspace as a product
