@@ -389,8 +389,8 @@ If a field value is within nested JSON you can use dot notation. Using the below
 
 ```json
 {
-    "product":{
-        "name: "Test"
+    "product": {
+        "name": "Test"
     }
 }
 ```
