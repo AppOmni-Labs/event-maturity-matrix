@@ -45,7 +45,7 @@ You can find the `event-maturity-matrix` defined categories [here](../categories
 
 ### Event Types
 
-Event Types are the different types of activity that is audited. These are the core of the `event-maturity-matrix` and provide detection, security and IT professionals with understanding what can and cannot be detected / investigated with an event source.
+Event Types are the different types of activity that are audited. These are the core of the `event-maturity-matrix` and provide detection, security and IT professionals with understanding what can and cannot be detected / investigated with an event source.
 
 The current list of event types by root type are:
 
