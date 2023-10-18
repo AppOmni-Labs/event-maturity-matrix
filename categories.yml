@@ -4,7 +4,7 @@
 entity_name: categories
 description: |
   Categories define the logical buckets of event types.
-version: "0.0.1"
+version: "1.0.0"
 meta:
 items:
   - id: C0001

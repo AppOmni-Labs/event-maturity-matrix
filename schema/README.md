@@ -104,7 +104,7 @@ You can find the `event-maturity-matrix` defined event_types [here](../event_typ
 
 ### Attributes
 
-Attributes are the individual fields (or keys) from different event_types. These help detction, security and IT professionals identify if they can or cannot detect certain activity effeciently (or even at all). 
+Attributes are the individual fields (or keys) from different event_types. These help detection, security and IT professionals identify if they can or cannot detect certain activity efficiently (or even at all).  
 
 Current defined attributes are:
 

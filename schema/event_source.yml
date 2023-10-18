@@ -5,7 +5,7 @@ $id: https://json-schema.org/draft/2020-12/schema
 title: Event Maturity Matrix - Event Source
 description: |
   A schema that defines the structure of an event source in the event-maturity-matrix.
-  Event sources are product specific definitions which defines the categories, event types and attributes
+  Event sources are product specific definitions which define the categories, event types and attributes
   for that specific event source.
 properties:
   entity_name:
@@ -138,7 +138,7 @@ $defs:
         description: The type of event example this references.
         type: string
       location:
-        description: The location of an example event which is santized.
+        description: The location of an example event which is sanitized.
         type: string
   reference:
     type: object

@@ -6,15 +6,14 @@ The Event Maturity Matrix (EMM) is a comprehensive framework that provides clari
 
 > If you have not read our blog post, [Introducing the SaaS Event Maturity Matrix](https://appomni.com/blog_post/appomni-saas-event-maturity-matrix/), we recommend doing so before proceeding.
 
-- [Event Maturity Matrix](#event-maturity-matrix)
-  - [Scope](#scope)
-  - [Matrix Overview](#matrix-overview)
-  - [Documentation](#documentation)
-  - [License](#license)
-  - [Security](#security)
-  - [Issues](#issues)
-  - [Credits](#credits)
-  - [Roadmap](#roadmap)
+- [Scope](#scope)
+- [Matrix Overview](#matrix-overview)
+- [Documentation](#documentation)
+- [License](#license)
+- [Security](#security)
+- [Issues](#issues)
+- [Credits](#credits)
+- [Roadmap](#roadmap)
 
 ## Scope
 
@@ -47,8 +46,11 @@ You can find most documentation in the [docs](./docs/) folder. Below is a list o
 
 ## License
 
-Distributed under the terms of the [MIT license][LICENSE.md],
-_Event Maturity Matrix_ is free and open source software.
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this
+file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+Additionally, you can view the license in the [LICENSE.md](./LICENSE.md) file.
 
 ## Security
 
