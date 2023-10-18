@@ -34,10 +34,10 @@ You can find an example event source [here](../template.event_source.yml).
 
 Categories are logical buckets for each `event_type`. The current categories are:
 
-* Authentication - {Add a description here}
-* Authorization - {Add a description here}
-* System Audit - {Add a description here}
-* Activity Audit - {Add a description here}
+* Authentication - This category contains events related to authentication.
+* Authorization - This category contains events related to the management of or access of a specific service provider.
+* System Audit - Tenant level setting / configuration operations that impact an entire product.
+* Activity Audit - This category contains events related to general activity within an environment.
 
 > These categories are subject to change and will likely be expanded upon in the future.
 
@@ -59,44 +59,6 @@ The current list of event types by root type are:
 * Security Configuration operations
 * Integration operations
 * Resource operations
-
-The current full list of event types are:
-
-* Account Login - {Add a description here}
-* Account Logout - {Add a description here}
-* MFA Verification - {Add a description here}
-* Create User - {Add a description here}
-* Read User - {Add a description here}
-* Update User - {Add a description here}
-* Delete User - {Add a description here}
-* Create Group - {Add a description here}
-* Read Group - {Add a description here}
-* Update Group - {Add a description here}
-* Delete Group - {Add a description here}
-* Add to Group - {Add a description here}
-* Remove From Group - {Add a description here}
-* Create Role - {Add a description here}
-* Read Role - {Add a description here}
-* Update Role - {Add a description here}
-* Delete Role - {Add a description here}
-* Add Permission - {Add a description here}
-* Remove Permission - {Add a description here}
-* Add Enrollment - {Add a description here}
-* Remove Enrollment - {Add a description here}
-* Create Security Configuration - {Add a description here}
-* Read Security Configuration - {Add a description here}
-* Update Security Configuration - {Add a description here}
-* Delete Security Configuration - {Add a description here}
-* Create Integration - {Add a description here}
-* Read Integration - {Add a description here}
-* Update Integration - {Add a description here}
-* Delete integration - {Add a description here}
-* Create Resource - {Add a description here}
-* Read Resource - {Add a description here}
-* Update Resource - {Add a description here}
-* Delete Resource - {Add a description here}
-* Download Resource - {Add a description here}
-
 
 > These event_types are subject to change and will likely be expanded upon in the future.
 
@@ -124,7 +86,7 @@ Current defined attributes are:
 * Credential Context
 * Identity Service Provider Context
 * Verification Result
-* Verificatio Method
+* Verification Method
 * Verification Flagged
 * Activity Performed
 * Target Username

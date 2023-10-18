@@ -24,22 +24,22 @@
 
 ## Product Definitions
 
-| Data Definition                                 |Schema|
-|-------------------------------------------------|------|
-| [product.template.yml](../product.template.yml) |[Schema](../schema/product.yml)|
+|Data Definition|Schema|
+|--------------|------|
+|[product.template.yml](../product.template.yml)|[Schema](../schema/product.yml)|
 
 * Collection - Each defined `Product` will have one or more collections. A collection is a series of values that describe the different ways that one could collect data from a product. For example, a collection could be a specific API endpoint or a specific log file.
 
 ## Event Source Definitions
 
-| Data Definition               |Schema|
-|-------------------------------|------|
-| [example.yml](../example.yml) |[Schema](../schema/event_source.yml)|
+|Data Definition|Schema|
+|--------------|------|
+|[example.yml](../example.yml)|[Schema](../schema/event_source.yml)|
 
 * licensing - Licensing within an event_source definition is used to describe the licensing model of the event source. It's recommended to add comments about the licensing model of the event source from a security perspective.
 * retention - Retention within an event_source definition is used to describe the duration of log retention. Additionally, it's recommended to add comments about the retention of the event source from a security perspective.
 * latency - Latency within an event_source definition is used to describe the duration of latency of the event source. Additionally, it's recommended to add comments about the latency of the event source from a security perspective.
-* mappings - Mappings within an event_source definition describes the different ways that one could map a specific event type to a specific event source. Mappings are used to describe the different ways that one could collect data from a event source. Mappings are made up of the following:
+* mappings - Mappings within an event_source definition describe the different ways that one could map a specific event type to a specific event source. Mappings are used to describe the different ways that one could collect data from an event source. Mappings are made up of the following:
   * category - The category of the event type being mapped.
   * event_type - The event type being mapped.
   * attributes - A map of internally defined attribute IDs to the provided examples field names. This is used to map the examples to the defined attributes.
@@ -55,7 +55,6 @@
 
 ## Category Definitions
 
-| Data Definition                     |Schema|
-|-------------------------------------|------|
-| [categories.yml](../categories.yml) |[Schema](../schema/categories.yml)|
-
+|Data Definition|Schema|
+|--------------|------|
+|[categories.yml](../categories.yml)|[Schema](../schema/categories.yml)|

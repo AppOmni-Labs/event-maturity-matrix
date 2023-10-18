@@ -39,7 +39,7 @@ Within each of our core definition files, a few fields must be present. These ar
 entity_name: categories # or attributes or event_types or product or event_source
 description: |
   A general description of the entity
-version: "0.0.1"
+version: "1.0.0"
 ```
 
 Depending on the entity, we may have additional fields but these are the base fields which must be present. 
@@ -54,13 +54,13 @@ Additionally, the available names for an entity are:
 
 The sections below will explain each definition in detail and provide examples of each. 
 
-> **NOTE**: Each core definition file contains a set of `items`. Each item represents the logical bucket of that entity's data definitions.
+> **NOTE**: Each core definition file contains a set of `items`. Each item represents the logical bucket of that entities data definitions.
 
 ### Categories
 
-| Data Definition                     |Schema|
-|-------------------------------------|------|
-| [categories.yml](../categories.yml) |[Schema](../schema/categories.yml)|
+|Data Definition|Schema|
+|--------------|------|
+|[categories.yml](../categories.yml)|[Schema](../schema/categories.yml)|
 
 Categories represent the high-level categorization of different event types.
 
@@ -85,9 +85,9 @@ description: |
 
 ### Event Types
 
-| Data Definition                       |Schema|
-|---------------------------------------|------|
-| [event_types.yml](../event_types.yml) |[Schema](../schema/event_types.yml)|
+|Data Definition|Schema|
+|--------------|------|
+|[event_types.yml](../event_types.yml)|[Schema](../schema/event_types.yml)|
 
 Event types represent logical buckets of different types of events with in a SaaS service.
 
@@ -113,9 +113,9 @@ When defining a new `event_type` you must have unique values for the `id`, `name
 
 ### Attributes
 
-| Data Definition                     |Schema|
-|-------------------------------------|------|
-| [attributes.yml](../attributes.yml) |[Schema](../schema/attributes.yml)|
+|Data Definition|Schema|
+|--------------|------|
+|[attributes.yml](../attributes.yml)|[Schema](../schema/attributes.yml)|
 
 Attributes represent the individual fields within an event. We've normalized these field names to allow for easier mapping of data from different SaaS services.
 
@@ -172,7 +172,7 @@ Also this attribute is only defined for event_types which are associated with th
 ## Content Definitions
 
 Content definitions within EMM describe the data which is logged by a specific SaaS service. These definitions are used to map the data from a SaaS service to our core definitions.
-Within EMM we consider content definitions to be the external data which we're representing using our core data definitions (above). 
+Within EMM we consdier content definitions to be the external data which we're representing using our core data definitions (above). 
 
 EMM has two main types of content definitions. These are:
 
@@ -185,17 +185,17 @@ Each event_source must have an associated `product` definition. It's also import
 
 ### Product
 
-| Data Definition                                 |Schema|
-|-------------------------------------------------|------|
-| [template.product.yml](../template.product.yml) |[Schema](../schema/product.yml)|
+|Data Definition|Schema|
+|--------------|------|
+|[template.product.yml](../template.product.yml)|[Schema](../schema/product.yml)|
 
 A product describes a specific SaaS service, available collection details and more. 
 
-The product content definition is defined similarly to the other definitions which requires:
+The product content definition is defined similarily to the other definitions which requires:
 
 ```yaml
 entity_name: product
-version: "0.0.1"
+version: "1.0.0"
 name: Salesforce
   Salesforce audit logs are collected via objects, namely the SetupAuditTrail object, EventLogFile object, or Real-Time Event Monitoring objects. These objects are accessible via the Salesforce API.
   
@@ -253,20 +253,20 @@ collection:
 
 The `collection` key takes an array of properties which define each collection point, including references and other information.
 
-|Property Name|Value Type|Value Options|Description| Notes                                                                             |
-|-------------|----------|-------------|-----------|-----------------------------------------------------------------------------------|
-|id|string|N/A|A unique id for this collection.| This unique_id is referenced in event_sources under `product.collection_sources`. |
-|name|string|N/A|The name of the collection| This should be unique as well.                                                    |
-|description|string|N/A|A description which explains the data collection source.|                                                                                   |
-|references|List[str]|N/A|A list of references| Each reference has a unique_id, name, description and a URL to the reference.     |
+|Property Name|Value Type|Value Options|Description|Notes|
+|-------------|----------|-------------|-----------|-----|
+|id|string|N/A|A unique id for this collection.|This unique_id is referenced in event_sources under `product.collection_sources`.|
+|name|string|N/A|The name of the collection|This should be unique as well.|
+|description|string|N/A|A description which explains the data collection source.||
+|references|List[str]|N/A|A list of references|Each reference has a unique_id, name, description and a URL to the reference.|
 
 > It's okay if a reference link is behind a paywall but please try to find an open Uri if possible.
 
 ### Event Source
 
-| Data Definition                                           |Schema|
-|-----------------------------------------------------------|------|
-| [template.event_source.yml](../template.event_source.yml) |[Schema](../schema/event_source.yml)|
+|Data Definition|Schema|
+|--------------|------|
+|[template.event_source.yml](../template.event_source.yml)|[Schema](../schema/event_source.yml)|
 
 Each event_source uniquely describes the event collection source used to detect threats. Each event_source itself has a relationship to a product but also describes the collection method, retention, latency, licensing and more. Each event_source (should) also have one or more mappings which describe the data which is collected by the event_source. These mappings map EMM attribute fields to the actual data fields within the event_source.
 
@@ -274,7 +274,7 @@ Below is an example event_source for [Salesforce EventLogFile Login Event](../pr
 
 ```yaml
 entity_name: event_source
-version: "0.0.1"
+version: "1.0.0"
 product: 
   name: Salesforce
   collection_sources:
@@ -319,7 +319,7 @@ Each event_source should define the following root values:
 
 ```yaml
 entity_name: event_source
-version: "0.0.1"
+version: "1.0.0"
 product: 
   name: Salesforce
   collection_sources:
@@ -348,7 +348,7 @@ references:
 #     url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_login.htm
 ```
 
-Each event_source defines a series of specific information as it relates to detection engineering, operations, and security in general. These properties allow us to better understand the capabilities of an event_source as well as it's usability within the context of your product.
+Each event_source defines a series of specific information as it relates to detection engineering, operations, and security in general. These properties allow us to better understand the capabilities of an event_source as well as its usability within the context of your product.
 
 These properties are:
 
@@ -363,7 +363,7 @@ Retention is meant to describe how long an event_source retains logs for retriev
 
 An event_source defines retention with two properties; `duration` and `comments`. 
 
-> When defining an event_source you should report the event_sources actual data instead of your experience with the service - keep this unbiased as possible. 
+> When defining an event_source you should report the event_sources actual data instead of your experience with the service - keep this as unbiased as possible. 
 
 The `duration` value accepts a string but please keep to a standard format of `{number} {days|weeks|years|hours|etc.}` if possible. Also, please add `comments` which helps with understanding the `duration` logs are kept within an event_source as well as any other pertinent information.
 
