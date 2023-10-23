@@ -3,7 +3,7 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 $id: https://json-schema.org/draft/2020-12/schema
 title: Event Maturity Matrix - Attributes
-description: A schema that defines the structure of attributes in the event-maturity-matrix 
+description: A schema that defines the structure of attributes in the event-maturity-matrix
 properties:
   entity_name:
     description: The name of the entity itself.
@@ -15,7 +15,7 @@ properties:
     description: A semantic version of the defined document.
     type: string
   meta:
-    description: An object that contains meta information about the definiton.
+    description: An object that contains meta information about the definition.
     type: ["null", "object"]
   items:
     description: An array of attributes.
@@ -48,7 +48,7 @@ $defs:
       type:
         description: Defines the value type for the given attribute field.
         type: string
-        enum: 
+        enum:
           - string
           - array
           - integer

@@ -10,7 +10,7 @@ The Okta System Log API provides near real-time, read-only access to an organiza
 
 ## Retention
 
-Based on our research, Okta retains audit logs for System Log events are retained in Okta for a period of 90 days..
+Based on our research, Okta retains audit logs for System Log events for a period of 90 days.
 
 
 ### Comments

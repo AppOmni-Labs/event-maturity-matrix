@@ -1,6 +1,6 @@
 # Event Maturity Matrix Schema
 
-This document defines the `event-maturity-matrix` (EMM) JSON Schema defintions. 
+This document defines the `event-maturity-matrix` (EMM) JSON Schema definitions. 
 
 ## Core
 
@@ -45,7 +45,7 @@ You can find the `event-maturity-matrix` defined categories [here](../categories
 
 ### Event Types
 
-Event Types are the different types of activity that's audited. These are the core of the `event-maturity-matrix` and provide detection, security and IT professionals with understanding what can and can't be detected / investigated with a event source.
+Event Types are the different types of activity that are audited. These are the core of the `event-maturity-matrix` and provide detection, security and IT professionals with understanding what can and cannot be detected / investigated with an event source.
 
 The current list of event types by root type are:
 
@@ -66,7 +66,7 @@ You can find the `event-maturity-matrix` defined event_types [here](../event_typ
 
 ### Attributes
 
-Attributes are the individual fields (or keys) from different event_types. These help detction, security and IT professionals identify if they can or can't detect certain activity effeciently (or even at all). 
+Attributes are the individual fields (or keys) from different event_types. These help detection, security and IT professionals identify if they can or cannot detect certain activity efficiently (or even at all).  
 
 Current defined attributes are:
 
@@ -86,7 +86,7 @@ Current defined attributes are:
 * Credential Context
 * Identity Service Provider Context
 * Verification Result
-* Verificatio Method
+* Verification Method
 * Verification Flagged
 * Activity Performed
 * Target Username

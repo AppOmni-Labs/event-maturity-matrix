@@ -56,7 +56,7 @@
 |Event Attributes|User Type / Role|Identifies the type of user or the user's role within the SaaS platform.||
 |Event Attributes|Session ID|Identifies the unique session identifier that a user has within the SaaS platform.||
 |Event Attributes|IP Address|Identifies the IP address that was used to access the SaaS platform.||
-|Event Attributes|IP Address Geo / ASN|Identifies the IP address gelocation or automomous system (AS) that was used to access the SaaS platform.||
+|Event Attributes|IP Address Geo / ASN|Identifies the IP address geolocation or autonomous system (AS) that was used to access the SaaS platform.||
 |Event Attributes|User Agent|Identifies the type of device and software that was used to access the SaaS platform.||
 |Event Attributes|Device / Client Type|Identifies the type of computer device or client software that was used to access the SaaS platform.||
 |Event Attributes|Failure Context|Provides a description or reason for why an event action or operation failed.||
@@ -75,8 +75,7 @@
 |Event Attributes|Configuration / Setting Name|Identifies the name of the setting, policy, or configuration parameter that was affected by the event.||
 |Event Attributes|Configuration / Setting Value|Identifies the new value of a changed setting, policy, or configuration parameter that was affected by the event.||
 |Event Attributes|Previous Configuration / Setting Value|Identifies the previous value of a changed setting, policy, or configuration parameter that was affected by the event.||
-|Event Attributes|Integration / App Name|Identifies the name of the third party or OAuth application that was effected by the event.||
+|Event Attributes|Integration / App Name|Identifies the name of the third party or OAuth application that was affected by the event.||
 |Event Attributes|Resource Name|Identifies the name of the resource (for example, application, file, report, etc.) that was accessed in the event.||
 |Event Attributes|Resource Type|Identifies the type of the resource (for example, application, file, report, etc.) that was accessed in the event.||
 |Event Attributes|Resource Metadata|Provides additional information about the resource (for example, application, file, report, etc.) that was accessed in the event.||
-

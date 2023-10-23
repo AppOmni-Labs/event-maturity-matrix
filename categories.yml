@@ -22,10 +22,10 @@ items:
     description: |
       Tenant level setting / configuration operations that impact an entire product.
 
-      For example, updating of security configurations at a global level are typicall within the System Audit category.
+      For example, updating of security configurations at a global level are typically within the System Audit category.
   - id: C0004
     name: Activity Audit
     description: |
       This category contains events related to general activity within an environment.
 
-      This event types within this category are focused on behavior within a service.
+      Event types within this category are focused on behavior within a service.

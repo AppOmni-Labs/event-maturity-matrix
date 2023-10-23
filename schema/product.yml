@@ -5,7 +5,7 @@ $id: https://json-schema.org/draft/2020-12/schema
 title: Event Maturity Matrix - Product
 description: |
   A schema that defines the structure of a product in the event-maturity-matrix.
-  Product data files are specific defintions which is used or referenced by event_sources, as well as describe the product.
+  Product data files are specific definitions which are used or referenced by event_sources, as well as describe the product.
 properties:
   entity_name:
     description: The entity type.
@@ -39,7 +39,7 @@ properties:
       $ref: "#/$defs/collection"
     uniqueItems: true
   meta:
-    description: An object that contains meta information about the definiton.
+    description: An object that contains meta information about the definition.
     type: ["null", "object"]
   event_sources:
     description: References one or more example files (relative path expected) containing a JSON response from the defined service.
@@ -88,7 +88,7 @@ $defs:
       - references
     properties:
       id:
-        description: A unique ID for a collection definiton. This ID will be referenced from event_sources.
+        description: A unique ID for a collection definition. This ID will be referenced from event_sources.
         type: string
       name:
         description: The name of a product collection source.

@@ -114,7 +114,7 @@ items:
     name: Remove Enrollment
     categories:
       - C0002
-    description: A MFA enrollment was rmeoved from an account.
+    description: A MFA enrollment was removed from an account.
   - id: ET0022
     name: Create Security Configuration
     categories:

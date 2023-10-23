@@ -1,13 +1,13 @@
-# Data Defintion Reference
+# Data Definition Reference
 
 This document describes the individual data files within the Event Maturity Matrix framework in detail as well as how these files relate to each other.
 
-> I will break down each file individually but please reivew the `notes` left within each section as these will contain pertinent information.
+> I will break down each file individually but please review the `notes` left within each section as these will contain pertinent information.
 
-- [Data Defintion Reference](#data-defintion-reference)
+- [Data Definition Reference](#data-definition-reference)
   - [Overview](#overview)
   - [Framework Definitions / Data Files](#framework-definitions--data-files)
-    - [Core Defintions](#core-defintions)
+    - [Core Definitions](#core-definitions)
     - [Categories](#categories)
     - [Event Types](#event-types)
     - [Attributes](#attributes)
@@ -21,19 +21,19 @@ This document describes the individual data files within the Event Maturity Matr
 
 ## Overview
 
-EMM has two main `buckets` of data files within the EMM project. The first bucket being the [core defintions](#core-defintions) themselves and the second being the [content defintions](#content-definitions) mapped to our defintions.
+EMM has two main `buckets` of data files within the EMM project. The first bucket being the [core definitions](#core-definitions) themselves and the second being the [content definitions](#content-definitions) mapped to our definitions.
 
-> All of the data defintions within EMM are based on a JSONSchema document which you can find in the [schema](../schema/README.md) folder.
+> All of the data definitions within EMM are based on a JSONSchema document which you can find in the [schema](../schema/README.md) folder.
 
 ## Framework Definitions / Data Files
 
-The EMM framework is made up of a few core defintions. These defintions are the core of the framework and are used to normalize data from our content defintions.
+The EMM framework is made up of a few core definitions. These definitions are the core of the framework and are used to normalize data from our content definitions.
 
-> **NOTE**: These core defintions within the framework aren't meant to be changed by the consumer in any way. 
+> **NOTE**: These core definitions within the framework aren't meant to be changed by the consumer in any way. 
 
-### Core Defintions
+### Core Definitions
 
-Within each of our core defintion files, a few fields must be present. These are:
+Within each of our core definition files, a few fields must be present. These are:
 
 ```yaml
 entity_name: categories # or attributes or event_types or product or event_source
@@ -52,13 +52,13 @@ Additionally, the available names for an entity are:
 * product
 * event_source
 
-The sections below will explain each defintion in detail and provide examples of each. 
+The sections below will explain each definition in detail and provide examples of each. 
 
-> **NOTE**: Each core defintion file contains a set of `items`. Each item represents the logical bucket of that entities data defintions.
+> **NOTE**: Each core definition file contains a set of `items`. Each item represents the logical bucket of that entities data definitions.
 
 ### Categories
 
-|Data Defintion|Schema|
+|Data Definition|Schema|
 |--------------|------|
 |[categories.yml](../categories.yml)|[Schema](../schema/categories.yml)|
 
@@ -70,7 +70,7 @@ Each category within EMM will have a set of event types which are considered rel
 
 Each category will be referenced by one or more event_types. Additionally, a category can be referenced as an `include` or `exclude` property value on a defined `attribute`.
 
-Below is an example of a category defintion:
+Below is an example of a category definition:
 
 > Each category must have a unique ID in the format of `C####` where `####` is a unique (sequential) number.
 
@@ -85,7 +85,7 @@ description: |
 
 ### Event Types
 
-|Data Defintion|Schema|
+|Data Definition|Schema|
 |--------------|------|
 |[event_types.yml](../event_types.yml)|[Schema](../schema/event_types.yml)|
 
@@ -95,9 +95,9 @@ Event types are the core of the EMM framework. Each defined event type is unique
 
 > If you are viewing the matrix itself, event types are the individual cards under a category.
 
-Each event type must be unique and must be associated with a category. Additionally, a event type can be referenced as an `include` or `exclude` property value on a defined `attribute`.
+Each event type must be unique and must be associated with a category. Additionally, an event type can be referenced as an `include` or `exclude` property value on a defined `attribute`.
 
-Below is an example of a event type defintion:
+Below is an example of an event type definition:
 
 For example, a single event_type item is defined as:
 
@@ -109,11 +109,11 @@ For example, a single event_type item is defined as:
   description: An account attempted to login to a system.
 ```
 
-When defining a new `event_type` you must have unique values for the `id`, `name` and `description` fields. Additionally, you must associate this event_type to a defined category. You can associate this event_type to more than one cateogry but many times there is no need to do so.
+When defining a new `event_type` you must have unique values for the `id`, `name` and `description` fields. Additionally, you must associate this event_type to a defined category. You can associate this event_type to more than one category but many times there is no need to do so.
 
 ### Attributes
 
-|Data Defintion|Schema|
+|Data Definition|Schema|
 |--------------|------|
 |[attributes.yml](../attributes.yml)|[Schema](../schema/attributes.yml)|
 
@@ -125,7 +125,7 @@ Each attribute must have a unique `id`, `name`, and `description`. Additionally,
 * integer
 * boolean
 
-> If you are viewing the matrix itself, attributes are the individual attributes/fields within a event type card.
+> If you are viewing the matrix itself, attributes are the individual attributes/fields within an event type card.
 
 By default, all defined attributes have a `include` field and this field defaults to `ALL`. **Even if it's not explicitly defined, just know that we consider this the default.**
 
@@ -171,27 +171,27 @@ Also this attribute is only defined for event_types which are associated with th
 
 ## Content Definitions
 
-Content defintions within EMM describe the data which is logged by a specific SaaS service. These defintions are used to map the data from a SaaS service to our core defintions.
-Within EMM we consdier content defintions to be the external data which we're representing using our core data defintions (above). 
+Content definitions within EMM describe the data which is logged by a specific SaaS service. These definitions are used to map the data from a SaaS service to our core definitions.
+Within EMM we consdier content definitions to be the external data which we're representing using our core data definitions (above). 
 
-EMM has two main types of content defintions. These are:
+EMM has two main types of content definitions. These are:
 
-* product - A product defintion describes a specific SaaS service, available collection details and more. 
-* event_source - An event_source defintion describes a specific collection method for a SaaS service. For example, a SaaS service may have multiple REST API's as a collection method. Each of these would be defined as an event_source.
+* product - A product definition describes a specific SaaS service, available collection details and more. 
+* event_source - An event_source definition describes a specific collection method for a SaaS service. For example, a SaaS service may have multiple REST APIs as a collection method. Each of these would be defined as an event_source.
 
-Each event_source must have an associated `product` defintion. It's also important to understand that each event_source defines a series of `mappings` that explain what that specific event_source can and will log.
+Each event_source must have an associated `product` definition. It's also important to understand that each event_source defines a series of `mappings` that explain what that specific event_source can and will log.
 
 > **NOTE**: You can find more about [contributing](../CONTRIBUTING.md) to EMM in the contributing guide.
 
 ### Product
 
-|Data Defintion|Schema|
+|Data Definition|Schema|
 |--------------|------|
 |[template.product.yml](../template.product.yml)|[Schema](../schema/product.yml)|
 
 A product describes a specific SaaS service, available collection details and more. 
 
-The product content defintion is defined similarily to the other defintions which requires:
+The product content definition is defined similarily to the other definitions which requires:
 
 ```yaml
 entity_name: product
@@ -214,7 +214,7 @@ name: Salesforce
 
 > Please note that the name of the `product` must match the `product.name` value in each event_source.
 
-Each product will define one or more `collections` in our content defintion. Here is an example of a collection data structure within a product defintion:
+Each product will define one or more `collections` in our content definition. Here is an example of a collection data structure within a product definition:
 
 ```yaml
 collection:
@@ -258,19 +258,19 @@ The `collection` key takes an array of properties which define each collection p
 |id|string|N/A|A unique id for this collection.|This unique_id is referenced in event_sources under `product.collection_sources`.|
 |name|string|N/A|The name of the collection|This should be unique as well.|
 |description|string|N/A|A description which explains the data collection source.||
-|references|List[str]|N/A|A list of references|Each refernce has a unique_id, name, description and a URL to the reference.|
+|references|List[str]|N/A|A list of references|Each reference has a unique_id, name, description and a URL to the reference.|
 
 > It's okay if a reference link is behind a paywall but please try to find an open Uri if possible.
 
 ### Event Source
 
-|Data Defintion|Schema|
+|Data Definition|Schema|
 |--------------|------|
 |[template.event_source.yml](../template.event_source.yml)|[Schema](../schema/event_source.yml)|
 
 Each event_source uniquely describes the event collection source used to detect threats. Each event_source itself has a relationship to a product but also describes the collection method, retention, latency, licensing and more. Each event_source (should) also have one or more mappings which describe the data which is collected by the event_source. These mappings map EMM attribute fields to the actual data fields within the event_source.
 
-Below is an example event_source for [Salesforce EventLogFile Login Event](../products/salesforce/event_sources/elf_login_event.yml) which we will use as an example to explain the structure of a event_source data content definiton file.
+Below is an example event_source for [Salesforce EventLogFile Login Event](../products/salesforce/event_sources/elf_login_event.yml) which we will use as an example to explain the structure of an event_source data content definition file.
 
 ```yaml
 entity_name: event_source
@@ -331,9 +331,9 @@ description: This event source is to track login events in Salesforce.
 
 > The name of the product must match what's defined in the `{name}.product.yml` file for said product.
 
-You must define the same core pieces of data like `entity_name`, `version`, `name`, and `description` but you must also define the associated `product`. This defintion has two properties `name` and `collection_sources`. The `product.name` property must match the name of the product and the `collection_sources` property takes a list of `collection` IDs from the `{product.name}.product.yml` defintion.
+You must define the same core pieces of data like `entity_name`, `version`, `name`, and `description` but you must also define the associated `product`. This definition has two properties `name` and `collection_sources`. The `product.name` property must match the name of the product and the `collection_sources` property takes a list of `collection` IDs from the `{product.name}.product.yml` definition.
 
-A event_source can also define one or more references. These references are meant to provide additional information about the event_source which helps describe event collection, retention, latency, licensing and more. These references are optional but are highly encouraged.
+An event_source can also define one or more references. These references are meant to provide additional information about the event_source which helps describe event collection, retention, latency, licensing and more. These references are optional but are highly encouraged.
 
 You can provide one or more references using this format:
 
@@ -342,13 +342,13 @@ references:
   - id: login_event
     name: EventLogFile Login Event
     url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_login.htm
-# You can add more by uncommiting the below section
+# You can add more by uncommenting the below section
 #   - id: login_event
 #     name: EventLogFile Login Event
 #     url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_login.htm
 ```
 
-Each event_source defines a series of specific information as it relates to detection engineering, operations, and security in general. These properties allow us to better understand the capabilities of a event_source as well as it's usability within the context of your product.
+Each event_source defines a series of specific information as it relates to detection engineering, operations, and security in general. These properties allow us to better understand the capabilities of an event_source as well as its usability within the context of your product.
 
 These properties are:
 
@@ -361,15 +361,15 @@ These properties are:
 
 Retention is meant to describe how long an event_source retains logs for retrieval.
 
-A event_source defines retention with two properties; `duration` and `comments`. 
+An event_source defines retention with two properties; `duration` and `comments`. 
 
-> When defining an event_source you should report the event_sources actual data instead of your experience with the service - keep this unbias as possible. 
+> When defining an event_source you should report the event_sources actual data instead of your experience with the service - keep this as unbiased as possible. 
 
-The `duration` value accepts a string but please keep to a standard format of `{number} {days|weeeks|years|hours|etc.}` if possible. Also, please add `comments` which helps with understanding the `duration` logs are kept within a event_source as well as any other pertinent information.
+The `duration` value accepts a string but please keep to a standard format of `{number} {days|weeks|years|hours|etc.}` if possible. Also, please add `comments` which helps with understanding the `duration` logs are kept within an event_source as well as any other pertinent information.
 
 #### Latency
 
-Latency is meant to describe the `duration` (or lag) from an event action to receiving the resulting log. The `duration` value accepts a string but please keep to a standard format of `{number} {days|weeeks|years|hours|etc.}` if possible. Also, please add `comments` which helps with understanding the `duration` logs are kept within a event_source.
+Latency is meant to describe the `duration` (or lag) from an event action to receiving the resulting log. The `duration` value accepts a string but please keep to a standard format of `{number} {days|weeks|years|hours|etc.}` if possible. Also, please add `comments` which helps with understanding the `duration` logs are kept within an event_source.
 
 #### Licensing
 
@@ -379,18 +379,18 @@ Licensing is complex, that being said at this time EMM is only tracking any `com
 
 Mappings are the key component of an event_source. `mappings` are a list of objects which define which categories, event_types and attributes are supported by a given event_source.
 
-Each `mapping` object must contain a [category](#categories) ID and [event_type](#event-types) ID which is defined as a core data defintion. Additionally, each `mapping` must define a list of [attributes](#attributes) which are supported by the event_source. Each attribute maps to a value within the provided example JSON event.
+Each `mapping` object must contain a [category](#categories) ID and [event_type](#event-types) ID which is defined as a core data definition. Additionally, each `mapping` must define a list of [attributes](#attributes) which are supported by the event_source. Each attribute maps to a value within the provided example JSON event.
 
 The `attribute` map must be in the format of `A000X` (which is the ID of an attribute) and the value must be the actual name of the field within the provided example.
 
-To reiterate, this map contains the ID of a defined attribute and the value matches the value within a example JSON file.
+To reiterate, this map contains the ID of a defined attribute and the value matches the value within an example JSON file.
 
 If a field value is within nested JSON you can use dot notation. Using the below example, the map attribute value would be `product.name`.
 
 ```json
 {
-    "product":{
-        "name: "Test"
+    "product": {
+        "name": "Test"
     }
 }
 ```
