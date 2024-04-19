@@ -1,0 +1,19 @@
+entity_name: product
+version: "0.0.1"
+name: OneLogin
+logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/onelogin_square.svg
+description: |
+  OneLogin is a cloud-based identity and access management (IAM) platform that provides centralized authentication, management of user identities, and access control to applications and data.
+  
+  OneLogin Events record logs related to an organization, such as user logins, password changes, and application access. The Events can be used to understand platform and user activity,  troubleshoot problems, and investigate security incidents.
+  
+  The OneLogin Get Events API allows an organization to programmatically access the OneLogin Event logs. The API provides a way to retrieve, filter, and export events.
+collection:
+  - id: get_events_api
+    name: Get Events API
+    description: The OneLogin Get Events API provides near real-time, read-only access to an organization's event log.
+    references:
+      - id: get_api_logs
+        name: Get Events API Documentation
+        description: API documentation
+        url: https://developers.onelogin.com/api-docs/1/events/get-events
