@@ -1,0 +1,56 @@
+{
+  "actor": {
+    "email": "test@test.com",
+    "profileId": "185459392577373"
+  },
+  "event": {
+    "type": "SECURITY_SETTINGS",
+    "name": "CHANGE_CAA_APP_ASSIGNMENTS",
+    "parameters": [
+      {
+        "name": "APPLICATION_NAME",
+        "value": "PLUS"
+      },
+      {
+        "name": "CAA_ASSIGNMENTS_OLD",
+        "multiValue": [
+          "device_policy_high"
+        ]
+      },
+      {
+        "name": "CAA_ASSIGNMENTS_NEW",
+        "multiValue": [
+          "device_policy_medium"
+        ]
+      },
+      {
+        "name": "CAA_ENFORCEMENT_ENDPOINTS_OLD",
+        "value": "CAA_WEB_VERSION_AND_1P_OAUTH_CLIENTS"
+      },
+      {
+        "name": "CAA_ENFORCEMENT_ENDPOINTS_NEW",
+        "value": "CAA_WEB_VERSION_AND_1P_OAUTH_CLIENTS"
+      },
+      {
+        "name": "TARGET_ENTITY_TYPE",
+        "value": "GROUP"
+      },
+      {
+        "name": "TARGET_ENTITY_NAME",
+        "value": "test-group@test.com"
+      },
+      {
+        "name": "MODE",
+        "value": "MONITOR"
+      }
+    ]
+  },
+  "kind": "admin#reports#activity",
+  "id": {
+    "uniqueQualifier": "-8357743806993103819",
+    "applicationName": "admin",
+    "customerId": "C07811bh",
+    "time": "2023-10-03T21:26:36.365Z"
+  },
+  "etag": "\"rQ3qpTrpjMqlryth5yh5yh5yh5J6c8Yw/0g3r6h6hHHU8fvg5zE\""
+}

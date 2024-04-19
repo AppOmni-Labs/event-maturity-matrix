@@ -1,0 +1,30 @@
+{
+  "event": {
+    "type": "GROUP_SETTINGS",
+    "name": "ADD_GROUP_MEMBER",
+    "parameters": [
+      {
+        "value": "test@test.com",
+        "name": "USER_EMAIL"
+      },
+      {
+        "name": "GROUP_EMAIL",
+        "value": "test-group@test.com"
+      }
+    ]
+  },
+  "kind": "admin#reports#activity",
+  "id": {
+    "time": "2023-10-04T18:24:54.690Z",
+    "uniqueQualifier": "-6798022200064344802",
+    "applicationName": "admin",
+    "customerId": "C00zibi7"
+  },
+  "etag": "\"rQ3qpTrpjMqlOD9Fifgh8f1fghf81gh4wU0J6c8Yw/MjJkdF51dfg5np52vLSY2l-gM\"",
+  "actor": {
+    "callerType": "USER",
+    "email": "testa@test.com",
+    "profileId": "10248166192532690543"
+  },
+  "ipAddress": "34.100.985.103"
+}

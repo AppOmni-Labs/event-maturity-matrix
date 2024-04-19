@@ -1,0 +1,30 @@
+{
+  "actor": {
+    "callerType": "USER",
+    "email": "test@test.com",
+    "profileId": "105951899444368150"
+  },
+  "ipAddress": "211.62.43.159",
+  "event": {
+    "name": "CREATE_SAML2_SERVICE_PROVIDER_CONFIG",
+    "parameters": [
+      {
+        "name": "SAML2_SERVICE_PROVIDER_ENTITY_ID",
+        "value": "https://test.com/sso/"
+      },
+      {
+        "name": "SAML2_SERVICE_PROVIDER_NAME",
+        "value": "BigCorp"
+      }
+    ],
+    "type": "SAML2_SERVICE_PROVIDER_CONFIG_SETTINGS"
+  },
+  "kind": "admin#reports#activity",
+  "id": {
+    "time": "2023-10-12T15:59:23.557Z",
+    "uniqueQualifier": "-7078025062376461990",
+    "applicationName": "admin",
+    "customerId": "C004knnh7y"
+  },
+  "etag": "\"jc94nIMyBF33rgergergergH0EHOA9OLU9Ps/JergergergereWa6e8Ij7s\""
+}

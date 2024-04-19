@@ -1,0 +1,37 @@
+{
+  "kind": "admin#reports#activity",
+  "id": {
+    "time": "2023-10-04T14:33:20.949Z",
+    "uniqueQualifier": "-7981887426606302427",
+    "applicationName": "admin",
+    "customerId": "C03huyf5"
+  },
+  "etag": "\"rQ3qpTrpjMqlOD9Fi887ghvuhbu77byv55c8Yw/b20Viygiyu7bUjyhpl56kx-M0\"",
+  "actor": {
+    "profileId": "154848611551817490212",
+    "callerType": "USER",
+    "email": "test@test.com"
+  },
+  "event": {
+    "name": "CHANGE_GROUP_SETTING",
+    "parameters": [
+      {
+        "name": "SETTING_NAME",
+        "value": "WHO_CAN_DISCOVER_GROUP"
+      },
+      {
+        "name": "GROUP_EMAIL",
+        "value": "test2@test.com"
+      },
+      {
+        "name": "OLD_VALUE",
+        "value": "ALL_IN_DOMAIN_CAN_DISCOVER"
+      },
+      {
+        "value": "ALL_MEMBERS_CAN_DISCOVER",
+        "name": "NEW_VALUE"
+      }
+    ],
+    "type": "GROUP_SETTINGS"
+  }
+}

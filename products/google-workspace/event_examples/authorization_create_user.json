@@ -1,0 +1,26 @@
+{
+  "kind": "admin#reports#activity",
+  "id": {
+    "time": "2023-10-04T17:27:02.768Z",
+    "uniqueQualifier": "-3314472940692087673",
+    "applicationName": "admin",
+    "customerId": "C02rtjjj7y"
+  },
+  "etag": "\"rQ3qpTrpjMqlOD9Fi6ZCgnwwpo6zAd3g53g55U0J6c8Yw/5pzih88L6fo0NupRAuuLv2Ar5M\"",
+  "actor": {
+    "email": "test@test.com",
+    "profileId": "111620519819984096",
+    "callerType": "USER"
+  },
+  "ipAddress": "42.130.180.122",
+  "event": {
+    "type": "USER_SETTINGS",
+    "name": "CREATE_USER",
+    "parameters": [
+      {
+        "value": "test2@test.com",
+        "name": "USER_EMAIL"
+      }
+    ]
+  }
+}

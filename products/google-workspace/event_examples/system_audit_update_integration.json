@@ -1,0 +1,42 @@
+{
+  "id": {
+    "time": "2023-10-04T16:37:47.039Z",
+    "uniqueQualifier": "-7371635294043122777",
+    "applicationName": "admin",
+    "customerId": "C02wayb7g"
+  },
+  "etag": "\"rQ3qpTrpjMqlOD9Firtrth56Y4wU0J6c8Yw/TmNY5656h6hhH4-rjrEGWN7Ko\"",
+  "actor": {
+    "callerType": "USER",
+    "email": "test@test.com",
+    "profileId": "11726318198115861321"
+  },
+  "ipAddress": "2500:1700:69d1:13f:5555:a5a3:fc15:c189",
+  "event": {
+    "type": "APPLICATION_SETTINGS",
+    "name": "CHANGE_APPLICATION_SETTING",
+    "parameters": [
+      {
+        "name": "APPLICATION_NAME",
+        "value": "Google Workspace Marketplace"
+      },
+      {
+        "name": "ORG_UNIT_NAME",
+        "value": "testdomain.com"
+      },
+      {
+        "value": "Allowlist app_access",
+        "name": "SETTING_NAME"
+      },
+      {
+        "name": "OLD_VALUE",
+        "value": "[app_access_id {\n  app_access_type {\n    type_enum: WEB\n  }\n  client_id: \"9999\"\n}\nallowed: true\n, app_access_id {\n  app_access_type {\n    type_enum: WEB\n  }\n  client_id: \"99999999\"\n}\nallowed: true\n, app_access_id {\n  app_access_type {\n    type_enum: WEB\n  }\n  client_id: \"99999999\"\n}\nallowed: true\n, app_access_id {\n  app_access_type {\n    type_enum: WEB\n  }\n  client_id: \"99999999\"\n}\nallowed: true\n]"
+      },
+      {
+        "name": "NEW_VALUE",
+        "value": "[app_access_id {\n  app_access_type {\n    type_enum: WEB\n  }\n  client_id: \"9999\"\n}\nallowed: true\n, app_access_id {\n  app_access_type {\n    type_enum: WEB\n  }\n  client_id: \"99999999\"\n}\nallowed: true\n, app_access_id {\n  app_access_type {\n    type_enum: WEB\n  }\n  client_id: \"99999999\"\n}\nallowed: true\n, app_access_id {\n  app_access_type {\n    type_enum: WEB\n  }\n  client_id: \"99999999\"\n}\nallowed: true\n, app_access_id {\n  app_access_type {\n    type_enum: WEB\n  }\n  client_id: \"999999999\"\n}\nallowed: true\n]"
+      }
+    ]
+  },
+  "kind": "admin#reports#activity"
+}

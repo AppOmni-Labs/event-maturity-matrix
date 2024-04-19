@@ -1,0 +1,29 @@
+{
+  "event": {
+    "type": "DOMAIN_SETTINGS",
+    "name": "REMOVE_APPLICATION",
+    "parameters": [
+      {
+        "name": "APP_ID",
+        "value": "10284841265"
+      },
+      {
+        "name": "APPLICATION_NAME",
+        "value": "TESTApplication"
+      }
+    ]
+  },
+  "kind": "admin#reports#activity",
+  "id": {
+    "time": "2023-10-12T16:40:07.644Z",
+    "uniqueQualifier": "-9185053452471991843",
+    "applicationName": "admin",
+    "customerId": "C0ijnijn9"
+  },
+  "etag": "\"jc94nIMyBF33ertgrhrthHOA9OLU9Ps/9CWrthretherthrTdaKCiZzGNsYU\"",
+  "actor": {
+    "callerType": "USER",
+    "email": "test@test.com",
+    "profileId": "105905798198198168150"
+  }
+}

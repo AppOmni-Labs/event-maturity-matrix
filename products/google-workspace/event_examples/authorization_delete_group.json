@@ -1,0 +1,26 @@
+{
+  "actor": {
+    "profileId": "117158165166014059",
+    "callerType": "USER",
+    "email": "test@test.com"
+  },
+  "ipAddress": "154.109.108.92",
+  "event": {
+    "type": "GROUP_SETTINGS",
+    "name": "DELETE_GROUP",
+    "parameters": [
+      {
+        "name": "GROUP_EMAIL",
+        "value": "test-group@test.com"
+      }
+    ]
+  },
+  "kind": "admin#reports#activity",
+  "id": {
+    "time": "2023-10-09T22:12:29.027Z",
+    "uniqueQualifier": "-8638445205597242715",
+    "applicationName": "admin",
+    "customerId": "C03hrryy3"
+  },
+  "etag": "\"rQ3qpTrpjMdfg4544rG#GEGrY4w55c8Yw/rpsdsSCER8_5--B_QCoUl8YBEHycL8\""
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "admin#reports#activity",
+  "id": {
+    "uniqueQualifier": "-5992544593425859742",
+    "applicationName": "admin",
+    "customerId": "C00ntyhtyhty",
+    "time": "2023-10-12T15:59:23.551Z"
+  },
+  "etag": "\"jc94nIMfgrtgrthrthrtXqUGGHrthrt9OLU9Ps/EN0CkgUCOrthrthrth5CvTHwbLE\"",
+  "actor": {
+    "profileId": "105905796516511368150",
+    "callerType": "USER",
+    "email": "test@test.com"
+  },
+  "event": {
+    "type": "DOMAIN_SETTINGS",
+    "name": "ADD_APPLICATION",
+    "parameters": [
+      {
+        "name": "APP_ID",
+        "value": "4265846946440"
+      },
+      {
+        "name": "APPLICATION_NAME",
+        "value": "TestApplication"
+      },
+      {
+        "name": "APPLICATION_ENABLED",
+        "value": "false"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "actor": {
+    "email": "test@test.com",
+    "profileId": "221195616515142",
+    "callerType": "USER"
+  },
+  "ipAddress": "9.10.100.22",
+  "event": {
+    "parameters": [
+      {
+        "value": "test@test.com",
+        "name": "USER_EMAIL"
+      }
+    ],
+    "type": "USER_SETTINGS",
+    "name": "REVOKE_SECURITY_KEY"
+  },
+  "kind": "admin#reports#activity",
+  "id": {
+    "applicationName": "admin",
+    "customerId": "C03ihi7vv",
+    "time": "2023-10-03T22:33:48.843Z",
+    "uniqueQualifier": "-7457679779333247500"
+  },
+  "etag": "\"rQ3qpTrp45g35log5yh5btM4Y4wU0J6c8Yw/Njl5tg5tg5ergai-Mk\""
+}
