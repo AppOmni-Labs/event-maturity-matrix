@@ -1,0 +1,69 @@
+{
+  "kind": "admin#reports#activity",
+  "id": {
+    "time": "2023-10-15T23:35:01.493Z",
+    "uniqueQualifier": "-5681301083801866672",
+    "applicationName": "drive",
+    "customerId": "C07hbjkkbjkj"
+  },
+  "etag": "\"jc94nIMyBF33504pdfefgegegGH0EHOA9erg6Y7Yn5ugkRL-3ergergcdimwc\"",
+  "actor": {
+    "profileId": "1095156489815781956899",
+    "email": "test@test.com"
+  },
+  "ipAddress": "2601:1700:39d1:8yt2:74df:5a1f:15ec:fc79",
+  "event": {
+    "type": "access",
+    "name": "download",
+    "parameters": [
+      {
+        "name": "primary_event",
+        "boolValue": true
+      },
+      {
+        "name": "billable",
+        "boolValue": true
+      },
+      {
+        "name": "owner_is_shared_drive",
+        "boolValue": false
+      },
+      {
+        "name": "owner",
+        "value": "test@test.com"
+      },
+      {
+        "name": "doc_id",
+        "value": "1tml8KIcsdwgewrg8jejg_jdid88"
+      },
+      {
+        "name": "doc_type",
+        "value": "txt"
+      },
+      {
+        "boolValue": false,
+        "name": "is_encrypted"
+      },
+      {
+        "value": "cooldoc.txt",
+        "name": "doc_title"
+      },
+      {
+        "name": "visibility",
+        "value": "shared_externally"
+      },
+      {
+        "name": "originating_app_id",
+        "value": "9471519811803"
+      },
+      {
+        "name": "actor_is_collaborator_account",
+        "boolValue": false
+      },
+      {
+        "name": "owner_is_team_drive",
+        "boolValue": false
+      }
+    ]
+  }
+}

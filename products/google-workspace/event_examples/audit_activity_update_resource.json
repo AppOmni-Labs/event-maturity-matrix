@@ -1,0 +1,38 @@
+{
+  "ipAddress": "113.213.81.31",
+  "event": {
+    "type": "EMAIL_SETTINGS",
+    "name": "CHANGE_EMAIL_SETTING",
+    "parameters": [
+      {
+        "name": "SETTING_NAME",
+        "value": "NUMBER_OF_EMAIL_IMAGE_URL_WHITELIST_PATTERNS"
+      },
+      {
+        "name": "ORG_UNIT_NAME",
+        "value": "TestOrg"
+      },
+      {
+        "name": "OLD_VALUE",
+        "value": "15"
+      },
+      {
+        "name": "NEW_VALUE",
+        "value": "16"
+      }
+    ]
+  },
+  "kind": "admin#reports#activity",
+  "id": {
+    "time": "2023-10-13T13:20:21.544Z",
+    "uniqueQualifier": "-7278920505284409591",
+    "applicationName": "admin",
+    "customerId": "C00jhhdbdn3"
+  },
+  "etag": "\"jc94nIMyBF33sdsdgefefbe0EHOA9OLU9Ps/iRevefvefvefvCgiwiS_XwN7wc\"",
+  "actor": {
+    "callerType": "USER",
+    "email": "test@test.com",
+    "profileId": "10785165158808731702"
+  }
+}

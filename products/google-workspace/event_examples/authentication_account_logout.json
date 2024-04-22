@@ -1,0 +1,25 @@
+{
+  "actor": {
+    "email": "tlsdfr@test.com",
+    "profileId": "10906988138484515654"
+  },
+  "etag": "\"rQ3qpTrpjMqlOD9Fi6ZCsdfsdfsdf0J6c8Yw/g9-7HZArWTv3ua4W8l_UrML6aj4\"",
+  "event": {
+    "type": "login",
+    "name": "logout",
+    "parameters": [
+      {
+        "name": "login_type",
+        "value": "google_password"
+      }
+    ]
+  },
+  "id": {
+    "time": "2023-10-04T16:44:09.155Z",
+    "uniqueQualifier": "-2936062481883257414",
+    "applicationName": "login",
+    "customerId": "C03nyz48b"
+  },
+  "ipAddress": "117.92.113.444",
+  "kind": "admin#reports#activity"
+}

@@ -1,0 +1,36 @@
+{
+  "ipAddress": "38.62.201.104",
+  "event": {
+    "type": "login",
+    "name": "login_success",
+    "parameters": [
+      {
+        "name": "login_type",
+        "value": "google_password"
+      },
+      {
+        "name": "login_challenge_method",
+        "multiValue": [
+          "password",
+          "google_authenticator"
+        ]
+      },
+      {
+        "name": "is_suspicious",
+        "boolValue": false
+      }
+    ]
+  },
+  "kind": "admin#reports#activity",
+  "id": {
+    "applicationName": "login",
+    "customerId": "C1567gg8b",
+    "time": "2023-10-04T17:00:38.873Z",
+    "uniqueQualifier": "-288098944121678920"
+  },
+  "etag": "\"rQ3qpTrpjMqlOD9Fi6ZCgnpo6zAdUtM4hgihb7gw/-PaydDWGhijb567DzxG3-Q\"",
+  "actor": {
+    "email": "dfggg@test.com",
+    "profileId": "1081510555451515508623"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "admin#reports#activity",
+  "id": {
+    "applicationName": "login",
+    "customerId": "C03nyz48b",
+    "time": "2023-10-04T17:05:18.707Z",
+    "uniqueQualifier": "-8053599687898373773"
+  },
+  "etag": "\"rQ3qpTrpjMqlOD9Fi6ZCgnpogfhr6664Y4wU0J6c8Yw/T8TMuJvnXTPKpwK263SLxaXX-EA\"",
+  "actor": {
+    "email": "egrt@test.com",
+    "profileId": "10206845645323004074611"
+  },
+  "ipAddress": "211.150.189.540",
+  "event": {
+    "type": "login",
+    "name": "login_success",
+    "parameters": [
+      {
+        "name": "login_type",
+        "value": "reauth"
+      },
+      {
+        "name": "login_challenge_method",
+        "multiValue": [
+          "none"
+        ]
+      },
+      {
+        "name": "is_suspicious",
+        "boolValue": false
+      }
+    ]
+  }
+}

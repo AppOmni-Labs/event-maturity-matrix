@@ -1,0 +1,34 @@
+{
+  "event": {
+    "type": "LICENSES_SETTINGS",
+    "name": "USER_LICENSE_REVOKE",
+    "parameters": [
+      {
+        "name": "USER_EMAIL",
+        "value": "test@test.com"
+      },
+      {
+        "value": "Cloud Identity Premium",
+        "name": "PRODUCT_NAME"
+      },
+      {
+        "name": "OLD_VALUE",
+        "value": "Cloud Identity Premium"
+      }
+    ]
+  },
+  "kind": "admin#reports#activity",
+  "id": {
+    "time": "2023-10-04T17:12:20.110Z",
+    "uniqueQualifier": "-7032755160008235805",
+    "applicationName": "admin",
+    "customerId": "C52egrg2wc"
+  },
+  "etag": "\"rQ3qpTrpjMqlOD9Fi6ZCgnpo6ze8herg98hJ6c8Yw/jgqx0-DnGyAy2VkAPVBcOFCT3-Q\"",
+  "actor": {
+    "callerType": "USER",
+    "email": "test2@test2.com",
+    "profileId": "1169451581811976442"
+  },
+  "ipAddress": "34.64.200.101"
+}

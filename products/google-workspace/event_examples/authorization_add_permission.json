@@ -1,0 +1,34 @@
+{
+  "id": {
+    "time": "2023-10-10T20:59:40.904Z",
+    "uniqueQualifier": "-7549838176766410754",
+    "applicationName": "admin",
+    "customerId": "C13bsdvd4"
+  },
+  "etag": "\"rQ3qpTrpjMqlOD9Fi6ZCgdfgdf4wU0J6c8Yw/9MRxYfzAnE9dVdfgdfgdfgORupSE\"",
+  "actor": {
+    "callerType": "USER",
+    "email": "test@test.com",
+    "profileId": "10782284568708731702"
+  },
+  "ipAddress": "125.215.53.31",
+  "event": {
+    "type": "DELEGATED_ADMIN_SETTINGS",
+    "name": "ADD_PRIVILEGE",
+    "parameters": [
+      {
+        "name": "ROLE_NAME",
+        "value": "Test Role"
+      },
+      {
+        "name": "ROLE_ID",
+        "value": "43792651651651557"
+      },
+      {
+        "name": "PRIVILEGE_NAME",
+        "value": "Alert Center;APPS_INCIDENTS_FULL_ACCESS"
+      }
+    ]
+  },
+  "kind": "admin#reports#activity"
+}

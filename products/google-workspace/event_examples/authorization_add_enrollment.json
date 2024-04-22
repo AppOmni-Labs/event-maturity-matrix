@@ -1,0 +1,26 @@
+{
+  "ipAddress": "19.20.200.21",
+  "event": {
+    "type": "USER_SETTINGS",
+    "name": "SECURITY_KEY_REGISTERED_FOR_USER",
+    "parameters": [
+      {
+        "name": "USER_EMAIL",
+        "value": "test@test.com"
+      }
+    ]
+  },
+  "kind": "admin#reports#activity",
+  "id": {
+    "applicationName": "admin",
+    "customerId": "C03nyzrf3",
+    "time": "2023-10-03T23:11:59.995Z",
+    "uniqueQualifier": "-6330457545647588246"
+  },
+  "etag": "\"rQ3qpTrpjMqlOD9Fi6ZCef34f34f36c8Yw/3t4sr-Fc34f34fgC0do\"",
+  "actor": {
+    "profileId": "11290751345894345842",
+    "callerType": "USER",
+    "email": "test@test.com"
+  }
+}

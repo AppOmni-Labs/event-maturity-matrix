@@ -1,0 +1,30 @@
+{
+  "kind": "admin#reports#activity",
+  "id": {
+    "time": "2023-10-17T23:13:13.915Z",
+    "uniqueQualifier": "-7017303223676593170",
+    "applicationName": "admin",
+    "customerId": "Ckkd8hc"
+  },
+  "etag": "\"jc94nIMyBsgegergergergOA9OLU9Ps/8q7ergergergergergeAca075m_AUp4pA\"",
+  "actor": {
+    "callerType": "USER",
+    "email": "test@test.com",
+    "profileId": "1169519165745888518"
+  },
+  "ipAddress": "164.220.241.143",
+  "event": {
+    "name": "DELETE_ROLE",
+    "parameters": [
+      {
+        "name": "ROLE_NAME",
+        "value": "New Admin"
+      },
+      {
+        "name": "ROLE_ID",
+        "value": "84898198181155903"
+      }
+    ],
+    "type": "DELEGATED_ADMIN_SETTINGS"
+  }
+}

@@ -1,0 +1,416 @@
+entity_name: event_source
+version: "0.0.1"
+product:
+  name: Google Workspace
+  collection_sources:
+    - activity_audit
+name: Workspace Activity Audit
+description: The activity audit log provides log events for actions occurring with your Google Workspace deployment.
+references:
+  - id: activity_rest_api_documentation
+    name: Google Workspace Activity Report
+    url: https://developers.google.com/admin-sdk/reports/reference/rest
+retention:
+  duration: Typically 6 months
+  comments: Service dependant - see https://support.google.com/a/answer/7061566?hl=en
+latency:
+  duration: Near real time up to a couple hours
+  comments: Service dependant - see https://support.google.com/a/answer/7061566?hl=en
+licensing:
+  comments: Admin logs are available for all Google Workspace plans. Drive audit logs and Device events may not be available as these are not available for the Business Starter plan. Additional configuration is required to get the full set of monitoring capabilities for Devices.
+mappings:
+  - category: C0001
+    event_type: ET0001
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0009: ipAddress
+      A0013: event.parameters[name=login_failure_type]
+      A0014: event.parameters[name=login_type]
+    examples: 
+      - type: success
+        location: "./event_examples/authentication_account_login.json"
+  - category: C0001
+    event_type: ET0002
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0004: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0009: ipAddress
+    examples:
+      - type: success
+        location: "./event_examples/authentication_account_logout.json"
+  - category: C0001
+    event_type: ET0003
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0004: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0009: ipAddress
+      A0016: event.parameters[name=login_challenge_method]
+      A0017: event.parameters[name=is_suspicious]
+      A0018: event.name
+    examples:
+      - type: success
+        location: "./event_examples/authentication_mfa_verification.json"
+  - category: C0002
+    event_type: ET0004
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0019: event.parameters[name=USER_EMAIL]
+    examples:
+      - type: success
+        location: "./event_examples/authorization_create_user.json"
+  - category: C0002
+    event_type: ET0006
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0019: event.parameters[name=USER_EMAIL]
+      A0020: event.parameters[]
+    examples:
+      - type: success
+        location: "./event_examples/authorization_update_user.json"
+  - category: C0002
+    event_type: ET0007
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0019: event.parameters[name=USER_EMAIL]
+    examples:
+      - type: success
+        location: "./event_examples/authorization_delete_user.json"
+  - category: C0002
+    event_type: ET0008
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0021: event.parameters[name=GROUP_EMAIL]
+    examples:
+      - type: success
+        location: "./event_examples/authorization_create_group.json"
+  - category: C0002
+    event_type: ET0010
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0021: event.parameters[name=GROUP_EMAIL]
+      A0020: event.parameters[name=SETTING_NAME]
+    examples:
+      - type: success
+        location: "./event_examples/authorization_update_group.json"
+  - category: C0002
+    event_type: ET0011
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0021: event.parameters[name=GROUP_EMAIL]
+    examples:
+      - type: success
+        location: "./event_examples/authorization_delete_group.json"
+  - category: C0002
+    event_type: ET0012
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0021: event.parameters[name=GROUP_EMAIL]
+      A0019: event.parameters[name=USER_EMAIL]
+    examples:
+      - type: success
+        location: "./event_examples/authorization_add_to_group.json"
+  - category: C0002
+    event_type: ET0013
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0021: event.parameters[name=GROUP_EMAIL]
+      A0019: event.parameters[name=USER_EMAIL]
+    examples:
+      - type: success
+        location: "./event_examples/authorization_remove_from_group.json"
+  - category: C0002
+    event_type: ET0014
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0022: event.parameters[name=ROLE_NAME]
+    examples:
+      - type: success
+        location: "./event_examples/authorization_create_role.json"
+  - category: C0002
+    event_type: ET0016
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0022: event.parameters[name=ROLE_NAME]
+      A0020: event.parameters[name=*]
+    examples:
+      - type: success
+        location: "./event_examples/authorization_update_role.json"
+  - category: C0002
+    event_type: ET0017
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0022: event.parameters[name=ROLE_NAME]
+    examples:
+      - type: success
+        location: "./event_examples/authorization_delete_role.json"
+  - category: C0002
+    event_type: ET0018
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0023: event.parameters[name=PRIVILEGE_NAME]
+      A0024: event.parameters[name=ROLE_NAME]
+    examples:
+      - type: success
+        location: "./event_examples/authorization_add_permission.json"
+  - category: C0002
+    event_type: ET0019
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0023: event.parameters[name=PRIVILEGE_NAME]
+      A0024: event.parameters[name=ROLE_NAME]
+  - category: C0002
+    event_type: ET0020
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0019: event.parameters[name=USER_EMAIL]
+    examples:
+      - type: success
+        location: "./event_examples/authorization_add_enrollment.json"
+  - category: C0002
+    event_type: ET0021
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0019: event.parameters[name=USER_EMAIL]
+    examples:
+      - type: success
+        location: "./event_examples/authorization_remove_enrollment.json"
+  - category: C0003
+    event_type: ET0022
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0026: event.parameters[name=*]
+      A0027: event.parameters[name=*]
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_create_security_configuration.json"
+  - category: C0003
+    event_type: ET0024
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0026: event.parameters[name=*]
+      A0027: event.parameters[name=*]
+  - category: C0003
+    event_type: ET0025
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0026: event.parameters[name=*]
+      A0027: event.parameters[name=*]
+  - category: C0003
+    event_type: ET0026
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0029: event.parameters[name=APPLICATION_NAME]
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_create_integration.json"
+  - category: C0003
+    event_type: ET0028
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0029: event.parameters[name=APPLICATION_NAME]
+      A0026: event.parameters[name=NEW_VALUE]
+      A0028: event.parameters[name=OLD_VALUE]
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_update_integration.json"
+  - category: C0003
+    event_type: ET0029
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0029: event.parameters[name=APPLICATION_NAME]
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_delete_integration.json"
+  - category: C0004
+    event_type: ET0030
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0030: event.parameters[name=*]
+      A0031: event.type
+    examples:
+      - type: success
+        location: "./event_examples/audit_activity_create_resource.json"
+  - category: C0004
+    event_type: ET0032
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0030: event.parameters[name=SETTING_NAME]
+      A0031: event.type
+    examples:
+      - type: success
+        location: "./event_examples/audit_activity_update_resource.json"
+  - category: C0004
+    event_type: ET0033
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0030: event.parameters[name=*]
+      A0031: event.type
+    examples:
+      - type: success
+        location: "./event_examples/audit_activity_delete_resource.json"
+  - category: C0004
+    event_type: ET0034
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0007: actor.callerType
+      A0009: ipAddress
+      A0032: event.parameters[name=*]
+      A0030: event.parameters[name=doc_title]
+      A0031: event.parameters[name=doc_type]
+    examples:
+      - type: success
+        location: "./event_examples/audit_activity_download_resource.json"
