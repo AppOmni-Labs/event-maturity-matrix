@@ -1,7 +1,7 @@
 entity_name: event_source
 version: "0.0.1"
 product:
-  name: Google Workspace
+  name: Google_Workspace
   collection_sources:
     - activity_audit
 name: Workspace Activity Audit

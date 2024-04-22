@@ -1,6 +1,6 @@
 entity_name: product
 version: "0.0.1"
-name: Google Workspace
+name: Google_Workspace
 logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/gsuite_square.svg
 description: |
   Google Workspace (formerly GSuite) provides audit logging for all business plans to help admins and security teams monitor activities in their instance. 
