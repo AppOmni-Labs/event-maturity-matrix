@@ -1,0 +1,41 @@
+entity_name: event_source
+version: "0.0.1"
+product:
+  name: ServiceNow
+  collection_sources:
+    - audit
+name: Audit Events
+description: ServiceNow audit events track changes to records in audited tables.
+references:
+  - id: audit_change_tables
+    name: Viewing Sys Audit and Audit Relationship Change tables
+    url: https://docs.servicenow.com/bundle/vancouver-platform-security/page/administer/security/concept/c_UnderstandingTheSysAuditTable.html
+retention:
+  duration: Infinite
+  comments: Can be changed by an instance admin.
+latency:
+  duration: Near Real-Time
+  comments: Can vary based on system conditions and configurations.
+licensing:
+  comments: Included with ServiceNow instances.
+mappings:
+  - category: C0004
+    event_type: ET0032
+    attributes:
+      A0001: sys_created_on
+      A0003: fieldname
+      A0005: user
+      A0030: tablename
+    examples:
+      - type: update
+        location: "./event_examples/audit/activity_audit_update_resource.json"
+  - category: C0004
+    event_type: ET0033
+    attributes:
+      A0001: sys_created_on
+      A0003: fieldname
+      A0005: user
+      A0030: tablename
+    examples:
+      - type: delete
+        location: "./event_examples/audit/activity_audit_delete_resource.json"

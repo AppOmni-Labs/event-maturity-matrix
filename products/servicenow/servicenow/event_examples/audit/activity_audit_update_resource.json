@@ -1,0 +1,12 @@
+{
+  "documentkey": "34abc1234abc1234abc1234abc1234ab",
+  "fieldname": "u_date_last_risk_updated",
+  "newvalue": "2024-04-22 13:45:41",
+  "oldvalue": "2024-04-22 13:04:27",
+  "reason": null,
+  "sys_created_by": "system",
+  "sys_created_on": "2024-04-22 13:45:41",
+  "sys_id": "abc1234abc1234abc1234abc1234abc1",
+  "tablename": "demo_table",
+  "user": "system"
+}

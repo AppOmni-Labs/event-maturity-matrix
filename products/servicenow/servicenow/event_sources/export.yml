@@ -1,0 +1,33 @@
+entity_name: event_source
+version: "0.0.1"
+product:
+  name: ServiceNow
+  collection_sources:
+    - export
+name: Export Events
+description: ServiceNow Instance Security Center export events track UI exports of record data.
+references:
+  - id: monitor_security_events
+    name: Monitor security events
+    url: https://docs.servicenow.com/bundle/washingtondc-platform-security/page/administer/security/concept/instance-sec-center-event-ribbon.html
+retention:
+  duration: Infinite
+  comments: Can be changed by an instance admin.
+latency:
+  duration: Near Real-Time
+  comments: Can vary based on system conditions and configurations.
+licensing:
+  comments: Included with ServiceNow instances.
+mappings:
+  - category: C0004
+    event_type: ET0034
+    attributes:
+      A0001: sys_created_on
+      A0002: event
+      A0003: sys_class_name
+      A0005: user_name
+      A0006: user
+      A0030: table
+    examples:
+      - type: download
+        location: "./event_examples/export/activity_audit_download_resource.json"

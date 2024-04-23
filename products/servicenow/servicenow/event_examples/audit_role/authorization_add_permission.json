@@ -1,0 +1,13 @@
+{
+  "changed_by": "c706140d1b6379909f22e2eb234bcbed",
+  "changed_by.name": null,
+  "granted_by_group": "befe683c13fe07001e9ef107d144b022",
+  "granted_by_group.name": null,
+  "operation": "Added",
+  "role": "12e63637b7cb001004aae3fdde11a9bd",
+  "role.name": null,
+  "sys_created_on": "2024-04-19 18:30:54",
+  "sys_id": "abc1234abc1234abc1234abc1234abc1",
+  "user": "234abc1234abc1234abc1234abc1234a",
+  "user.name": null
+}

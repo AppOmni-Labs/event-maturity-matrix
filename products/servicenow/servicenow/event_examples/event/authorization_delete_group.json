@@ -1,0 +1,14 @@
+{
+  "instance": null,
+  "name": "cmdb.group.modified",
+  "parm1": "32f097e7934d4a109a3afea47aba10a5",
+  "parm2": "update",
+  "sys_created_by": "admin",
+  "sys_created_on": "2024-03-26 09:50:23",
+  "sys_id": "abc1234abc1234abc1234abc1234abc1",
+  "sys_updated_by": "system",
+  "sys_updated_on": "2024-03-26 09:50:53",
+  "table": "",
+  "user_id": "34abc1234abc1234abc1234abc1234ab",
+  "user_name": "admin"
+}

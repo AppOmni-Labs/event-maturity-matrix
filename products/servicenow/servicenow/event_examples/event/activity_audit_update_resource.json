@@ -1,0 +1,14 @@
+{
+  "instance": "1234abc1234abc1234abc1234abc1234",
+  "name": "live_feed.update",
+  "parm1": "[work_notes, business_duration, calendar_duration]",
+  "parm2": "9",
+  "sys_created_by": "servicenow_sync",
+  "sys_created_on": "2024-04-16 14:03:45",
+  "sys_id": "abc1234abc1234abc1234abc1234abc1",
+  "sys_updated_by": "system",
+  "sys_updated_on": "2024-04-16 14:03:50",
+  "table": "incident",
+  "user_id": "34abc1234abc1234abc1234abc1234ab",
+  "user_name": "servicenow_sync"
+}
