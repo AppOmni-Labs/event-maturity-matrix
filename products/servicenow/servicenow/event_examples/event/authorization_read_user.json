@@ -1,0 +1,14 @@
+{
+  "instance": "1234abc1234abc1234abc1234abc1234",
+  "name": "user.view",
+  "parm1": null,
+  "parm2": null,
+  "sys_created_by": "admin",
+  "sys_created_on": "2024-04-15 15:52:58",
+  "sys_id": "abc1234abc1234abc1234abc1234abc1",
+  "sys_updated_by": "system",
+  "sys_updated_on": "2024-04-15 15:53:01",
+  "table": "sys_properties",
+  "user_id": "34abc1234abc1234abc1234abc1234ab",
+  "user_name": "admin"
+}

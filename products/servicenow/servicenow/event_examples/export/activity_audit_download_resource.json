@@ -1,0 +1,12 @@
+{
+  "classification": null,
+  "event": "34abc1234abc1234abc1234abc1234ab",
+  "records": "28",
+  "size": "7019",
+  "sys_class_name": "isc_export_event",
+  "sys_created_on": "2024-04-16 17:06:11",
+  "sys_id": "abc1234abc1234abc1234abc1234abc1",
+  "table": "task",
+  "user": "234abc1234abc1234abc1234abc1234a",
+  "user_name": "admin"
+}

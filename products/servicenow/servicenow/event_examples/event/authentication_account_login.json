@@ -1,0 +1,14 @@
+{
+  "instance": "1234abc1234abc1234abc1234abc1234",
+  "name": "login",
+  "parm1": "admin",
+  "parm2": "198.51.100.1",
+  "sys_created_by": "admin",
+  "sys_created_on": "2024-04-15 15:20:07",
+  "sys_id": "abc1234abc1234abc1234abc1234abc1",
+  "sys_updated_by": "system",
+  "sys_updated_on": "2024-04-15 15:20:17",
+  "table": "",
+  "user_id": "34abc1234abc1234abc1234abc1234ab",
+  "user_name": "admin"
+}

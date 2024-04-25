@@ -1,0 +1,14 @@
+{
+  "instance": "1234abc1234abc1234abc1234abc1234",
+  "name": "attachment.deleted",
+  "parm1": "sys_attachment",
+  "parm2": "93125c9a87254ad0aeb2dc273cbb35ea",
+  "sys_created_by": "012340123",
+  "sys_created_on": "2024-04-19 16:54:11",
+  "sys_id": "abc1234abc1234abc1234abc1234abc1",
+  "sys_updated_by": "system",
+  "sys_updated_on": "2024-04-19 16:54:20",
+  "table": "",
+  "user_id": "34abc1234abc1234abc1234abc1234ab",
+  "user_name": "012340123"
+}

@@ -1,0 +1,14 @@
+{
+  "instance": null,
+  "name": "sys_user.insert",
+  "parm1": "5d7e55b69721021096f8ba6de053aff1",
+  "parm2": null,
+  "sys_created_by": "admin",
+  "sys_created_on": "2024-04-17 13:58:12",
+  "sys_id": "abc1234abc1234abc1234abc1234abc1",
+  "sys_updated_by": "system",
+  "sys_updated_on": "2024-04-17 13:58:23",
+  "table": "",
+  "user_id": "34abc1234abc1234abc1234abc1234ab",
+  "user_name": "admin"
+}

@@ -1,0 +1,12 @@
+{
+  "documentkey": "34abc1234abc1234abc1234abc1234ab",
+  "fieldname": "DELETED",
+  "newvalue": "DELETED",
+  "oldvalue": "DELETED",
+  "reason": null,
+  "sys_created_by": "system",
+  "sys_created_on": "2024-04-22 14:21:25",
+  "sys_id": "abc1234abc1234abc1234abc1234abc1",
+  "tablename": "demo_table",
+  "user": "system"
+}

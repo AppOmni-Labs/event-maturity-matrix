@@ -1,0 +1,14 @@
+{
+  "instance": null,
+  "name": "sn_change_cab.group_member.removed",
+  "parm1": "5408091a3b100300e81d47b334efc452",
+  "parm2": "d5fe9df69721021096f8ba6de053af69",
+  "sys_created_by": "admin",
+  "sys_created_on": "2024-04-17 14:02:06",
+  "sys_id": "abc1234abc1234abc1234abc1234abc1",
+  "sys_updated_by": "system",
+  "sys_updated_on": "2024-04-17 14:02:14",
+  "table": "",
+  "user_id": "34abc1234abc1234abc1234abc1234ab",
+  "user_name": "admin"
+}

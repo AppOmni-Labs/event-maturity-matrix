@@ -1,0 +1,13 @@
+{
+  "changed_by": "9afadc375b33120088236ede91f91a5b",
+  "changed_by.name": null,
+  "granted_by_group": null,
+  "granted_by_group.name": null,
+  "operation": "Removed",
+  "role": "417b3f710b03120025666f3ef6673a98",
+  "role.name": null,
+  "sys_created_on": "2024-04-17 17:54:47",
+  "sys_id": "abc1234abc1234abc1234abc1234abc1",
+  "user": "234abc1234abc1234abc1234abc1234a",
+  "user.name": null
+}
