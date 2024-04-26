@@ -1,0 +1,343 @@
+entity_name: event_source
+version: "0.0.1"
+product:
+  name: PingOne
+  collection_sources:
+    - get_read_user_activities
+name: Read User Activities API
+description: The PingOne Read User Activities API provides near real-time, read-only access to an organization's audit activity events.
+references:
+  - id: get_read_user_activities_documentation
+    name: Read User Activities API Documentation
+    url: https://apidocs.pingidentity.com/pingone/platform/v1/api/#get-read-user-activities
+retention:
+  duration: Unknown
+  comments: N/A
+latency:
+  duration: Near real-time
+  comments: N/A
+licensing:
+  comments: A PingOne license is required to access the Read User Activities API.
+mappings:
+  - category: C0001
+    event_type: ET0001
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+    examples:
+      - type: success
+        location: "./event_examples/authentication_account_login_session_success.json"
+      - type: failure
+        location: "./event_examples/authentication_account_login_session_failure.json"
+  - category: C0001
+    event_type: ET0002
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+    examples:
+      - type: success
+        location: "./event_examples/authentication_account_logout.json"
+  - category: C0001
+    event_type: ET0003
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0016: y
+    examples:
+      - type: success
+        location: "./event_examples/authentication_mfa_verification.json"
+  - category: C0002
+    event_type: ET0004
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0019: y
+    examples:
+      - type: success
+        location: "./event_examples/authorization_create_user.json"
+  - category: C0002
+    event_type: ET0006
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0019: y
+      A0020: y
+    examples:
+      - type: success
+        location: "./event_examples/authorization_update_user.json"
+  - category: C0002
+    event_type: ET0007
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0019: y
+    examples:
+      - type: success
+        location: "./event_examples/authorization_delete_user.json"
+  - category: C0002
+    event_type: ET0008
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0021: y
+    examples:
+      - type: success
+        location: "./event_examples/authorization_create_group.json"
+  - category: C0002
+    event_type: ET0011
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0021: y
+    examples:
+      - type: success
+        location: "./event_examples/authorization_delete_group.json"
+  - category: C0002
+    event_type: ET0012
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0021: y
+    examples:
+      - type: success
+        location: "./event_examples/authorization_add_to_group.json"
+  - category: C0002
+    event_type: ET0013
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0021: y
+    examples:
+      - type: success
+        location: "./event_examples/authorization_remove_from_group.json"
+  - category: C0002
+    event_type: ET0018
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0023: y
+      A0024: y
+    examples:
+      - type: success
+        location: "./event_examples/authorization_add_permission.json"
+  - category: C0002
+    event_type: ET0019
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0023: y
+      A0024: y
+    examples:
+      - type: success
+        location: "./event_examples/authorization_remove_permission.json"
+  - category: C0002
+    event_type: ET0020
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0019: y
+    examples:
+      - type: success
+        location: "./event_examples/authorization_add_enrollment.json"
+  - category: C0002
+    event_type: ET0021
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0025: y
+    examples:
+      - type: success
+        location: "./event_examples/authorization_remove_enrollment.json"
+  - category: C0003
+    event_type: ET0022
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0026: y
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_create_security_configuration_idp.json"
+  - category: C0003
+    event_type: ET0024
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0026: y
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_update_security_configuration_idp.json"
+  - category: C0003
+    event_type: ET0025
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0026: y
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_delete_security_configuration_idp.json"
+  - category: C0003
+    event_type: ET0026
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0029: y
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_create_integration.json"
+  - category: C0003
+    event_type: ET0028
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0029: y
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_update_integration.json"
+  - category: C0003
+    event_type: ET0029
+    attributes:
+      A0001: y
+      A0002: y
+      A0003: y
+      A0004: y
+      A0005: y
+      A0006: y
+      A0008: y
+      A0009: y
+      A0011: y
+      A0029: y
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_delete_integration.json"

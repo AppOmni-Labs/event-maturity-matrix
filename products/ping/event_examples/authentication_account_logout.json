@@ -1,0 +1,46 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://api.pingone.com/v1/environments/1234abc1-a123-1234-ab12-1ab123a1234a/activities/1234abc1-a123-1234-ab12-1ab123a1234a"
+    }
+  },
+  "action": {
+    "description": "Session Deleted",
+    "type": "SESSION.DELETED"
+  },
+  "correlationId": "1234abc1-a123-1234-ab12-1ab123a1234a",
+  "createdAt": "2024-04-16T20:08:56.060Z",
+  "id": "1234abc1-a123-1234-ab12-1ab123a1234a",
+  "recordedAt": "2024-04-16T20:08:56.047Z",
+  "resources": [
+    {
+      "environment": {
+        "id": "1234abc1-a123-1234-ab12-1ab123a1234a"
+      },
+      "href": "https://api.pingone.com/v1/environments/1234abc1-a123-1234-ab12-1ab123a1234a/users/1234abc1-a123-1234-ab12-1ab123a1234a",
+      "id": "1234abc1-a123-1234-ab12-1ab123a1234a",
+      "name": "jdoe@acme.co",
+      "population": {
+        "id": "1234abc1-a123-1234-ab12-1ab123a1234a"
+      },
+      "type": "USER"
+    },
+    {
+      "environment": {
+        "id": "1234abc1-a123-1234-ab12-1ab123a1234a"
+      },
+      "href": "https://api.pingone.com/v1/environments/1234abc1-a123-1234-ab12-1ab123a1234a/sessions/1234abc1-a123-1234-ab12-1ab123a1234a",
+      "id": "1234abc1-a123-1234-ab12-1ab123a1234a",
+      "name": "User Session 1234abc1-a123-1234-ab12-1ab123a1234a",
+      "type": "SESSION"
+    }
+  ],
+  "result": {
+    "description": "Deleted Session '1234abc1-a123-1234-ab12-1ab123a1234a' for User '1234abc1-a123-1234-ab12-1ab123a1234a'",
+    "status": "SUCCESS"
+  },
+  "source": {
+    "ipAddress": "2001:4860:4860::8888",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+  }
+}

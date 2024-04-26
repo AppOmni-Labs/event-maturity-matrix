@@ -1,0 +1,56 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://api.pingone.com/v1/environments/1234abc1-a123-1234-ab12-1ab123a1234a/activities/1234abc1-a123-1234-ab12-1ab123a1234a"
+    }
+  },
+  "action": {
+    "description": "Identity Provider Updated",
+    "type": "IDENTITY_PROVIDER.UPDATED"
+  },
+  "actors": {
+    "client": {
+      "id": "adminui",
+      "name": "adminui",
+      "type": "CLIENT"
+    },
+    "user": {
+      "environment": {
+        "id": "1234abc1-a123-1234-ab12-1ab123a1234a"
+      },
+      "href": "https://api.pingone.com/v1/environments/1234abc1-a123-1234-ab12-1ab123a1234a/users/1234abc1-a123-1234-ab12-1ab123a1234a",
+      "id": "1234abc1-a123-1234-ab12-1ab123a1234a",
+      "name": "jdoe@acme.co",
+      "population": {
+        "id": "1234abc1-a123-1234-ab12-1ab123a1234a"
+      },
+      "type": "USER"
+    }
+  },
+  "correlationId": "1234abc1-a123-1234-ab12-1ab123a1234a",
+  "createdAt": "2024-04-11T20:39:40.622Z",
+  "id": "1234abc1-a123-1234-ab12-1ab123a1234a",
+  "internalCorrelation": {
+    "sessionId": "1234abc1-a123-1234-ab12-1ab123a1234a"
+  },
+  "recordedAt": "2024-04-11T20:39:40.609Z",
+  "resources": [
+    {
+      "environment": {
+        "id": "1234abc1-a123-1234-ab12-1ab123a1234a"
+      },
+      "href": "https://api.pingone.com/v1/environments/1234abc1-a123-1234-ab12-1ab123a1234a/identityProviders/1234abc1-a123-1234-ab12-1ab123a1234a",
+      "id": "1234abc1-a123-1234-ab12-1ab123a1234a",
+      "name": "example_idp",
+      "type": "IDENTITY_PROVIDER"
+    }
+  ],
+  "result": {
+    "description": "Updated Identity Provider f of type 'YAHOO'.",
+    "status": "SUCCESS"
+  },
+  "source": {
+    "ipAddress": "2001:4860:4860::8888",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+  }
+}

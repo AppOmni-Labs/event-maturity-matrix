@@ -1,0 +1,19 @@
+entity_name: product
+version: "0.0.1"
+name: PingOne
+logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/ping_square.svg
+description: |
+  PingOne is a cloud-based identity as a service (IDaaS) framework for secure identity access management that uses an organization-based model to define tenant accounts and their related entities within the PingOne platform.
+  
+  PingOne Audit Activities record logs related to an organization, such as user logins, password changes, and application access. The events can be used to understand platform and user activity, troubleshoot problems, and investigate security incidents.
+  
+  The PingOne Read User Activities API allows an organization to programmatically access the PingOne audit activity event logs. The API provides a way to retrieve, filter, and export events.
+collection:
+  - id: get_read_user_activities
+    name: Read User Activities API
+    description: The PingOne Read User Activities API provides near real-time, read-only access to an organization's audit activity events.
+    references:
+      - id: get_read_user_activities_documentation
+        name: Read User Activities API Documentation
+        description: API documentation
+        url: https://apidocs.pingidentity.com/pingone/platform/v1/api/#get-read-user-activities

@@ -1,0 +1,60 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://api.pingone.com/v1/environments/1234abc1-a123-1234-ab12-1ab123a1234a/activities/1234abc1-a123-1234-ab12-1ab123a1234a"
+    }
+  },
+  "action": {
+    "description": "User Access Denied",
+    "type": "USER.ACCESS_DENIED"
+  },
+  "actors": {
+    "client": {
+      "environment": {
+        "id": "1234abc1-a123-1234-ab12-1ab123a1234a"
+      },
+      "href": "https://api.pingone.com/v1/environments/1234abc1-a123-1234-ab12-1ab123a1234a/applications/1234abc1-a123-1234-ab12-1ab123a1234a",
+      "id": "1234abc1-a123-1234-ab12-1ab123a1234a",
+      "name": "PingOne Admin Console",
+      "type": "CLIENT"
+    },
+    "user": {
+      "environment": {
+        "id": "1234abc1-a123-1234-ab12-1ab123a1234a"
+      },
+      "href": "https://api.pingone.com/v1/environments/1234abc1-a123-1234-ab12-1ab123a1234a/users/1234abc1-a123-1234-ab12-1ab123a1234a",
+      "id": "1234abc1-a123-1234-ab12-1ab123a1234a",
+      "name": "jsmith@acme.co",
+      "population": {
+        "id": "1234abc1-a123-1234-ab12-1ab123a1234a"
+      },
+      "type": "USER"
+    }
+  },
+  "correlationId": "1234abc1-a123-1234-ab12-1ab123a1234a",
+  "createdAt": "2024-04-09T21:41:11.471Z",
+  "id": "1234abc1-a123-1234-ab12-1ab123a1234a",
+  "recordedAt": "2024-04-09T21:41:11.459Z",
+  "resources": [
+    {
+      "environment": {
+        "id": "1234abc1-a123-1234-ab12-1ab123a1234a"
+      },
+      "href": "https://api.pingone.com/v1/environments/1234abc1-a123-1234-ab12-1ab123a1234a/users/1234abc1-a123-1234-ab12-1ab123a1234a",
+      "id": "1234abc1-a123-1234-ab12-1ab123a1234a",
+      "name": "jsmith@acme.co",
+      "population": {
+        "id": "1234abc1-a123-1234-ab12-1ab123a1234a"
+      },
+      "type": "USER"
+    }
+  ],
+  "result": {
+    "description": "Failed role access control",
+    "status": "FAILED"
+  },
+  "source": {
+    "ipAddress": "2001:4860:4860::8888",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+  }
+}
