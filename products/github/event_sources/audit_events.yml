@@ -45,6 +45,7 @@ mappings:
       A0003: action
       A0005: actor
       A0006: actor_id
+      A0009: actor_ip
       A0010: actor_location.country_code
       A0011: user_agent
       A0021: [org, team]
