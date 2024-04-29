@@ -4,6 +4,7 @@
   "action": "team.create",
   "actor": "john.doe",
   "actor_id": 12345678,
+  "actor_ip": "198.51.100.1",
   "actor_location": {
     "country_code": "US"
   },

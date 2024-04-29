@@ -1,0 +1,23 @@
+{
+    "@timestamp": 1714145080936,
+    "_document_id": "alg4QbCba1UhZA2VFJSTxQ",
+    "action": "team.destroy",
+    "actor": "john.doe",
+    "actor_id": 12345678,
+    "actor_ip": "198.51.100.1",
+    "actor_is_bot": false,
+    "actor_location":
+    {
+        "country_code": "US"
+    },
+    "business": "acme-inc",
+    "business_id": 1234000,
+    "created_at": 1714145080936,
+    "external_identity_nameid": "john@example.com",
+    "external_identity_username": null,
+    "operation_type": "remove",
+    "org": "acme-inc",
+    "org_id": 1234000,
+    "team": "acme-inc/approvers",
+    "user_agent": "Mozilla/5.0 (Macintosh Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}
