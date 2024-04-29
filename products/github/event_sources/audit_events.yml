@@ -30,7 +30,6 @@ mappings:
       A0003: action
       A0005: actor
       A0006: actor_id
-      A0009: actor_ip
       A0010: actor_location.country_code
       A0011: user_agent
       A0014: action
@@ -203,6 +202,21 @@ mappings:
     examples:
       - type: success
         location: "./event_examples/audit/system_audit_create_integration.json"
+  - category: C0003
+    event_type: ET0029
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0029: integration
+    examples:
+      - type: success
+        location: "./event_examples/audit/system_audit_delete_integration.json"
   - category: C0004
     event_type: ET0030
     attributes:

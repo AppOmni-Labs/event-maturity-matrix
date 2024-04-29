@@ -2,9 +2,12 @@
   "@timestamp": 1689093550092,
   "_document_id": "IrAm5tty1DHWLJG7uRCusA",
   "action": "integration.destroy",
-  "actor": "bspcgcg",
+  "actor": "john.doe",
   "actor_id": 12345678,
   "actor_ip": "198.51.100.1",
+  "actor_location": {
+    "country_code": "US"
+  },
   "business": "acme",
   "business_id": 120,
   "created_at": 1689093550092,
