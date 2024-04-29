@@ -46,7 +46,6 @@ mappings:
       A0003: action
       A0005: actor
       A0006: actor_id
-      A0009: actor_ip
       A0010: actor_location.country_code
       A0011: user_agent
       A0021: [org, team]
@@ -68,6 +67,21 @@ mappings:
     examples:
       - type: success
         location: "./event_examples/audit/authorization_update_group_team.json"
+  - category: C0002
+    event_type: ET0011
+    attributes:
+      A0001: created_at
+      A0002: _document_id
+      A0003: action
+      A0005: actor
+      A0006: actor_id
+      A0009: actor_ip
+      A0010: actor_location.country_code
+      A0011: user_agent
+      A0021: [org, team]
+    examples:
+      - type: success
+        location: "./event_examples/audit/authorization_delete_group_team.json"
   - category: C0002
     event_type: ET0012
     attributes:

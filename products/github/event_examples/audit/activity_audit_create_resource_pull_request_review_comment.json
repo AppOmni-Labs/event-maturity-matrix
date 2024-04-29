@@ -4,6 +4,7 @@
   "action": "pull_request_review_comment.create",
   "actor": "john.doe",
   "actor_id": 12345678,
+  "actor_ip": "198.51.100.1",
   "business": "acme",
   "business_id": 1122,
   "created_at": 1686079082576,
