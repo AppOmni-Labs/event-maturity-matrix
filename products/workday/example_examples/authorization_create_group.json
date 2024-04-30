@@ -1,0 +1,16 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-22T11:17:40.737Z",
+    "sessionId": "b4dc5b",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "Custom HR Admin Group",
+        "id": "3b45e1da2b3e1000aa9b045a187d0000"
+    },
+    "taskDisplayName": "Create Security Group",
+    "taskId": "dc3318ce446c11de98360015c5e6daf6",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+}

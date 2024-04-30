@@ -1,0 +1,16 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-15T12:09:31.763Z",
+    "sessionId": "495269",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "Create Workday Account: Jane Doe",
+        "id": "3f2a87a1ee011000ad21051bbfb90000"
+    },
+    "taskDisplayName": "Create Workday Account",
+    "taskId": "dc2fbbfc446c11de98360015c5e6daf6",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0"
+}

@@ -1,0 +1,16 @@
+{
+    "activityAction": "READ",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-16T15:20:25.595Z",
+    "sessionId": "7bfc6f",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "Expense Payments - John Doe",
+        "id": "4a7ccee4655d1009b82f55cf259b0002"
+    },
+    "taskDisplayName": "Change Election",
+    "taskId": "b73c880a358640fdae5c86aa21daa427",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+}

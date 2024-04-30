@@ -1,0 +1,16 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-22T12:06:18.499Z",
+    "sessionId": "208afc",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "Edit Workday Account: jane.doe@acme.com / Jane Doe",
+        "id": "3b45e1da2b3e1000ad425682b5ab0000"
+    },
+    "taskDisplayName": "Edit Workday Account",
+    "taskId": "6c148253fc8b1000027f9a8ba31c000e",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0"
+}

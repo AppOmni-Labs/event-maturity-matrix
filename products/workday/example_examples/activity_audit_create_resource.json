@@ -1,0 +1,16 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-15T18:58:53.582Z",
+    "sessionId": "a0ce77",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "Expense Report: EXP-20240-123",
+        "id": "a4b2226134119000c4478784348b0000"
+    },
+    "taskDisplayName": "Create Expense Report",
+    "taskId": "dc306b10446c11de98360015c5e6daf6",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+}

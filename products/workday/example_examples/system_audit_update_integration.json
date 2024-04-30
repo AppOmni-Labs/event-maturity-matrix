@@ -1,0 +1,16 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-10T18:36:53.137Z",
+    "sessionId": "9b4f58",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "EIB - Put Compensation Plans",
+        "id": "caeae0ba9a4a10015f280519f6be0000"
+    },
+    "taskDisplayName": "Edit Integration System",
+    "taskId": "82c4467dd1cf4ee89d12712e1709cca4",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+}

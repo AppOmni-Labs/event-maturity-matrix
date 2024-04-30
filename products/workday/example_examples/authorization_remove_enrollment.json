@@ -1,0 +1,16 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-03-27T15:22:28.183Z",
+    "sessionId": "92dc7b",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "One Time Passcode - Email",
+        "id": "8b2c9ed03ecb1049073f1d6487120000"
+    },
+    "taskDisplayName": "Edit One Time Passcode - Email Setup",
+    "taskId": "cab913dced9810001e63901c892a0017",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+}

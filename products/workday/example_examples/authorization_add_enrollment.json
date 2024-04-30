@@ -1,0 +1,11 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-15T23:06:03.915Z",
+    "sessionId": "67b7bc",
+    "systemAccount": "test.user@acme.com",
+    "taskDisplayName": "Set up Authenticator App",
+    "taskId": "383bb6086e1a100011635fc295a60095",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3.1 Safari/605.1.15"
+}

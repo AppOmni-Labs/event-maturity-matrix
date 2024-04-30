@@ -1,0 +1,16 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-18T17:04:59.204Z",
+    "sessionId": "efc2ba",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "Self-Service: Benefits and Pay Hub",
+        "id": "fb58ac88f9ba1001a8a5835b27aa0000"
+    },
+    "taskDisplayName": "Create Security Policy for Domain",
+    "taskId": "dc31d018446c11de98360015c5e6daf6",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}

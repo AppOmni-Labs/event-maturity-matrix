@@ -1,0 +1,16 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-22T19:18:56.858Z",
+    "sessionId": "8413e1",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "Create and Manage Surveys",
+        "id": "860b38cc4831013d6b1850dfb58c8200"
+    },
+    "taskDisplayName": "Edit Permissions",
+    "taskId": "dc32592a446c11de98360015c5e6daf6",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+}

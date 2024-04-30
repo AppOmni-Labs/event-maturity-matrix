@@ -1,0 +1,16 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-29T16:12:45.263Z",
+    "sessionId": "692dd8",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "Accountant",
+        "id": "b54cec1213ff4f6e8a3567998124a7a2"
+    },
+    "taskDisplayName": "Edit Role Assignment Permissions",
+    "taskId": "dc4cf668446c11de98360015c5e6daf6",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}

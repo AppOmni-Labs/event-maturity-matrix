@@ -1,0 +1,16 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-29T16:09:37.206Z",
+    "sessionId": "692dd8",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "Benefits Administrator",
+        "id": "1d1b0ad99fb64daa863027571269e158"
+    },
+    "taskDisplayName": "Assign Users to User-Based Security Group",
+    "taskId": "dc49b84a446c11de98360015c5e6daf6",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}

@@ -1,0 +1,16 @@
+{
+    "activityAction": "READ",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-24T14:32:40.272Z",
+    "sessionId": "dd7803",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "john.doe / John Doe",
+        "id": "597a5fe0e5b41000a873c5e87aa10000"
+    },
+    "taskDisplayName": "View Workday Account",
+    "taskId": "dc347228446c11de98360015c5e6daf6",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}

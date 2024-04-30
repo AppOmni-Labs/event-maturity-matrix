@@ -1,0 +1,16 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-16T15:00:22.436Z",
+    "sessionId": "7bfc6f",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "Custom Payroll Report",
+        "id": "3786a181dce445298a877f501322f72b"
+    },
+    "taskDisplayName": "Edit Custom Report",
+    "taskId": "dc2fb94a446c11de98360015c5e6daf6",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+}
