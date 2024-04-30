@@ -1,0 +1,16 @@
+{
+    "activityAction": "DOWNLOAD",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-16T17:54:37.766Z",
+    "sessionId": "97928e",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "Compensation Review - Annual Pay.pdf",
+        "id": "ca1516de621b1000b8ebe7001d850001"
+    },
+    "taskDisplayName": "Compensation Review Statement History",
+    "taskId": "5c5cfae6533e4a46a64614fe22b991f4",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+}

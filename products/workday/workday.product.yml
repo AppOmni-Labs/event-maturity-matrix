@@ -1,0 +1,30 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: product
+version: "1.0.0"
+name: Workday
+logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/workday_square.svg
+description: |
+  Workday is a cloud-based enterprise resource planning (ERP) platform that offers financial management, 
+  human resources management, and workforce planning.
+  
+  The User Activity Logging REST API enables organizations to retrieve an audit trail for Workday user activities.
+collection:
+  - id: user_activity_logs
+    name: User Activity Logs
+    description: Documentation on collecting events from the User Activity Logging REST API
+    references:
+      - id: rest_api_directory
+        name: REST Services Directory for User Activity Logging
+        description: REST Services Directory for User Activity Logging
+        url: https://community.workday.com/sites/default/files/file-hosting/restapi/index.html#privacy/v1/get-/activityLogging
+      - id: rest_api_admin_guide
+        name: User Activity Logging REST API
+        description: User Activity Logging REST API
+        url: https://doc.workday.com/admin-guide/en-us/integrations/workday-rest-api/rest-api-guides/user-activity-logging-rest-api/mhr1626995534900.html
+      - id: rest_api_python_example
+        name: REST API Python Example
+        description: Call the User Activity Logging REST API Using Python
+        url: https://doc.workday.com/admin-guide/en-us/integrations/workday-rest-api/rest-api-guides/user-activity-logging-rest-api/hsq1650324712301.html
+

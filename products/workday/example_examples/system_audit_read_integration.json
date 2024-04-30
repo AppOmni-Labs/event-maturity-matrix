@@ -1,0 +1,11 @@
+{
+    "activityAction": "READ",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-24T16:45:01.996Z",
+    "sessionId": "23f3c4",
+    "systemAccount": "test.user@acme.com",
+    "taskDisplayName": "Register API Client for Integrations",
+    "taskId": "564682b1f8824efd87254fc5d6ffb5a4",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+}

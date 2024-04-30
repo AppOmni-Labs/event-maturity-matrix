@@ -1,0 +1,17 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-16T14:58:10.665Z",
+    "sessionId": "7bfc6f",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "",
+        "id": "4fd998fc9a861001120eb5ebf89c0000"
+    },
+    "taskDisplayName": "Delete Custom Report",
+    "taskId": "dc2fc08e446c11de98360015c5e6daf6",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+}
+   

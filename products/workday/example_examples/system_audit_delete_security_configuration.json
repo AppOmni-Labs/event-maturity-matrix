@@ -1,0 +1,16 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-18T17:46:17.353Z",
+    "sessionId": "5ced74",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "acme_workday_tenant",
+        "id": "acc14cefb22b44e18d96ac71fc35f6a0"
+    },
+    "taskDisplayName": "Edit Tenant Setup - Security",
+    "taskId": "35382c414f3140e9bc738121e6f6f68f",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}

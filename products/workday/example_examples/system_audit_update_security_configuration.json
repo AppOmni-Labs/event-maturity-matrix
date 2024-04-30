@@ -1,0 +1,16 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-18T17:04:18.829Z",
+    "sessionId": "5ced74",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "One Time Passcode - SMS",
+        "id": "ab2cb4ac47b401c761847989a2551700"
+    },
+    "taskDisplayName": "Edit One Time Passcode - SMS Setup",
+    "taskId": "cdc5d309f37910000296e685317a0120",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}

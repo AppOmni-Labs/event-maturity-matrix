@@ -1,0 +1,16 @@
+{
+    "activityAction": "WRITE",
+    "deviceType": "Desktop",
+    "ipAddress": "192.168.0.1",
+    "requestTime": "2024-04-12T17:48:40.298Z",
+    "sessionId": "a6894b",
+    "systemAccount": "test.user@acme.com",
+    "target":
+    {
+        "descriptor": "3rd Party Integration to Workday",
+        "id": "a98bc7f71d0010020844f80994580000"
+    },
+    "taskDisplayName": "Register API Client for Integrations",
+    "taskId": "564682b1f8824efd87254fc5d6ffb5a4",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+}
