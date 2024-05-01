@@ -272,6 +272,7 @@ mappings:
       A0011:
       A0012:
       A0021:
+      A0019:
     examples:
       - type: success
         location: "./event_examples/some_sample.json"
