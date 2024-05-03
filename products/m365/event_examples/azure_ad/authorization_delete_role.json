@@ -1,0 +1,64 @@
+{
+  "CreationTime":"2024-05-01T21:36:10",
+  "Id":"f377408a-4cde-46ae-a658-f0042cc3f652",
+  "Operation":"Delete role definition.",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":8,
+  "ResultStatus":"Success",
+  "UserKey":"100320015ED2DA21@test.onmicrosoft.com",
+  "UserType":0,
+  "Version":1,
+  "Workload":"AzureActiveDirectory",
+  "ObjectId":"RoleDefinition_176137b7-85e6-4dd9-9f65-3c1ce26fa1c3",
+  "UserId":"example@test.onmicrosoft.com",
+  "AzureActiveDirectoryEventType":1,
+  "ExtendedProperties":[{
+    "Name":"additionalDetails",
+    "Value":"{\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/120.0\"}"
+  },{
+    "Name":"extendedAuditEventCategory",
+    "Value":"RoleDefinition"
+  }],
+  "ModifiedProperties":[{
+    "Name":"Included Updated Properties",
+    "NewValue":"",
+    "OldValue":""
+  }],
+  "Actor":[{
+    "ID":"example@test.onmicrosoft.com",
+    "Type":5
+  },{
+    "ID":"100320015ED2DA21",
+    "Type":3
+  },{
+    "ID":"74658136-14ec-4630-ad9b-26e160ff0fc6",
+    "Type":2
+  },{
+    "ID":"User_f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":2
+  },{
+    "ID":"f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":2
+  },{
+    "ID":"User",
+    "Type":2
+  }],
+  "ActorContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "InterSystemsId":"d68f7c29-5a2c-43e4-a113-51b6bd72d0ea",
+  "IntraSystemId":"9b6be5d3-e88b-430f-8eb6-29b3b7428016",
+  "SupportTicketId":"",
+  "Target":[{
+    "ID":"RoleDefinition_176137b7-85e6-4dd9-9f65-3c1ce26fa1c3",
+    "Type":2
+  },{
+    "ID":"176137b7-85e6-4dd9-9f65-3c1ce26fa1c3",
+    "Type":2
+  },{
+    "ID":"Other",
+    "Type":2
+  },{
+    "ID":"New Test Role",
+    "Type":1
+  }],
+  "TargetContextId":"8326222c-5c86-45a1-b768-561ad270c694"
+}

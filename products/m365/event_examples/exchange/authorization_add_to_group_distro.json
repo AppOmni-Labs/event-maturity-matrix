@@ -1,0 +1,38 @@
+{
+  "AppAccessContext":{
+    "IssuedAtTime":"2024-05-01T16:21:07",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-05-01T16:26:08",
+  "Id":"33c59316-c708-4a04-7a24-08dc69fb680a",
+  "Operation":"Add-DistributionGroupMember",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":1,
+  "ResultStatus":"True",
+  "UserKey":"100320015ED2DA21",
+  "UserType":2,
+  "Version":1,
+  "Workload":"Exchange",
+  "ClientIP":"198.51.100.1:17461",
+  "ObjectId":"Test Group20240501162508",
+  "UserId":"example@test.onmicrosoft.com",
+  "AppId":"00000006-0000-0ff1-ce00-000000000000",
+  "AppPoolName":"MSExchangeAdminApiNetCore",
+  "ClientAppId":"",
+  "CorrelationID":"",
+  "ExternalAccess":false,
+  "OrganizationName":"test.onmicrosoft.com",
+  "OriginatingServer":"DM6PR06MB4844 (15.20.7544.013)",
+  "Parameters":[{
+    "Name":"Identity",
+    "Value":"NAMPR06A004.prod.outlook.com/Microsoft Exchange Hosted Organizations/test.onmicrosoft.com/Test Group20240501162508"
+  },{
+    "Name":"Member",
+    "Value":"93714996-ddb9-4e6a-b1aa-6db081388f73"
+  },{
+    "Name":"BypassSecurityGroupManagerCheck",
+    "Value":"True"
+  }],
+  "RequestId":"377d3ffb-35c0-1272-3ca4-c373e68de9f1",
+  "SessionId":"c73392a1-6d2e-42f5-ace1-f3965111e109"
+}

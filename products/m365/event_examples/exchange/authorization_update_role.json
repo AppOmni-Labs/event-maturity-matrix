@@ -1,0 +1,38 @@
+{
+  "AppAccessContext":{
+    "IssuedAtTime":"2024-05-01T03:56:21",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-05-01T04:22:00",
+  "Id":"557d12c8-6bd9-4ad4-3b52-08dc69963f27",
+  "Operation":"Set-RoleGroup",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":1,
+  "ResultStatus":"True",
+  "UserKey":"100320015ED2DA21",
+  "UserType":2,
+  "Version":1,
+  "Workload":"Exchange",
+  "ClientIP":"198.51.100.1:3533",
+  "ObjectId":"Security Operator",
+  "UserId":"example@test.onmicrosoft.com",
+  "AppId":"497effe9-df71-4043-a8bb-14cf78c4b63b",
+  "AppPoolName":"MSExchangeAdminApiNetCore",
+  "ClientAppId":"",
+  "CorrelationID":"",
+  "ExternalAccess":false,
+  "OrganizationName":"test.onmicrosoft.com",
+  "OriginatingServer":"BL0PR06MB4945 (15.20.7519.031)",
+  "Parameters":[{
+    "Name":"Identity",
+    "Value":"56882e99-c987-4492-aded-48e8bb029d3a"
+  },{
+    "Name":"Description",
+    "Value":"Membership in this role group is synchronized across services and managed centrally. This role group is not manageable through Microsoft Exchange or Security and Compliance Center (SCC). Members of this role group may include cross-service administrators that have access beyond Exchange and SCC.  By default, this group is not assigned any roles. However, it will be a member of the 'Records Management' and 'Compliance Management' role groups in Exchange and 'Compliance Data Administrator' role group in SCC. It will inherit the permissions of these role groups."
+  },{
+    "Name":"Name",
+    "Value":"Security Operator Test"
+  }],
+  "RequestId":"aadf0312-2bee-a4ec-e212-23b4c6ebf90d",
+  "SessionId":"d15707db-ca84-4096-be63-c6126b7391d5"
+}

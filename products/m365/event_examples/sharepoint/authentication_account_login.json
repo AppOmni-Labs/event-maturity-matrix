@@ -1,0 +1,30 @@
+{
+  "AppAccessContext":{
+    "AADSessionId":"c21adbd5-e8d4-44fe-a2a2-43e3251b04b5",
+    "ClientAppName":"Unknown",
+    "CorrelationId":"dcd124a1-d0b1-5000-62e6-155874ea96f9",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-05-02T20:13:40",
+  "Id":"a35c38f6-ed9d-4ddc-bbfd-08dc6ae45bd7",
+  "Operation":"SignInEvent",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":4,
+  "UserKey":"i:0h.f|membership|100320015ED2DA21@live.com",
+  "UserType":0,
+  "Version":1,
+  "Workload":"SharePoint",
+  "ClientIP":"198.51.100.1",
+  "UserId":"example@test.onmicrosoft.com",
+  "AuthenticationType":"None",
+  "BrowserName":"Firefox",
+  "BrowserVersion":"120.0",
+  "CorrelationId":"dcd124a1-d0b1-5000-62e6-155874ea96f9",
+  "EventSource":"SharePoint",
+  "IsManagedDevice":false,
+  "ItemType":"Invalid",
+  "Platform":"WinDesktop",
+  "UserAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/120.0",
+  "DeviceDisplayName":"2a01:111:2054:217:7752:bc0c:d4bb:ce49",
+  "ApplicationDisplayName":"Unknown"
+}

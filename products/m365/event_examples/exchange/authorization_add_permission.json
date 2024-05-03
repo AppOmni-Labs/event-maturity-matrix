@@ -1,0 +1,35 @@
+{
+  "AppAccessContext":{
+    "IssuedAtTime":"2024-05-01T03:56:21",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-05-01T04:06:31",
+  "Id":"3f044723-212c-4b70-966f-08dc6994156a",
+  "Operation":"New-ManagementRoleAssignment",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":1,
+  "ResultStatus":"True",
+  "UserKey":"100320015ED2DA21",
+  "UserType":2,
+  "Version":1,
+  "Workload":"Exchange",
+  "ClientIP":"198.51.100.1:8259",
+  "ObjectId":"test.onmicrosoft.com\\Audit Logs-Test Role Group",
+  "UserId":"example@test.onmicrosoft.com",
+  "AppId":"497effe9-df71-4043-a8bb-14cf78c4b63b",
+  "AppPoolName":"MSExchangeAdminApiNetCore",
+  "ClientAppId":"",
+  "CorrelationID":"",
+  "ExternalAccess":false,
+  "OrganizationName":"test.onmicrosoft.com",
+  "OriginatingServer":"BL0PR06MB4945 (15.20.7519.031)",
+  "Parameters":[{
+    "Name":"Role",
+    "Value":"Audit Logs"
+  },{
+    "Name":"SecurityGroup",
+    "Value":"def12b29-0bac-42d0-8d75-fbfcfa3536cc"
+  }],
+  "RequestId":"f975c651-1df4-8b35-d560-2cb34a0f4c0f",
+  "SessionId":"c73392a1-6d2e-42f5-ace1-f3965111e109"
+}

@@ -1,0 +1,50 @@
+{
+  "AppAccessContext":{
+    "IssuedAtTime":"2024-05-01T16:21:28",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-05-01T16:26:29",
+  "Id":"baba650a-2d56-4b03-586a-08dc69fb74e4",
+  "Operation":"Set-DistributionGroup",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":1,
+  "ResultStatus":"True",
+  "UserKey":"100320015ED2DA21",
+  "UserType":2,
+  "Version":1,
+  "Workload":"Exchange",
+  "ClientIP":"198.51.100.1:14492",
+  "ObjectId":"Test Group20240501162508",
+  "UserId":"example@test.onmicrosoft.com",
+  "AppId":"00000006-0000-0ff1-ce00-000000000000",
+  "AppPoolName":"MSExchangeAdminApiNetCore",
+  "ClientAppId":"",
+  "CorrelationID":"",
+  "ExternalAccess":false,
+  "OrganizationName":"test.onmicrosoft.com",
+  "OriginatingServer":"DM6PR06MB4844 (15.20.7544.013)",
+  "Parameters":[{
+    "Name":"Identity",
+    "Value":"NAMPR06A004.prod.outlook.com/Microsoft Exchange Hosted Organizations/test.onmicrosoft.com/Test Group20240501162508"
+  },{
+    "Name":"GrantSendOnBehalfTo",
+    "Value":""
+  },{
+    "Name":"ModeratedBy",
+    "Value":""
+  },{
+    "Name":"BypassModerationFromSendersOrMembers",
+    "Value":""
+  },{
+    "Name":"AcceptMessagesOnlyFromSendersOrMembers",
+    "Value":""
+  },{
+    "Name":"BypassSecurityGroupManagerCheck",
+    "Value":"True"
+  },{
+    "Name":"DisplayName",
+    "Value":"Test Group 24"
+  }],
+  "RequestId":"de7de5af-cf19-7e5d-375b-1d32f22226a4",
+  "SessionId":"d15707db-ca84-4096-be63-c6126b7391d5"
+}

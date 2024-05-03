@@ -1,0 +1,17 @@
+entity_name: product
+version: "0.0.1"
+name: Microsoft 365
+logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/m365_square.svg
+description: |
+Microsoft 365 (M365) is a cloud-based productivity platform which provides access to the full suite of office applications including Outlook, SharePoint, OneDrive, Word, Excel, PowerPoint, etc.
+
+M365 provides audit logs through the Microsoft Purview service via audit log subscriptions. Logging levels and retention are controlled by the license of an organization, as well as the license assigned to each individual user.
+collection:
+  - id: m365_mgmt_api
+    name: Management API
+    description: The Office 365 Management Activity API is a REST web service that provides access to audit logging via subscriptions.
+    references:
+      - id: m365_mgmt_api_documentation
+        name: Management API Documentation
+        description: Management API Documentation
+        url: https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-reference

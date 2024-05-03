@@ -1,0 +1,43 @@
+{
+  "AppAccessContext":{
+    "UniqueTokenId":"6e1c5a56-fb53-46ae-8b6d-24988bdcced2"
+  },
+  "CreationTime":"2024-05-01T01:11:16",
+  "Id":"323fd199-99bb-4bd5-5ca7-08dc697b9a0c",
+  "Operation":"New-App",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":1,
+  "ResultStatus":"True",
+  "UserKey":"NT AUTHORITY\\SYSTEM (Microsoft.Exchange.AdminApi.NetCore)",
+  "UserType":3,
+  "Version":1,
+  "Workload":"Exchange",
+  "ClientIP":"198.51.100.1:14804",
+  "ObjectId":"\\fe93bfe1-7947-460a-a5e0-7a5906b51360",
+  "UserId":"NT AUTHORITY\\SYSTEM (Microsoft.Exchange.AdminApi.NetCore)",
+  "AppId":"3c896ded-22c5-450f-91f6-3d1ef0848f6e",
+  "AppPoolName":"MSExchangeAdminApiNetCore",
+  "ClientAppId":"6e1c5a56-fb53-46ae-8b6d-24988bdcced2",
+  "CorrelationID":"",
+  "ExternalAccess":true,
+  "OrganizationName":"test.onmicrosoft.com",
+  "OriginatingServer":"BL0PR06MB4945 (15.20.7519.031)",
+  "Parameters":[{
+    "Name":"DefaultStateForUser",
+    "Value":"Enabled"
+  },{
+    "Name":"Enabled",
+    "Value":"True"
+  },{
+    "Name":"FileData",
+    "Value":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS1DcmVhdGVkOmNiODViODBjLWY1OA==..."
+  },{
+    "Name":"OrganizationApp",
+    "Value":"True"
+  },{
+    "Name":"Organization",
+    "Value":"test.onmicrosoft.com"
+  }],
+  "RequestId":"28c1fbd6-98d3-4ee9-8411-d4ced8ae313a",
+  "SessionId":""
+}

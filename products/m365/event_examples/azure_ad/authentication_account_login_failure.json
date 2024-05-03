@@ -1,0 +1,51 @@
+{
+  "CreationTime":"2024-05-02T02:15:53",
+  "Id":"514d0006-6b28-446c-8f7c-e85271a31200",
+  "Operation":"UserLoginFailed",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":15,
+  "ResultStatus":"Success",
+  "UserKey":"1a3b0ad5-eda1-4f48-b877-3b002e5d85b5",
+  "UserType":4,
+  "Version":1,
+  "Workload":"AzureActiveDirectory",
+  "ClientIP":"198.51.100.1",
+  "ObjectId":"00000003-0000-0000-c000-000000000000",
+  "UserId":"Not Available",
+  "AzureActiveDirectoryEventType":1,
+  "ExtendedProperties":[{
+    "Name":"ResultStatusDetail",
+    "Value":"Success"
+  },{
+    "Name":"UserAgent",
+    "Value":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/120.0"
+  },{
+    "Name":"RequestType",
+    "Value":"SAS:BeginAuth"
+  }],
+  "ModifiedProperties":[],
+  "Actor":[{
+    "ID":"74a66a67-9799-4620-a338-3b4a0b06045e",
+    "Type":0
+  }],
+  "ActorContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "ActorIpAddress":"198.51.100.1",
+  "InterSystemsId":"cb18cf68-7234-4c40-8092-532f41063417",
+  "IntraSystemId":"514d0006-6b28-446c-8f7c-e85271a31200",
+  "SupportTicketId":"",
+  "Target":[{
+    "ID":"00000003-0000-0000-c000-000000000000",
+    "Type":0
+  }],
+  "TargetContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "ApplicationId":"19db86c3-b2b9-44cc-b339-36da233a3be2",
+  "DeviceProperties":[{
+    "Name":"OS",
+    "Value":"Windows"
+  },{
+    "Name":"BrowserType",
+    "Value":"Firefox"
+  }],
+  "ErrorNumber":"50074",
+  "LogonError":"UserStrongAuthClientAuthNRequiredInterrupt"
+}

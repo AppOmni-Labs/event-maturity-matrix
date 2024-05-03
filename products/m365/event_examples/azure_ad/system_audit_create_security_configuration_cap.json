@@ -1,0 +1,69 @@
+{
+  "CreationTime":"2024-05-01T21:41:34",
+  "Id":"b1fe6046-32f3-4464-9769-1fedc9122000",
+  "Operation":"Add policy.",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":8,
+  "ResultStatus":"Success",
+  "UserKey":"100320015ED2DA21@test.onmicrosoft.com",
+  "UserType":0,
+  "Version":1,
+  "Workload":"AzureActiveDirectory",
+  "ObjectId":"Policy_b2711e15-d574-4d4f-ad0a-2628e64dad97",
+  "UserId":"example@test.onmicrosoft.com",
+  "AzureActiveDirectoryEventType":1,
+  "ExtendedProperties":[{
+    "Name":"additionalDetails",
+    "Value":"{\"User-Agent\":\"Microsoft Azure Graph Client Library 1.0\"}"
+  },{
+    "Name":"extendedAuditEventCategory",
+    "Value":"Policy"
+  }],
+  "ModifiedProperties":[{
+    "Name":"DisplayName",
+    "NewValue":"[\r\n  \"Default Policy\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"PolicyType",
+    "NewValue":"[\r\n  \"ConditionalAccessPolicy\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"Included Updated Properties",
+    "NewValue":"DisplayName, PolicyType",
+    "OldValue":""
+  }],
+  "Actor":[{
+    "ID":"example@test.onmicrosoft.com",
+    "Type":5
+  },{
+    "ID":"100320015ED2DA21",
+    "Type":3
+  },{
+    "ID":"User_f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":2
+  },{
+    "ID":"f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":2
+  },{
+    "ID":"User",
+    "Type":2
+  }],
+  "ActorContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "InterSystemsId":"1392787e-f8a4-44f1-bc52-40f5c542b317",
+  "IntraSystemId":"0d381482-0e74-49eb-9a16-edf059158785",
+  "SupportTicketId":"",
+  "Target":[{
+    "ID":"Policy_b2711e15-d574-4d4f-ad0a-2628e64dad97",
+    "Type":2
+  },{
+    "ID":"b2711e15-d574-4d4f-ad0a-2628e64dad97",
+    "Type":2
+  },{
+    "ID":"Policy",
+    "Type":2
+  },{
+    "ID":"Default Policy",
+    "Type":1
+  }],
+  "TargetContextId":"8326222c-5c86-45a1-b768-561ad270c694"
+}

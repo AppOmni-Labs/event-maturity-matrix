@@ -1,0 +1,22 @@
+{
+  "AppAccessContext":{
+    "IssuedAtTime":"2024-05-02T21:11:45",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-05-02T21:21:45",
+  "Id":"46429b68-d31f-4329-9601-e1d77131f2b2",
+  "Operation":"AppInstalled",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":25,
+  "UserKey":"f1c08887-d776-42f8-9911-06faa5ab392f",
+  "UserType":0,
+  "Version":1,
+  "Workload":"MicrosoftTeams",
+  "UserId":"example@test.onmicrosoft.com",
+  "AddOnGuid":"31c1aadf-4a2e-4465-b1a4-6d4d7d9a284c",
+  "AddOnType":4,
+  "AppDistributionMode":"Store",
+  "OperationScope":3,
+  "TargetUserId":"f1c08887-d776-42f8-9911-06faa5ab392f",
+  "AddOnName":"Stipop Stickers"
+}

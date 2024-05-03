@@ -1,0 +1,17 @@
+{
+  "AppAccessContext":{
+    "IssuedAtTime":"2024-05-03T15:29:06",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-05-03T15:34:16",
+  "Id":"64ecdac9-543e-4046-99be-087dd56c2150",
+  "Operation":"TeamCreated",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":25,
+  "UserKey":"f1c08887-d776-42f8-9911-06faa5ab392f",
+  "UserType":2,
+  "Version":1,
+  "Workload":"MicrosoftTeams",
+  "UserId":"example@test.onmicrosoft.com",
+  "TeamGuid":"19:ni2H9QQogRGdOxflsO1Y_JGNwcM_g2bmD6ng483GF_41@thread.tacv2",
+  "TeamName":"New Team 1"

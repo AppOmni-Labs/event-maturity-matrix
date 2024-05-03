@@ -1,0 +1,56 @@
+{
+  "AppAccessContext":{
+    "IssuedAtTime":"2024-05-01T16:20:08",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-05-01T16:25:27",
+  "Id":"60ee7c61-f9d1-49eb-1743-08dc69fb4fdc",
+  "Operation":"New-DistributionGroup",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":1,
+  "ResultStatus":"True",
+  "UserKey":"100320015ED2DA21",
+  "UserType":2,
+  "Version":1,
+  "Workload":"Exchange",
+  "ClientIP":"198.51.100.1:13736",
+  "ObjectId":"NAMPR06A004.prod.outlook.com/Microsoft Exchange Hosted Organizations/test.onmicrosoft.com/Test Group20240501162508",
+  "UserId":"example@test.onmicrosoft.com",
+  "AppId":"00000006-0000-0ff1-ce00-000000000000",
+  "AppPoolName":"MSExchangeAdminApiNetCore",
+  "ClientAppId":"",
+  "CorrelationID":"",
+  "ExternalAccess":false,
+  "OrganizationName":"test.onmicrosoft.com",
+  "OriginatingServer":"DM6PR06MB4844 (15.20.7544.013)",
+  "Parameters":[{
+    "Name":"Alias",
+    "Value":"testdistro"
+  },{
+    "Name":"Description",
+    "Value":"This is a test distribution group"
+  },{
+    "Name":"RequireSenderAuthenticationEnabled",
+    "Value":"True"
+  },{
+    "Name":"DisplayName",
+    "Value":"Test Group"
+  },{
+    "Name":"MemberDepartRestriction",
+    "Value":"Open"
+  },{
+    "Name":"ManagedBy",
+    "Value":"example@test.onmicrosoft.com"
+  },{
+    "Name":"Name",
+    "Value":"Test Group20240501162508"
+  },{
+    "Name":"MemberJoinRestriction",
+    "Value":"Open"
+  },{
+    "Name":"PrimarySmtpAddress",
+    "Value":"testdistro@test.onmicrosoft.com"
+  }],
+  "RequestId":"a36f3f21-295b-52e0-28bf-4ed14ed99ae1",
+  "SessionId":"c73392a1-6d2e-42f5-ace1-f3965111e109"
+}

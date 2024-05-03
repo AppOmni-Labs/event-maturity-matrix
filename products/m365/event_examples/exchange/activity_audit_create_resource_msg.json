@@ -1,0 +1,39 @@
+{
+  "CreationTime":"2024-04-30T01:50:44",
+  "Id":"b879cd77-f6df-4dd0-526a-08dc68b7f338",
+  "Operation":"Send",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":2,
+  "ResultStatus":"Succeeded",
+  "UserKey":"100320015ED2DA21",
+  "UserType":0,
+  "Version":1,
+  "Workload":"Exchange",
+  "ClientIP":"2603:1036:307:44::5",
+  "UserId":"test4@test.onmicrosoft.com",
+  "AppId":"63224634-e46c-47db-921f-42bf5bfeaf4e",
+  "ClientAppId":"6e1c5a56-fb53-46ae-8b6d-24988bdcced2",
+  "ClientIPAddress":"198.51.100.1",
+  "ClientInfoString":"Client=REST;Client=RESTSystem;;",
+  "ExternalAccess":false,
+  "InternalLogonType":0,
+  "LogonType":0,
+  "LogonUserSid":"S-1-5-21-1587198437-855871042-1312952668-23578732",
+  "MailboxGuid":"90d31cb1-d428-43a7-82cb-9ecaf526bda8",
+  "MailboxOwnerSid":"S-1-5-21-1587198437-855871042-1312952668-23578732",
+  "MailboxOwnerUPN":"test4@test.onmicrosoft.com",
+  "OrganizationName":"test.onmicrosoft.com",
+  "OriginatingServer":"SJ0PR06MB7068 (15.20.4200.000)\r\n",
+  "Item":{
+    "Attachments":"LogoM365.png (3442b); welcome_email_v3_conversations.png (12282b); welcome_email_v3_calendar.png (9778b); welcome_email_v3_files.png (10267b); welcome_email_v3_sharing_laptop.png (95913b); welcome_email_v3_onenote.png (8844b); welcome_email_v3_teamwork_laptop.png (75139b); group_photo (13165b); twitter_icon.png (2248b); salesforce.png (2742b); trello.png (1610b); jira.png (2516b); microsoft.png (2896b); arrow.png (415b)",
+    "Id":"RgAAAADVmE95ewSjS4ZrC2ktggLuBwBJYlPF4gPyS7/L9chR1JeWAAAAAAEPAABJYlPF4gPyS7/L9chR1JeWAAANOg+9AAAJ",
+    "InternetMessageId":"&lt;SJ0PR06MB7068F00A3EE360BB9B9F05A0B81A2@SJ0PR06MB7068.namprd06.prod.outlook.com&gt;",
+    "ParentFolder":{
+      "Id":"LgAAAADVmE95ewSjS4ZrC2ktggLuAQBJYlPF4gPyS7/L9chR1JeWAAAAAAEPAAAB",
+      "Path":"\\Drafts"
+    },
+    "SizeInBytes":268282,
+    "Subject":"Test4 added you to the Test Group 1 group"
+  },
+  "SaveToSentItems":false
+}

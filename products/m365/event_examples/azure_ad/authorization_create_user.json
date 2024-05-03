@@ -1,0 +1,88 @@
+{
+  "CreationTime":"2024-05-01T21:29:10",
+  "Id":"d17a8564-4f63-4792-a063-4ecf01e1b7a1",
+  "Operation":"Add user.",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":8,
+  "ResultStatus":"Success",
+  "UserKey":"100320015ED2DA21@test.onmicrosoft.com",
+  "UserType":0,
+  "Version":1,
+  "Workload":"AzureActiveDirectory",
+  "ObjectId":"TestUser10@test.onmicrosoft.com",
+  "UserId":"example@test.onmicrosoft.com",
+  "AzureActiveDirectoryEventType":1,
+  "ExtendedProperties":[{
+    "Name":"additionalDetails",
+    "Value":"{}"
+  },{
+    "Name":"extendedAuditEventCategory",
+    "Value":"User"
+  }],
+  "ModifiedProperties":[{
+    "Name":"AccountEnabled",
+    "NewValue":"[\r\n  true\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"DisplayName",
+    "NewValue":"[\r\n  \"Test User 10\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"MailNickname",
+    "NewValue":"[\r\n  \"TestUser10\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"StsRefreshTokensValidFrom",
+    "NewValue":"[\r\n  \"2024-05-01T21:29:10Z\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"UserPrincipalName",
+    "NewValue":"[\r\n  \"TestUser10@test.onmicrosoft.com\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"UserType",
+    "NewValue":"[\r\n  \"Member\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"Included Updated Properties",
+    "NewValue":"AccountEnabled, DisplayName, MailNickname, StsRefreshTokensValidFrom, UserPrincipalName, UserType",
+    "OldValue":""
+  }],
+  "Actor":[{
+    "ID":"example@test.onmicrosoft.com",
+    "Type":5
+  },{
+    "ID":"100320015ED2DA21",
+    "Type":3
+  },{
+    "ID":"User_f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":2
+  },{
+    "ID":"f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":2
+  },{
+    "ID":"User",
+    "Type":2
+  }],
+  "ActorContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "InterSystemsId":"8134ebac-1bab-411b-a547-b1610cf84a8f",
+  "IntraSystemId":"8004de8c-eb2b-4c14-b55a-2525ccedaa82",
+  "SupportTicketId":"",
+  "Target":[{
+    "ID":"User_74a66a67-9799-4620-a338-3b4a0b06045e",
+    "Type":2
+  },{
+    "ID":"74a66a67-9799-4620-a338-3b4a0b06045e",
+    "Type":2
+  },{
+    "ID":"User",
+    "Type":2
+  },{
+    "ID":"TestUser10@test.onmicrosoft.com",
+    "Type":5
+  },{
+    "ID":"100320037B121E64",
+    "Type":3
+  }],
+  "TargetContextId":"8326222c-5c86-45a1-b768-561ad270c694"
+}

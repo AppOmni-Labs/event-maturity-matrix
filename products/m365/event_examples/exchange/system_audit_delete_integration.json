@@ -1,0 +1,38 @@
+{
+  "AppAccessContext":{
+    "IssuedAtTime":"2024-04-29T19:52:05",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-04-30T15:49:40",
+  "Id":"86328dc9-8a8d-4612-2156-08dc692d25cb",
+  "Operation":"Remove-App",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":1,
+  "ResultStatus":"True",
+  "UserKey":"100320015ED2DA21",
+  "UserType":2,
+  "Version":1,
+  "Workload":"Exchange",
+  "ClientIP":"198.51.100.1:56403",
+  "ObjectId":"f1c08887-d776-42f8-9911-06faa5ab392f\\fe93bfe1-7947-460a-a5e0-7a5906b51360",
+  "UserId":"example@test.onmicrosoft.com",
+  "AppId":"fb78d390-0c51-40cd-8e17-fdbfab77341b",
+  "AppPoolName":"MSExchangeAdminApiNetCore",
+  "ClientAppId":"",
+  "CorrelationID":"",
+  "ExternalAccess":false,
+  "OrganizationName":"test.onmicrosoft.com",
+  "OriginatingServer":"BL0PR06MB4835 (15.20.7519.031)",
+  "Parameters":[{
+    "Name":"Identity",
+    "Value":"fe93bfe1-7947-460a-a5e0-7a5906b51360"
+  },{
+    "Name":"OrganizationApp",
+    "Value":"True"
+  },{
+    "Name":"Confirm",
+    "Value":"False"
+  }],
+  "RequestId":"53b9dec4-d210-788c-60cd-c365c8fd3666",
+  "SessionId":"d15707db-ca84-4096-be63-c6126b7391d5"
+}

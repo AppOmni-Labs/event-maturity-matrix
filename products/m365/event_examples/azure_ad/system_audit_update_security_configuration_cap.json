@@ -1,0 +1,61 @@
+{
+  "CreationTime":"2024-05-01T21:41:53",
+  "Id":"5bf46a0b-5c14-468e-9b1f-bbb861d60411",
+  "Operation":"Update policy.",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":8,
+  "ResultStatus":"Success",
+  "UserKey":"100320015ED2DA21@test.onmicrosoft.com",
+  "UserType":0,
+  "Version":1,
+  "Workload":"AzureActiveDirectory",
+  "ObjectId":"Policy_b2711e15-d574-4d4f-ad0a-2628e64dad97",
+  "UserId":"example@test.onmicrosoft.com",
+  "AzureActiveDirectoryEventType":1,
+  "ExtendedProperties":[{
+    "Name":"additionalDetails",
+    "Value":"{\"User-Agent\":\"Microsoft Azure Graph Client Library 1.0\"}"
+  },{
+    "Name":"extendedAuditEventCategory",
+    "Value":"Policy"
+  }],
+  "ModifiedProperties":[{
+    "Name":"Included Updated Properties",
+    "NewValue":"",
+    "OldValue":""
+  }],
+  "Actor":[{
+    "ID":"example@test.onmicrosoft.com",
+    "Type":5
+  },{
+    "ID":"100320015ED2DA21",
+    "Type":3
+  },{
+    "ID":"User_f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":2
+  },{
+    "ID":"f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":2
+  },{
+    "ID":"User",
+    "Type":2
+  }],
+  "ActorContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "InterSystemsId":"59e475aa-49be-4608-b3c2-4163f5a4285f",
+  "IntraSystemId":"198cceb4-2226-451c-bccf-7500fd31da79",
+  "SupportTicketId":"",
+  "Target":[{
+    "ID":"Policy_b2711e15-d574-4d4f-ad0a-2628e64dad97",
+    "Type":2
+  },{
+    "ID":"b2711e15-d574-4d4f-ad0a-2628e64dad97",
+    "Type":2
+  },{
+    "ID":"Policy",
+    "Type":2
+  },{
+    "ID":"Default Policy",
+    "Type":1
+  }],
+  "TargetContextId":"8326222c-5c86-45a1-b768-561ad270c694"
+}

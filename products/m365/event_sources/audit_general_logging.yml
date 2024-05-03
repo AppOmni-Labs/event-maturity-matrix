@@ -1,0 +1,134 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: Microsoft 365
+  collection_sources:
+    -  m365_mgmt_api
+name: General Audit Logs
+description: Includes workloads not included in other audit log types.
+references:
+  - id: audit_general_schema
+    name: Common Audit Schema
+    url: https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#common-schema
+retention:
+  duration: 180 days
+  comments: Minimum retention is 180 days, but organizations can set a retention policy up to 10 years dependent on licensing, reference https://learn.microsoft.com/en-us/purview/audit-log-retention-policies
+latency:
+  duration: Typically 60 to 90 minutes after an event occurs.
+  comments: Microsoft does not provide a specific audit logging latency SLA, reference https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
+licensing:
+  comments: Standard and Premium audit licenses are available, with log availability and retention dependent on the license level. For more information, see https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
+mappings:
+  - category: C0002
+    event_type: ET0008
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0006: UserKey
+      A0007: UserId
+      A0021: TeamName
+    examples:
+      - type: success
+        location: "./event_examples/general/authorization_create_group.json"
+  - category: C0002
+    event_type: ET0010
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0006: UserKey
+      A0021: TeamName
+      A0020: NewValue
+    examples:
+      - type: success
+        location: "./event_examples/general/authorization_update_group.json"
+  - category: C0002
+    event_type: ET0011
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0006: UserKey
+      A0021: TeamName
+    examples:
+      - type: success
+        location: "./event_examples/general/authorization_delete_group.json"
+  - category: C0002
+    event_type: ET0012
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0006: UserKey
+      A0021: TeamName
+      A0019: Members.Displayname
+    examples:
+      - type: success
+        location: "./event_examples/general/authorization_add_member_to_group.json"
+  - category: C0002
+    event_type: ET0013
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0006: UserKey
+      A0021: TeamName
+      A0019: Members.Displayname
+    examples:
+      - type: success
+        location: "./event_examples/general/authorization_remove_member_from_group.json"
+  - category: C0003
+    event_type: ET0026
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0006: UserKey
+      A0029: AddOnName
+    examples:
+      - type: success
+        location: "./event_examples/general/system_audit_create_integration.json"
+  - category: C0003
+    event_type: ET0029
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0006: UserKey
+    examples:
+      - type: success
+        location: "./event_examples/general/system_audit_delete_integration.json"
+  - category: C0004
+    event_type: ET0030
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0006: UserKey
+      A0031: ExtraProperties
+    examples:
+      - type: success
+        location: "./event_examples/general/activity_audit_create_resource.json"
+  - category: C0004
+    event_type: ET0033
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0006: UserKey
+      A0009: ClientIP
+    examples:
+      - type: success
+        location: "./event_examples/general/activity_audit_delete_resource.json"
