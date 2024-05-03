@@ -1,0 +1,57 @@
+{
+  "CreationTime":"2024-05-01T16:26:51",
+  "Id":"1bcdf6d9-d41e-408a-ad70-0a2ec1e040d2",
+  "Operation":"Delete group.",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":8,
+  "ResultStatus":"Success",
+  "UserKey":"Not Available",
+  "UserType":4,
+  "Version":1,
+  "Workload":"AzureActiveDirectory",
+  "ObjectId":"Group_d81ef556-a18c-4c2f-9f41-ccf90321c181",
+  "UserId":"ServicePrincipal_ac1c885a-da2e-446e-9f3f-544e5f988861",
+  "AzureActiveDirectoryEventType":1,
+  "ExtendedProperties":[{
+    "Name":"additionalDetails",
+    "Value":"{}"
+  },{
+    "Name":"extendedAuditEventCategory",
+    "Value":"Group"
+  }],
+  "ModifiedProperties":[],
+  "Actor":[{
+    "ID":"Microsoft Substrate Management",
+    "Type":1
+  },{
+    "ID":"98db8bd6-0cc0-4e67-9de5-f187f1cd1b41",
+    "Type":2
+  },{
+    "ID":"ServicePrincipal_ac1c885a-da2e-446e-9f3f-544e5f988861",
+    "Type":2
+  },{
+    "ID":"ac1c885a-da2e-446e-9f3f-544e5f988861",
+    "Type":2
+  },{
+    "ID":"ServicePrincipal",
+    "Type":2
+  }],
+  "ActorContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "InterSystemsId":"ce7facf0-60d9-4594-9536-02839e0633bb",
+  "IntraSystemId":"495208b4-932d-4768-9d16-6d9f059b5494",
+  "SupportTicketId":"",
+  "Target":[{
+    "ID":"Group_d81ef556-a18c-4c2f-9f41-ccf90321c181",
+    "Type":2
+  },{
+    "ID":"d81ef556-a18c-4c2f-9f41-ccf90321c181",
+    "Type":2
+  },{
+    "ID":"Group",
+    "Type":2
+  },{
+    "ID":"Test Group 24",
+    "Type":1
+  }],
+  "TargetContextId":"8326222c-5c86-45a1-b768-561ad270c694"
+}

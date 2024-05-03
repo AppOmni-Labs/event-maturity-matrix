@@ -1,0 +1,18 @@
+{
+  "AppAccessContext":{
+    "IssuedAtTime":"2024-05-02T21:26:11",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-05-03T15:33:02",
+  "Id":"6718936a-de28-4f7d-9b40-29256adfca43",
+  "Operation":"TeamDeleted",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":25,
+  "UserKey":"62b732f7-fc71-40bc-b27d-35efcb0509de",
+  "UserType":5,
+  "Version":1,
+  "Workload":"MicrosoftTeams",
+  "UserId":"Microsoft Teams Sync",
+  "TeamGuid":"19:xd7VhKaazsuwrJCpopRmHA1KCyC00Iftn7mqR-fV_ik1@thread.tacv2",
+  "TeamName":"Test Group 200"
+}

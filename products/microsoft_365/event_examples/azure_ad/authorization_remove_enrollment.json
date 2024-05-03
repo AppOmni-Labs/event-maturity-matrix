@@ -1,0 +1,72 @@
+{
+  "CreationTime":"2024-05-02T02:16:16",
+  "Id":"0ec7c8b7-77cb-4aa4-bee9-834e4dc9491a",
+  "Operation":"Update user.",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":8,
+  "ResultStatus":"Success",
+  "UserKey":"Not Available",
+  "UserType":4,
+  "Version":1,
+  "Workload":"AzureActiveDirectory",
+  "ObjectId":"TestUser10@test.onmicrosoft.com",
+  "UserId":"ServicePrincipal_14de7e5c-d71d-4803-afd0-4cbc978b0d84",
+  "AzureActiveDirectoryEventType":1,
+  "ExtendedProperties":[{
+    "Name":"additionalDetails",
+    "Value":"{\"UserType\":\"Member\"}"
+  },{
+    "Name":"extendedAuditEventCategory",
+    "Value":"User"
+  }],
+  "ModifiedProperties":[{
+    "Name":"StrongAuthenticationPhoneAppDetail",
+    "NewValue":"[]",
+    "OldValue":"[\r\n  {\r\n    \"DeviceName\": \"iPhone 12 Pro\",\r\n    \"DeviceToken\": \"apns2-f5f9da4aa265ab5f8f45948763d0fc07d560e25fa2f7452706d82bfe1eee0d0b\",\r\n    \"DeviceTag\": \"SoftwareTokenActivated\",\r\n    \"PhoneAppVersion\": \"6.8.7\",\r\n    \"OathTokenTimeDrift\": 0,\r\n    \"DeviceId\": \"00000000-0000-0000-0000-000000000000\",\r\n    \"Id\": \"780c65ef-b4d2-4c09-a84f-fc8ee722c6fe\",\r\n    \"TimeInterval\": 0,\r\n    \"AuthenticationType\": 3,\r\n    \"NotificationType\": 2,\r\n    \"LastAuthenticatedTimestamp\": \"2024-05-02T01:46:51.1234035Z\",\r\n    \"AuthenticatorFlavor\": null,\r\n    \"HashFunction\": null,\r\n    \"TenantDeviceId\": null,\r\n    \"SecuredPartitionId\": 0,\r\n    \"SecuredKeyId\": 0\r\n  }\r\n]"
+  },{
+    "Name":"Included Updated Properties",
+    "NewValue":"StrongAuthenticationPhoneAppDetail",
+    "OldValue":""
+  },{
+    "Name":"TargetId.UserType",
+    "NewValue":"Member",
+    "OldValue":""
+  }],
+  "Actor":[{
+    "ID":"Azure MFA StrongAuthenticationService",
+    "Type":1
+  },{
+    "ID":"b5a60e17-278b-4c92-a4e2-b9262e66bb28",
+    "Type":2
+  },{
+    "ID":"ServicePrincipal_14de7e5c-d71d-4803-afd0-4cbc978b0d84",
+    "Type":2
+  },{
+    "ID":"14de7e5c-d71d-4803-afd0-4cbc978b0d84",
+    "Type":2
+  },{
+    "ID":"ServicePrincipal",
+    "Type":2
+  }],
+  "ActorContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "InterSystemsId":"6bc227a7-2e1d-4108-be7d-afab72e4887d",
+  "IntraSystemId":"8d98157b-5aec-459d-a4fd-39773a9b0b7d",
+  "SupportTicketId":"",
+  "Target":[{
+    "ID":"User_74a66a67-9799-4620-a338-3b4a0b06045e",
+    "Type":2
+  },{
+    "ID":"74a66a67-9799-4620-a338-3b4a0b06045e",
+    "Type":2
+  },{
+    "ID":"User",
+    "Type":2
+  },{
+    "ID":"TestUser10@test.onmicrosoft.com",
+    "Type":5
+  },{
+    "ID":"100320037B121E64",
+    "Type":3
+  }],
+  "TargetContextId":"8326222c-5c86-45a1-b768-561ad270c694"
+}

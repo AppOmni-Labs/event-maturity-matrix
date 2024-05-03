@@ -1,0 +1,57 @@
+{
+  "CreationTime":"2024-05-01T21:42:17",
+  "Id":"f26d627b-40b0-42d6-9ab1-97de7ec000d6",
+  "Operation":"Delete policy.",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":8,
+  "ResultStatus":"Success",
+  "UserKey":"100320015ED2DA21@test.onmicrosoft.com",
+  "UserType":0,
+  "Version":1,
+  "Workload":"AzureActiveDirectory",
+  "ObjectId":"Policy_673e6616-0786-46cb-bd95-118b7cf949a6",
+  "UserId":"example@test.onmicrosoft.com",
+  "AzureActiveDirectoryEventType":1,
+  "ExtendedProperties":[{
+    "Name":"additionalDetails",
+    "Value":"{\"User-Agent\":\"Microsoft Azure Graph Client Library 1.0\"}"
+  },{
+    "Name":"extendedAuditEventCategory",
+    "Value":"Policy"
+  }],
+  "ModifiedProperties":[],
+  "Actor":[{
+    "ID":"example@test.onmicrosoft.com",
+    "Type":5
+  },{
+    "ID":"100320015ED2DA21",
+    "Type":3
+  },{
+    "ID":"User_f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":2
+  },{
+    "ID":"f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":2
+  },{
+    "ID":"User",
+    "Type":2
+  }],
+  "ActorContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "InterSystemsId":"fcb00c2e-c2ec-49c8-80fe-34131490dd8b",
+  "IntraSystemId":"5c9e3a73-f101-4ccb-8358-fdc8c4e206b2",
+  "SupportTicketId":"",
+  "Target":[{
+    "ID":"Policy_673e6616-0786-46cb-bd95-118b7cf949a6",
+    "Type":2
+  },{
+    "ID":"673e6616-0786-46cb-bd95-118b7cf949a6",
+    "Type":2
+  },{
+    "ID":"Policy",
+    "Type":2
+  },{
+    "ID":"Test CAP",
+    "Type":1
+  }],
+  "TargetContextId":"8326222c-5c86-45a1-b768-561ad270c694"
+}

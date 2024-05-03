@@ -1,0 +1,179 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: Microsoft 365
+  collection_sources:
+    -  m365_mgmt_api
+name: Sharepoint Audit Logs
+description: Includes logs for Sharepoint and OneDrive.
+references:
+  - id: audit_sharepoint_schema
+    name: SharePoint Base Schema
+    url: https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#sharepoint-base-schema
+retention:
+  duration: 180 days
+  comments: Minimum retention is 180 days, but organizations can set a retention policy up to 10 years dependent on licensing, reference https://learn.microsoft.com/en-us/purview/audit-log-retention-policies
+latency:
+  duration: Typically 60 to 90 minutes after an event occurs.
+  comments: Microsoft does not provide a specific audit logging latency SLA, reference https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
+licensing:
+  comments: Standard and Premium audit licenses are available, with log availability and retention dependent on the license level. For more information, see https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
+mappings:
+  - category: C0001
+    event_type: ET0001
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0008: AppAccessContext.AADSessionId
+      A0009: ClientIP
+      A0011: UserAgent
+      A0012: Platform
+    examples:
+      - type: success
+        location: "./event_examples/sharepoint/authentication_account_login_success.json"
+  - category: C0002
+    event_type: ET0012
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0008: AppAccessContext.AADSessionId
+      A0009: ClientIP
+      A0011: UserAgent
+      A0012: Platform
+      A0021: EventData
+      A0019: TargetUserOrGroupName
+    examples:
+      - type: success
+        location: "./event_examples/sharepoint/authorization_add_member_to_group.json"
+  - category: C0002
+    event_type: ET0013
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0008: AppAccessContext.AADSessionId
+      A0009: ClientIP
+      A0011: UserAgent
+      A0012: Platform
+      A0021: EventData
+      A0019: TargetUserOrGroupName
+    examples:
+      - type: success
+        location: "./event_examples/sharepoint/authorization_remove_member_from_group.json"
+  - category: C0002
+    event_type: ET0018
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0008: AppAccessContext.AADSessionId
+      A0009: ClientIP
+      A0011: UserAgent
+      A0012: Platform
+      A0023: TargetUserOrGroupType
+      A0024: TargetUserOrGroupName
+    examples:
+      - type: success
+        location: "./event_examples/sharepoint/authorization_add_permission.json"
+  - category: C0002
+    event_type: ET0019
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0008: AppAccessContext.AADSessionId
+      A0009: ClientIP
+      A0011: UserAgent
+      A0012: Platform
+      A0023: TargetUserOrGroupType
+      A0024: TargetUserOrGroupName
+    examples:
+      - type: success
+        location: "./event_examples/sharepoint/authorization_remove_permission.json"
+  - category: C0003
+    event_type: ET0024
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0009: ClientIP
+      A0011: UserAgent
+      A0026: ModifiedProperties
+      A0027: ModifiedProperties
+      A0028: ModifiedProperties
+    examples:
+      - type: success
+        location: "./event_examples/sharepoint/system_audit_update_security_configuration.json"
+  - category: C0004
+    event_type: ET0030
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0008: AppAccessContext.AADSessionId
+      A0009: ClientIP
+      A0011: UserAgent
+      A0012: Platform
+      A0030: EventData
+      A0031: ItemType
+    examples:
+      - type: success
+        location: "./event_examples/sharepoint/activity_audit_create_resource_site.json"
+  - category: C0004
+    event_type: ET0031
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0008: AppAccessContext.AADSessionId
+      A0009: ClientIP
+      A0011: UserAgent
+      A0012: Platform
+      A0030: ObjectId
+      A0031: ItemType
+    examples:
+      - type: success
+        location: "./event_examples/sharepoint/activity_audit_read_resource_page.json"
+  - category: C0004
+    event_type: ET0033
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0009: ClientIP
+      A0011: UserAgent
+      A0012: Platform
+      A0030: ObjectId
+      A0031: ItemType
+    examples:
+      - type: success
+        location: "./event_examples/sharepoint/activity_audit_delete_resource_site.json"
+  - category: C0004
+    event_type: ET0034
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0008: AppAccessContext.AADSessionId
+      A0009: ClientIP
+      A0011: UserAgent
+      A0012: Platform
+      A0030: ItemType
+    examples:
+      - type: success
+        location: "./event_examples/sharepoint/activity_audit_download_resource_file.json"

@@ -1,0 +1,32 @@
+{
+  "CreationTime":"2024-05-01T05:10:10",
+  "Id":"d84f2254-5d4b-5274-91ad-6729e781821f",
+  "Operation":"MemberAdded",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":25,
+  "UserKey":"f1c08887-d776-42f8-9911-06faa5ab392f",
+  "UserType":0,
+  "Version":1,
+  "Workload":"MicrosoftTeams",
+  "UserId":"example@test.onmicrosoft.com",
+  "AADGroupId":"a86f3642-1b11-468d-aaa3-8398902bd512",
+  "CommunicationType":"Team",
+  "ExtraProperties":[],
+  "Members":[{
+    "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+    "DisplayName":"Alex Wilber",
+    "Role":1,
+    "UPN":"AlexW@test.onmicrosoft.com"
+  }],
+  "ParticipantInfo":{
+    "HasForeignTenantUsers":false,
+    "HasGuestUsers":false,
+    "HasUnauthenticatedUsers":false,
+    "ParticipatingDomains":[],
+    "ParticipatingSIPDomains":[]
+  },
+  "ResourceTenantId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "TeamGuid":"19:xd7VhKaazsuwrJCpopRmHA1KCyC00Iftn7mqR-fV_ik1@thread.tacv2",
+  "ItemName":"Test Group 100",
+  "TeamName":"Test Group 100"
+}

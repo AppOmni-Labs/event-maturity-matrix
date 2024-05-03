@@ -1,0 +1,101 @@
+{
+  "CreationTime":"2024-05-01T16:25:27",
+  "Id":"dadb97b5-59e0-40e8-9d39-0be9bbcf584b",
+  "Operation":"Add group.",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":8,
+  "ResultStatus":"Success",
+  "UserKey":"Not Available",
+  "UserType":4,
+  "Version":1,
+  "Workload":"AzureActiveDirectory",
+  "ObjectId":"Group_d81ef556-a18c-4c2f-9f41-ccf90321c181",
+  "UserId":"ServicePrincipal_ac1c885a-da2e-446e-9f3f-544e5f988861",
+  "AzureActiveDirectoryEventType":1,
+  "ExtendedProperties":[{
+    "Name":"additionalDetails",
+    "Value":"{}"
+  },{
+    "Name":"extendedAuditEventCategory",
+    "Value":"Group"
+  }],
+  "ModifiedProperties":[{
+    "Name":"Description",
+    "NewValue":"[\r\n  \"This is a test distribution group\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"DisplayName",
+    "NewValue":"[\r\n  \"Test Group\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"Mail",
+    "NewValue":"[\r\n  \"testdistro@test.onmicrosoft.com\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"MailEnabled",
+    "NewValue":"[\r\n  true\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"MailNickname",
+    "NewValue":"[\r\n  \"testdistro\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"ProxyAddresses",
+    "NewValue":"[\r\n  \"SMTP:testdistro@test.onmicrosoft.com\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"RenewedDateTime",
+    "NewValue":"[\r\n  \"2024-05-01T16:25:27Z\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"SecurityEnabled",
+    "NewValue":"[\r\n  false\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"Included Updated Properties",
+    "NewValue":"Description, DisplayName, Mail, MailEnabled, MailNickname, ProxyAddresses, RenewedDateTime, SecurityEnabled",
+    "OldValue":""
+  },{
+    "Name":"ActorId.ServicePrincipalNames",
+    "NewValue":"98db8bd6-0cc0-4e67-9de5-f187f1cd1b41",
+    "OldValue":""
+  },{
+    "Name":"SPN",
+    "NewValue":"98db8bd6-0cc0-4e67-9de5-f187f1cd1b41",
+    "OldValue":""
+  }],
+  "Actor":[{
+    "ID":"Microsoft Substrate Management",
+    "Type":1
+  },{
+    "ID":"98db8bd6-0cc0-4e67-9de5-f187f1cd1b41",
+    "Type":2
+  },{
+    "ID":"ServicePrincipal_ac1c885a-da2e-446e-9f3f-544e5f988861",
+    "Type":2
+  },{
+    "ID":"ac1c885a-da2e-446e-9f3f-544e5f988861",
+    "Type":2
+  },{
+    "ID":"ServicePrincipal",
+    "Type":2
+  }],
+  "ActorContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "InterSystemsId":"cd44d8b8-42a5-4b68-b11f-bd6e7f028c72",
+  "IntraSystemId":"89114104-c53a-4f24-8211-c4019169bc6c",
+  "SupportTicketId":"",
+  "Target":[{
+    "ID":"Group_d81ef556-a18c-4c2f-9f41-ccf90321c181",
+    "Type":2
+  },{
+    "ID":"d81ef556-a18c-4c2f-9f41-ccf90321c181",
+    "Type":2
+  },{
+    "ID":"Group",
+    "Type":2
+  },{
+    "ID":"Test Group",
+    "Type":1
+  }],
+  "TargetContextId":"8326222c-5c86-45a1-b768-561ad270c694"
+}

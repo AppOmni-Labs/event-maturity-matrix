@@ -1,0 +1,39 @@
+{
+  "CreationTime":"2024-05-01T19:00:32",
+  "Id":"0b41bd99-5ab2-4d17-359c-08dc6a10f9ac",
+  "Operation":"Update",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":2,
+  "ResultStatus":"Succeeded",
+  "UserKey":"100320015ED2DA21",
+  "UserType":0,
+  "Version":1,
+  "Workload":"Exchange",
+  "ClientIP":"198.51.100.1",
+  "UserId":"example@test.onmicrosoft.com",
+  "AppId":"00000002-0000-0ff1-ce00-000000000000",
+  "ClientIPAddress":"198.51.100.1",
+  "ClientInfoString":"Client=OWA;Action=ViaProxy",
+  "ExternalAccess":false,
+  "InternalLogonType":0,
+  "LogonType":0,
+  "LogonUserSid":"S-1-5-21-1587198437-855871042-1312952668-23578732",
+  "MailboxGuid":"90d31cb1-d428-43a7-82cb-9ecaf526bda8",
+  "MailboxOwnerSid":"S-1-5-21-1587198437-855871042-1312952668-23578732",
+  "MailboxOwnerUPN":"example@test.onmicrosoft.com",
+  "OrganizationName":"test.onmicrosoft.com",
+  "OriginatingServer":"DM6PR06MB4844 (15.20.4200.000)\r\n",
+  "SessionId":"c73392a1-6d2e-42f5-ace1-f3965111e109",
+  "Item":{
+    "Id":"RgAAAAAgL0dcqfr+QYkwnaCB+wwMBwBx36FMViA4QL6OjQQj0W4QAAAAAAENAABx36FMViA4QL6OjQQj0W4QAAFb0NzJAAAP",
+    "InternetMessageId":"&lt;DM6PR06MB4844135DDF8FB5589A0935CAD7192@DM6PR06MB4844.namprd06.prod.outlook.com&gt;",
+    "IsRecord":false,
+    "ParentFolder":{
+      "Id":"LgAAAAAgL0dcqfr+QYkwnaCB+wwMAQBx36FMViA4QL6OjQQj0W4QAAAAAAENAAAC",
+      "Path":"\\Calendar"
+    },
+    "SizeInBytes":6758,
+    "Subject":"Test Calender Entry 24"
+  },
+  "ModifiedProperties":["MapiEndTime","MapiPREndDate","MapiStartTime","MapiPRStartDate","MapiSubject","NormalizedSubjectInternal"]
+}

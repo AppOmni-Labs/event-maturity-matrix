@@ -1,0 +1,33 @@
+{
+  "AppAccessContext":{
+    "AADSessionId":"c21adbd5-e8d4-44fe-a2a2-43e3251b04b5",
+    "ClientAppName":"Unknown",
+    "CorrelationId":"47d324a1-106f-5000-62e6-151e1aa4a24f",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-05-02T20:38:33",
+  "Id":"786cf23e-013b-4fab-105e-08dc6ae7d5e1",
+  "Operation":"SiteCollectionCreated",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":4,
+  "UserKey":"i:0h.f|membership|100320015ED2DA21@live.com",
+  "UserType":0,
+  "Version":1,
+  "Workload":"SharePoint",
+  "ClientIP":"198.51.100.1",
+  "UserId":"example@test.onmicrosoft.com",
+  "AuthenticationType":"FormsCookieAuth",
+  "BrowserName":"Firefox",
+  "BrowserVersion":"120.0",
+  "CorrelationId":"47d324a1-106f-5000-62e6-151e1aa4a24f",
+  "EventSource":"SharePoint",
+  "IsManagedDevice":false,
+  "ItemType":"Site",
+  "Platform":"WinDesktop",
+  "Site":"a849538d-406b-4e55-9c0e-20aad5fdce7d",
+  "UserAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/120.0",
+  "DeviceDisplayName":"198.51.100.1",
+  "EventData":"&lt;SiteCreationSource&gt;API&lt;/SiteCreationSource&gt;",
+  "ApplicationDisplayName":"Unknown",
+  "ObjectId":"https://test.sharepoint.com/sites/appcatalog"
+}

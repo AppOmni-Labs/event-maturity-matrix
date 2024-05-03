@@ -1,0 +1,32 @@
+{
+  "AppAccessContext":{
+    "IssuedAtTime":"2024-05-01T03:56:21",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-05-01T04:06:22",
+  "Id":"159c17b5-7735-4d7f-d5a5-08dc69941015",
+  "Operation":"Remove-ManagementRoleAssignment",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":1,
+  "ResultStatus":"True",
+  "UserKey":"100320015ED2DA21",
+  "UserType":2,
+  "Version":1,
+  "Workload":"Exchange",
+  "ClientIP":"198.51.100.1:8259",
+  "ObjectId":"Address Lists-Test Role Group",
+  "UserId":"example@test.onmicrosoft.com",
+  "AppId":"497effe9-df71-4043-a8bb-14cf78c4b63b",
+  "AppPoolName":"MSExchangeAdminApiNetCore",
+  "ClientAppId":"",
+  "CorrelationID":"",
+  "ExternalAccess":false,
+  "OrganizationName":"test.onmicrosoft.com",
+  "OriginatingServer":"BL0PR06MB4945 (15.20.7519.031)",
+  "Parameters":[{
+    "Name":"Identity",
+    "Value":"379109cd-46a3-4a83-bfa9-6e4fbaf88531"
+  }],
+  "RequestId":"4e7af3ce-88f6-b205-007b-3abd6ecfc56d",
+  "SessionId":"d15707db-ca84-4096-be63-c6126b7391d5"
+}

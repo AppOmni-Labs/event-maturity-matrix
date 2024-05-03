@@ -1,0 +1,21 @@
+{
+  "AppAccessContext":{
+    "IssuedAtTime":"2024-05-02T21:11:45",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-05-03T15:50:19",
+  "Id":"2c658d54-4fc9-477f-b98c-48500df799b4",
+  "Operation":"TeamSettingChanged",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":25,
+  "UserKey":"f1c08887-d776-42f8-9911-06faa5ab392f",
+  "UserType":0,
+  "Version":1,
+  "Workload":"MicrosoftTeams",
+  "UserId":"example@test.onmicrosoft.com",
+  "Name":"Team name",
+  "TeamGuid":"19:908b4ca6d6d84b989347b8427e5048ce@thread.tacv2",
+  "NewValue":"Test Updated Team Name",
+  "OldValue":"Digital Initiative Public Relations",
+  "TeamName":"Test Updated Team Name"
+}

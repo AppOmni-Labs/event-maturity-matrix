@@ -1,0 +1,349 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: Microsoft 365
+  collection_sources:
+    -  m365_mgmt_api
+name: Exchange Audit Logs
+description: Includes logs for Exchange administration and mailbox activities.
+references:
+  - id: audit_exchange_admin_schema
+    name: Exchange Admin Schema
+    url: https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#exchange-admin-schema
+  - id: audit_exchange_mailbox_schema
+    name: Exchange Mailbox Schema
+    url: https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#exchange-mailbox-schema
+retention:
+  duration: 180 days
+  comments: Minimum retention is 180 days, but organizations can set a retention policy up to 10 years dependent on licensing, reference https://learn.microsoft.com/en-us/purview/audit-log-retention-policies
+latency:
+  duration: Typically 60 to 90 minutes after an event occurs.
+  comments: Microsoft does not provide a specific audit logging latency SLA, reference https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
+licensing:
+  comments: Standard and Premium audit licenses are available, with log availability and retention dependent on the license level. For more information, see https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
+mappings:
+  - category: C0001
+    event_type: ET0001
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0006: LogonUserSid
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0011: ClientInfoString
+      A0012: ClientInfoString
+    examples:
+      - type: success
+        location: "./event_examples/exchange/authentication_account_login_success.json"
+  - category: C0002
+    event_type: ET0008
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0021: Parameters.DisplayName
+    examples:
+      - type: success
+        location: "./event_examples/exchange/authorization_create_group_distro.json"
+  - category: C0002
+    event_type: ET0010
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0021: Parameters.DisplayName
+    examples:
+      - type: success
+        location: "./event_examples/exchange/authorization_update_group_distro.json"
+  - category: C0002
+    event_type: ET0011
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+    examples:
+      - type: success
+        location: "./event_examples/exchange/authorization_delete_group_distro.json"
+  - category: C0002
+    event_type: ET0012
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+    examples:
+      - type: success
+        location: "./event_examples/exchange/authorization_add_to_group_distro.json"
+  - category: C0002
+    event_type: ET0013
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+    examples:
+      - type: success
+        location: "./event_examples/exchange/authorization_remove_from_group_distro.json"
+  - category: C0002
+    event_type: ET0014
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0022: Parameters.Name
+    examples:
+      - type: success
+        location: "./event_examples/exchange/authorization_create_role.json"
+  - category: C0002
+    event_type: ET0016
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0022: Parameters.Name
+    examples:
+      - type: success
+        location: "./event_examples/exchange/authorization_update_role.json"
+  - category: C0002
+    event_type: ET0017
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+    examples:
+      - type: success
+        location: "./event_examples/exchange/authorization_delete_role.json"
+  - category: C0002
+    event_type: ET0018
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+    examples:
+      - type: success
+        location: "./event_examples/exchange/authorization_add_permission.json"
+  - category: C0002
+    event_type: ET0019
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0023: Parameters.Role
+    examples:
+      - type: success
+        location: "./event_examples/exchange/authorization_remove_permission.json"
+  - category: C0003
+    event_type: ET0022
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0026: Parameters.Name
+      A0027: Parameters.Value
+    examples:
+      - type: success
+        location: "./event_examples/exchange/system_audit_create_security_configuration_spam.json"
+  - category: C0003
+    event_type: ET0024
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0026: Parameters.Name
+      A0027: Parameters.Value
+    examples:
+      - type: success
+        location: "./event_examples/exchange/system_audit_update_security_configuration_spam.json"
+  - category: C0003
+    event_type: ET0025
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0026: Parameters.Name
+    examples:
+      - type: success
+        location: "./event_examples/exchange/system_audit_delete_security_configuration_spam.json"
+  - category: C0003
+    event_type: ET0026
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0006: Parameters.Identity
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0029: AppId
+    examples:
+      - type: success
+        location: "./event_examples/exchange/system_audit_create_integration.json"
+  - category: C0003
+    event_type: ET0028
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0006: Parameters.Identity
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0029: AppId
+    examples:
+      - type: success
+        location: "./event_examples/exchange/system_audit_update_integration.json"
+  - category: C0003
+    event_type: ET0029
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0006: Parameters.Identity
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0029: AppId
+    examples:
+      - type: success
+        location: "./event_examples/exchange/system_audit_delete_integration.json"
+  - category: C0004
+    event_type: ET0030
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0030: AffectedItems
+      A0031: AffectedItems
+    examples:
+      - type: success - email
+        location: "./event_examples/exchange/activity_audit_create_resource_msg.json"
+      - type: success - calendar
+        location: "./event_examples/exchange/activity_audit_create_resource_calendar.json"
+  - category: C0004
+    event_type: ET0031
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0030: AffectedItems
+      A0031: AffectedItems
+    examples:
+      - type: success
+        location: "./event_examples/exchange/activity_audit_read_resource.json"
+  - category: C0004
+    event_type: ET0032
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+    examples:
+      - type: success
+        location: "./event_examples/exchange/activity_audit_update_resource_calendar.json"
+  - category: C0004
+    event_type: ET0033
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0004: ResultStatus
+      A0005: UserId
+      A0007: UserType
+      A0008: SessionId
+      A0009: ClientIP
+      A0030: AffectedItems
+      A0031: AffectedItems
+    examples:
+      - type: success - email
+        location: "./event_examples/exchange/activity_audit_delete_resource_msg.json"
+      - type: success - calendar
+        location: "./event_examples/exchange/activity_audit_delete_resource_calendar.json"

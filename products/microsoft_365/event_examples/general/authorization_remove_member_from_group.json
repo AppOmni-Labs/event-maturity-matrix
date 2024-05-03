@@ -1,0 +1,32 @@
+{
+  "CreationTime":"2024-05-03T15:49:22",
+  "Id":"a7c73bdd-0302-533a-bff4-97d64dc681a9",
+  "Operation":"MemberRemoved",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":25,
+  "UserKey":"f1c08887-d776-42f8-9911-06faa5ab392f",
+  "UserType":0,
+  "Version":1,
+  "Workload":"MicrosoftTeams",
+  "UserId":"example@test.onmicrosoft.com",
+  "AADGroupId":"21492354-b302-4664-ae50-bf7e27cabc0e",
+  "CommunicationType":"Team",
+  "ExtraProperties":[],
+  "Members":[{
+    "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+    "DisplayName":"Pradeep Gupta",
+    "Role":1,
+    "UPN":"PradeepG@test.onmicrosoft.com"
+  }],
+  "ParticipantInfo":{
+    "HasForeignTenantUsers":false,
+    "HasGuestUsers":false,
+    "HasUnauthenticatedUsers":false,
+    "ParticipatingDomains":[],
+    "ParticipatingSIPDomains":[]
+  },
+  "ResourceTenantId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "TeamGuid":"19:fdeeeb50e13d4630ac6be879c2318b53@thread.tacv2",
+  "ItemName":"U.S. Sales Updated v2",
+  "TeamName":"U.S. Sales Updated v2"
+}

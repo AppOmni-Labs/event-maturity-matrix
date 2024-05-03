@@ -1,0 +1,38 @@
+{
+  "AppAccessContext":{
+    "IssuedAtTime":"2024-05-01T03:54:48",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-05-01T04:00:43",
+  "Id":"f09281ab-848e-4de0-6356-08dc69934603",
+  "Operation":"New-RoleGroup",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":1,
+  "ResultStatus":"True",
+  "UserKey":"100320015ED2DA21",
+  "UserType":2,
+  "Version":1,
+  "Workload":"Exchange",
+  "ClientIP":"198.51.100.1:10267",
+  "ObjectId":"NAMPR06A004.prod.outlook.com/Microsoft Exchange Hosted Organizations/test.onmicrosoft.com/Test Role Group",
+  "UserId":"example@test.onmicrosoft.com",
+  "AppId":"497effe9-df71-4043-a8bb-14cf78c4b63b",
+  "AppPoolName":"MSExchangeAdminApiNetCore",
+  "ClientAppId":"",
+  "CorrelationID":"",
+  "ExternalAccess":false,
+  "OrganizationName":"test.onmicrosoft.com",
+  "OriginatingServer":"BL0PR06MB4945 (15.20.7519.031)",
+  "Parameters":[{
+    "Name":"Name",
+    "Value":"Test Role Group"
+  },{
+    "Name":"Roles",
+    "Value":"Address Lists"
+  },{
+    "Name":"Members",
+    "Value":"fff85c15-3ce8-48c0-af17-4088dbdc5d62"
+  }],
+  "RequestId":"1e83e21b-eb7d-1e92-c02c-09292b02ebac",
+  "SessionId":"273fa545-05fe-4d22-af37-fa899f0b91ca"
+}

@@ -1,0 +1,35 @@
+{
+  "AppAccessContext":{
+    "IssuedAtTime":"2024-05-01T16:21:50",
+    "UniqueTokenId":"XeDaLWgRe1rsdtbkm15SAw"
+  },
+  "CreationTime":"2024-05-01T16:26:51",
+  "Id":"165ebb45-ec0e-40a2-0a76-08dc69fb81d7",
+  "Operation":"Remove-DistributionGroup",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":1,
+  "ResultStatus":"True",
+  "UserKey":"100320015ED2DA21",
+  "UserType":2,
+  "Version":1,
+  "Workload":"Exchange",
+  "ClientIP":"198.51.100.1:12185",
+  "ObjectId":"Test Group20240501162508",
+  "UserId":"example@test.onmicrosoft.com",
+  "AppId":"00000006-0000-0ff1-ce00-000000000000",
+  "AppPoolName":"MSExchangeAdminApiNetCore",
+  "ClientAppId":"",
+  "CorrelationID":"",
+  "ExternalAccess":false,
+  "OrganizationName":"test.onmicrosoft.com",
+  "OriginatingServer":"DM6PR06MB4844 (15.20.7544.013)",
+  "Parameters":[{
+    "Name":"Identity",
+    "Value":"NAMPR06A004.prod.outlook.com/Microsoft Exchange Hosted Organizations/test.onmicrosoft.com/Test Group20240501162508"
+  },{
+    "Name":"BypassSecurityGroupManagerCheck",
+    "Value":"True"
+  }],
+  "RequestId":"e7b9495a-3dae-61c4-d07b-061ca7db5010",
+  "SessionId":"273fa545-05fe-4d22-af37-fa899f0b91ca"
+}

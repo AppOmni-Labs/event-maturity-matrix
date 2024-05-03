@@ -1,0 +1,32 @@
+{
+  "CreationTime":"2024-05-02T21:17:51",
+  "Id":"f36fd190-d3c2-47df-a62b-8d31eb7876c5",
+  "Operation":"ShiftAdded",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":73,
+  "UserKey":"f1c08887-d776-42f8-9911-06faa5ab392f",
+  "UserType":0,
+  "Version":1,
+  "Workload":"MicrosoftTeams",
+  "UserId":"example@test.onmicrosoft.com",
+  "AADGroupId":"a86f3642-1b11-468d-aaa3-8398902bd512",
+  "ExtraProperties":[{
+    "Key":"ShiftType",
+    "Value":"Shift"
+  },{
+    "Key":"ScheduleGroupId",
+    "Value":"TAG_3ef10228-af6c-4337-95de-1d4fb1dc84f9"
+  },{
+    "Key":"CorrelationId",
+    "Value":"2184a3795e56eb81ea8dcdb7f8e8bfc2"
+  }],
+  "TeamGuid":"19:xd7VhKaazsuwrJCpopRmHA1KCyC00Iftn7mqR-fV_ik1@thread.tacv2",
+  "TeamName":"Test Group 200",
+  "ScheduleId":"TEAM_64f16f25-30d0-42aa-af6d-18329a22cc02",
+  "Shift":{
+    "EndTime":"2024-04-29T00:00:00",
+    "Id":"SHFT_ed971e06-1a4b-4dc5-88a9-9f2f8839aa55",
+    "StartTime":"2024-04-29T00:00:00",
+    "AssignedTo":"f1c08887-d776-42f8-9911-06faa5ab392f"
+  }
+}

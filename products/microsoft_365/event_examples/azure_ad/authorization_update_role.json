@@ -1,0 +1,68 @@
+{
+  "CreationTime":"2024-05-01T21:35:59",
+  "Id":"c7a002e8-8dbd-43a7-8c64-8de5910f49ff",
+  "Operation":"Update role definition.",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":8,
+  "ResultStatus":"Success",
+  "UserKey":"100320015ED2DA21@test.onmicrosoft.com",
+  "UserType":0,
+  "Version":1,
+  "Workload":"AzureActiveDirectory",
+  "ObjectId":"RoleDefinition_176137b7-85e6-4dd9-9f65-3c1ce26fa1c3",
+  "UserId":"example@test.onmicrosoft.com",
+  "AzureActiveDirectoryEventType":1,
+  "ExtendedProperties":[{
+    "Name":"additionalDetails",
+    "Value":"{\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/120.0\"}"
+  },{
+    "Name":"extendedAuditEventCategory",
+    "Value":"RoleDefinition"
+  }],
+  "ModifiedProperties":[{
+    "Name":"GrantedPermissions",
+    "NewValue":"[\r\n  {\r\n    \"Actions\": [\r\n      {\r\n        \"ResourceCategory\": \"AadDirectory\",\r\n        \"ResourceType\": \"PolicyApplicationConfiguration\",\r\n        \"TaskType\": \"Delete\",\r\n        \"ReadPropertySet\": \"None\",\r\n        \"WritePropertySet\": \"None\",\r\n        \"TaskTypeSubsetName\": null\r\n      },\r\n      {\r\n        \"ResourceCategory\": \"AadDirectory\",\r\n        \"ResourceType\": \"PolicyApplicationConfiguration\",\r\n        \"TaskType\": \"Read\",\r\n        \"ReadPropertySet\": \"Owners\",\r\n        \"WritePropertySet\": \"None\",\r\n        \"TaskTypeSubsetName\": null\r\n      },\r\n      {\r\n        \"ResourceCategory\": \"AadDirectory\",\r\n        \"ResourceType\": \"ApplicationMyOrganization\",\r\n        \"TaskType\": \"Update\",\r\n        \"ReadPropertySet\": \"None\",\r\n        \"WritePropertySet\": \"Basic\",\r\n        \"TaskTypeSubsetName\": null\r\n      },\r\n      {\r\n        \"ResourceCategory\": \"AadDirectory\",\r\n        \"ResourceType\": \"ApplicationMyOrganization\",\r\n        \"TaskType\": \"Update\",\r\n        \"ReadPropertySet\": \"None\",\r\n        \"WritePropertySet\": \"Credentials\",\r\n        \"TaskTypeSubsetName\": null\r\n      }\r\n    ],\r\n    \"Condition\": null,\r\n    \"ScopeConstraints\": [],\r\n    \"IsPrivileged\": true\r\n  }\r\n]",
+    "OldValue":"[\r\n  {\r\n    \"Actions\": [\r\n      {\r\n        \"ResourceCategory\": \"AadDirectory\",\r\n        \"ResourceType\": \"PolicyApplicationConfiguration\",\r\n        \"TaskType\": \"Delete\",\r\n        \"ReadPropertySet\": \"None\",\r\n        \"WritePropertySet\": \"None\",\r\n        \"TaskTypeSubsetName\": null\r\n      },\r\n      {\r\n        \"ResourceCategory\": \"AadDirectory\",\r\n        \"ResourceType\": \"PolicyApplicationConfiguration\",\r\n        \"TaskType\": \"Read\",\r\n        \"ReadPropertySet\": \"Owners\",\r\n        \"WritePropertySet\": \"None\",\r\n        \"TaskTypeSubsetName\": null\r\n      }\r\n    ],\r\n    \"Condition\": null,\r\n    \"ScopeConstraints\": [],\r\n    \"IsPrivileged\": false\r\n  }\r\n]"
+  },{
+    "Name":"Included Updated Properties",
+    "NewValue":"GrantedPermissions",
+    "OldValue":""
+  }],
+  "Actor":[{
+    "ID":"example@test.onmicrosoft.com",
+    "Type":5
+  },{
+    "ID":"100320015ED2DA21",
+    "Type":3
+  },{
+    "ID":"74658136-14ec-4630-ad9b-26e160ff0fc6",
+    "Type":2
+  },{
+    "ID":"User_f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":2
+  },{
+    "ID":"f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":2
+  },{
+    "ID":"User",
+    "Type":2
+  }],
+  "ActorContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "InterSystemsId":"38e57fdb-584e-4c9e-a68d-2b1eca4fae68",
+  "IntraSystemId":"9b6be5d3-e88b-430f-8eb6-29b3b742800e",
+  "SupportTicketId":"",
+  "Target":[{
+    "ID":"RoleDefinition_176137b7-85e6-4dd9-9f65-3c1ce26fa1c3",
+    "Type":2
+  },{
+    "ID":"176137b7-85e6-4dd9-9f65-3c1ce26fa1c3",
+    "Type":2
+  },{
+    "ID":"Other",
+    "Type":2
+  },{
+    "ID":"New Test Role",
+    "Type":1
+  }],
+  "TargetContextId":"8326222c-5c86-45a1-b768-561ad270c694"
+}

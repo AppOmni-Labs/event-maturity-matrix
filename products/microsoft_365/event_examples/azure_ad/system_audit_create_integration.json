@@ -1,0 +1,96 @@
+{
+  "CreationTime":"2024-05-01T21:43:37",
+  "Id":"2f2af1ba-6d5f-40d2-863e-5263bb46a62c",
+  "Operation":"Add application.",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":8,
+  "ResultStatus":"Success",
+  "UserKey":"Not Available",
+  "UserType":4,
+  "Version":1,
+  "Workload":"AzureActiveDirectory",
+  "ObjectId":"Application_9b59f56e-9679-4503-b31f-594503399e1e",
+  "UserId":"ServicePrincipal_4f990b57-c537-4671-b080-8b6ffd9aded7",
+  "AzureActiveDirectoryEventType":1,
+  "ExtendedProperties":[{
+    "Name":"additionalDetails",
+    "Value":"{\"AppId\":\"fd81b5e5-74e3-4447-bfe5-3ad3ab319e12\"}"
+  },{
+    "Name":"extendedAuditEventCategory",
+    "Value":"Application"
+  }],
+  "ModifiedProperties":[{
+    "Name":"AppAddress",
+    "NewValue":"[\r\n  {\r\n    \"AddressType\": 0,\r\n    \"Address\": \"https://sso.services.box.net/sp/ACS.saml2\",\r\n    \"ReplyAddressClientType\": 0,\r\n    \"ReplyAddressIndex\": null,\r\n    \"IsReplyAddressDefault\": false\r\n  }\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"AppId",
+    "NewValue":"[\r\n  \"fd81b5e5-74e3-4447-bfe5-3ad3ab319e12\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"AvailableToOtherTenants",
+    "NewValue":"[\r\n  false\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"DisplayName",
+    "NewValue":"[\r\n  \"Box\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"Entitlement",
+    "NewValue":"[\r\n  {\r\n    \"EntitlementEncodingVersion\": 2,\r\n    \"EntitlementId\": \"e5bf6e42-3702-45c6-b19e-e0113417b6ad\",\r\n    \"IsDisabled\": false,\r\n    \"Origin\": 0,\r\n    \"Name\": \"Access Box\",\r\n    \"Description\": \"Allow the application to access Box on behalf of the signed-in user.\",\r\n    \"Definition\": null,\r\n    \"ClaimValue\": \"user_impersonation\",\r\n    \"ResourceScopeType\": 1,\r\n    \"IsPrivate\": false,\r\n    \"UserConsentDisplayName\": \"Access Box\",\r\n    \"UserConsentDescription\": \"Allow the application to access Box on your behalf.\",\r\n    \"DirectAccessGrantTypes\": [],\r\n    \"ImpersonationAccessGrantTypes\": [\r\n      {\r\n        \"Impersonator\": 29,\r\n        \"Impersonated\": 20\r\n      }\r\n    ],\r\n    \"EntitlementCategory\": 0,\r\n    \"DependentMicrosoftGraphPermissions\": [],\r\n    \"IsPreauthzOnlyDirectAccessGrant\": false,\r\n    \"IsPreauthzOnlyImpersonationGrant\": false\r\n  }\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"PublicClient",
+    "NewValue":"[\r\n  false\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"WwwHomepage",
+    "NewValue":"[\r\n  \"https://sso.services.box.net/sp/ACS.saml2?metadata=box|ISV9.1|primary|z\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"PublisherDomain",
+    "NewValue":"[\r\n  \"test.onmicrosoft.com\"\r\n]",
+    "OldValue":"[]"
+  },{
+    "Name":"Included Updated Properties",
+    "NewValue":"AppAddress, AppId, AvailableToOtherTenants, DisplayName, Entitlement, PublicClient, WwwHomepage, PublisherDomain",
+    "OldValue":""
+  }],
+  "Actor":[{
+    "ID":"AAD App Management",
+    "Type":1
+  },{
+    "ID":"f0ae4899-d877-4d3c-ae25-679e38eea492",
+    "Type":2
+  },{
+    "ID":"ServicePrincipal_4f990b57-c537-4671-b080-8b6ffd9aded7",
+    "Type":2
+  },{
+    "ID":"4f990b57-c537-4671-b080-8b6ffd9aded7",
+    "Type":2
+  },{
+    "ID":"ServicePrincipal",
+    "Type":2
+  }],
+  "ActorContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "InterSystemsId":"ceb1bc66-ebc1-4cee-ac1c-c79573942636",
+  "IntraSystemId":"00000000-0000-0000-0000-000000000000",
+  "SupportTicketId":"",
+  "Target":[{
+    "ID":"Application_9b59f56e-9679-4503-b31f-594503399e1e",
+    "Type":2
+  },{
+    "ID":"9b59f56e-9679-4503-b31f-594503399e1e",
+    "Type":2
+  },{
+    "ID":"Application",
+    "Type":2
+  },{
+    "ID":"Box",
+    "Type":1
+  },{
+    "ID":"fd81b5e5-74e3-4447-bfe5-3ad3ab319e12",
+    "Type":2
+  }],
+  "TargetContextId":"8326222c-5c86-45a1-b768-561ad270c694"
+}

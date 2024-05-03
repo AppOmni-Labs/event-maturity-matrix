@@ -1,0 +1,76 @@
+{
+  "CreationTime":"2024-05-01T19:03:01",
+  "Id":"7df508c4-a9a3-4c58-b39f-a6ef3c171d41",
+  "Operation":"Update user.",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":8,
+  "ResultStatus":"Success",
+  "UserKey":"Not Available",
+  "UserType":4,
+  "Version":1,
+  "Workload":"AzureActiveDirectory",
+  "ObjectId":"example@test.onmicrosoft.com",
+  "UserId":"ServicePrincipal_ac1c885a-da2e-446e-9f3f-544e5f988861",
+  "AzureActiveDirectoryEventType":1,
+  "ExtendedProperties":[{
+    "Name":"additionalDetails",
+    "Value":"{\"UserType\":\"Member\"}"
+  },{
+    "Name":"extendedAuditEventCategory",
+    "Value":"User"
+  }],
+  "ModifiedProperties":[{
+    "Name":"Included Updated Properties",
+    "NewValue":"",
+    "OldValue":""
+  },{
+    "Name":"TargetId.UserType",
+    "NewValue":"Member",
+    "OldValue":""
+  },{
+    "Name":"ActorId.ServicePrincipalNames",
+    "NewValue":"98db8bd6-0cc0-4e67-9de5-f187f1cd1b41",
+    "OldValue":""
+  },{
+    "Name":"SPN",
+    "NewValue":"98db8bd6-0cc0-4e67-9de5-f187f1cd1b41",
+    "OldValue":""
+  }],
+  "Actor":[{
+    "ID":"Microsoft Substrate Management",
+    "Type":1
+  },{
+    "ID":"98db8bd6-0cc0-4e67-9de5-f187f1cd1b41",
+    "Type":2
+  },{
+    "ID":"ServicePrincipal_ac1c885a-da2e-446e-9f3f-544e5f988861",
+    "Type":2
+  },{
+    "ID":"ac1c885a-da2e-446e-9f3f-544e5f988861",
+    "Type":2
+  },{
+    "ID":"ServicePrincipal",
+    "Type":2
+  }],
+  "ActorContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "InterSystemsId":"627e042e-637b-4a2a-9c65-ac00b2d08906",
+  "IntraSystemId":"c434b12d-544d-4db1-90cd-21a79a9a8c0a",
+  "SupportTicketId":"",
+  "Target":[{
+    "ID":"User_f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":2
+  },{
+    "ID":"f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":2
+  },{
+    "ID":"User",
+    "Type":2
+  },{
+    "ID":"example@test.onmicrosoft.com",
+    "Type":5
+  },{
+    "ID":"100320015ED2DA21",
+    "Type":3
+  }],
+  "TargetContextId":"8326222c-5c86-45a1-b768-561ad270c694"
+}

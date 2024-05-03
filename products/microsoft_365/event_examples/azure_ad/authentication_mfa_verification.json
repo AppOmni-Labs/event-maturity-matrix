@@ -1,0 +1,50 @@
+{
+  "CreationTime":"2024-05-01T03:59:39",
+  "Id":"ffdb8af6-ce7e-4218-93f8-79024f7e3300",
+  "Operation":"UserLoggedIn",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":15,
+  "ResultStatus":"Success",
+  "UserKey":"1a3b0ad5-eda1-4f48-b877-3b002e5d85b5",
+  "UserType":4,
+  "Version":1,
+  "Workload":"AzureActiveDirectory",
+  "ClientIP":"198.51.100.1",
+  "ObjectId":"00000002-0000-0000-c000-000000000000",
+  "UserId":"Not Available",
+  "AzureActiveDirectoryEventType":1,
+  "ExtendedProperties":[{
+    "Name":"ResultStatusDetail",
+    "Value":"Success"
+  },{
+    "Name":"UserAgent",
+    "Value":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/120.0"
+  },{
+    "Name":"RequestType",
+    "Value":"SAS:BeginAuth"
+  }],
+  "ModifiedProperties":[],
+  "Actor":[{
+    "ID":"f1c08887-d776-42f8-9911-06faa5ab392f",
+    "Type":0
+  }],
+  "ActorContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "ActorIpAddress":"198.51.100.1",
+  "InterSystemsId":"82fd1a94-4b4e-4b6e-ab01-ae97923206d6",
+  "IntraSystemId":"ffdb8af6-ce7e-4218-93f8-79024f7e3300",
+  "SupportTicketId":"",
+  "Target":[{
+    "ID":"00000002-0000-0000-c000-000000000000",
+    "Type":0
+  }],
+  "TargetContextId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "ApplicationId":"497effe9-df71-4043-a8bb-14cf78c4b63b",
+  "DeviceProperties":[{
+    "Name":"OS",
+    "Value":"Windows"
+  },{
+    "Name":"BrowserType",
+    "Value":"Firefox"
+  }],
+  "ErrorNumber":"0"
+}

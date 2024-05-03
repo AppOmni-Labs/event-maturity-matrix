@@ -1,0 +1,29 @@
+{
+  "AppAccessContext":{
+    "ClientAppName":"TenantWorkflowEngine",
+    "CorrelationId":"045124a1-3080-5000-62e6-18339d196c67"
+  },
+  "CreationTime":"2024-05-01T06:41:58",
+  "Id":"bebaecd3-a9c7-4cd9-211d-08dc69a9ccab",
+  "Operation":"SiteIBModeChanged",
+  "OrganizationId":"8326222c-5c86-45a1-b768-561ad270c694",
+  "RecordType":4,
+  "UserKey":"S-1-0-0",
+  "UserType":0,
+  "Version":1,
+  "Workload":"SharePoint",
+  "ClientIP":"",
+  "UserId":"SHAREPOINT\\system",
+  "CorrelationId":"045124a1-3080-5000-62e6-18339d196c67",
+  "EventSource":"SharePoint",
+  "ItemType":"Site",
+  "Site":"9c91ddba-ad04-4f5d-b659-6bfe37275e66",
+  "UserAgent":"",
+  "ModifiedProperties":[{
+    "Name":"SiteIBMode",
+    "NewValue":"Open",
+    "OldValue":"Implicit"
+  }],
+  "ApplicationDisplayName":"TenantWorkflowEngine",
+  "ObjectId":"https://test.sharepoint.com/sites/group1"
+}
