@@ -8,7 +8,9 @@ logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/m365
 description: |
   Microsoft 365 (M365) is a cloud-based productivity platform which provides access to the full suite of office applications including Outlook, SharePoint, OneDrive, Word, Excel, PowerPoint, etc.
 
-  M365 provides audit logs through the Microsoft Purview service via audit log subscriptions. Logging levels and retention are controlled by the license of an organization, as well as the license assigned to each individual user.
+  Identity and access management is controlled through Microsoft Entra ID (formerly Azure Active Directory), which is also available as an audit log dataset.
+  
+  M365 provides all audit logs through the Microsoft Purview service via audit log subscriptions. Logging levels and retention are controlled by the license of an organization, as well as the license assigned to each individual user.
 collection:
   - id: m365_mgmt_api
     name: Management API
