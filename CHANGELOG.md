@@ -1,6 +1,7 @@
 # 1.0.1 - 2024-05-01
 ## New Sources
 - Google Workspace
+- Microsoft 365
 - Onelogin
 - PingOne
 - ServiceNow

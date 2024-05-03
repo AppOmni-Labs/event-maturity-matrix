@@ -69,7 +69,6 @@ This project was developed by the Threat Detection team at [AppOmni](https://app
 
 We currently have identified the following roadmap items. If you have any suggestions, please [file an issue](https://github.com/AppOmni-Labs/event-maturity-matrix/issues/new).
 
-* [ ] Add Microsoft as a product
 * [ ] Consider extending Event Categories by tailoring to distinct classes of SaaS platforms
 * [ ] Expand nuances of SaaS platforms by adding additional context around licensing, permissions, and other relevant details
 * [ ] Visualize attack paths that impact event sources, and ultimately those defined event sources
