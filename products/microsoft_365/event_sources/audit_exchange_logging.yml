@@ -40,7 +40,7 @@ mappings:
       A0012: ClientInfoString
     examples:
       - type: success
-        location: "./event_examples/exchange/authentication_account_login_success.json"
+        location: "./event_examples/exchange/authentication_account_login.json"
   - category: C0002
     event_type: ET0008
     attributes:
