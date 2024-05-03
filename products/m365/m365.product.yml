@@ -4,7 +4,7 @@
 entity_name: product
 version: "1.0.0"
 name: Microsoft 365
-logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/m365_square.svg
+logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/o365_square.svg
 description: |
   Microsoft 365 (M365) is a cloud-based productivity platform which provides access to the full suite of office applications including Outlook, SharePoint, OneDrive, Word, Excel, PowerPoint, etc.
 
