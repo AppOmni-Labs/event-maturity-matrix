@@ -35,7 +35,7 @@ mappings:
       A0012: Platform
     examples:
       - type: success
-        location: "./event_examples/sharepoint/authentication_account_login_success.json"
+        location: "./event_examples/sharepoint/authentication_account_login.json"
   - category: C0002
     event_type: ET0012
     attributes:
