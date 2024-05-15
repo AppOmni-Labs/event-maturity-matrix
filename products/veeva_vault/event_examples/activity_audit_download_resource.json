@@ -1,0 +1,21 @@
+{
+  "action": "Download",
+  "doc_id": "101",
+  "document_url": "/ui/#doc_info/101/0/1",
+  "event_description": "Document downloaded",
+  "field_name": null,
+  "full_name": "Bugs Bunny",
+  "id": "650",
+  "item": "VV-TMF-00017",
+  "job_instance_id": null,
+  "new_value": null,
+  "old_value": null,
+  "on_behalf_of": null,
+  "signature_meaning": null,
+  "task_name": null,
+  "timestamp": "2024-05-07T19:24:09Z",
+  "user_name": "bbunny@acme.com",
+  "version": "0.1",
+  "view_license": null,
+  "workflow_name": null
+}

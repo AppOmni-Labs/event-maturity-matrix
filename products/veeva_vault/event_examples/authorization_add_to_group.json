@@ -1,0 +1,14 @@
+{
+  "action": "Edit_ListProperty",
+  "event_description": "\"jdoe@acme.com\" was added to the \"Report Administrators\" group",
+  "field_name": "groupMember",
+  "full_name": "Bugs Bunny",
+  "id": "726692",
+  "item": "Report Administrators",
+  "new_value": "jdoe@acme.com",
+  "old_value": null,
+  "on_behalf_of": null,
+  "timestamp": "2024-05-07T22:20:50Z",
+  "user_id": "13648907",
+  "user_name": "bbunny@acme.com"
+}

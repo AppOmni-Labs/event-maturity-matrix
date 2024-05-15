@@ -1,0 +1,12 @@
+{
+  "browser": "Chrome 124.0.0.0",
+  "id": "6145624385",
+  "on_behalf_of": null,
+  "platform": "Intel Mac OS X 10.15.7",
+  "source_ip": "8.8.8.8",
+  "status": "Success",
+  "timestamp": "2024-05-07T20:18:07Z",
+  "type": "User Logout",
+  "user_name": "bbunny@acme.com",
+  "vault_id": "123456"
+}

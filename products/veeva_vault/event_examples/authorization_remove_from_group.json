@@ -1,0 +1,14 @@
+{
+  "action": "Edit_ListProperty",
+  "event_description": "\"example_user_123@acme.com\" was removed from the \"External Inspectors\" group",
+  "field_name": "groupMember",
+  "full_name": "System",
+  "id": "726721",
+  "item": "External Inspectors",
+  "new_value": null,
+  "old_value": "example_user_123@acme.com",
+  "on_behalf_of": null,
+  "timestamp": "2024-05-07T23:20:35Z",
+  "user_id": "1",
+  "user_name": "System"
+}

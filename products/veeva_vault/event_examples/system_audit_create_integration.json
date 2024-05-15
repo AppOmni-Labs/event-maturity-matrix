@@ -1,0 +1,20 @@
+{
+  "action": "Create",
+  "capacity": null,
+  "event_description": "Connection Client : example_external_connection created",
+  "field_name": null,
+  "full_name": "System",
+  "id": "123225",
+  "item": "Connection Client : example_external_connection",
+  "new_value": null,
+  "object_label": "Connection Client",
+  "old_value": null,
+  "on_behalf_of": "bbunny@acme.com",
+  "reason": null,
+  "record_id": "V8M00000000E001",
+  "task_name": null,
+  "timestamp": "2024-05-09T18:23:21Z",
+  "user_name": "System",
+  "verdict": null,
+  "workflow_name": null
+}
