@@ -1,0 +1,20 @@
+{
+  "action": "Edit",
+  "capacity": null,
+  "event_description": "\"Subject Status\" changed from \"Started Treatment\" to \"Started Follow Up\"",
+  "field_name": "Subject Status",
+  "full_name": "Bugs Bunny",
+  "id": "123243",
+  "item": "Subject : example_subject_id",
+  "new_value": "Started Follow Up",
+  "object_label": "Subject",
+  "old_value": "Started Treatment",
+  "on_behalf_of": null,
+  "reason": null,
+  "record_id": "OPB000000001002",
+  "task_name": null,
+  "timestamp": "2024-05-09T19:59:52Z",
+  "user_name": "bbunny@acme.com",
+  "verdict": null,
+  "workflow_name": null
+}

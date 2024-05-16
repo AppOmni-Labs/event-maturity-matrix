@@ -1,0 +1,14 @@
+{
+  "action": "Create",
+  "event_description": "Group \"example_group_123\" created",
+  "field_name": "groupName",
+  "full_name": "Bugs Bunny",
+  "id": "726727",
+  "item": "example_group_123",
+  "new_value": "example_group_123",
+  "old_value": null,
+  "on_behalf_of": null,
+  "timestamp": "2024-05-07T23:21:12Z",
+  "user_id": "13648907",
+  "user_name": "bbunny@acme.com"
+}

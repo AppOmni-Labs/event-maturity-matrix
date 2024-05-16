@@ -1,0 +1,14 @@
+{
+  "action": "RemovePermission",
+  "event_description": "Permission \"Admin > Configuration > Pages > Edit\" removed from permission set \"example_permission_set\"",
+  "field_name": "Admin > Configuration > Pages > Edit",
+  "full_name": "Bugs Bunny",
+  "id": "726747",
+  "item": "Permission Set \"example_permission_set\"",
+  "new_value": null,
+  "old_value": null,
+  "on_behalf_of": null,
+  "timestamp": "2024-05-08T23:03:03Z",
+  "user_id": "13648907",
+  "user_name": "bbunny@acme.com"
+}

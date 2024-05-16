@@ -1,0 +1,20 @@
+{
+  "action": "Create",
+  "capacity": null,
+  "event_description": "Application Role : example_new_role created",
+  "field_name": null,
+  "full_name": "Bugs Bunny",
+  "id": "123212",
+  "item": "Application Role : example_new_role",
+  "new_value": null,
+  "object_label": "Application Role",
+  "old_value": null,
+  "on_behalf_of": null,
+  "reason": null,
+  "record_id": "0AR00000000P001",
+  "task_name": null,
+  "timestamp": "2024-05-08T20:24:13Z",
+  "user_name": "bbunny@acme.com",
+  "verdict": null,
+  "workflow_name": null
+}

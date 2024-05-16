@@ -1,0 +1,279 @@
+entity_name: event_source
+version: "0.0.1"
+product:
+  name: Veeva Vault
+  collection_sources:
+    - get_audittrail_api
+name: Retrieve Audit Details API
+description: The Veeva Vault Retrieve Audit Details API provides near real-time, read-only access to an organization's audit log.
+references:
+  - id: get_audittrail_api_documentation
+    name: Retrieve Audit Details API Documentation
+    url: https://developer.veevavault.com/api/24.1/#retrieve-audit-details
+retention:
+  duration: 30 days
+  comments: N/A
+latency:
+  duration: Near real-time
+  comments: N/A
+licensing:
+  comments: A Veeva Vault license is required to access the Retrieve Audit Details API.
+mappings:
+  - category: C0001
+    event_type: ET0001
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: type
+      A0005: user_name
+      A0009: source_ip
+      A0011: platform
+      A0013: status
+    examples:
+      - type: success
+        location: "./event_examples/authentication_account_login_session_success.json"
+      - type: failure
+        location: "./event_examples/authentication_account_login_session_failure.json"
+  - category: C0001
+    event_type: ET0002
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: type
+      A0005: user_name
+      A0009: source_ip
+      A0011: platform
+    examples:
+      - type: success
+        location: "./event_examples/authentication_account_logout.json"
+  - category: C0002
+    event_type: ET0004
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0019: item
+    examples:
+      - type: success
+        location: "./event_examples/authorization_create_user.json"
+  - category: C0002
+    event_type: ET0006
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0019: item
+      A0020: field_name
+    examples:
+      - type: success
+        location: "./event_examples/authorization_update_user.json"
+  - category: C0002
+    event_type: ET0008
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0021: item
+    examples:
+      - type: success
+        location: "./event_examples/authorization_create_group.json"
+  - category: C0002
+    event_type: ET0010
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0021: item
+      A0020: field_name
+    examples:
+      - type: success
+        location: "./event_examples/authorization_update_group.json"
+  - category: C0002
+    event_type: ET0011
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0021: item
+    examples:
+      - type: success
+        location: "./event_examples/authorization_delete_group.json"
+  - category: C0002
+    event_type: ET0012
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0021: item
+      A0019: new_value
+    examples:
+      - type: success
+        location: "./event_examples/authorization_add_to_group.json"
+  - category: C0002
+    event_type: ET0013
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0021: item
+      A0019: old_value
+    examples:
+      - type: success
+        location: "./event_examples/authorization_remove_from_group.json"
+  - category: C0002
+    event_type: ET0014
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0022: item
+    examples:
+      - type: success
+        location: "./event_examples/authorization_create_role.json"
+  - category: C0002
+    event_type: ET0016
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0022: item
+      A0020: field_name
+    examples:
+      - type: success
+        location: "./event_examples/authorization_update_role.json"
+  - category: C0002
+    event_type: ET0017
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0022: item
+    examples:
+      - type: success
+        location: "./event_examples/authorization_delete_role.json"
+  - category: C0002
+    event_type: ET0018
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0023: new_value
+      A0024: item
+    examples:
+      - type: success
+        location: "./event_examples/authorization_add_permission.json"
+  - category: C0002
+    event_type: ET0019
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0023: field_name
+      A0024: item
+    examples:
+      - type: success
+        location: "./event_examples/authorization_remove_permission.json"
+  - category: C0003
+    event_type: ET0026
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0029: item
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_create_integration.json"
+  - category: C0003
+    event_type: ET0028
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0029: item
+      A0026: new_value
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_update_integration.json"
+  - category: C0003
+    event_type: ET0029
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0029: item
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_delete_integration.json"
+  - category: C0004
+    event_type: ET0030
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0030: item
+      A0031: object_label
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_create_resource.json"
+  - category: C0004
+    event_type: ET0031
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0030: item
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_read_resource.json"
+  - category: C0004
+    event_type: ET0032
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0030: item
+      A0031: object_label
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_update_resource.json"
+  - category: C0004
+    event_type: ET0033
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0030: item
+      A0031: object_label
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_delete_resource.json"
+  - category: C0004
+    event_type: ET0034
+    attributes:
+      A0001: timestamp
+      A0002: id
+      A0003: action
+      A0005: user_name
+      A0032: item
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_download_resource.json"

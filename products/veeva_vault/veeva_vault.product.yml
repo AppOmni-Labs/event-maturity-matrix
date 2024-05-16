@@ -1,0 +1,19 @@
+entity_name: product
+version: "0.0.1"
+name: Veeva Vault
+logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/veeva_square.svg
+description: |
+  Veeva Vault is a true cloud enterprise content management platform and suite of applications specifically built for life sciences.
+  
+  Veeva Vault audit events record logs related to an documents, objects, logins, and systems. The Events can be used to understand platform and user activity, troubleshoot problems, and investigate security incidents.
+  
+  The Veeva Vault Retrieve Audit Details API allows an organization to programmatically access the Veeva Vault audit logs. The API provides a way to retrieve, filter, and export events.
+collection:
+  - id: get_audittrail_api
+    name: Retrieve Audit Details API
+    description: The Veeva Vault Retrieve Audit Details API provides near real-time, read-only access to an organization's audit log.
+    references:
+      - id: get_api_logs
+        name: Retrieve Audit Details API Documentation
+        description: API documentation
+        url: https://developer.veevavault.com/api/24.1/#retrieve-audit-details

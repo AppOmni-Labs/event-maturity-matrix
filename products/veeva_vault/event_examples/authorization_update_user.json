@@ -1,0 +1,20 @@
+{
+  "action": "Edit",
+  "capacity": null,
+  "event_description": "\"Email\" changed from \"example_user_123@appomni.com\" to \"changed_email@appomni.com\"",
+  "field_name": "Email",
+  "full_name": "Bugs Bunny",
+  "id": "123193",
+  "item": "User : example_firstname example_lastname",
+  "new_value": "changed_email@appomni.com",
+  "object_label": "User",
+  "old_value": "example_user_123@appomni.com",
+  "on_behalf_of": null,
+  "reason": null,
+  "record_id": "20107255",
+  "task_name": null,
+  "timestamp": "2024-05-07T23:19:35Z",
+  "user_name": "bbunny@acme.com",
+  "verdict": null,
+  "workflow_name": null
+}

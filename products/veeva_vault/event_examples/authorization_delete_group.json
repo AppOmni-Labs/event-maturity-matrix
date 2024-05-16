@@ -1,0 +1,14 @@
+{
+  "action": "Delete",
+  "event_description": "Group \"example_group_123\" deleted",
+  "field_name": null,
+  "full_name": "Bugs Bunny",
+  "id": "726731",
+  "item": "example_group_123",
+  "new_value": null,
+  "old_value": null,
+  "on_behalf_of": null,
+  "timestamp": "2024-05-07T23:21:49Z",
+  "user_id": "13648907",
+  "user_name": "bbunny@acme.com"
+}

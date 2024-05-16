@@ -1,0 +1,20 @@
+{
+  "action": "Delete",
+  "capacity": null,
+  "event_description": "Connection : External : example_external_connection deleted",
+  "field_name": null,
+  "full_name": "Bugs Bunny",
+  "id": "123232",
+  "item": "Connection : External : example_external_connection",
+  "new_value": null,
+  "object_label": "Connection",
+  "old_value": null,
+  "on_behalf_of": null,
+  "reason": null,
+  "record_id": "V1F00000000L001",
+  "task_name": null,
+  "timestamp": "2024-05-09T18:50:15Z",
+  "user_name": "bbunny@acme.com",
+  "verdict": null,
+  "workflow_name": null
+}

@@ -1,0 +1,14 @@
+{
+  "action": "Edit",
+  "event_description": "Security profile for \"jdoe@acme.com\" was changed from \"System Administrator\" to \"Vault Owner\"",
+  "field_name": "securityProfile",
+  "full_name": "Paul Bunyan",
+  "id": "731223",
+  "item": "jdoe@acme.com (John Doe)",
+  "new_value": "Vault Owner",
+  "old_value": "System Administrator",
+  "on_behalf_of": null,
+  "timestamp": "2024-05-10T13:53:39Z",
+  "user_id": "13796477",
+  "user_name": "pbunyan@acme.com"
+}

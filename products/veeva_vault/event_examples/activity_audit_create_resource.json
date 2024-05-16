@@ -1,0 +1,20 @@
+{
+  "action": "Create",
+  "capacity": null,
+  "event_description": "Study : example_study_1337 created",
+  "field_name": null,
+  "full_name": "Bugs Bunny",
+  "id": "123244",
+  "item": "Study : example_study_1337",
+  "new_value": null,
+  "object_label": "Study",
+  "old_value": null,
+  "on_behalf_of": null,
+  "reason": null,
+  "record_id": "0ST000000006002",
+  "task_name": null,
+  "timestamp": "2024-05-09T20:18:54Z",
+  "user_name": "bbunny@acme.com",
+  "verdict": null,
+  "workflow_name": null
+}

@@ -1,0 +1,14 @@
+{
+  "action": "Edit",
+  "event_description": "Group description set to \"new_description\"",
+  "field_name": "groupDescr",
+  "full_name": "Bugs Bunny",
+  "id": "726729",
+  "item": "example_group_123",
+  "new_value": "new_description",
+  "old_value": null,
+  "on_behalf_of": null,
+  "timestamp": "2024-05-07T23:21:28Z",
+  "user_id": "13648907",
+  "user_name": "bbunny@acme.com"
+}

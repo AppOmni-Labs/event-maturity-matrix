@@ -1,0 +1,21 @@
+{
+  "action": "GetDocumentVersion",
+  "doc_id": "102",
+  "document_url": "/ui/#doc_info/102/0/1",
+  "event_description": "Viewed Document",
+  "field_name": null,
+  "full_name": "John Doe",
+  "id": "729",
+  "item": "VV-TMF-12345",
+  "job_instance_id": null,
+  "new_value": null,
+  "old_value": null,
+  "on_behalf_of": null,
+  "signature_meaning": null,
+  "task_name": null,
+  "timestamp": "2024-05-14T21:37:10Z",
+  "user_name": "jdoe@acme.com",
+  "version": "0.1",
+  "view_license": null,
+  "workflow_name": null
+}

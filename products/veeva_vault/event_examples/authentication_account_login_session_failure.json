@@ -1,0 +1,12 @@
+{
+  "browser": "Unknown",
+  "id": "6151724407",
+  "on_behalf_of": null,
+  "platform": "Unknown",
+  "source_ip": "8.8.8.8",
+  "status": "Password Change Required",
+  "timestamp": "2024-05-08T21:17:23Z",
+  "type": "User Login",
+  "user_name": "granny@acme.com",
+  "vault_id": null
+}
