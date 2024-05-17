@@ -1,7 +1,7 @@
 entity_name: product
 version: "0.0.1"
 name: Veeva Vault
-logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/veeva_square.svg
+logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/veevavault_square.svg
 description: |
   Veeva Vault is a true cloud enterprise content management platform and suite of applications specifically built for life sciences.
   
