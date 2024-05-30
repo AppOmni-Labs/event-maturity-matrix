@@ -18,7 +18,7 @@ retention:
   comments: Administrator logs are stored based on the log retention interval setting. If no custom log retention interval has been specified, Administrator logs can be retrieved from the time the account was initially created, reference https://help.duo.com/s/article/2990?language=en_US
 latency:
   duration: Near real-time
-  comments:
+  comments: N/A
 licensing:
   comments: The Duo Admin API is available to Duo Premier, Duo Advantage, and Duo Essentials customers, and new customers with an Advantage or Premier trial. For more information, see https://duo.com/docs/adminapi#about-the-admin-api
 mappings:
