@@ -1,0 +1,20 @@
+{
+    "action": "admin_delete",
+    "description":
+    {
+        "administrative_units": "",
+        "email": "bob.smith@example.com",
+        "hardtoken": null,
+        "is_temporary_password": false,
+        "name": "Bob Smith",
+        "phone": null,
+        "restricted_by_admin_units": false,
+        "role": "Administrator",
+        "status": "Pending Activation",
+        "subaccount_role": "Administrator"
+    },
+    "isotimestamp": "2024-05-23T20:16:36+00:00",
+    "object": "Bob Smith",
+    "timestamp": 1716495396,
+    "username": "Jane Doe"
+}

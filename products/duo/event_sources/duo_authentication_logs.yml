@@ -1,0 +1,42 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: Duo
+  collection_sources:
+    -  duo_admin_api
+name: Duo Authentication Logs
+description: Provides an audit trail of authentication activity within the Duo Security platform.
+references:
+  - id: duo_authentication_logs
+    name: Duo Authentication Logs
+    url: https://duo.com/docs/adminapi#authentication-logs
+retention:
+  duration: 180 days
+  comments: Maximum retention of 180 days, even if the log retention interval is set to a value greater than 180 days, reference https://help.duo.com/s/article/2990?language=en_US
+latency:
+  duration: Near real-time
+  comments: There is an intentional two minute delay in availability of new authentication events, reference https://duo.com/docs/adminapi#authentication-logs
+licensing:
+  comments: The Duo Admin API is available to Duo Premier, Duo Advantage, and Duo Essentials customers, and new customers with an Advantage or Premier trial. For more information, see https://duo.com/docs/adminapi#about-the-admin-api
+mappings:
+  - category: C0001
+    event_type: ET0003
+    attributes:
+      A0001: timestamp, isotimestamp
+      A0004: result
+      A0005: username
+      A0009: ip
+      A0010: location.city, location.country, location.state
+      A0011: access_device.browser
+      A0012: access_device.os
+      A0016: factor, device
+      A0017: reason
+      A0018: integration
+    examples:
+      - type: success
+        location: "./event_examples/authentication_mfa_verification_success_auth.json"
+      - type: failure
+        location: "./event_examples/authentication_mfa_verification_failure_auth.json"

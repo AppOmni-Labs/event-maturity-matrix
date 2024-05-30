@@ -1,0 +1,14 @@
+{
+    "action": "group_create",
+    "description":
+    {
+        "_status": "Active",
+        "administrative_units": "",
+        "desc": "East coast admin group",
+        "name": "custom_admin_group_east"
+    },
+    "isotimestamp": "2024-05-17T17:31:18+00:00",
+    "object": "custom_admin_group_east",
+    "timestamp": 1715967078,
+    "username": "Jane Doe"
+}

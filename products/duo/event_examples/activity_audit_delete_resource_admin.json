@@ -1,0 +1,17 @@
+{
+    "action": "phone_delete",
+    "description":
+    {
+        "extension": "",
+        "number": "+11234567890",
+        "platform": "Generic Smartphone",
+        "pname": "",
+        "postdelay": null,
+        "predelay": null,
+        "type": "Mobile"
+    },
+    "isotimestamp": "2024-05-28T17:17:58+00:00",
+    "object": "123-456-6789",
+    "timestamp": 1716916678,
+    "username": "Jane Doe"
+}

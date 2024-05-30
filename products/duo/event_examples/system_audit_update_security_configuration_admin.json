@@ -1,0 +1,19 @@
+{
+    "action": "updated_risk_profile",
+    "description":
+    {
+        "applications": "Admin API",
+        "countries": "Ascension, Afghanistan, Albania, Algeria, Antigua and Barbuda",
+        "groups": "",
+        "ips": "192.168.100.10",
+        "net_blocks": "",
+        "non_authentication_events":
+        {
+            "bypass_status_enablement": "Always"
+        }
+    },
+    "isotimestamp": "2024-05-29T14:34:59+00:00",
+    "object": null,
+    "timestamp": 1716993299,
+    "username": "Jane Doe"
+}

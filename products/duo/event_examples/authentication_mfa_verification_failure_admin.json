@@ -1,0 +1,14 @@
+{
+    "action": "admin_2fa_error",
+    "description":
+    {
+        "email": "john.smith@example.com",
+        "error": "Invalid passcode.",
+        "factor": "sms",
+        "ip_address": "192.168.10.1"
+    },
+    "isotimestamp": "2024-05-21T17:58:04+00:00",
+    "object": null,
+    "timestamp": 1716314284,
+    "username": "Smith, John"
+}

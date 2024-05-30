@@ -1,0 +1,13 @@
+{
+    "action": "admin_update",
+    "description":
+    {
+        "administrative_units": "",
+        "restricted_by_admin_units": false,
+        "role": "Help Desk"
+    },
+    "isotimestamp": "2024-05-29T12:54:47+00:00",
+    "object": "Bruce Banner",
+    "timestamp": 1716987287,
+    "username": "John Doe"
+}

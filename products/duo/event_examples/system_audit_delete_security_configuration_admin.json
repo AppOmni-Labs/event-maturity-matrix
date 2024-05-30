@@ -1,0 +1,26 @@
+{
+    "action": "policy_delete",
+    "description":
+    {
+        "admin_email": "jane.doe@example.com",
+        "anonymous_ip_policy": "Deny access",
+        "browser_max_ood_days": 30,
+        "chrome_remediation": "notify and allow",
+        "edge_remediation": "notify and allow",
+        "enroll_policy": "Require Enrollment",
+        "firefox_remediation": "notify and allow",
+        "ie_remediation": "notify and allow",
+        "mobile_chrome_remediation": "notify and allow",
+        "mobile_edge_remediation": "notify and allow",
+        "mobile_firefox_remediation": "notify and allow",
+        "mobile_safari_remediation": "notify and allow",
+        "name": "TEST POLICY",
+        "other_browsers_remediation": "notify and allow",
+        "pretty_trusted_devices": "",
+        "safari_remediation": "block all"
+    },
+    "isotimestamp": "2024-05-29T14:49:14+00:00",
+    "object": "TEST POLICY",
+    "timestamp": 1716994154,
+    "username": "Jane Doe"
+}

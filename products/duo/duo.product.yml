@@ -1,0 +1,20 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: product
+version: "1.0.0"
+name: Duo
+logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/duo_square.png
+description: |
+  Duo is a cloud-based security platform which provides multi-factor authentication, identity and device verification, and single sign-on to company resources.
+    
+  The Duo Admin API provides programmatic access to the Duo platform. The Admin API can be used to to manage users, tokens, bypass codes, and retrieve audit logs.
+collection:
+  - id: duo_admin_api
+    name: Duo Admin API
+    description: The Duo Admin API provides programmatic access to the administrative functionality of Duo Security's two-factor authentication platform.
+    references:
+      - id: admin_api_overview
+        name: Admin API Overview
+        description: Admin API Overview
+        url: https://duo.com/docs/adminapi

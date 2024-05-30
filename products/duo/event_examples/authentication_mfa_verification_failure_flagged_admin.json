@@ -1,0 +1,14 @@
+{
+    "action": "admin_2fa_error",
+    "description":
+    {
+        "email": "joe.smith@example.com",
+        "error": "Login request reported as fraudulent.",
+        "factor": "push",
+        "ip_address": "192.168.1.2"
+    },
+    "isotimestamp": "2024-05-23T19:17:28+00:00",
+    "object": null,
+    "timestamp": 1716491848,
+    "username": "Joe Smith"
+}

@@ -1,0 +1,31 @@
+{
+    "access_device":
+    {
+        "browser": "Chrome",
+        "browser_version": "125.0.6422.61",
+        "flash_version": "uninstalled",
+        "java_version": "uninstalled",
+        "os": "Mac OS X",
+        "os_version": "14.5.0",
+        "trusted_endpoint_status": "unknown"
+    },
+    "alias": "",
+    "device": "123-456-7890",
+    "email": "",
+    "factor": "Verified Duo Push",
+    "integration": "Duo Central",
+    "ip": "192.168.10.1",
+    "isotimestamp": "2024-05-21T18:08:48.081423+00:00",
+    "location":
+    {
+        "city": "San Francisco",
+        "country": "US",
+        "state": "California"
+    },
+    "new_enrollment": false,
+    "ood_software": null,
+    "reason": "User entered incorrect verification code",
+    "result": "FAILURE",
+    "timestamp": 1716314928,
+    "username": "Tony Stark"
+}

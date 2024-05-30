@@ -1,0 +1,17 @@
+{
+    "action": "administrative_unit_create",
+    "description":
+    {
+        "Administrators": "No assignments",
+        "Applications": "No assignments",
+        "Description": "",
+        "Groups": "No assignments",
+        "Name": "Test Admin Unit",
+        "Restricted by applications": "True",
+        "Restricted by groups": "True"
+    },
+    "isotimestamp": "2024-05-29T15:55:42+00:00",
+    "object": "Test Admin Unit",
+    "timestamp": 1716998142,
+    "username": "John Doe"
+}

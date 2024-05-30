@@ -1,0 +1,16 @@
+{
+    "action": "custom_messaging_update",
+    "description":
+    {
+        "help_links":
+        [],
+        "help_text_by_locale":
+        {
+            "en_US": "This is a custom Help Desk Message"
+        }
+    },
+    "isotimestamp": "2024-05-29T16:04:19+00:00",
+    "object": null,
+    "timestamp": 1716998659,
+    "username": "John Doe"
+}

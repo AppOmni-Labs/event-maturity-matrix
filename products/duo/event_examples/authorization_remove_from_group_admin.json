@@ -1,0 +1,14 @@
+{
+    "action": "user_update",
+    "description":
+    {
+        "groups":
+        [
+            null
+        ]
+    },
+    "isotimestamp": "2024-05-23T19:43:42+00:00",
+    "object": "Steve Smith",
+    "timestamp": 1716493422,
+    "username": "Jane Doe"
+}

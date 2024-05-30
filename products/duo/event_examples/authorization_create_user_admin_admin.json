@@ -1,0 +1,21 @@
+{
+    "action": "admin_create",
+    "description":
+    {
+        "administrative_units": "",
+        "email": "bwayne@batman.com",
+        "hardtoken": null,
+        "is_temporary_password": false,
+        "name": "Bruce Wayne",
+        "phone": null,
+        "restricted_by_admin_units": false,
+        "role": "Administrator",
+        "status": "Pending Activation",
+        "subaccount_access_tags":
+        []
+    },
+    "isotimestamp": "2024-05-23T20:16:23+00:00",
+    "object": "Bruce Wayne",
+    "timestamp": 1716495383,
+    "username": "Jane Doe"
+}

@@ -1,0 +1,16 @@
+{
+    "action": "user_create",
+    "description":
+    {
+        "email": "",
+        "enable_auto_prompt": true,
+        "notes": "",
+        "realname": "",
+        "status": "Active",
+        "uname": "bbanner@example.com"
+    },
+    "isotimestamp": "2024-05-17T17:24:53+00:00",
+    "object": "bbanner@example.com",
+    "timestamp": 1715966693,
+    "username": "Jane Doe"
+}

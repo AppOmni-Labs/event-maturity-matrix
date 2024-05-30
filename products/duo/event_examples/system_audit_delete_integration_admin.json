@@ -1,0 +1,24 @@
+{
+    "action": "integration_delete",
+    "description":
+    {
+        "greeting": "",
+        "group_access": "",
+        "missing_web_referer_policy": "deny",
+        "name": "Workday - Single Sign-On",
+        "networks_for_api_access": "",
+        "notes": "",
+        "offline_auth_enabled": 0,
+        "offline_max_attempts": 0,
+        "offline_max_days": 0,
+        "os_logon_pwl_enabled": false,
+        "raw_type": "sso-workday",
+        "self_service_allowed": false,
+        "type": "Workday - Single Sign-On",
+        "username_normalization_policy": "None"
+    },
+    "isotimestamp": "2024-05-21T15:52:12+00:00",
+    "object": "Workday - Single Sign-On",
+    "timestamp": 1716306732,
+    "username": "Jane Doe"
+}
