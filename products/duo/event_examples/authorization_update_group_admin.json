@@ -1,0 +1,11 @@
+{
+    "action": "group_update",
+    "description":
+    {
+        "_status": "Disabled"
+    },
+    "isotimestamp": "2024-05-23T19:42:49+00:00",
+    "object": "custom_group_bypass_users",
+    "timestamp": 1716493369,
+    "username": "John Doe"
+}

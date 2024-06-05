@@ -1,0 +1,11 @@
+{
+    "action": "user_pending_delete",
+    "description":
+    {
+        "status": "Pending Deletion"
+    },
+    "isotimestamp": "2024-05-17T17:30:04+00:00",
+    "object": "sally.smith@example.com",
+    "timestamp": 1715967004,
+    "username": "John Doe"
+}

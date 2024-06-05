@@ -1,0 +1,15 @@
+{
+    "action": "admin_login",
+    "description":
+    {
+        "device": "123-456-7890",
+        "factor": "push",
+        "ip_address": "192.168.10.1",
+        "primary_auth_method": "Password",
+        "role": "Owner"
+    },
+    "isotimestamp": "2024-05-17T17:24:21+00:00",
+    "object": null,
+    "timestamp": 1715966661,
+    "username": "John Doe"
+}

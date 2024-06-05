@@ -1,0 +1,12 @@
+{
+    "action": "user_update",
+    "description":
+    {
+        "email": "tonystark@acme.com",
+        "realname": "Tony Stark"
+    },
+    "isotimestamp": "2024-05-23T19:41:21+00:00",
+    "object": "tonystark",
+    "timestamp": 1716493281,
+    "username": "James Doe"
+}

@@ -1,0 +1,269 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: Duo
+  collection_sources:
+    -  duo_admin_api
+name: Duo Administrator Logs
+description: Provides an audit trail of administrative actions taken within the Duo Security platform.
+references:
+  - id: duo_administrator_logs
+    name: Duo Administrator Logs
+    url: https://duo.com/docs/adminapi#administrator-logs
+retention:
+  duration: Configurable
+  comments: Administrator logs are stored based on the log retention interval setting. If no custom log retention interval has been specified, Administrator logs can be retrieved from the time the account was initially created, reference https://help.duo.com/s/article/2990?language=en_US
+latency:
+  duration: Near real-time
+  comments: N/A
+licensing:
+  comments: The Duo Admin API is available to Duo Premier, Duo Advantage, and Duo Essentials customers, and new customers with an Advantage or Premier trial. For more information, see https://duo.com/docs/adminapi#about-the-admin-api
+mappings:
+  - category: C0001
+    event_type: ET0001
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0004: action
+      A0005: username, description.email
+      A0007: description.role
+      A0009: description.ip_address
+      A0012: description.device
+      A0013: description.error
+      A0014: description.factor, description.primary_auth_method
+      A0015: description.saml_idp
+    examples:
+      - type: success
+        location: "./event_examples/authentication_account_login_success_admin.json"
+      - type: failure
+        location: "./event_examples/authentication_account_login_failure_admin.json"
+  - category: C0001
+    event_type: ET0003
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0004: action, error
+      A0005: username, description.email
+      A0009: description.ip_address
+      A0016: description.factor
+      A0017: description.error
+    examples:
+      - type: failure
+        location: "./event_examples/authentication_mfa_verification_failure_admin.json"
+      - type: flagged
+        location: "./event_examples/authentication_mfa_verification_failure_flagged_admin.json"
+  - category: C0002
+    event_type: ET0004
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0007: description.role
+      A0019: description.uname, object
+    examples:
+      - type: user
+        location: "./event_examples/authorization_create_user_admin.json"
+      - type: admin
+        location: "./event_examples/authorization_create_user_admin_admin.json"
+  - category: C0002
+    event_type: ET0006
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0019: object
+      A0020: description
+    examples:
+      - type: user
+        location: "./event_examples/authorization_update_user_admin.json"
+      - type: admin
+        location: "./event_examples/authorization_update_user_admin_admin.json"
+  - category: C0002
+    event_type: ET0007
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0007: description.role
+      A0019: object
+    examples:
+      - type: user
+        location: "./event_examples/authorization_delete_user_admin.json"
+      - type: admin
+        location: "./event_examples/authorization_delete_user_admin_admin.json"
+  - category: C0002
+    event_type: ET0008
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0021: description.name, object
+    examples:
+      - type: success
+        location: "./event_examples/authorization_create_group_admin.json"
+  - category: C0002
+    event_type: ET0010
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0021: object
+      A0020: description
+    examples:
+      - type: success
+        location: "./event_examples/authorization_update_group_admin.json"
+  - category: C0002
+    event_type: ET0011
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0021: object, description.name
+    examples:
+      - type: success
+        location: "./event_examples/authorization_delete_group_admin.json"
+  - category: C0002
+    event_type: ET0012
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0021: description.groups.name
+      A0019: object
+    examples:
+      - type: success
+        location: "./event_examples/authorization_add_to_group_admin.json"
+  - category: C0002
+    event_type: ET0013
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0019: object
+    examples:
+      - type: success
+        location: "./event_examples/authorization_remove_from_group_admin.json"
+  - category: C0002
+    event_type: ET0020
+    attributes:
+      A0001: isotimestamp, timestamp,
+      A0003: action
+      A0005: username
+      A0011: description.user_agent
+      A0025: description.authenticator_type
+      A0019: description.owner_name
+    examples:
+      - type: success
+        location: "./event_examples/authorization_add_enrollment_admin.json"
+  - category: C0002
+    event_type: ET0021
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0025: description
+      A0019: object
+    examples:
+      - type: user
+        location: "./event_examples/authorization_remove_enrollment_admin.json"
+      - type: admin
+        location: "./event_examples/authorization_remove_enrollment_admin_admin.json"
+  - category: C0003
+    event_type: ET0022
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0026: action
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_create_security_configuration_admin.json"
+  - category: C0003
+    event_type: ET0024
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0026: action, description
+      A0027: description
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_update_security_configuration_admin.json"
+  - category: C0003
+    event_type: ET0025
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0026: action, description, object
+      A0027: description
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_delete_security_configuration_admin.json"
+  - category: C0003
+    event_type: ET0026
+    attributes:
+      A0001: isotimestamp
+      A0003: action
+      A0005: username
+      A0029: description.name, object
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_create_integration_admin.json"
+  - category: C0003
+    event_type: ET0028
+    attributes:
+      A0001: isotimestamp
+      A0003: action
+      A0005: username
+      A0029: object
+      A0026: description
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_update_integration_admin.json"
+  - category: C0003
+    event_type: ET0029
+    attributes:
+      A0001: isotimestamp
+      A0003: action
+      A0005: username
+      A0029: description.name, object
+    examples:
+      - type: success
+        location: "./event_examples/system_audit_delete_integration_admin.json"
+  - category: C0004
+    event_type: ET0030
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0030: object
+      A0031: action, description
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_create_resource_admin.json"
+  - category: C0004
+    event_type: ET0032
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0030: action, description
+      A0031: action, description
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_update_resource_admin.json"
+  - category: C0004
+    event_type: ET0033
+    attributes:
+      A0001: isotimestamp, timestamp
+      A0003: action
+      A0005: username
+      A0030: object
+      A0031: action, description
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_delete_resource_admin.json"

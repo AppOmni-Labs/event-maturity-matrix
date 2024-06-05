@@ -1,0 +1,22 @@
+{
+    "action": "webauthncredential_create",
+    "description":
+    {
+        "authenticator_type": "Security key",
+        "browser": "Chrome",
+        "browser_version": "125.0.0.0",
+        "credential_name": "Security key",
+        "os": "Mac OS X",
+        "os_version": "10.15.7",
+        "owner_id": "DURTAOK2HW7ORVKHXQDU",
+        "owner_name": "luke.skywalker@republic.com",
+        "owner_type": "user",
+        "passwordless_authorized": false,
+        "transport_types": "nfc,usb",
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+    },
+    "isotimestamp": "2024-05-17T17:36:03+00:00",
+    "object": "WAB9XG0DD12N34EQDGTP",
+    "timestamp": 1715967363,
+    "username": "Jane Doe"
+}

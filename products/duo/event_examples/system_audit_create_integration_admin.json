@@ -1,0 +1,24 @@
+{
+    "action": "integration_create",
+    "description":
+    {
+        "greeting": "",
+        "group_access": "",
+        "missing_web_referer_policy": "deny",
+        "name": "Salesforce - Single Sign-On",
+        "networks_for_api_access": "",
+        "notes": "",
+        "offline_auth_enabled": 0,
+        "offline_max_attempts": 0,
+        "offline_max_days": 0,
+        "os_logon_pwl_enabled": false,
+        "raw_type": "sso-salesforce",
+        "self_service_allowed": false,
+        "type": "Salesforce - Single Sign-On",
+        "username_normalization_policy": "None"
+    },
+    "isotimestamp": "2024-05-21T15:49:00+00:00",
+    "object": "Salesforce - Single Sign-On",
+    "timestamp": 1716306540,
+    "username": "Jane Doe"
+}

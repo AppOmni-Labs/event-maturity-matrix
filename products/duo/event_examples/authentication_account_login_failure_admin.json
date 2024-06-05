@@ -1,0 +1,13 @@
+{
+    "action": "admin_login_error",
+    "description":
+    {
+        "email": "jane.doe@acme.com",
+        "error": "Invalid password attempt",
+        "ip_address": "192.168.1.1"
+    },
+    "isotimestamp": "2024-05-20T19:23:45+00:00",
+    "object": null,
+    "timestamp": 1716233025,
+    "username": "Jane Doe"
+}

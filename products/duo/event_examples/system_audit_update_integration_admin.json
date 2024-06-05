@@ -1,0 +1,15 @@
+{
+    "action": "integration_update",
+    "description":
+    {
+        "adminapi_admins": true,
+        "adminapi_info": true,
+        "adminapi_read_log": true,
+        "adminapi_read_resource": true,
+        "adminapi_settings": true
+    },
+    "isotimestamp": "2024-05-24T18:51:14+00:00",
+    "object": "Admin API",
+    "timestamp": 1716576674,
+    "username": "John Doe"
+}
