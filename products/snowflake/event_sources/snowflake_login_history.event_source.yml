@@ -1,0 +1,49 @@
+description: This Account Usage view can be used to query login attempts by Snowflake
+  users within the last 365 days (1 year).
+entity_name: event_source
+latency:
+  comments: null
+  duration: up to 120 minutes
+licensing:
+  comments: Contact Sales
+mappings:
+- attributes:
+    A0001: EVENT_TIMESTAMP
+    A0002: EVENT_ID
+    A0003: EVENT_TYPE
+    A0005: USER_NAME
+    A0009: CLIENT_IP
+    A0012: REPORTED_CLIENT_TYPE
+  category: C0001
+  event_type: ET0001
+  examples:
+  - location: ./event_examples/login_history/authentication_account_login.json
+    type: success
+- attributes:
+    A0001: EVENT_TIMESTAMP
+    A0002: EVENT_ID
+    A0003: EVENT_TYPE
+    A0004: IS_SUCCESS
+    A0005: USER_NAME
+    A0009: CLIENT_IP
+    A0012: REPORTED_CLIENT_TYPE
+    A0016: SECOND_AUTHENTICATION_FACTOR
+    A0017: IS_SUCCESS
+  category: C0001
+  event_type: ET0003
+  examples:
+  - location: ./event_examples/login_history/authentication_mfa_verification.json
+    type: success
+name: Login History
+product:
+  collection_sources:
+  - login_history
+  name: Snowflake
+references:
+- id: about_login_history
+  name: About the Login History View
+  url: https://docs.snowflake.com/en/sql-reference/account-usage/login_history
+retention:
+  comments: null
+  duration: 365 days
+version: 1.0.0
