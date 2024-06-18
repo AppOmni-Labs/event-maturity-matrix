@@ -44,6 +44,6 @@ references:
   name: About the Login History View
   url: https://docs.snowflake.com/en/sql-reference/account-usage/login_history
 retention:
-  comments: null
+  comments:
   duration: 365 days
 version: 1.0.0
