@@ -179,7 +179,7 @@ mappings:
   category: C0003
   event_type: ET0022
   examples:
-  - location: ./event_examples/query_history/system_audit_create_security_integration.json
+  - location: ./event_examples/query_history/system_audit_create_security_configuration.json
     type: success
 - attributes:
     A0001: START_TIME
@@ -193,7 +193,7 @@ mappings:
   category: C0003
   event_type: ET0023
   examples:
-  - location: ./event_examples/query_history/system_audit_read_security_integration.json
+  - location: ./event_examples/query_history/system_audit_read_security_configuration.json
     type: success
 - attributes:
     A0001: START_TIME
@@ -208,7 +208,7 @@ mappings:
   category: C0003
   event_type: ET0024
   examples:
-  - location: ./event_examples/query_history/system_audit_update_security_integration.json
+  - location: ./event_examples/query_history/system_audit_update_security_configuration.json
     type: success
 - attributes:
     A0001: START_TIME
@@ -223,7 +223,7 @@ mappings:
   category: C0003
   event_type: ET0025
   examples:
-  - location: ./event_examples/query_history/system_audit_delete_security_integration.json
+  - location: ./event_examples/query_history/system_audit_delete_security_configuration.json
     type: success
 - attributes:
     A0001: START_TIME
