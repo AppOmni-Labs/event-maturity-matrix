@@ -2,7 +2,7 @@ description: This Account Usage view can be used to query login attempts by Snow
   users within the last 365 days (1 year).
 entity_name: event_source
 latency:
-  comments: null
+  comments: No comments
   duration: up to 120 minutes
 licensing:
   comments: Contact Sales
