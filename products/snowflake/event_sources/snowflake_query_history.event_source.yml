@@ -368,6 +368,6 @@ references:
   name: About the Query History View
   url: https://docs.snowflake.com/en/sql-reference/account-usage/query_history
 retention:
-  comments:
+  comments: No comments
   duration: 365 days
 version: 1.0.0
