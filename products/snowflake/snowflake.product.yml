@@ -28,4 +28,4 @@ collection:
       - id: about_sessions
         name: About Sessions View
         description: This Account Usage view provides information on the session, including information on the authentication method to Snowflake and the Snowflake login event. Snowflake returns one row for each session created over the last year.
-        url: https://docs.snowflake.com/en/sql-reference/account-usage/session
+        url: https://docs.snowflake.com/en/sql-reference/account-usage/sessions
