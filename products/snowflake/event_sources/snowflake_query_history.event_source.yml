@@ -1,0 +1,373 @@
+description: This Account Usage view can be used to query Snowflake query history
+  by various dimensions (time range, session, user, warehouse, etc.) within the last
+  365 days (1 year).
+entity_name: event_source
+latency:
+  comments: No comments
+  duration: up to 45 minutes
+licensing:
+  comments: Contact sales
+mappings:
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0019: QUERY_TEXT
+  category: C0002
+  event_type: ET0004
+  examples:
+  - location: ./event_examples/query_history/authorization_create_user.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0019: QUERY_TEXT
+  category: C0002
+  event_type: ET0005
+  examples:
+  - location: ./event_examples/query_history/authorization_read_user.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0019: QUERY_TEXT
+    A0020: QUERY_TEXT
+  category: C0002
+  event_type: ET0006
+  examples:
+  - location: ./event_examples/query_history/authorization_update_user.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+  category: C0002
+  event_type: ET0007
+  examples:
+  - location: ./event_examples/query_history/authorization_delete_user.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0022: QUERY_TEXT
+  category: C0002
+  event_type: ET0014
+  examples:
+  - location: ./event_examples/query_history/authorization_create_role.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0022: QUERY_TEXT
+  category: C0002
+  event_type: ET0015
+  examples:
+  - location: ./event_examples/query_history/authorization_read_role.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0020: QUERY_TEXT
+    A0022: QUERY_TEXT
+  category: C0002
+  event_type: ET0016
+  examples:
+  - location: ./event_examples/query_history/authorization_update_role.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0022: QUERY_TEXT
+  category: C0002
+  event_type: ET0017
+  examples:
+  - location: ./event_examples/query_history/authorization_delete_role.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0023: QUERY_TEXT
+    A0024: QUERY_TEXT
+  category: C0002
+  event_type: ET0018
+  examples:
+  - location: ./event_examples/query_history/authorization_add_permission.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0023: QUERY_TEXT
+    A0024: QUERY_TEXT
+  category: C0002
+  event_type: ET0019
+  examples:
+  - location: ./event_examples/query_history/authorization_remove_permission.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0019: QUERY_TEXT
+    A0025: QUERY_TEXT
+  category: C0002
+  event_type: ET0021
+  examples:
+  - location: ./event_examples/query_history/authorization_remove_enrollment.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0026: QUERY_TEXT
+    A0027: QUERY_TEXT
+  category: C0003
+  event_type: ET0022
+  examples:
+  - location: ./event_examples/query_history/system_audit_create_security_configuration.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0027: QUERY_TEXT
+  category: C0003
+  event_type: ET0023
+  examples:
+  - location: ./event_examples/query_history/system_audit_read_security_configuration.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0026: QUERY_TEXT
+    A0027: QUERY_TEXT
+  category: C0003
+  event_type: ET0024
+  examples:
+  - location: ./event_examples/query_history/system_audit_update_security_configuration.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0026: QUERY_TEXT
+    A0027: QUERY_TEXT
+  category: C0003
+  event_type: ET0025
+  examples:
+  - location: ./event_examples/query_history/system_audit_delete_security_configuration.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0029: QUERY_TEXT
+  category: C0003
+  event_type: ET0026
+  examples:
+  - location: ./event_examples/query_history/system_audit_create_integration.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0029: QUERY_TEXT
+  category: C0003
+  event_type: ET0027
+  examples:
+  - location: ./event_examples/query_history/system_audit_read_integration.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0026: QUERY_TEXT
+    A0029: QUERY_TEXT
+  category: C0003
+  event_type: ET0028
+  examples:
+  - location: ./event_examples/query_history/system_audit_update_integration.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0029: QUERY_TEXT
+  category: C0003
+  event_type: ET0029
+  examples:
+  - location: ./event_examples/query_history/system_audit_delete_integration.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0030: QUERY_TEXT
+    A0031: QUERY_TEXT
+  category: C0004
+  event_type: ET0030
+  examples:
+  - location: ./event_examples/query_history/activity_audit_create_resource.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0030: QUERY_TEXT
+    A0031: QUERY_TEXT
+  category: C0004
+  event_type: ET0031
+  examples:
+  - location: ./event_examples/query_history/activity_audit_read_resource.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0030: QUERY_TEXT
+    A0031: QUERY_TEXT
+  category: C0004
+  event_type: ET0032
+  examples:
+  - location: ./event_examples/query_history/activity_audit_update_resource.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0030: QUERY_TEXT
+    A0031: QUERY_TEXT
+  category: C0004
+  event_type: ET0033
+  examples:
+  - location: ./event_examples/query_history/activity_audit_delete_resource.json
+    type: success
+- attributes:
+    A0001: START_TIME
+    A0002: QUERY_ID
+    A0003: QUERY_TYPE
+    A0004: ERROR_CODE
+    A0005: USER_NAME
+    A0007: ROLE_NAME
+    A0008: SESSION_ID
+    A0030: QUERY_TEXT
+    A0031: QUERY_TEXT
+    A0032: QUERY_TEXT
+  category: C0004
+  event_type: ET0034
+  examples:
+  - location: ./event_examples/query_history/activity_audit_download_resource.json
+    type: success
+name: Query History
+product:
+  collection_sources:
+  - query_history
+  name: Snowflake
+references:
+- id: about_query_history
+  name: About the Query History View
+  url: https://docs.snowflake.com/en/sql-reference/account-usage/query_history
+retention:
+  comments: No comments
+  duration: 365 days
+version: 1.0.0

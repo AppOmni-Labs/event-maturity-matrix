@@ -1,0 +1,31 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: product
+version: "1.0.0"
+name: Snowflake
+logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/snowflake_square.svg
+description: |
+  Snowflake is a cloud-based Software as a Service (SaaS) platform that provides data warehousing, data lake, data sharing, and data integration services to customers. It stores a wide variety of data types, including structured and semi-structured data, enabling organizations to perform complex data analytics and gain insights from their data.
+collection:
+  - id: login_history
+    name: Login History
+    references:
+      - id: about_login_history
+        name: About the Login History View
+        description: This Account Usage view can be used to query login attempts by Snowflake users within the last 365 days (1 year).
+        url: https://docs.snowflake.com/en/sql-reference/account-usage/login_history
+  - id: query_history
+    name: Query History
+    references:
+      - id: about_query_history
+        name: About the Query History View
+        description: This Account Usage view can be used to query Snowflake query history by various dimensions (time range, session, user, warehouse, etc.) within the last 365 days (1 year).
+        url: https://docs.snowflake.com/en/sql-reference/account-usage/query_history
+  - id: sessions
+    name: Session History
+    references:
+      - id: about_sessions
+        name: About Sessions View
+        description: This Account Usage view provides information on the session, including information on the authentication method to Snowflake and the Snowflake login event. Snowflake returns one row for each session created over the last year.
+        url: https://docs.snowflake.com/en/sql-reference/account-usage/sessions
