@@ -1,0 +1,22 @@
+entity_name: product
+version: 1.0.0
+name: Taco SaaS Company
+logo_link: <url to logo>
+description: A SaaS company that produces taco workflows
+collection:
+  - id: authentication_api_collection
+    name: Authentication API
+    description: An API that provides authentication audit logs
+    references:
+      id: about_vendor_docs
+      name: Vendor docs
+      description: online documentation about the authentication API and events
+      url: https://www.tacoforce.com/api/authentication
+  - id: activity_audit_api_collection
+    name: Activity Audit API
+    description: An API that provides an audit trail of all user activity
+    references:
+      id: about_online_documentation
+      name: Online documentation
+      description: Vendor docs about the activity audit API and related events
+      url: https://www.tacoforce.com/api/activity_audit/v1

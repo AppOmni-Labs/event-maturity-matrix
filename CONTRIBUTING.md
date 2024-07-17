@@ -16,7 +16,7 @@ A convenience MAKEFILE has been created to generate all the necessary files for 
 ```bash
 make create_product
 ```
-This will prompt you to enter the name of the SaaS platform you wish to assess, followed by prompting for the number of log event sources you wish to assess for that product.  To help keep the assessments organized, it is easiest to create a new event source for each API endpoint that generates events.  This will allow for the most flexibility in accurately mapping data from products that support multiple SKUs or license levels that may deliver different events. A good example of this can be found in the `Github` product folder which contains an assessment for both the `audit` events and a separate assessment for `webhook` events.
+This will prompt you to enter the name of the SaaS platform you wish to assess, followed by prompts that will automatically create the directories, files, and documentation necessary for that product.
 
 ### The Product File
 1. Reference existing product files for real-world examples via `/products/[saas_name]/`
