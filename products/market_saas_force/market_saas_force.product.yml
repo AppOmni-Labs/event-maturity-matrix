@@ -1,0 +1,22 @@
+entity_name: product
+version: 1.0.0
+name: Market SaaS Force
+logo_link: <url to logo>
+description: Financial Forecasting SaaS Platform
+collection:
+  - id: authentication_api_collection
+    name: Authentication API
+    description: API for auth events
+    references:
+      - id: about_online_documentation
+        name: online documentation
+        description: vendor docs for api and auth event schema
+        url: https://www.marketforce.com/api/docs/v1/auth
+  - id: activity_events_api_collection
+    name: Activity Events API
+    description: API for end user audit activity
+    references:
+      - id: about_online_documentation
+        name: online documentation
+        description: vendor docs about the events api including schema
+        url: https://www.marketforce.com/v1/api/docs/events
