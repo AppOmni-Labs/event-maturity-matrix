@@ -100,12 +100,12 @@ def user_prompts():
 
         source_names.append(source_name)
         source_descriptions.append(source_description)
-        source_references.append({
+        source_references.append([{
             "id": normalize_name("about_" + source_reference_name),
             "name": source_reference_name,
             "description": source_reference_description,
             "url": source_reference_url
-        })
+        }])
         source_retention_durations.append(source_retention_duration)
         source_retention_comments.append(source_retention_comment)
         source_latency_durations.append(source_latency_duration)
