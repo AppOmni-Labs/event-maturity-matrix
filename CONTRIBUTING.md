@@ -16,7 +16,7 @@ A convenience MAKEFILE has been created to generate all the necessary files for 
 ```bash
 make create_product
 ```
-This will prompt you to enter the name of the SaaS platform you wish to assess, followed by prompting for the number of log event sources you wish to assess for that product.  To help keep the assessments organized, it is easiest to create a new event source for each API endpoint that generates events.  This will allow for the most flexibility in accurately mapping data from products that support multiple SKUs or license levels that may deliver different events. A good example of this can be found in the `Github` product folder which contains an assessment for both the `audit` events and a separate assessment for `webhook` events.
+This will prompt you to enter the name of the SaaS platform you wish to assess, followed by prompts that will automatically create the directories, files, and documentation necessary for that product.
 
 ### The Product File
 1. Reference existing product files for real-world examples via `/products/[saas_name]/`
@@ -46,10 +46,11 @@ We'll now temporarily pivot away from the Event Source YAML file and begin mappi
 	1. This may also require researching SaaS platform event schema documentation to verify the existence of certain Event Types
 	1. If the Event Type exists, map the raw event field name against the associated EMM event attributes
 	1. If the Event Type or an event attribute does not exist for an event type, leave blank
-	1. Once the Event Type has been assessed, export a raw event sample in JSON format locally. To ensure peer review is feasible, each `event_type` should have at least one sample event.  This makes it possible for others to see example raw logs from the SaaS platform and the attributes that are available 
-    1. The event samples should be sanitized to remove any sensitive information.  While sanitizing data, it is important to maintain some contextual consistency with the data that is being sanitized.  For example an email field should have a fake, but semantically valid email address 
-    1. Each event example json file should follow the naming convention of `<category>_<event_type>.json` and be placed in the `event_examples` directory for the product.  Some services may generate an event with outcomes such as `success` or `failure`.  In these cases, it is important to have examples of both outcomes where possible.  The naming convention for these files should be `<category>_<event_type>_<outcome>.json`
-1. Now that all your example log files are collected and sanitized, you will need to go into the event sources YAML file and update links to the event examples for each event type.  This will allow users to see the raw log data that was used to generate the mappings
+	1. Once the Event Type has been assessed, export a raw event sample in JSON format locally. To ensure peer review is feasible, each `event_type` should have at least one sample event.  This makes it possible for others to see example raw logs from the SaaS platform and the attributes that are available
+       - The `create_product` MAKEFILE command will create a directory called `event_examples` in the product directory.  This is where the raw event samples should be stored
+       - The MAKEFILE command also auto-generates empty JSON files for each event type. The JSON files following the naming convention of `<category>_<event_type>.json`
+       - Some services may generate an event with outcomes such as `success` or `failure`.  In these cases, it is important to have examples of both outcomes where possible.  The naming convention for these files should be `<category>_<event_type>_<outcome>.json`
+       - The event samples should be sanitized to remove any sensitive information.  While sanitizing data, it is important to maintain some contextual consistency with the data that is being sanitized.  For example an email field should have a fake, but semantically valid email address
 1. With all the sample log links added to the event sources file, and the spreadsheet complete, the last step involves running the MAKEFILE command to finalize the event sources file.  This will take the data from the spreadsheet and add all the attributes for each event type.  The command to run is:
 ```bash
 make update_event_sources

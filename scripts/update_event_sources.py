@@ -8,7 +8,7 @@ def build_sheet_url(doc_id, sheet_id):
     return f'https://docs.google.com/spreadsheets/d/{doc_id}/export?format=csv&gid={sheet_id}'
 
 
-# Read in the google sheet data and prepare the dataframe
+# Read in the Google sheet data and prepare the dataframe
 def get_sheets_data(document_id, sheets_id):
     try:
         sheet_url = build_sheet_url(document_id, sheets_id)
@@ -68,7 +68,9 @@ def process_data(csv_data, yaml_file):
 
     # Write updated YAML data back to file
     with open(yaml_file, 'w') as f:
-        yaml.dump(yaml_data, f, default_flow_style=False)
+        yaml.dump(yaml_data, f, default_flow_style=False, sort_keys=False)
+
+    print(f"\nUpdated '{yaml_file.split('/')[-1]}' with data from Google Sheets")
 
 
 def find_file_to_update(yaml_file_name):
