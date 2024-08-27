@@ -14,6 +14,7 @@ mappings:
     A0005: USER_NAME
     A0009: CLIENT_IP
     A0012: REPORTED_CLIENT_TYPE
+    A0014: FIRST_AUTHENTICATION_FACTOR
   category: C0001
   event_type: ET0001
   examples:
