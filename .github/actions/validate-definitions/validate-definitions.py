@@ -81,7 +81,7 @@ def validate():
                                         example_data = json.load(f)
                                 except FileNotFoundError as e:
                                     print(f"Error: No example found at {parent_path}/{example['location']}: {e}")
-                                    raise e  # Re-raise to fail the step
+                                    raise e  
                                 for attribute_name in attribute_names:
                                     for value in item_generator(example_data, attribute_name):
                                         if not value:
@@ -89,7 +89,7 @@ def validate():
                                                 f"Could not find attribute in {example['location']}: {attribute_name}")
                         except Exception as e:
                             print(f"Error with example {example['location']}: {e}")
-                            raise e  # Re-raise to fail the step
+                            raise e  
         except Exception as e:
             print(f"Error with {event_source}: {e}")
             sys.exit(1)
