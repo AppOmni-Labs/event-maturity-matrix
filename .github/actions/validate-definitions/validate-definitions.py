@@ -1,5 +1,6 @@
 """Generates docs from defined data files in repository."""
 import os
+import sys
 import json
 from typing import Dict
 from glob import glob
@@ -20,10 +21,12 @@ def item_generator(json_input, lookup_key):
         for item in json_input:
             yield from item_generator(item, lookup_key)
 
+
 def load(path: str) -> Dict[str, str]:
     """Loads a YAML file from a path and returns a dict."""
     with open(path, "r") as f:
         return yaml.safe_load(f)
+
 
 def _schema_validation(data_path: str, schema_path: str) -> bool:
     """Validates a schema file."""
@@ -34,6 +37,7 @@ def _schema_validation(data_path: str, schema_path: str) -> bool:
         raise ve
     except Exception as e:
         raise e
+
 
 def validate():
     """Validates all data files in repository."""
@@ -63,7 +67,6 @@ def validate():
             raise Exception(f"Event source schema validation failed for {event_source}.")
 
         try:
-            data = None
             with open(event_source, "r") as f:
                 data = yaml.safe_load(f)
             if data:
@@ -73,24 +76,23 @@ def validate():
                     if mapping.get("examples"):
                         try:
                             for example in mapping["examples"]:
-                                example_data = None
                                 try:
                                     with open(f"{parent_path}/{example['location']}", "r") as f:
                                         example_data = json.load(f)
                                 except FileNotFoundError as e:
-                                    print(
-                                        f"Error: No example found at {parent_path}/{example['location']}: {e}")
+                                    print(f"Error: No example found at {parent_path}/{example['location']}: {e}")
+                                    raise e  # Re-raise to fail the step
                                 for attribute_name in attribute_names:
                                     for value in item_generator(example_data, attribute_name):
                                         if not value:
-                                            print(f"""
-            Could not find attribute in {example['location']}: {attribute_name}
-            Example File: {example['location']}
-            """)
+                                            print(
+                                                f"Could not find attribute in {example['location']}: {attribute_name}")
                         except Exception as e:
                             print(f"Error with example {example['location']}: {e}")
+                            raise e  # Re-raise to fail the step
         except Exception as e:
             print(f"Error with {event_source}: {e}")
+            sys.exit(1)
 
 
 if __name__ == "__main__":
