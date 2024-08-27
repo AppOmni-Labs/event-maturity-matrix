@@ -83,8 +83,6 @@ def validate():
             Could not find attribute in {example['location']}: {attribute_name}
             Example File: {example['location']}
             """)
-                                        else:
-                                            print(f"Found attribute in {example['location']}: {attribute_name} = {value}")
                         except Exception as e:
                             print(f"Error with example {example['location']}: {e}")
         except Exception as e:
