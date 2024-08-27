@@ -74,8 +74,12 @@ def validate():
                         try:
                             for example in mapping["examples"]:
                                 example_data = None
-                                with open(f"{parent_path}/{example['location']}", "r") as f:
-                                    example_data = json.load(f)
+                                try:
+                                    with open(f"{parent_path}/{example['location']}", "r") as f:
+                                        example_data = json.load(f)
+                                except FileNotFoundError as e:
+                                    print(
+                                        f"Error: No example found at {parent_path}/{example['location']}: {e}")
                                 for attribute_name in attribute_names:
                                     for value in item_generator(example_data, attribute_name):
                                         if not value:
@@ -83,8 +87,6 @@ def validate():
             Could not find attribute in {example['location']}: {attribute_name}
             Example File: {example['location']}
             """)
-                                        else:
-                                            print(f"Found attribute in {example['location']}: {attribute_name} = {value}")
                         except Exception as e:
                             print(f"Error with example {example['location']}: {e}")
         except Exception as e:
