@@ -1,6 +1,7 @@
 """Generates docs from defined data files in repository."""
 import os
 import json
+import logging
 from typing import Dict
 from glob import glob
 
@@ -58,37 +59,41 @@ def validate():
     for product in glob("./products/*/*.product.yml"):
         if not _schema_validation(product, os.path.join(schema_folder, "product.yml")):
             raise Exception(f"Product schema validation failed for {product}.")
-    for event_source in glob("./products/*/event_sources/*.yml"):
+    for event_source in glob.glob("./products/*/event_sources/*.yml"):
         if not _schema_validation(event_source, os.path.join(schema_folder, "event_source.yml")):
-            raise Exception(f"Event source schema validation failed for {event_source}.")
-
+            raise ValueError(f"Event source schema validation failed for {event_source}.")
         try:
-            data = None
             with open(event_source, "r") as f:
                 data = yaml.safe_load(f)
-            if data:
-                parent_path = os.path.dirname(os.path.dirname(event_source))
-                for mapping in data["mappings"]:
-                    attribute_names = mapping["attributes"].values()
-                    if mapping.get("examples"):
-                        try:
-                            for example in mapping["examples"]:
-                                example_data = None
-                                with open(f"{parent_path}/{example['location']}", "r") as f:
-                                    example_data = json.load(f)
-                                for attribute_name in attribute_names:
-                                    for value in item_generator(example_data, attribute_name):
-                                        if not value:
-                                            print(f"""
-            Could not find attribute in {example['location']}: {attribute_name}
-            Example File: {example['location']}
-            """)
-                                        else:
-                                            print(f"Found attribute in {example['location']}: {attribute_name} = {value}")
-                        except Exception as e:
-                            print(f"Error with example {example['location']}: {e}")
-        except Exception as e:
-            print(f"Error with {event_source}: {e}")
+            if not data:
+                continue
+            parent_path = os.path.dirname(os.path.dirname(event_source))
+            for mapping in data["mappings"]:
+                attribute_names = mapping["attributes"].values()
+                if not mapping.get("examples"):
+                    continue
+                for example in mapping["examples"]:
+                    try:
+                        example_file_path = os.path.join(parent_path, example['location'])
+                        with open(example_file_path, "r") as f:
+                            example_data = json.load(f)
+
+                        for attribute_name in attribute_names:
+                            for value in item_generator(example_data, attribute_name):
+                                if not value:
+                                    logging.warning(
+                                        f"Could not find attribute in {example['location']}: {attribute_name}")
+                                else:
+                                    logging.info(
+                                        f"Found attribute in {example['location']}: {attribute_name} = {value}")
+                    except FileNotFoundError as e:
+                        logging.error(f"Error no example found at {example_file_path}: {e}")
+                    except json.JSONDecodeError as e:
+                        logging.error(f"Error decoding JSON from {example_file_path}: {e}")
+        except (OSError, yaml.YAMLError) as e:
+            logging.error(f"Error processing {event_source}: {e}")
+
+    # Function call example (assuming schema_folder is defined):
 
 
 if __name__ == "__main__":
