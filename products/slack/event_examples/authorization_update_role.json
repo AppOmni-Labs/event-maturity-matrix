@@ -1,0 +1,43 @@
+{
+    "action": "role_updated",
+    "actor":
+    {
+        "type": "user",
+        "user":
+        {
+            "email": "john@example.com",
+            "id": "U01A2ABCDNG",
+            "name": "John Doe",
+            "team": "A01111TD4"
+        }
+    },
+    "context":
+    {
+        "ip_address": "198.51.100.2",
+        "location":
+        {
+            "domain": "acme",
+            "id": "A01111TD4",
+            "name": "Acme",
+            "type": "workspace"
+        },
+        "session_id": 1233443505954,
+        "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/198.51.100.1 Safari/537.36"
+    },
+    "date_create": 1657550802,
+    "details":
+    {
+        "target_entity": "E08BAGP5UPD"
+    },
+    "entity":
+    {
+        "role":
+        {
+            "id": "Rl08KD2YU4LP",
+            "name": "New Test Role",
+            "type": "1"
+        },
+        "type": "role"
+    },
+    "id": "1234f70-0fb0-00b1-00eb-95ab9a123d12"
+}
