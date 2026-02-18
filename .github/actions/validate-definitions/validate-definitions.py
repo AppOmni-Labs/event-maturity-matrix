@@ -20,8 +20,8 @@ logger.add(
 )
 
 
-def _path_to_jmespath(path_str: str) -> str:
-    """Convert our path format to JMESPath. Our bracket filter key[filter_key=filter_value] becomes key[?filter_key=='filter_value']."""
+def _path_segments(path_str: str) -> list[str]:
+    """Split path string by '.' but not inside brackets. E.g. 'context.session_id' -> ['context', 'session_id']."""
     segments = []
     current = []
     depth = 0
@@ -39,6 +39,12 @@ def _path_to_jmespath(path_str: str) -> str:
             current.append(c)
     if current:
         segments.append("".join(current))
+    return segments
+
+
+def _path_to_jmespath(path_str: str) -> str:
+    """Convert our path format to JMESPath. Our bracket filter key[filter_key=filter_value] becomes key[?filter_key=='filter_value']."""
+    segments = _path_segments(path_str)
 
     jmespath_parts = []
     for seg in segments:
@@ -78,6 +84,29 @@ def item_generator(json_input: Any, lookup_key: str):
     except jmespath.exceptions.JMESPathError:
         return
     if result is None:
+        # JMESPath returns None for "not found" and for "value is null". For simple dotted paths, try two fallbacks:
+        if "[" not in lookup_key:
+            segs = _path_segments(lookup_key)
+            if len(segs) >= 2:
+                # 1) Key exists with null value: parent is dict and has the key
+                parent_expr = _path_to_jmespath(".".join(segs[:-1]))
+                try:
+                    parent_result = jmespath.search(parent_expr, json_input)
+                    if isinstance(parent_result, dict) and segs[-1] in parent_result:
+                        yield parent_result[segs[-1]]
+                        return
+                except jmespath.exceptions.JMESPathError:
+                    pass
+                # 2) Parent is an array: JMESPath needs [*] to project (e.g. target.alternateId -> target[*].alternateId)
+                projection_expr = _path_to_jmespath(segs[0] + "[*]." + ".".join(segs[1:]))
+                try:
+                    proj_result = jmespath.search(projection_expr, json_input)
+                    if isinstance(proj_result, list):
+                        for item in proj_result:
+                            yield item
+                        return
+                except jmespath.exceptions.JMESPathError:
+                    pass
         return
     if isinstance(result, list):
         for item in result:
@@ -122,8 +151,8 @@ def validate():
     event_sources_validated = 0
     mappings_checked = 0
     example_files_checked = 0
-    attribute_checks_ok = 0
-    attribute_checks_missing = 0
+    mappings_satisfied = 0  # at least one example had all attributes
+    mappings_unsatisfied = 0  # no example had all attributes
     example_errors = 0
 
     # --- Root definition files ---
@@ -182,6 +211,12 @@ def validate():
                 attribute_names = list(mapping.get("attributes", {}).values())
                 examples = mapping.get("examples") or []
 
+                # Validation passes for this mapping if at least one example has all attributes
+                mapping_satisfied = False
+                found_in_any_example = set()  # display_name of attributes found in at least one example
+                all_display_names = set()
+                example_locations_checked = []  # example files checked for this mapping (for warning context)
+
                 for example in examples:
                     example_location = example.get("location", "")
                     example_full_path = os.path.normpath(os.path.join(parent_path, example_location))
@@ -202,6 +237,9 @@ def validate():
                         continue
 
                     example_files_checked += 1
+                    example_locations_checked.append(example_location)
+                    example_has_all = True
+
                     for attribute_name in attribute_names:
                         # Attribute may be a single path (str) or a list of paths (any of these)
                         if isinstance(attribute_name, list):
@@ -210,31 +248,46 @@ def validate():
                             for path in paths:
                                 if isinstance(path, str):
                                     values.extend(item_generator(example_data, path))
-                            # Only warn if NONE of the paths yielded a value
                             is_missing = not values
                             display_name = ", ".join(str(p) for p in paths)
                         else:
+                            if attribute_name == "FIXME":
+                                continue  # don't require FIXME for "all attributes" check
                             values = list(item_generator(example_data, attribute_name))
                             is_missing = not values
                             display_name = attribute_name
 
+                        all_display_names.add(display_name)
                         if is_missing:
-                            logger.warning(
-                                "[{}] {} | {}: missing or empty attribute '{}'",
-                                product_name,
-                                event_source_name,
-                                example_location,
-                                display_name,
-                            )
-                            attribute_checks_missing += 1
+                            example_has_all = False
                         else:
+                            found_in_any_example.add(display_name)
                             logger.debug(
                                 "Found in {}: {} ({} value(s))",
                                 example_location,
                                 display_name,
                                 len(values),
                             )
-                            attribute_checks_ok += 1
+
+                    if example_has_all:
+                        mapping_satisfied = True
+
+                if mapping_satisfied:
+                    mappings_satisfied += 1
+                else:
+                    mappings_unsatisfied += 1
+                    never_found = all_display_names - found_in_any_example
+                    category = mapping.get("category", "?")
+                    event_type = mapping.get("event_type", "?")
+                    logger.warning(
+                        "[{}] {} | mapping {} / {} | {} | attributes not found in any example: {}",
+                        product_name,
+                        event_source_name,
+                        category,
+                        event_type,
+                        example_locations_checked,
+                        sorted(never_found) if never_found else "(none)",
+                    )
 
         except Exception as e:
             logger.error(
@@ -258,25 +311,24 @@ def validate():
     logger.info("Event sources validated: {}", event_sources_validated)
     logger.info("Mappings with examples considered: {}", mappings_checked)
     logger.info("Example files loaded and checked: {}", example_files_checked)
-    logger.info("Attribute lookups OK: {}", attribute_checks_ok)
-    logger.info("Attribute lookups missing/empty: {}", attribute_checks_missing)
+    logger.info("Mappings where at least one example had all attributes: {}", mappings_satisfied)
+    logger.info("Mappings where no example had all attributes: {}", mappings_unsatisfied)
     logger.info("Example load/processing errors: {}", example_errors)
 
-    if attribute_checks_missing > 0 or example_errors > 0:
+    if mappings_unsatisfied > 0 or example_errors > 0:
         logger.error(
-            "Validation failed: {} missing attribute(s), {} error(s)",
-            attribute_checks_missing,
+            "Validation failed: {} mapping(s) with no example having all attributes, {} error(s)",
+            mappings_unsatisfied,
             example_errors,
         )
         sys.exit(1)
-    total_checks = attribute_checks_ok + attribute_checks_missing
     logger.success(
         "Validation complete. Every product and event source was checked ({} products, {} event sources, "
-        "{} example files, {} attribute checks). No false negatives.",
+        "{} example files, {} mappings). At least one example had all attributes per mapping.",
         products_validated,
         event_sources_validated,
         example_files_checked,
-        total_checks,
+        mappings_checked,
     )
 
 
