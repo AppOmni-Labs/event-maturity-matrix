@@ -121,7 +121,7 @@ mappings:
       A0005: action_data.target_user_username
       A0006: user_id
       A0009: action_data.user_ip
-      A0011: act_data.user_agent
+      A0011: action_data.user_agent
       A0019: action_data.target_user_username
     examples:
       - type: success

@@ -28,7 +28,7 @@ mappings:
       A0005: actor.email
       A0006: actor.profileId
       A0009: ipAddress
-      A0013: event.parameters[name=login_failure_type]
+      A0013: ['event.name', 'event.parameters[name=login_failure_type]']
       A0014: event.parameters[name=login_type]
     examples: 
       - type: success

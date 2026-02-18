@@ -14,4 +14,4 @@ runs:
       run: |
         set -x
         new_path=$(python -c "print('${{ github.action_path }}'.replace('./.', '.'))")
-        resp=$(python $new_path/validate-definitions.py)
+        python "$new_path/validate-definitions.py"

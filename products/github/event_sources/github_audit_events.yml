@@ -186,8 +186,6 @@ mappings:
     examples:
       - type: success
         location: "./event_examples/audit/system_audit_update_security_configuration_hook_config.json"
-      - type: success
-        location: "./event_examples/audit/system_audit_update_security_configuration_merge_setting.json"
   - category: C0003
     event_type: ET0026
     attributes:

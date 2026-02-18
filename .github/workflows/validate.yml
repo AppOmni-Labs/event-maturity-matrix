@@ -18,5 +18,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install PyYAML==6.0.1
           pip install jsonschema==4.18.4
+          pip install loguru
+          pip install jmespath
       - name: Validate
         uses: ./.github/actions/validate-definitions

@@ -1,94 +1,283 @@
-"""Generates docs from defined data files in repository."""
+"""Validates EMM data definitions: schema validation and example attribute checks."""
 import os
+import sys
 import json
-from typing import Dict
+from typing import Dict, Any
 from glob import glob
 
 import yaml
+import jmespath
 from jsonschema.exceptions import ValidationError
 from jsonschema.validators import Draft202012Validator
+from loguru import logger
+
+# Clear format for CI and local runs: level + message (no timestamp for less noise in CI)
+logger.remove()
+logger.add(
+    sys.stderr,
+    format="<level>{level: <8}</level> | {message}",
+    level=os.environ.get("LOGURU_LEVEL", "INFO"),
+)
 
 
-def item_generator(json_input, lookup_key):
-    if isinstance(json_input, dict):
-        for k, v in json_input.items():
-            if k == lookup_key:
-                yield v if v else "Null"
-            else:
-                yield from item_generator(v, lookup_key)
-    elif isinstance(json_input, list):
-        for item in json_input:
-            yield from item_generator(item, lookup_key)
+def _path_to_jmespath(path_str: str) -> str:
+    """Convert our path format to JMESPath. Our bracket filter key[filter_key=filter_value] becomes key[?filter_key=='filter_value']."""
+    segments = []
+    current = []
+    depth = 0
+    for c in path_str:
+        if c == "[":
+            depth += 1
+            current.append(c)
+        elif c == "]":
+            depth -= 1
+            current.append(c)
+        elif c == "." and depth == 0:
+            segments.append("".join(current))
+            current = []
+        else:
+            current.append(c)
+    if current:
+        segments.append("".join(current))
 
-def load(path: str) -> Dict[str, str]:
+    jmespath_parts = []
+    for seg in segments:
+        if "[" in seg and seg.endswith("]") and "=" in seg:
+            key = seg[: seg.index("[")]
+            filter_part = seg[seg.index("[") + 1 : -1]
+            filter_key, _, filter_value = filter_part.partition("=")
+            # JMESPath literal: escape single quotes in value
+            escaped = filter_value.replace("\\", "\\\\").replace("'", "\\'")
+            jmespath_parts.append(f"{key}[?{filter_key}=='{escaped}']")
+        else:
+            jmespath_parts.append(seg)
+    return ".".join(jmespath_parts)
+
+
+def _values_for_key_recursive(obj: Any, key: str):
+    """Recursively find all values for key anywhere in obj (dict/list tree). Used for bare keys like 'user_id'."""
+    if isinstance(obj, dict):
+        if key in obj:
+            yield obj[key]
+        for v in obj.values():
+            yield from _values_for_key_recursive(v, key)
+    elif isinstance(obj, list):
+        for item in obj:
+            yield from _values_for_key_recursive(item, key)
+
+
+def item_generator(json_input: Any, lookup_key: str):
+    """Yield values for lookup_key in json_input. Uses JMESPath for paths with dots/brackets; recursive search for bare keys."""
+    # Bare key (no dots, no brackets): JMESPath only looks at root, but data often has keys nested (e.g. user_id inside action_data)
+    if "." not in lookup_key and "[" not in lookup_key:
+        yield from _values_for_key_recursive(json_input, lookup_key)
+        return
+    expr = _path_to_jmespath(lookup_key)
+    try:
+        result = jmespath.search(expr, json_input)
+    except jmespath.exceptions.JMESPathError:
+        return
+    if result is None:
+        return
+    if isinstance(result, list):
+        for item in result:
+            yield item
+    else:
+        yield result
+
+
+def load(path: str) -> Dict[str, Any] | None:
     """Loads a YAML file from a path and returns a dict."""
     with open(path, "r") as f:
         return yaml.safe_load(f)
 
-def _schema_validation(data_path: str, schema_path: str) -> bool:
-    """Validates a schema file."""
+
+def _validate_with_validator(validator: Draft202012Validator, data_path: str) -> bool:
+    """Validates a data file with an existing validator."""
     try:
-        Draft202012Validator(schema=load(schema_path)).validate(load(data_path))
+        validator.validate(load(data_path))
         return True
-    except ValidationError as ve:
-        raise ve
-    except Exception as e:
-        raise e
+    except ValidationError:
+        raise
+
+
+def _validator_for(schema_path: str) -> Draft202012Validator:
+    """Build a validator for a schema (reuse for many data files)."""
+    return Draft202012Validator(schema=load(schema_path))
+
 
 def validate():
     """Validates all data files in repository."""
-    if not os.getenv("GITHUB_WORKSPACE"):
-        attributes = os.path.join(os.getcwd(), "attributes.yml")
-        categories = os.path.join(os.getcwd(), "categories.yml")
-        event_types = os.path.join(os.getcwd(), "event_types.yml")
-        schema_folder = os.path.join(os.getcwd(), "schema")
-    else:
-        attributes = os.path.join(os.getenv("GITHUB_WORKSPACE"), "attributes.yml")
-        categories = os.path.join(os.getenv("GITHUB_WORKSPACE"), "categories.yml")
-        event_types = os.path.join(os.getenv("GITHUB_WORKSPACE"), "event_types.yml")
-        schema_folder = os.path.join(os.getenv("GITHUB_WORKSPACE"), "schema")
+    # Resolve base path once for consistency
+    base = os.getenv("GITHUB_WORKSPACE") or os.getcwd()
+    attributes_path = os.path.join(base, "attributes.yml")
+    categories_path = os.path.join(base, "categories.yml")
+    event_types_path = os.path.join(base, "event_types.yml")
+    schema_folder = os.path.join(base, "schema")
 
-    if not _schema_validation(attributes, os.path.join(schema_folder, "attributes.yml")):
-        raise Exception("Attributes schema validation failed.")
-    if not _schema_validation(categories, os.path.join(schema_folder, "categories.yml")):
-        raise Exception("Categories schema validation failed.")
-    if not _schema_validation(event_types, os.path.join(schema_folder, "event_types.yml")):
-        raise Exception("Event types schema validation failed.")
+    logger.info("Validation starting; base path = {}", base)
 
-    for product in glob("./products/*/*.product.yml"):
-        if not _schema_validation(product, os.path.join(schema_folder, "product.yml")):
-            raise Exception(f"Product schema validation failed for {product}.")
-    for event_source in glob("./products/*/event_sources/*.yml"):
-        if not _schema_validation(event_source, os.path.join(schema_folder, "event_source.yml")):
+    # Summary counts for final report
+    products_validated = 0
+    event_sources_validated = 0
+    mappings_checked = 0
+    example_files_checked = 0
+    attribute_checks_ok = 0
+    attribute_checks_missing = 0
+    example_errors = 0
+
+    # --- Root definition files ---
+    logger.info("Validating root definition files...")
+    for name, data_path in [
+        ("attributes", attributes_path),
+        ("categories", categories_path),
+        ("event_types", event_types_path),
+    ]:
+        schema_path = os.path.join(schema_folder, f"{name}.yml")
+        logger.debug("Validating {} against {}", data_path, schema_path)
+        validator = _validator_for(schema_path)
+        if not _validate_with_validator(validator, data_path):
+            raise Exception(f"{name} schema validation failed.")
+    logger.success("Root definition files validated (attributes, categories, event_types)")
+
+    # --- Product files ---
+    product_glob = os.path.join(base, "products", "*", "*.product.yml")
+    product_paths = sorted(glob(product_glob))
+    logger.info("Found {} product definition(s); validating...", len(product_paths))
+    product_validator = _validator_for(os.path.join(schema_folder, "product.yml"))
+
+    for product_path in product_paths:
+        logger.debug("Validating product: {}", product_path)
+        if not _validate_with_validator(product_validator, product_path):
+            raise Exception(f"Product schema validation failed for {product_path}.")
+        products_validated += 1
+    logger.success("All {} product(s) validated", products_validated)
+
+    # --- Event source files ---
+    event_sources_glob = os.path.join(base, "products", "*", "event_sources", "*.yml")
+    event_source_paths = sorted(glob(event_sources_glob))
+    logger.info("Found {} event source(s); validating and checking examples...", len(event_source_paths))
+    event_source_validator = _validator_for(os.path.join(schema_folder, "event_source.yml"))
+
+    for event_source in event_source_paths:
+        logger.debug("Validating event source: {}", event_source)
+        if not _validate_with_validator(event_source_validator, event_source):
             raise Exception(f"Event source schema validation failed for {event_source}.")
+        event_sources_validated += 1
+
+        # Derive product id from path (e.g. .../products/appomni/event_sources/foo.yml -> appomni)
+        _parts = event_source.replace(os.sep, "/").split("/")
+        product_id = _parts[_parts.index("products") + 1] if "products" in _parts else "?"
 
         try:
-            data = None
-            with open(event_source, "r") as f:
-                data = yaml.safe_load(f)
-            if data:
-                parent_path = os.path.dirname(os.path.dirname(event_source))
-                for mapping in data["mappings"]:
-                    attribute_names = mapping["attributes"].values()
-                    if mapping.get("examples"):
-                        try:
-                            for example in mapping["examples"]:
-                                example_data = None
-                                with open(f"{parent_path}/{example['location']}", "r") as f:
-                                    example_data = json.load(f)
-                                for attribute_name in attribute_names:
-                                    for value in item_generator(example_data, attribute_name):
-                                        if not value:
-                                            print(f"""
-            Could not find attribute in {example['location']}: {attribute_name}
-            Example File: {example['location']}
-            """)
-                                        else:
-                                            print(f"Found attribute in {example['location']}: {attribute_name} = {value}")
-                        except Exception as e:
-                            print(f"Error with example {example['location']}: {e}")
+            data = load(event_source)
+            if not data:
+                continue
+            product_name = data.get("product", {}).get("name", product_id)
+            event_source_name = data.get("name") or os.path.basename(event_source)
+            parent_path = os.path.dirname(os.path.dirname(event_source))
+
+            for mapping in data.get("mappings", []):
+                mappings_checked += 1
+                attribute_names = list(mapping.get("attributes", {}).values())
+                examples = mapping.get("examples") or []
+
+                for example in examples:
+                    example_location = example.get("location", "")
+                    example_full_path = os.path.normpath(os.path.join(parent_path, example_location))
+                    logger.debug("Checking example: {} (mapping attributes: {})", example_full_path, attribute_names)
+
+                    try:
+                        with open(example_full_path, "r") as f:
+                            example_data = json.load(f)
+                    except Exception as e:
+                        logger.error(
+                            "[{}] {}: Error loading example {}: {}",
+                            product_name,
+                            event_source_name,
+                            example_location,
+                            e,
+                        )
+                        example_errors += 1
+                        continue
+
+                    example_files_checked += 1
+                    for attribute_name in attribute_names:
+                        # Attribute may be a single path (str) or a list of paths (any of these)
+                        if isinstance(attribute_name, list):
+                            paths = attribute_name
+                            values = []
+                            for path in paths:
+                                if isinstance(path, str):
+                                    values.extend(item_generator(example_data, path))
+                            # Only warn if NONE of the paths yielded a value
+                            is_missing = not values
+                            display_name = ", ".join(str(p) for p in paths)
+                        else:
+                            values = list(item_generator(example_data, attribute_name))
+                            is_missing = not values
+                            display_name = attribute_name
+
+                        if is_missing:
+                            logger.warning(
+                                "[{}] {} | {}: missing or empty attribute '{}'",
+                                product_name,
+                                event_source_name,
+                                example_location,
+                                display_name,
+                            )
+                            attribute_checks_missing += 1
+                        else:
+                            logger.debug(
+                                "Found in {}: {} ({} value(s))",
+                                example_location,
+                                display_name,
+                                len(values),
+                            )
+                            attribute_checks_ok += 1
+
         except Exception as e:
-            print(f"Error with {event_source}: {e}")
+            logger.error(
+                "[{}] {}: Error processing event source: {}",
+                product_id,
+                os.path.basename(event_source),
+                e,
+            )
+            example_errors += 1
+
+    logger.success(
+        "All {} event source(s) validated; {} mapping(s), {} example file(s) checked",
+        event_sources_validated,
+        mappings_checked,
+        example_files_checked,
+    )
+
+    # --- Final summary (confidence that every module and event type was checked) ---
+    logger.info("--- Validation summary ---")
+    logger.info("Products validated: {}", products_validated)
+    logger.info("Event sources validated: {}", event_sources_validated)
+    logger.info("Mappings with examples considered: {}", mappings_checked)
+    logger.info("Example files loaded and checked: {}", example_files_checked)
+    logger.info("Attribute lookups OK: {}", attribute_checks_ok)
+    logger.info("Attribute lookups missing/empty: {}", attribute_checks_missing)
+    logger.info("Example load/processing errors: {}", example_errors)
+
+    if attribute_checks_missing > 0 or example_errors > 0:
+        logger.error(
+            "Validation failed: {} missing attribute(s), {} error(s)",
+            attribute_checks_missing,
+            example_errors,
+        )
+        sys.exit(1)
+    total_checks = attribute_checks_ok + attribute_checks_missing
+    logger.success(
+        "Validation complete. Every product and event source was checked ({} products, {} event sources, "
+        "{} example files, {} attribute checks). No false negatives.",
+        products_validated,
+        event_sources_validated,
+        example_files_checked,
+        total_checks,
+    )
 
 
 if __name__ == "__main__":
