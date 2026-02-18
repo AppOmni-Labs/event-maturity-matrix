@@ -22,14 +22,15 @@ mappings:
   - category: C0001
     event_type: ET0001
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
     examples:
       - type: success
         location: "./event_examples/authentication_account_login_session_success.json"
@@ -38,306 +39,306 @@ mappings:
   - category: C0001
     event_type: ET0002
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
     examples:
       - type: success
         location: "./event_examples/authentication_account_logout.json"
   - category: C0001
     event_type: ET0003
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0016: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0016: resources[type=DEVICE].name
     examples:
       - type: success
         location: "./event_examples/authentication_mfa_verification.json"
   - category: C0002
     event_type: ET0004
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0019: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0019: resources[type=USER].name
     examples:
       - type: success
         location: "./event_examples/authorization_create_user.json"
   - category: C0002
     event_type: ET0006
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0019: y
-      A0020: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0019: resources[type=USER].name
+      A0020: [result.description, _embedded.modifiedAttributes]
     examples:
       - type: success
         location: "./event_examples/authorization_update_user.json"
   - category: C0002
     event_type: ET0007
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0019: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0019: resources[type=USER].name
     examples:
       - type: success
         location: "./event_examples/authorization_delete_user.json"
   - category: C0002
     event_type: ET0008
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0021: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0021: ['resources[type=GROUP].name', 'resources[type=MEMBER_OF_GROUP].name']
     examples:
       - type: success
         location: "./event_examples/authorization_create_group.json"
   - category: C0002
     event_type: ET0011
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0021: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0021: ['resources[type=GROUP].name', 'resources[type=MEMBER_OF_GROUP].name']
     examples:
       - type: success
         location: "./event_examples/authorization_delete_group.json"
   - category: C0002
     event_type: ET0012
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0021: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0021: ['resources[type=GROUP].name', 'resources[type=MEMBER_OF_GROUP].name']
     examples:
       - type: success
         location: "./event_examples/authorization_add_to_group.json"
   - category: C0002
     event_type: ET0013
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0021: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0021: ['resources[type=GROUP].name', 'resources[type=MEMBER_OF_GROUP].name']
     examples:
       - type: success
         location: "./event_examples/authorization_remove_from_group.json"
   - category: C0002
     event_type: ET0018
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0023: y
-      A0024: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0023: FIXME
+      A0024: resources[type=USER].name
     examples:
       - type: success
         location: "./event_examples/authorization_add_permission.json"
   - category: C0002
     event_type: ET0019
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0023: y
-      A0024: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0023: FIXME
+      A0024: resources[type=USER].name
     examples:
       - type: success
         location: "./event_examples/authorization_remove_permission.json"
   - category: C0002
     event_type: ET0020
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0019: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0019: resources[type=USER].name
     examples:
       - type: success
         location: "./event_examples/authorization_add_enrollment.json"
   - category: C0002
     event_type: ET0021
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0025: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0025: resources[type=DEVICE].name
     examples:
       - type: success
         location: "./event_examples/authorization_remove_enrollment.json"
   - category: C0003
     event_type: ET0022
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0026: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0026: ['action.type', 'resources[0].name']
     examples:
       - type: success
         location: "./event_examples/system_audit_create_security_configuration_idp.json"
   - category: C0003
     event_type: ET0024
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0026: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0026: ['action.type', 'resources[0].name']
     examples:
       - type: success
         location: "./event_examples/system_audit_update_security_configuration_idp.json"
   - category: C0003
     event_type: ET0025
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0026: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0026: ['action.type', 'resources[0].name']
     examples:
       - type: success
         location: "./event_examples/system_audit_delete_security_configuration_idp.json"
   - category: C0003
     event_type: ET0026
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0029: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0029: ['resources[type=IDENTITY_PROVIDER].name', 'resources[type=APPLICATION].name']
     examples:
       - type: success
         location: "./event_examples/system_audit_create_integration.json"
   - category: C0003
     event_type: ET0028
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0029: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0029: ['resources[type=IDENTITY_PROVIDER].name', 'resources[type=APPLICATION].name']
     examples:
       - type: success
         location: "./event_examples/system_audit_update_integration.json"
   - category: C0003
     event_type: ET0029
     attributes:
-      A0001: y
-      A0002: y
-      A0003: y
-      A0004: y
-      A0005: y
-      A0006: y
-      A0008: y
-      A0009: y
-      A0011: y
-      A0029: y
+      A0001: [createdAt, recordedAt]
+      A0002: id
+      A0003: action.type
+      A0004: result.status
+      A0005: actors.user.name
+      A0006: actors.user.id
+      A0008: [internalCorrelation.sessionId, correlationId]
+      A0009: source.ipAddress
+      A0011: source.userAgent
+      A0029: ['resources[type=IDENTITY_PROVIDER].name', 'resources[type=APPLICATION].name']
     examples:
       - type: success
         location: "./event_examples/system_audit_delete_integration.json"

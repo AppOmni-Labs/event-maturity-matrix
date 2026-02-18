@@ -30,12 +30,12 @@ mappings:
       A0003: Operation
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0008: DeviceProperties.SessionId
+      A0007: Actor[ID=User].Type
+      A0008: DeviceProperties[Name=SessionId].Value
       A0009: ClientIP
-      A0011: ExtendedProperties.UserAgent
+      A0011: ExtendedProperties[Name=UserAgent].Value
       A0012: DeviceProperties
-      A0015: ExtendedProperties.RequestType
+      A0015: ExtendedProperties[Name=RequestType].Value
     examples:
       - type: success
         location: "./event_examples/azure_ad/authentication_account_login_success.json"
@@ -50,9 +50,9 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
+      A0007: Actor[ID=User].Type
       A0009: ClientIP
-      A0011: ExtendedProperties.UserAgent
+      A0011: ExtendedProperties[Name=UserAgent].Value
       A0012: DeviceProperties
     examples:
       - type: success
@@ -66,7 +66,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
+      A0007: Actor[ID=User].Type
       A0019: Target.ID
     examples:
       - type: success
@@ -80,7 +80,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
+      A0007: Actor[ID=User].Type
       A0019: Target.ID
       A0020: ModifiedProperties
     examples:
@@ -95,7 +95,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
+      A0007: Actor[ID=User].Type
       A0019: Target.ID
     examples:
       - type: success
@@ -109,7 +109,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
+      A0007: Actor[ID=User].Type
       A0021: Target.ID
     examples:
       - type: success
@@ -123,7 +123,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: ModifiedProperties.Actor
-      A0007: Actor.Type
+      A0007: Actor[ID=User].Type
       A0021: Target.ID
     examples:
       - type: success
@@ -137,7 +137,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
+      A0007: Actor[ID=User].Type
       A0021: Target.ID
     examples:
       - type: success
@@ -151,9 +151,9 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: ModifiedProperties.Actor
-      A0007: Actor.Type
-      A0012: ExtendedProperties.[Name=additionalDetails].Value
-      A0021: ModifiedProperties.[Name=Group.Displayname].Value
+      A0007: Actor[ID=User].Type
+      A0012: ExtendedProperties[Name=additionalDetails].Value
+      A0021: ModifiedProperties[Name=Group.Displayname].Value
       A0019: Target.ID
     examples:
       - type: success
@@ -167,9 +167,9 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0011: ExtendedProperties.[Name=additionalDetails].Value
-      A0021: ModifiedProperties.[Name=Group.DisplayName].NewValue
+      A0007: Actor[ID=User].Type
+      A0011: ExtendedProperties[Name=additionalDetails].Value
+      A0021: ModifiedProperties[Name=Group.DisplayName].NewValue
       A0019: Target.ID
     examples:
       - type: success
@@ -183,8 +183,8 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0011: ExtendedProperties.[Name=additionalDetails].Value
+      A0007: Actor[ID=User].Type
+      A0011: ExtendedProperties[Name=additionalDetails].Value
       A0022: Target.ID
     examples:
       - type: success
@@ -198,10 +198,10 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0011: ExtendedProperties.[Name=additionalDetails].Value
+      A0007: Actor[ID=User].Type
+      A0011: ExtendedProperties[Name=additionalDetails].Value
       A0022: Target.ID
-      A0020: ModifiedProperties.[Name=GrantedPermissions].NewValue
+      A0020: ModifiedProperties[Name=GrantedPermissions].NewValue
     examples:
       - type: success
         location: "./event_examples/azure_ad/authorization_update_role.json"
@@ -214,8 +214,8 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0011: ExtendedProperties.[Name=additionalDetails].Value
+      A0007: Actor[ID=User].Type
+      A0011: ExtendedProperties[Name=additionalDetails].Value
       A0022: Target.ID
     examples:
       - type: success
@@ -229,8 +229,8 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0023: ModifiedProperties.[Name=Role.DisplayName].NewValue
+      A0007: Actor[ID=User].Type
+      A0023: ModifiedProperties[Name=Role.DisplayName].NewValue
       A0024: Target.ID
     examples:
       - type: success
@@ -244,8 +244,8 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0023: ModifiedProperties.[Name=Role.DisplayName].OldValue
+      A0007: Actor[ID=User].Type
+      A0023: ModifiedProperties[Name=Role.DisplayName].OldValue
       A0024: Target.ID
     examples:
       - type: success
@@ -259,8 +259,8 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0025: ModifiedProperties.[Name=StrongAuthenticationUserDetails].NewValue
+      A0007: Actor[ID=User].Type
+      A0025: ModifiedProperties[Name=StrongAuthenticationUserDetails].NewValue
       A0019: Target.ID
     examples:
       - type: success
@@ -274,8 +274,8 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0025: ModifiedProperties.[Name=StrongAuthenticationUserDetails].OldValue
+      A0007: Actor[ID=User].Type
+      A0025: ModifiedProperties[Name=StrongAuthenticationUserDetails].OldValue
       A0019: Target.ID
     examples:
       - type: success
@@ -289,9 +289,9 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0011: ExtendedProperties.[Name=additionalDetails].Value
-      A0026: ModifiedProperties.[Name=PolicyType].NewValue
+      A0007: Actor[ID=User].Type
+      A0011: ExtendedProperties[Name=additionalDetails].Value
+      A0026: ModifiedProperties[Name=PolicyType].NewValue
       A0027: ModifiedProperties
     examples:
       - type: success
@@ -305,10 +305,10 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0011: ExtendedProperties.[Name=additionalDetails].Value
-      A0026: ExtendedProperties.[Name=extendedAuditEventCategory].Value
-      A0027: ModifiedProperties.[Name=Included
+      A0007: Actor[ID=User].Type
+      A0011: ExtendedProperties[Name=additionalDetails].Value
+      A0026: ExtendedProperties[Name=extendedAuditEventCategory].Value
+      A0027: ModifiedProperties[Name=Included].Value
       A0028: ModifiedProperties
     examples:
       - type: success
@@ -322,9 +322,9 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0011: ExtendedProperties.[Name=additionalDetails].Value
-      A0026: ExtendedProperties.[Name=extendedAuditEventCategory].Value
+      A0007: Actor[ID=User].Type
+      A0011: ExtendedProperties[Name=additionalDetails].Value
+      A0026: ExtendedProperties[Name=extendedAuditEventCategory].Value
     examples:
       - type: success
         location: "./event_examples/azure_ad/system_audit_delete_security_configuration_cap.json"
@@ -337,8 +337,8 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0029: ModifiedProperties.[Name=DisplayName].NewValue
+      A0007: Actor[ID=User].Type
+      A0029: ModifiedProperties[Name=DisplayName].NewValue
     examples:
       - type: success
         location: "./event_examples/azure_ad/system_audit_create_integration.json"
@@ -351,10 +351,10 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
+      A0007: Actor[ID=User].Type
       A0029: Target.Id
       A0026: ModifiedProperties
-      A0028: ModifiedProperties.[Name=Entitlement].OldValue
+      A0028: ModifiedProperties[Name=Entitlement].OldValue
     examples:
       - type: success
         location: "./event_examples/azure_ad/system_audit_update_integration.json"
@@ -367,7 +367,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
+      A0007: Actor[ID=User].Type
       A0029: Target.Id
     examples:
       - type: success

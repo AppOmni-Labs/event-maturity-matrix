@@ -52,7 +52,7 @@ mappings:
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
-      A0021: Parameters.DisplayName
+      A0021: Parameters[Name=DisplayName].Value
     examples:
       - type: success
         location: "./event_examples/exchange/authorization_create_group_distro.json"
@@ -67,7 +67,7 @@ mappings:
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
-      A0021: Parameters.DisplayName
+      A0021: Parameters[Name=DisplayName].Value
     examples:
       - type: success
         location: "./event_examples/exchange/authorization_update_group_distro.json"

@@ -98,7 +98,7 @@ mappings:
       A0010: client.geographicalContext
       A0011: client.userAgent
       A0012: client.device
-      A0019: target.alternativeId
+      A0019: target.alternateId
     examples:
       - type: success
         location: "./event_examples/authorization_create_user.json"
@@ -116,7 +116,7 @@ mappings:
       A0010: client.geographicalContext
       A0011: client.userAgent
       A0012: client.device
-      A0019: target.alternativeId
+      A0019: target.alternateId
       A0020: debugContext.debugData.changedAttributes
     examples:
       - type: success
@@ -135,7 +135,7 @@ mappings:
       A0010: client.geographicalContext
       A0011: client.userAgent
       A0012: client.device
-      A0019: target.alternativeId
+      A0019: target.alternateId
     examples:
       - type: success
         location: "./event_examples/authorization_delete_user.json"
@@ -340,7 +340,7 @@ mappings:
       A0011: client.userAgent
       A0012: client.device
       A0025: outcome.reason
-      A0019: target.alternativeId
+      A0019: target.alternateId
     examples:
       - type: success
         location: "./event_examples/authorization_add_enrollment.json"
@@ -359,7 +359,7 @@ mappings:
       A0011: client.userAgent
       A0012: client.device
       A0025: outcome.reason
-      A0019: target.alternativeId
+      A0019: target.alternateId
     examples:
       - type: success
         location: "./event_examples/authorization_remove_enrollment.json"
