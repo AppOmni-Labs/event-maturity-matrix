@@ -421,7 +421,7 @@ mappings:
       A0005: actor.email
       A0006: actor.profileId
       A0009: ipAddress
-      A0031: event.parameters[name=user_query]
+      A0033: event.parameters[name=user_query]
     examples:
       - type: success
         location: "./event_examples/audit_activity_query_resource.json"
