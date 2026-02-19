@@ -292,3 +292,12 @@ items:
     type: string
     examples:
       - "The report was 1,000 rows and 25Mb in size"
+  - id: A0033
+    name: Query String
+    include:
+      - ET0035
+    description: The query or search string used when querying a resource.
+    type: string
+    examples:
+      - "from:user@example.com"
+      - "subject:quarterly report"

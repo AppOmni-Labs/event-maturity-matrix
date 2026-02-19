@@ -176,3 +176,18 @@ mappings:
     examples:
       - type: success
         location: "./event_examples/sharepoint/activity_audit_download_resource_file.json"
+  - category: C0004
+    event_type: ET0035
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0006: UserKey
+      A0007: UserType
+      A0009: ClientIP
+      A0030: QuerySource
+      A0033: QueryText
+    examples:
+      - type: success
+        location: "./event_examples/sharepoint/activity_audit_query_resource.json"
