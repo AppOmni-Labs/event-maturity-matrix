@@ -1,0 +1,26 @@
+{
+  "@timestamp": 1686246022669,
+  "_document_id": "Ko2tnAiduqWy3KZSsh1nGA",
+  "action": "repo.change_merge_setting",
+  "actor": "john.doe",
+  "actor_id": 12345678,
+  "actor_ip": "198.51.100.1",
+  "actor_location": {
+    "country_code": "US"
+  },
+  "business": "acme",
+  "business_id": 1122,
+  "created_at": 1686246022669,
+  "hashed_token": "WQH64WU0ciJ0EBQcMlkneYRFGeQoW6FocQt8NYpNy5c=",
+  "operation_type": "modify",
+  "org": "acme-inc",
+  "org_id": 1234000,
+  "programmatic_access_type": "Personal access token (classic)",
+  "public_repo": false,
+  "repo": "acme-inc/example-repo",
+  "repo_id": 651188699,
+  "token_id": 1139584588,
+  "token_scopes": "admin:repo_hook,delete_repo,repo",
+  "user_agent": "octokit.js/2.0.10 octokit-core.js/4.1.0 Node.js/16.20.0 (linux; x64)",
+  "visibility": "private"
+}
