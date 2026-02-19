@@ -30,7 +30,7 @@ mappings:
       A0003: Operation
       A0005: UserId
       A0006: UserKey
-      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0007: Actor[].Type
       A0008: DeviceProperties[Name=SessionId].Value
       A0009: ClientIP
       A0011: ExtendedProperties[Name=UserAgent].Value
@@ -50,7 +50,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0007: Actor[].Type
       A0009: ClientIP
       A0011: ExtendedProperties[Name=UserAgent].Value
       A0012: DeviceProperties
@@ -122,7 +122,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
-      A0006: ModifiedProperties.Actor
+      A0006: UserKey
       A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0021: Target.ID
     examples:
@@ -150,7 +150,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
-      A0006: ModifiedProperties.Actor
+      A0006: UserKey
       A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0012: ExtendedProperties[Name=additionalDetails].Value
       A0021: ModifiedProperties[Name=Group.DisplayName].NewValue
@@ -275,7 +275,7 @@ mappings:
       A0005: UserId
       A0006: UserKey
       A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
-      A0025: ModifiedProperties[Name=StrongAuthenticationUserDetails].OldValue
+      A0025: ModifiedProperties[Name=StrongAuthenticationPhoneAppDetail].OldValue
       A0019: Target.ID
     examples:
       - type: success
@@ -308,7 +308,7 @@ mappings:
       A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0011: ExtendedProperties[Name=additionalDetails].Value
       A0026: ExtendedProperties[Name=extendedAuditEventCategory].Value
-      A0027: ModifiedProperties[Name=Included].Value
+      A0027: ModifiedProperties[Name=Included Updated Properties].NewValue
       A0028: ModifiedProperties
     examples:
       - type: success

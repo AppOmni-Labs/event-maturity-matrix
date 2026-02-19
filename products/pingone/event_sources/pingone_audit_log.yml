@@ -22,13 +22,13 @@ mappings:
   - category: C0001
     event_type: ET0001
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
     examples:
@@ -39,13 +39,13 @@ mappings:
   - category: C0001
     event_type: ET0002
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
-      A0005: actors.user.name
-      A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0005: resources.name
+      A0006: resources.id
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
     examples:
@@ -54,29 +54,29 @@ mappings:
   - category: C0001
     event_type: ET0003
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
-      A0016: resources[type=DEVICE].name
+      A0016: resources.name
     examples:
       - type: success
         location: "./event_examples/authentication_mfa_verification.json"
   - category: C0002
     event_type: ET0004
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
       A0019: resources[type=USER].name
@@ -86,30 +86,30 @@ mappings:
   - category: C0002
     event_type: ET0006
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
       A0019: resources[type=USER].name
-      A0020: [result.description, _embedded.modifiedAttributes]
+      A0020: result.description
     examples:
       - type: success
         location: "./event_examples/authorization_update_user.json"
   - category: C0002
     event_type: ET0007
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
       A0019: resources[type=USER].name
@@ -119,13 +119,13 @@ mappings:
   - category: C0002
     event_type: ET0008
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
       A0021: ['resources[type=GROUP].name', 'resources[type=MEMBER_OF_GROUP].name']
@@ -135,13 +135,13 @@ mappings:
   - category: C0002
     event_type: ET0011
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
       A0021: ['resources[type=GROUP].name', 'resources[type=MEMBER_OF_GROUP].name']
@@ -151,13 +151,13 @@ mappings:
   - category: C0002
     event_type: ET0012
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
       A0021: ['resources[type=GROUP].name', 'resources[type=MEMBER_OF_GROUP].name']
@@ -167,13 +167,13 @@ mappings:
   - category: C0002
     event_type: ET0013
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
       A0021: ['resources[type=GROUP].name', 'resources[type=MEMBER_OF_GROUP].name']
@@ -183,16 +183,16 @@ mappings:
   - category: C0002
     event_type: ET0018
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
-      A0023: FIXME
+      A0023: result.description
       A0024: resources[type=USER].name
     examples:
       - type: success
@@ -200,16 +200,16 @@ mappings:
   - category: C0002
     event_type: ET0019
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
-      A0023: FIXME
+      A0023: result.description
       A0024: resources[type=USER].name
     examples:
       - type: success
@@ -217,13 +217,13 @@ mappings:
   - category: C0002
     event_type: ET0020
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
       A0019: resources[type=USER].name
@@ -233,29 +233,28 @@ mappings:
   - category: C0002
     event_type: ET0021
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
-      A0025: resources[type=DEVICE].name
     examples:
       - type: success
         location: "./event_examples/authorization_remove_enrollment.json"
   - category: C0003
     event_type: ET0022
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
       A0026: ['action.type', 'resources[0].name']
@@ -265,13 +264,13 @@ mappings:
   - category: C0003
     event_type: ET0024
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
       A0026: ['action.type', 'resources[0].name']
@@ -281,13 +280,13 @@ mappings:
   - category: C0003
     event_type: ET0025
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
       A0026: ['action.type', 'resources[0].name']
@@ -297,13 +296,13 @@ mappings:
   - category: C0003
     event_type: ET0026
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
       A0029: ['resources[type=IDENTITY_PROVIDER].name', 'resources[type=APPLICATION].name']
@@ -313,13 +312,13 @@ mappings:
   - category: C0003
     event_type: ET0028
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
       A0029: ['resources[type=IDENTITY_PROVIDER].name', 'resources[type=APPLICATION].name']
@@ -329,13 +328,13 @@ mappings:
   - category: C0003
     event_type: ET0029
     attributes:
-      A0001: [createdAt, recordedAt]
+      A0001: recordedAt
       A0002: id
       A0003: action.type
       A0004: result.status
       A0005: actors.user.name
       A0006: actors.user.id
-      A0008: [internalCorrelation.sessionId, correlationId]
+      A0008: correlationId
       A0009: source.ipAddress
       A0011: source.userAgent
       A0029: ['resources[type=IDENTITY_PROVIDER].name', 'resources[type=APPLICATION].name']

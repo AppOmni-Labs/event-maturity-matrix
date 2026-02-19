@@ -27,7 +27,7 @@ mappings:
     attributes:
       A0001: EventDate
       A0002: EventIdentifier
-      A0003: attributes.type
+      A0003: data.payload.attributes.type
       A0004: PolicyOutcome
       A0005: Username
       A0006: UserId
