@@ -156,7 +156,6 @@ mappings:
       A0005: UserId
       A0009: ClientIP
       A0011: UserAgent
-      A0012: Platform
       A0030: ObjectId
       A0031: ItemType
     examples:

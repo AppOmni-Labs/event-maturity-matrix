@@ -34,7 +34,6 @@ mappings:
       A0012: description.device
       A0013: description.error
       A0014: [description.factor, description.primary_auth_method]
-      A0015: description.saml_idp
     examples:
       - type: success
         location: "./event_examples/authentication_account_login_success_admin.json"

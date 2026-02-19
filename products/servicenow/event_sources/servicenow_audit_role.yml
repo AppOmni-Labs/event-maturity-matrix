@@ -24,8 +24,8 @@ mappings:
     attributes:
       A0001: sys_created_on
       A0003: operation
-      A0005: user.name
-      A0006: user.name
+      A0005: "user\\.name"
+      A0006: "user\\.name"
     examples:
       - type: add
         location: "./event_examples/audit_role/authorization_add_permission.json"
@@ -34,8 +34,8 @@ mappings:
     attributes:
       A0001: sys_created_on
       A0003: operation
-      A0005: user.name
-      A0006: user.name
+      A0005: "user\\.name"
+      A0006: "user\\.name"
     examples:
       - type: add
         location: "./event_examples/audit_role/authorization_remove_permission.json"

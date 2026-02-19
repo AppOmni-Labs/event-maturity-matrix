@@ -182,7 +182,7 @@ mappings:
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
-      A0023: Parameters.Role
+      A0023: ObjectId
     examples:
       - type: success
         location: "./event_examples/exchange/authorization_remove_permission.json"
@@ -241,7 +241,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
-      A0006: Parameters.Identity
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -257,7 +257,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
-      A0006: Parameters.Identity
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -273,7 +273,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
-      A0006: Parameters.Identity
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -292,8 +292,8 @@ mappings:
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
-      A0030: AffectedItems
-      A0031: AffectedItems
+      A0030: Item
+      A0031: Item.Subject
     examples:
       - type: success - email
         location: "./event_examples/exchange/activity_audit_create_resource_msg.json"
@@ -310,7 +310,7 @@ mappings:
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
-      A0030: AffectedItems
+      A0030: Item
       A0031: AffectedItems
     examples:
       - type: success

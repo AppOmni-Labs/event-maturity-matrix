@@ -202,7 +202,7 @@ mappings:
       A0007: actor.callerType
       A0009: ipAddress
       A0022: event.parameters[name=ROLE_NAME]
-      A0020: event.parameters[name=*]
+      A0020: event.parameters
     examples:
       - type: success
         location: "./event_examples/authorization_update_role.json"
@@ -283,9 +283,8 @@ mappings:
       A0003: event.name
       A0005: actor.email
       A0006: actor.profileId
-      A0007: actor.callerType
-      A0026: event.parameters[name=*]
-      A0027: event.parameters[name=*]
+      A0026: event.parameters
+      A0027: event.parameters
     examples:
       - type: success
         location: "./event_examples/system_audit_create_security_configuration.json"
@@ -363,7 +362,7 @@ mappings:
       A0006: actor.profileId
       A0007: actor.callerType
       A0009: ipAddress
-      A0030: event.parameters[name=*]
+      A0030: event.parameters[].name
       A0031: event.type
     examples:
       - type: success
@@ -378,7 +377,7 @@ mappings:
       A0006: actor.profileId
       A0007: actor.callerType
       A0009: ipAddress
-      A0030: event.parameters[name=SETTING_NAME]
+      A0030: event.parameters[].name
       A0031: event.type
     examples:
       - type: success
@@ -393,7 +392,7 @@ mappings:
       A0006: actor.profileId
       A0007: actor.callerType
       A0009: ipAddress
-      A0030: event.parameters[name=*]
+      A0030: event.parameters[].name
       A0031: event.type
     examples:
       - type: success
@@ -406,9 +405,8 @@ mappings:
       A0003: event.name
       A0005: actor.email
       A0006: actor.profileId
-      A0007: actor.callerType
       A0009: ipAddress
-      A0032: event.parameters[name=*]
+      A0032: event.parameters[].name
       A0030: event.parameters[name=doc_title]
       A0031: event.parameters[name=doc_type]
     examples:

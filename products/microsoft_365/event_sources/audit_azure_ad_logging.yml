@@ -30,7 +30,7 @@ mappings:
       A0003: Operation
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0008: DeviceProperties[Name=SessionId].Value
       A0009: ClientIP
       A0011: ExtendedProperties[Name=UserAgent].Value
@@ -50,7 +50,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0009: ClientIP
       A0011: ExtendedProperties[Name=UserAgent].Value
       A0012: DeviceProperties
@@ -66,7 +66,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0019: Target.ID
     examples:
       - type: success
@@ -80,7 +80,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0019: Target.ID
       A0020: ModifiedProperties
     examples:
@@ -95,7 +95,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0019: Target.ID
     examples:
       - type: success
@@ -109,7 +109,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0021: Target.ID
     examples:
       - type: success
@@ -123,7 +123,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: ModifiedProperties.Actor
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0021: Target.ID
     examples:
       - type: success
@@ -137,7 +137,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0021: Target.ID
     examples:
       - type: success
@@ -151,9 +151,9 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: ModifiedProperties.Actor
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0012: ExtendedProperties[Name=additionalDetails].Value
-      A0021: ModifiedProperties[Name=Group.Displayname].Value
+      A0021: ModifiedProperties[Name=Group.DisplayName].NewValue
       A0019: Target.ID
     examples:
       - type: success
@@ -167,7 +167,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0011: ExtendedProperties[Name=additionalDetails].Value
       A0021: ModifiedProperties[Name=Group.DisplayName].NewValue
       A0019: Target.ID
@@ -183,7 +183,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0011: ExtendedProperties[Name=additionalDetails].Value
       A0022: Target.ID
     examples:
@@ -198,7 +198,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0011: ExtendedProperties[Name=additionalDetails].Value
       A0022: Target.ID
       A0020: ModifiedProperties[Name=GrantedPermissions].NewValue
@@ -214,7 +214,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0011: ExtendedProperties[Name=additionalDetails].Value
       A0022: Target.ID
     examples:
@@ -229,7 +229,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0023: ModifiedProperties[Name=Role.DisplayName].NewValue
       A0024: Target.ID
     examples:
@@ -244,7 +244,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0023: ModifiedProperties[Name=Role.DisplayName].OldValue
       A0024: Target.ID
     examples:
@@ -259,7 +259,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0025: ModifiedProperties[Name=StrongAuthenticationUserDetails].NewValue
       A0019: Target.ID
     examples:
@@ -274,7 +274,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0025: ModifiedProperties[Name=StrongAuthenticationUserDetails].OldValue
       A0019: Target.ID
     examples:
@@ -289,7 +289,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0011: ExtendedProperties[Name=additionalDetails].Value
       A0026: ModifiedProperties[Name=PolicyType].NewValue
       A0027: ModifiedProperties
@@ -305,7 +305,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0011: ExtendedProperties[Name=additionalDetails].Value
       A0026: ExtendedProperties[Name=extendedAuditEventCategory].Value
       A0027: ModifiedProperties[Name=Included].Value
@@ -322,7 +322,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0011: ExtendedProperties[Name=additionalDetails].Value
       A0026: ExtendedProperties[Name=extendedAuditEventCategory].Value
     examples:
@@ -337,7 +337,7 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0029: ModifiedProperties[Name=DisplayName].NewValue
     examples:
       - type: success
@@ -351,8 +351,8 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
-      A0029: Target.Id
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0029: Target.ID
       A0026: ModifiedProperties
       A0028: ModifiedProperties[Name=Entitlement].OldValue
     examples:
@@ -367,8 +367,8 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor[ID=User].Type
-      A0029: Target.Id
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0029: Target.ID
     examples:
       - type: success
         location: "./event_examples/azure_ad/system_audit_delete_integration.json"
