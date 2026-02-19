@@ -19,24 +19,48 @@ logger.add(
     level=os.environ.get("LOGURU_LEVEL", "INFO"),
 )
 
+# Reserved value: attribute paths with this value are skipped for validation (e.g. EMM_UPDATE placeholders).
+EMM_UPDATE = "EMM_UPDATE"
+
 
 def _path_segments(path_str: str) -> list[str]:
-    """Split path string by '.' but not inside brackets. E.g. 'context.session_id' -> ['context', 'session_id']."""
+    """Split path string by '.' but not inside brackets or when escaped (\\.). E.g. 'context.session_id' -> ['context', 'session_id']; 'user\\.name' -> ['user.name']."""
     segments = []
     current = []
     depth = 0
-    for c in path_str:
+    i = 0
+    while i < len(path_str):
+        c = path_str[i]
+        if depth > 0:
+            current.append(c)
+            if c == "[":
+                depth += 1
+            elif c == "]":
+                depth -= 1
+            i += 1
+            continue
         if c == "[":
             depth += 1
             current.append(c)
-        elif c == "]":
-            depth -= 1
-            current.append(c)
-        elif c == "." and depth == 0:
+            i += 1
+        elif c == "\\" and i + 1 < len(path_str):
+            nxt = path_str[i + 1]
+            if nxt == ".":
+                current.append(".")
+                i += 2
+            elif nxt == "\\":
+                current.append("\\")
+                i += 2
+            else:
+                current.append(c)
+                i += 1
+        elif c == ".":
             segments.append("".join(current))
             current = []
+            i += 1
         else:
             current.append(c)
+            i += 1
     if current:
         segments.append("".join(current))
     return segments
@@ -55,6 +79,10 @@ def _path_to_jmespath(path_str: str) -> str:
             # JMESPath literal: escape single quotes in value
             escaped = filter_value.replace("\\", "\\\\").replace("'", "\\'")
             jmespath_parts.append(f"{key}[?{filter_key}=='{escaped}']")
+        elif "." in seg:
+            # Key contains a literal dot (e.g. "user.name"); JMESPath needs bracket notation
+            escaped = seg.replace("\\", "\\\\").replace("'", "\\'")
+            jmespath_parts.append(f"['{escaped}']")
         else:
             jmespath_parts.append(seg)
     return ".".join(jmespath_parts)
@@ -97,16 +125,17 @@ def item_generator(json_input: Any, lookup_key: str):
                         return
                 except jmespath.exceptions.JMESPathError:
                     pass
-                # 2) Parent is an array: JMESPath needs [*] to project (e.g. target.alternateId -> target[*].alternateId)
-                projection_expr = _path_to_jmespath(segs[0] + "[*]." + ".".join(segs[1:]))
-                try:
-                    proj_result = jmespath.search(projection_expr, json_input)
-                    if isinstance(proj_result, list):
-                        for item in proj_result:
-                            yield item
-                        return
-                except jmespath.exceptions.JMESPathError:
-                    pass
+                # 2) Some segment is an array: try [*] after each segment (e.g. target.alternateId -> target[*].alternateId; description.groups.name -> description.groups[*].name)
+                for i in range(len(segs) - 1):
+                    projection_expr = _path_to_jmespath(".".join(segs[: i + 1]) + "[*]." + ".".join(segs[i + 1 :]))
+                    try:
+                        proj_result = jmespath.search(projection_expr, json_input)
+                        if isinstance(proj_result, list):
+                            for item in proj_result:
+                                yield item
+                            return
+                    except jmespath.exceptions.JMESPathError:
+                        continue
         return
     if isinstance(result, list):
         for item in result:
@@ -135,6 +164,11 @@ def _validator_for(schema_path: str) -> Draft202012Validator:
     return Draft202012Validator(schema=load(schema_path))
 
 
+def _product_dir(event_source_path: str) -> str:
+    """Return the product directory (parent of event_sources) for an event source file path."""
+    return os.path.dirname(os.path.dirname(event_source_path))
+
+
 def validate():
     """Validates all data files in repository."""
     # Resolve base path once for consistency
@@ -153,6 +187,8 @@ def validate():
     example_files_checked = 0
     mappings_satisfied = 0  # at least one example had all attributes
     mappings_unsatisfied = 0  # no example had all attributes
+    mappings_without_examples = 0  # mapping has no examples (skipped, not an error)
+    attributes_ignored = 0  # attribute value is EMM_UPDATE (skipped)
     example_errors = 0
 
     # --- Root definition files ---
@@ -204,12 +240,25 @@ def validate():
                 continue
             product_name = data.get("product", {}).get("name", product_id)
             event_source_name = data.get("name") or os.path.basename(event_source)
-            parent_path = os.path.dirname(os.path.dirname(event_source))
+            parent_path = _product_dir(event_source)
 
             for mapping in data.get("mappings", []):
                 mappings_checked += 1
-                attribute_names = list(mapping.get("attributes", {}).values())
+                raw_attrs = mapping.get("attributes") or {}
+                attribute_names = []
+                for v in raw_attrs.values():
+                    if isinstance(v, str) and v == EMM_UPDATE:
+                        attributes_ignored += 1
+                        continue
+                    if isinstance(v, list) and len(v) > 0 and v[-1] == EMM_UPDATE:
+                        attributes_ignored += 1
+                        continue
+                    attribute_names.append(v)
                 examples = mapping.get("examples") or []
+
+                if not examples:
+                    mappings_without_examples += 1
+                    continue
 
                 # Validation passes for this mapping if at least one example has all attributes
                 mapping_satisfied = False
@@ -251,8 +300,8 @@ def validate():
                             is_missing = not values
                             display_name = ", ".join(str(p) for p in paths)
                         else:
-                            if attribute_name == "FIXME":
-                                continue  # don't require FIXME for "all attributes" check
+                            if attribute_name == EMM_UPDATE:
+                                continue  # don't require EMM_UPDATE for "all attributes" check
                             values = list(item_generator(example_data, attribute_name))
                             is_missing = not values
                             display_name = attribute_name
@@ -272,11 +321,16 @@ def validate():
                     if example_has_all:
                         mapping_satisfied = True
 
+                # Satisfied if at least one example had all attributes, or every attribute
+                # was found in at least one example (coverage across examples).
+                never_found = all_display_names - found_in_any_example
+                if not never_found and all_display_names:
+                    mapping_satisfied = True
+
                 if mapping_satisfied:
                     mappings_satisfied += 1
                 else:
                     mappings_unsatisfied += 1
-                    never_found = all_display_names - found_in_any_example
                     category = mapping.get("category", "?")
                     event_type = mapping.get("event_type", "?")
                     logger.warning(
@@ -286,7 +340,7 @@ def validate():
                         category,
                         event_type,
                         example_locations_checked,
-                        sorted(never_found) if never_found else "(none)",
+                        sorted(never_found),
                     )
 
         except Exception as e:
@@ -310,6 +364,8 @@ def validate():
     logger.info("Products validated: {}", products_validated)
     logger.info("Event sources validated: {}", event_sources_validated)
     logger.info("Mappings with examples considered: {}", mappings_checked)
+    logger.info("Mappings with no examples (skipped): {}", mappings_without_examples)
+    logger.info("Attributes ignored (EMM_UPDATE): {}", attributes_ignored)
     logger.info("Example files loaded and checked: {}", example_files_checked)
     logger.info("Mappings where at least one example had all attributes: {}", mappings_satisfied)
     logger.info("Mappings where no example had all attributes: {}", mappings_unsatisfied)
