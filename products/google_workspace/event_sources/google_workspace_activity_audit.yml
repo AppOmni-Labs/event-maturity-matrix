@@ -412,3 +412,16 @@ mappings:
     examples:
       - type: success
         location: "./event_examples/audit_activity_download_resource.json"
+  - category: C0004
+    event_type: ET0035
+    attributes:
+      A0001: id.time
+      A0002: etag
+      A0003: event.name
+      A0005: actor.email
+      A0006: actor.profileId
+      A0009: ipAddress
+      A0031: event.parameters[name=user_query]
+    examples:
+      - type: success
+        location: "./event_examples/audit_activity_query_resource.json"
