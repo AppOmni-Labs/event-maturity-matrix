@@ -1,0 +1,69 @@
+{
+    "actor":
+    {
+        "email": "test@test.com",
+        "profileId": "1095156489815745756899"
+    },
+    "etag": "\"jc94nIMyBF76804pdfefgegegGH0EHOA9erg2Y7Yn5ugkRL-3uaabgecdimwc\"",
+    "event":
+    {
+        "name": "search",
+        "parameters":
+        [
+            {
+                "boolValue": true,
+                "name": "primary_event"
+            },
+            {
+                "boolValue": false,
+                "name": "billable"
+            },
+            {
+                "name": "user_query",
+                "value": "secret passwords"
+            },
+            {
+                "name": "parsed_query",
+                "value": "((fullText contains 'secret' and fullText contains 'passwords') and trashed = false)"
+            },
+            {
+                "name": "originating_app_id",
+                "value": "691301496089"
+            },
+            {
+                "boolValue": false,
+                "name": "actor_is_collaborator_account"
+            }
+        ],
+        "resourceIds":
+        [
+            "1Cq4mB1YpL8vQdAX-nzSk2GfuA3J6xwAbC5p1PA-cbDr2",
+            "1tF2AkCb7NUIrXPUuHn1ABC7WsJzm8q1vElcOzTaGRA5"
+        ],
+        "type": "access"
+    },
+    "id":
+    {
+        "applicationName": "drive",
+        "customerId": "C07hbjkkbjkj",
+        "time": "2026-02-01T10:15:01.523Z",
+        "uniqueQualifier": "-5681301083801866672"
+    },
+    "ipAddress": "198.51.100.1",
+    "kind": "admin#reports#activity",
+    "resourceDetails":
+    [
+        {
+            "id": "1Cq4mB1YpL8vQdAX-nzSk2GfuA3J6xwAbC5p1PA-cbDr2",
+            "relation": "DRIVE_PRIMARY",
+            "title": "All Passwords List",
+            "type": "DRIVE_ITEM"
+        },
+        {
+            "id": "1tF2AkCb7NUIrXPUuHn1ABC7WsJzm8q1vElcOzTaGRA5",
+            "relation": "DRIVE_PRIMARY",
+            "title": "Secret Prod Passwords",
+            "type": "DRIVE_ITEM"
+        }
+    ]
+}

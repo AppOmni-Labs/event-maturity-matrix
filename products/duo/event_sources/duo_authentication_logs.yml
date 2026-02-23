@@ -25,14 +25,14 @@ mappings:
   - category: C0001
     event_type: ET0003
     attributes:
-      A0001: timestamp, isotimestamp
+      A0001: [timestamp, isotimestamp]
       A0004: result
       A0005: username
       A0009: ip
-      A0010: location.city, location.country, location.state
+      A0010: [location.city, location.country, location.state]
       A0011: access_device.browser
       A0012: access_device.os
-      A0016: factor, device
+      A0016: [factor, device]
       A0017: reason
       A0018: integration
     examples:

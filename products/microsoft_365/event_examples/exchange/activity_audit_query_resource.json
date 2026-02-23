@@ -1,0 +1,30 @@
+{
+    "AppAccessContext":
+    {
+        "APIId": "00000002-0000-0ff1-ce00-000000000000",
+        "ClientAppId": "00000002-0000-0ff1-ce00-000000000000",
+        "CorrelationId": "930c55e1-dcf4-4455-9f41-96939c2c9f21"
+    },
+    "ClientIP": "198.51.100.1",
+    "ClientUserAgent": "Mozilla/5.0,(Windows NT 10.0; Win64; x64; rv:109.0),Gecko/20100101,Firefox/120.0",
+    "CreationTime": "2025-02-01T10:01:03",
+    "CustomProperties":
+    [
+        {
+            "Name": "UserAgent",
+            "Value": "exchangeshared.owa.react"
+        }
+    ],
+    "Id": "67eeaaae-3c3c-4fcf-a18e-351546330c8e",
+    "Operation": "SearchQueryInitiatedExchange",
+    "OrganizationId": "8326222c-5c86-45a1-b768-561ad250a624",
+    "QuerySource": "Email",
+    "QueryText": "passwords and secrets",
+    "RecordType": 101,
+    "ScenarioName": "owa.react",
+    "UserId": "test@test.onmicrosoft.com",
+    "UserKey": "100320015ED2DA21",
+    "UserType": 0,
+    "Version": 1,
+    "Workload": "Exchange"
+}

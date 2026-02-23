@@ -29,7 +29,7 @@ mappings:
       A0002: EventIdentifier
       A0003: Operation
       A0004: OperationStatus
-      A0005: UserName
+      A0005: Username
       A0006: UserId
       A0007: UserType
       A0008: SessionKey
@@ -46,7 +46,7 @@ mappings:
       A0002: EventIdentifier
       A0003: Operation
       A0004: OperationStatus
-      A0005: UserName
+      A0005: Username
       A0006: UserId
       A0007: UserType
       A0008: SessionKey
@@ -63,7 +63,7 @@ mappings:
       A0002: EventIdentifier
       A0003: Operation
       A0004: OperationStatus
-      A0005: UserName
+      A0005: Username
       A0006: UserId
       A0007: UserType
       A0008: SessionKey
@@ -80,7 +80,7 @@ mappings:
       A0002: EventIdentifier
       A0003: Operation
       A0004: OperationStatus
-      A0005: UserName
+      A0005: Username
       A0006: UserId
       A0007: UserType
       A0008: SessionKey

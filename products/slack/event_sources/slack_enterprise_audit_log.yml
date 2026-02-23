@@ -251,7 +251,7 @@ mappings:
       A0002: id
       A0003: action
       A0005: actor.user.email
-      A0006: entity.user.id
+      A0006: actor.user.id
       A0008: context.session_id
       A0009: context.ip_address
       A0011: context.ua
@@ -267,7 +267,7 @@ mappings:
       A0002: id
       A0003: action
       A0005: actor.user.email
-      A0006: entity.user.id
+      A0006: actor.user.id
       A0008: context.session_id
       A0009: context.ip_address
       A0011: context.ua
@@ -286,7 +286,7 @@ mappings:
       A0002: id
       A0003: action
       A0005: actor.user.email
-      A0006: entity.user.id
+      A0006: actor.user.id
       A0008: context.session_id
       A0009: context.ip_address
       A0011: context.ua
@@ -302,7 +302,7 @@ mappings:
       A0002: id
       A0003: action
       A0005: actor.user.email
-      A0006: entity.user.id
+      A0006: actor.user.id
       A0008: context.session_id
       A0009: context.ip_address
       A0011: context.ua
@@ -317,7 +317,7 @@ mappings:
       A0002: id
       A0003: action
       A0005: actor.user.email
-      A0006: entity.user.id
+      A0006: actor.user.id
       A0008: context.session_id
       A0009: context.ip_address
       A0011: context.ua
@@ -333,7 +333,7 @@ mappings:
       A0002: id
       A0003: action
       A0005: actor.user.email
-      A0006: entity.user.id
+      A0006: actor.user.id
       A0008: context.session_id
       A0009: context.ip_address
       A0011: context.ua
@@ -348,7 +348,7 @@ mappings:
       A0002: id
       A0003: action
       A0005: actor.user.email
-      A0006: entity.user.id
+      A0006: actor.user.id
       A0008: context.session_id
       A0009: context.ip_address
       A0011: context.ua
@@ -364,7 +364,7 @@ mappings:
       A0002: id
       A0003: action
       A0005: actor.user.email
-      A0006: entity.user.id
+      A0006: actor.user.id
       A0008: context.session_id
       A0009: context.ip_address
       A0011: context.ua
@@ -380,7 +380,7 @@ mappings:
       A0002: id
       A0003: action
       A0005: actor.user.email
-      A0006: entity.user.id
+      A0006: actor.user.id
       A0008: context.session_id
       A0009: context.ip_address
       A0011: context.ua
@@ -396,7 +396,7 @@ mappings:
       A0002: id
       A0003: action
       A0005: actor.user.email
-      A0006: entity.user.id
+      A0006: actor.user.id
       A0008: context.session_id
       A0009: context.ip_address
       A0011: context.ua

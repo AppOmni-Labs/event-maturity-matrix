@@ -31,8 +31,8 @@ mappings:
       A0001: published
       A0002: uuid
       A0003: eventType
-      A0005: target.alternateId
-      A0006: target.id
+      A0005: actor.alternateId
+      A0006: actor.id
       A0008: authenticationContext.externalSessionId
       A0009: client.ipAddress
       A0010: client.geographicalContext
@@ -98,7 +98,7 @@ mappings:
       A0010: client.geographicalContext
       A0011: client.userAgent
       A0012: client.device
-      A0019: target.alternativeId
+      A0019: target.alternateId
     examples:
       - type: success
         location: "./event_examples/authorization_create_user.json"
@@ -116,7 +116,7 @@ mappings:
       A0010: client.geographicalContext
       A0011: client.userAgent
       A0012: client.device
-      A0019: target.alternativeId
+      A0019: target.alternateId
       A0020: debugContext.debugData.changedAttributes
     examples:
       - type: success
@@ -135,7 +135,7 @@ mappings:
       A0010: client.geographicalContext
       A0011: client.userAgent
       A0012: client.device
-      A0019: target.alternativeId
+      A0019: target.alternateId
     examples:
       - type: success
         location: "./event_examples/authorization_delete_user.json"
@@ -320,7 +320,7 @@ mappings:
       A0010: client.geographicalContext
       A0011: client.userAgent
       A0012: client.device
-      A0023: debugContext.debugData.privilegeGranted
+      A0023: debugContext.debugData.privilegeRevoked
       A0024: target.alternateId
     examples:
       - type: success
@@ -340,7 +340,7 @@ mappings:
       A0011: client.userAgent
       A0012: client.device
       A0025: outcome.reason
-      A0019: target.alternativeId
+      A0019: target.alternateId
     examples:
       - type: success
         location: "./event_examples/authorization_add_enrollment.json"
@@ -359,7 +359,7 @@ mappings:
       A0011: client.userAgent
       A0012: client.device
       A0025: outcome.reason
-      A0019: target.alternativeId
+      A0019: target.alternateId
     examples:
       - type: success
         location: "./event_examples/authorization_remove_enrollment.json"
@@ -396,7 +396,7 @@ mappings:
       A0011: client.userAgent
       A0012: client.device
       A0026: target.displayName
-      A0027: debugData.debugData.zoneData
+      A0027: debugContext.debugData.zoneData
     examples:
       - type: success
         location: "./event_examples/system_audit_update_security_configuration_zone.json"

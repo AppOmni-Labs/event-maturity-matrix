@@ -53,7 +53,7 @@ mappings:
       A0009: SourceIp
       A0011: UserAgent
       A0012: Platform
-      A0032: RowsReturned
+      A0032: RowsProcessed
       A0030: Query
       A0031: ApiType
     examples:

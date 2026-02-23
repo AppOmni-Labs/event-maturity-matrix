@@ -30,17 +30,17 @@ mappings:
       A0003: Operation
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0008: DeviceProperties.SessionId
+      A0007: Actor[].Type
+      A0008: DeviceProperties[Name=SessionId].Value
       A0009: ClientIP
-      A0011: ExtendedProperties.UserAgent
+      A0011: ExtendedProperties[Name=UserAgent].Value
       A0012: DeviceProperties
-      A0015: ExtendedProperties.RequestType
+      A0015: ExtendedProperties[Name=RequestType].Value
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authentication_account_login_success.json"
+        location: "./event_examples/azure_ad/authentication_account_login_success.json"
       - type: failure
-        location: "/event_examples/azure_ad/authentication_account_login_failure.json"
+        location: "./event_examples/azure_ad/authentication_account_login_failure.json"
   - category: C0001
     event_type: ET0003
     attributes:
@@ -50,13 +50,13 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
+      A0007: Actor[].Type
       A0009: ClientIP
-      A0011: ExtendedProperties.UserAgent
+      A0011: ExtendedProperties[Name=UserAgent].Value
       A0012: DeviceProperties
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authentication_mfa_verification.json"
+        location: "./event_examples/azure_ad/authentication_mfa_verification.json"
   - category: C0002
     event_type: ET0004
     attributes:
@@ -66,11 +66,11 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0019: Target.ID
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_create_user.json"
+        location: "./event_examples/azure_ad/authorization_create_user.json"
   - category: C0002
     event_type: ET0006
     attributes:
@@ -80,12 +80,12 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0019: Target.ID
       A0020: ModifiedProperties
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_update_user.json"
+        location: "./event_examples/azure_ad/authorization_update_user.json"
   - category: C0002
     event_type: ET0007
     attributes:
@@ -95,11 +95,11 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0019: Target.ID
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_delete_user.json"
+        location: "./event_examples/azure_ad/authorization_delete_user.json"
   - category: C0002
     event_type: ET0008
     attributes:
@@ -109,11 +109,11 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0021: Target.ID
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_create_group.json"
+        location: "./event_examples/azure_ad/authorization_create_group.json"
   - category: C0002
     event_type: ET0010
     attributes:
@@ -122,12 +122,12 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
-      A0006: ModifiedProperties.Actor
-      A0007: Actor.Type
+      A0006: UserKey
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0021: Target.ID
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_update_group.json"
+        location: "./event_examples/azure_ad/authorization_update_group.json"
   - category: C0002
     event_type: ET0011
     attributes:
@@ -137,11 +137,11 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
       A0021: Target.ID
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_delete_group.json"
+        location: "./event_examples/azure_ad/authorization_delete_group.json"
   - category: C0002
     event_type: ET0012
     attributes:
@@ -150,14 +150,14 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
-      A0006: ModifiedProperties.Actor
-      A0007: Actor.Type
-      A0012: ExtendedProperties.[Name=additionalDetails].Value
-      A0021: ModifiedProperties.[Name=Group.Displayname].Value
+      A0006: UserKey
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0012: ExtendedProperties[Name=additionalDetails].Value
+      A0021: ModifiedProperties[Name=Group.DisplayName].NewValue
       A0019: Target.ID
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_add_member_to_group.json"
+        location: "./event_examples/azure_ad/authorization_add_member_to_group.json"
   - category: C0002
     event_type: ET0013
     attributes:
@@ -167,13 +167,13 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0011: ExtendedProperties.[Name=additionalDetails].Value
-      A0021: ModifiedProperties.[Name=Group.DisplayName].NewValue
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0011: ExtendedProperties[Name=additionalDetails].Value
+      A0021: ModifiedProperties[Name=Group.DisplayName].NewValue
       A0019: Target.ID
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_remove_member_from_group.json"
+        location: "./event_examples/azure_ad/authorization_remove_member_from_group.json"
   - category: C0002
     event_type: ET0014
     attributes:
@@ -183,12 +183,12 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0011: ExtendedProperties.[Name=additionalDetails].Value
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0011: ExtendedProperties[Name=additionalDetails].Value
       A0022: Target.ID
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_create_role.json"
+        location: "./event_examples/azure_ad/authorization_create_role.json"
   - category: C0002
     event_type: ET0016
     attributes:
@@ -198,13 +198,13 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0011: ExtendedProperties.[Name=additionalDetails].Value
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0011: ExtendedProperties[Name=additionalDetails].Value
       A0022: Target.ID
-      A0020: ModifiedProperties.[Name=GrantedPermissions].NewValue
+      A0020: ModifiedProperties[Name=GrantedPermissions].NewValue
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_update_role.json"
+        location: "./event_examples/azure_ad/authorization_update_role.json"
   - category: C0002
     event_type: ET0017
     attributes:
@@ -214,12 +214,12 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0011: ExtendedProperties.[Name=additionalDetails].Value
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0011: ExtendedProperties[Name=additionalDetails].Value
       A0022: Target.ID
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_delete_role.json"
+        location: "./event_examples/azure_ad/authorization_delete_role.json"
   - category: C0002
     event_type: ET0018
     attributes:
@@ -229,12 +229,12 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0023: ModifiedProperties.[Name=Role.DisplayName].NewValue
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0023: ModifiedProperties[Name=Role.DisplayName].NewValue
       A0024: Target.ID
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_add_permission.json"
+        location: "./event_examples/azure_ad/authorization_add_permission.json"
   - category: C0002
     event_type: ET0019
     attributes:
@@ -244,12 +244,12 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0023: ModifiedProperties.[Name=Role.DisplayName].OldValue
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0023: ModifiedProperties[Name=Role.DisplayName].OldValue
       A0024: Target.ID
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_remove_permission.json"
+        location: "./event_examples/azure_ad/authorization_remove_permission.json"
   - category: C0002
     event_type: ET0020
     attributes:
@@ -259,12 +259,12 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0025: ModifiedProperties.[Name=StrongAuthenticationUserDetails].NewValue
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0025: ModifiedProperties[Name=StrongAuthenticationUserDetails].NewValue
       A0019: Target.ID
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_add_enrollment.json"
+        location: "./event_examples/azure_ad/authorization_add_enrollment.json"
   - category: C0002
     event_type: ET0021
     attributes:
@@ -274,12 +274,12 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0025: ModifiedProperties.[Name=StrongAuthenticationUserDetails].OldValue
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0025: ModifiedProperties[Name=StrongAuthenticationPhoneAppDetail].OldValue
       A0019: Target.ID
     examples:
       - type: success
-        location: "/event_examples/azure_ad/authorization_remove_enrollment.json"
+        location: "./event_examples/azure_ad/authorization_remove_enrollment.json"
   - category: C0003
     event_type: ET0022
     attributes:
@@ -289,13 +289,13 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0011: ExtendedProperties.[Name=additionalDetails].Value
-      A0026: ModifiedProperties.[Name=PolicyType].NewValue
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0011: ExtendedProperties[Name=additionalDetails].Value
+      A0026: ModifiedProperties[Name=PolicyType].NewValue
       A0027: ModifiedProperties
     examples:
       - type: success
-        location: "/event_examples/azure_ad/system_audit_create_security_configuration_cap.json"
+        location: "./event_examples/azure_ad/system_audit_create_security_configuration_cap.json"
   - category: C0003
     event_type: ET0024
     attributes:
@@ -305,14 +305,14 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0011: ExtendedProperties.[Name=additionalDetails].Value
-      A0026: ExtendedProperties.[Name=extendedAuditEventCategory].Value
-      A0027: ModifiedProperties.[Name=Included
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0011: ExtendedProperties[Name=additionalDetails].Value
+      A0026: ExtendedProperties[Name=extendedAuditEventCategory].Value
+      A0027: ModifiedProperties[Name=Included Updated Properties].NewValue
       A0028: ModifiedProperties
     examples:
       - type: success
-        location: "/event_examples/azure_ad/system_audit_update_security_configuration_cap.json"
+        location: "./event_examples/azure_ad/system_audit_update_security_configuration_cap.json"
   - category: C0003
     event_type: ET0025
     attributes:
@@ -322,12 +322,12 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0011: ExtendedProperties.[Name=additionalDetails].Value
-      A0026: ExtendedProperties.[Name=extendedAuditEventCategory].Value
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0011: ExtendedProperties[Name=additionalDetails].Value
+      A0026: ExtendedProperties[Name=extendedAuditEventCategory].Value
     examples:
       - type: success
-        location: "/event_examples/azure_ad/system_audit_delete_security_configuration_cap.json"
+        location: "./event_examples/azure_ad/system_audit_delete_security_configuration_cap.json"
   - category: C0003
     event_type: ET0026
     attributes:
@@ -337,11 +337,11 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0029: ModifiedProperties.[Name=DisplayName].NewValue
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0029: ModifiedProperties[Name=DisplayName].NewValue
     examples:
       - type: success
-        location: "/event_examples/azure_ad/system_audit_create_integration.json"
+        location: "./event_examples/azure_ad/system_audit_create_integration.json"
   - category: C0003
     event_type: ET0028
     attributes:
@@ -351,13 +351,13 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0029: Target.Id
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0029: Target.ID
       A0026: ModifiedProperties
-      A0028: ModifiedProperties.[Name=Entitlement].OldValue
+      A0028: ModifiedProperties[Name=Entitlement].OldValue
     examples:
       - type: success
-        location: "/event_examples/azure_ad/system_audit_update_integration.json"
+        location: "./event_examples/azure_ad/system_audit_update_integration.json"
   - category: C0003
     event_type: ET0029
     attributes:
@@ -367,8 +367,8 @@ mappings:
       A0004: ResultStatus
       A0005: UserId
       A0006: UserKey
-      A0007: Actor.Type
-      A0029: Target.Id
+      A0007: ['Actor[ID=User].Type','Actor[ID=ServicePrincipal].Type']
+      A0029: Target.ID
     examples:
       - type: success
-        location: "/event_examples/azure_ad/system_audit_delete_integration.json"
+        location: "./event_examples/azure_ad/system_audit_delete_integration.json"

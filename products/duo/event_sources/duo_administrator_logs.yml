@@ -25,16 +25,15 @@ mappings:
   - category: C0001
     event_type: ET0001
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0004: action
-      A0005: username, description.email
+      A0005: [username, description.email]
       A0007: description.role
       A0009: description.ip_address
       A0012: description.device
       A0013: description.error
-      A0014: description.factor, description.primary_auth_method
-      A0015: description.saml_idp
+      A0014: [description.factor, description.primary_auth_method, EMM_UPDATE]
     examples:
       - type: success
         location: "./event_examples/authentication_account_login_success_admin.json"
@@ -43,10 +42,10 @@ mappings:
   - category: C0001
     event_type: ET0003
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
-      A0004: action, error
-      A0005: username, description.email
+      A0004: [action, error]
+      A0005: [username, description.email]
       A0009: description.ip_address
       A0016: description.factor
       A0017: description.error
@@ -58,11 +57,11 @@ mappings:
   - category: C0002
     event_type: ET0004
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
       A0007: description.role
-      A0019: description.uname, object
+      A0019: [description.uname, object]
     examples:
       - type: user
         location: "./event_examples/authorization_create_user_admin.json"
@@ -71,7 +70,7 @@ mappings:
   - category: C0002
     event_type: ET0006
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
       A0019: object
@@ -84,7 +83,7 @@ mappings:
   - category: C0002
     event_type: ET0007
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
       A0007: description.role
@@ -97,17 +96,17 @@ mappings:
   - category: C0002
     event_type: ET0008
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
-      A0021: description.name, object
+      A0021: [description.name, object]
     examples:
       - type: success
         location: "./event_examples/authorization_create_group_admin.json"
   - category: C0002
     event_type: ET0010
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
       A0021: object
@@ -118,17 +117,17 @@ mappings:
   - category: C0002
     event_type: ET0011
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
-      A0021: object, description.name
+      A0021: [object, description.name]
     examples:
       - type: success
         location: "./event_examples/authorization_delete_group_admin.json"
   - category: C0002
     event_type: ET0012
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
       A0021: description.groups.name
@@ -139,7 +138,7 @@ mappings:
   - category: C0002
     event_type: ET0013
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
       A0019: object
@@ -149,7 +148,7 @@ mappings:
   - category: C0002
     event_type: ET0020
     attributes:
-      A0001: isotimestamp, timestamp,
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
       A0011: description.user_agent
@@ -161,7 +160,7 @@ mappings:
   - category: C0002
     event_type: ET0021
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
       A0025: description
@@ -174,7 +173,7 @@ mappings:
   - category: C0003
     event_type: ET0022
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
       A0026: action
@@ -184,10 +183,10 @@ mappings:
   - category: C0003
     event_type: ET0024
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
-      A0026: action, description
+      A0026: [action, description]
       A0027: description
     examples:
       - type: success
@@ -195,10 +194,10 @@ mappings:
   - category: C0003
     event_type: ET0025
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
-      A0026: action, description, object
+      A0026: [action, description, object]
       A0027: description
     examples:
       - type: success
@@ -209,7 +208,7 @@ mappings:
       A0001: isotimestamp
       A0003: action
       A0005: username
-      A0029: description.name, object
+      A0029: [description.name, object]
     examples:
       - type: success
         location: "./event_examples/system_audit_create_integration_admin.json"
@@ -230,40 +229,40 @@ mappings:
       A0001: isotimestamp
       A0003: action
       A0005: username
-      A0029: description.name, object
+      A0029: [description.name, object]
     examples:
       - type: success
         location: "./event_examples/system_audit_delete_integration_admin.json"
   - category: C0004
     event_type: ET0030
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
       A0030: object
-      A0031: action, description
+      A0031: [action, description]
     examples:
       - type: success
         location: "./event_examples/activity_audit_create_resource_admin.json"
   - category: C0004
     event_type: ET0032
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
-      A0030: action, description
-      A0031: action, description
+      A0030: [action, description]
+      A0031: [action, description]
     examples:
       - type: success
         location: "./event_examples/activity_audit_update_resource_admin.json"
   - category: C0004
     event_type: ET0033
     attributes:
-      A0001: isotimestamp, timestamp
+      A0001: [isotimestamp, timestamp]
       A0003: action
       A0005: username
       A0030: object
-      A0031: action, description
+      A0031: [action, description]
     examples:
       - type: success
         location: "./event_examples/activity_audit_delete_resource_admin.json"

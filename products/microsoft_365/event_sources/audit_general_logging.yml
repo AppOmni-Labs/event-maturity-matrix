@@ -68,7 +68,7 @@ mappings:
       A0005: UserId
       A0006: UserKey
       A0021: TeamName
-      A0019: Members.Displayname
+      A0019: Members.DisplayName
     examples:
       - type: success
         location: "./event_examples/general/authorization_add_member_to_group.json"
@@ -81,7 +81,7 @@ mappings:
       A0005: UserId
       A0006: UserKey
       A0021: TeamName
-      A0019: Members.Displayname
+      A0019: Members.DisplayName
     examples:
       - type: success
         location: "./event_examples/general/authorization_remove_member_from_group.json"

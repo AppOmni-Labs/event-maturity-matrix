@@ -1,0 +1,29 @@
+{
+    "AppAccessContext":
+    {
+        "APIId": "00000003-0000-0ff1-ce00-000000000000",
+        "ClientAppId": "00000003-0000-0ff1-ce00-000000000000"
+    },
+    "ClientIP": "198.51.100.1",
+    "ClientUserAgent": "Mozilla/5.0,(Windows NT 10.0; Win64; x64; rv:109.0),Gecko/20100101,Firefox/120.0",
+    "CreationTime": "2025-02-02T11:02:01",
+    "CustomProperties":
+    [
+        {
+            "Name": "UserAgent",
+            "Value": "sharepointshared.teamsitesearch"
+        }
+    ],
+    "Id": "86265de6-0f51-4028-a903-c679c212842c",
+    "Operation": "SearchQueryInitiatedSharePoint",
+    "OrganizationId": "8326222c-5c86-45a1-b768-561ad250a624",
+    "QuerySource": "SharePoint",
+    "QueryText": "passwords and secrets",
+    "RecordType": 102,
+    "ScenarioName": "teamsitesearch",
+    "UserId": "test@test.onmicrosoft.com",
+    "UserKey": "100320015ED2DA21",
+    "UserType": 0,
+    "Version": 1,
+    "Workload": "SharePoint"
+}

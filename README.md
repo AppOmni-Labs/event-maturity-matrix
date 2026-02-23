@@ -13,7 +13,6 @@ The Event Maturity Matrix (EMM) is a comprehensive framework that provides clari
 - [Security](#security)
 - [Issues](#issues)
 - [Credits](#credits)
-- [Roadmap](#roadmap)
 
 ## Scope
 
@@ -33,7 +32,7 @@ The SaaS Event Maturity Matrix (EMM) was developed with the defensive security p
 * [Event Sources: represent the different audit log files / sources that can be queried and collected](./docs/data-definition-reference.md#event-sources)
 * [Event Categories: represent the primary, top level categories of SaaS audit logging](./docs/data-definition-reference.md#event-categories)
 * [Event Types: represent the different types of activity that's audited, organized by categories](./docs/data-definition-reference.md#event-types)
-* [Event Attributes: represent the the individual fields or keys from different event types](./docs/data-definition-reference.md#event-attributes)
+* [Event Attributes: represent the individual fields or keys from different event types](./docs/data-definition-reference.md#event-attributes)
 
 The EMM is built using various yml files and JSON schema docs. You can read more about these definitions, as well as their relationships, in the [Data Definition Reference](./docs/data-definition-reference.md) section.
 
@@ -64,14 +63,3 @@ please [file an issue](https://github.com/AppOmni-Labs/event-maturity-matrix/iss
 ## Credits
 
 This project was developed by the Threat Detection team at [AppOmni](https://appomni.com).
-
-## Roadmap
-
-We currently have identified the following roadmap items. If you have any suggestions, please [file an issue](https://github.com/AppOmni-Labs/event-maturity-matrix/issues/new).
-
-* [ ] Consider extending Event Categories by tailoring to distinct classes of SaaS platforms
-* [ ] Expand nuances of SaaS platforms by adding additional context around licensing, permissions, and other relevant details
-* [ ] Visualize attack paths that impact event sources, and ultimately those defined event sources
-* [ ] Add Mitre ATT&CK mappings to event types
-* [ ] Update site to be mobile friendly
-* [ ] Add ability to compare visibility across products and event sources

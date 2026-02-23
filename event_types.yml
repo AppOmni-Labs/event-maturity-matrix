@@ -180,3 +180,8 @@ items:
     categories:
       - C0004
     description: A resource was downloaded.
+  - id: ET0035
+    name: Query Resource
+    categories:
+      - C0004
+    description: A resource was queried or searched.

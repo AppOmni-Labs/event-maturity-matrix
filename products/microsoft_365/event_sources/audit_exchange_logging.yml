@@ -49,10 +49,11 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
-      A0021: Parameters.DisplayName
+      A0021: Parameters[Name=DisplayName].Value
     examples:
       - type: success
         location: "./event_examples/exchange/authorization_create_group_distro.json"
@@ -64,10 +65,11 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
-      A0021: Parameters.DisplayName
+      A0021: Parameters[Name=DisplayName].Value
     examples:
       - type: success
         location: "./event_examples/exchange/authorization_update_group_distro.json"
@@ -79,6 +81,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -93,6 +96,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -107,6 +111,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -121,6 +126,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -136,6 +142,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -151,6 +158,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -165,6 +173,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -179,10 +188,11 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
-      A0023: Parameters.Role
+      A0023: ObjectId
     examples:
       - type: success
         location: "./event_examples/exchange/authorization_remove_permission.json"
@@ -194,6 +204,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -210,6 +221,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -226,6 +238,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -241,7 +254,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
-      A0006: Parameters.Identity
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -257,7 +270,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
-      A0006: Parameters.Identity
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -273,7 +286,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
-      A0006: Parameters.Identity
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -289,11 +302,12 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
-      A0030: AffectedItems
-      A0031: AffectedItems
+      A0030: Item
+      A0031: Item.Subject
     examples:
       - type: success - email
         location: "./event_examples/exchange/activity_audit_create_resource_msg.json"
@@ -307,11 +321,12 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
-      A0009: ClientIP
-      A0030: AffectedItems
-      A0031: AffectedItems
+      A0009: ClientIPAddress
+      A0030: OperationProperties
+      A0031: Operation
     examples:
       - type: success
         location: "./event_examples/exchange/activity_audit_read_resource.json"
@@ -323,6 +338,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -337,6 +353,7 @@ mappings:
       A0003: Operation
       A0004: ResultStatus
       A0005: UserId
+      A0006: UserKey
       A0007: UserType
       A0008: SessionId
       A0009: ClientIP
@@ -347,3 +364,18 @@ mappings:
         location: "./event_examples/exchange/activity_audit_delete_resource_msg.json"
       - type: success - calendar
         location: "./event_examples/exchange/activity_audit_delete_resource_calendar.json"
+  - category: C0004
+    event_type: ET0035
+    attributes:
+      A0001: CreationTime
+      A0002: Id
+      A0003: Operation
+      A0005: UserId
+      A0006: UserKey
+      A0007: UserType
+      A0009: ClientIP
+      A0030: QuerySource
+      A0033: QueryText
+    examples:
+      - type: success
+        location: "./event_examples/exchange/activity_audit_query_resource.json"
