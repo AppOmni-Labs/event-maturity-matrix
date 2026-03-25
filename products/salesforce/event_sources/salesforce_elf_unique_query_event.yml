@@ -1,0 +1,36 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+entity_name: event_source
+version: "1.0.0"
+product:
+  name: Salesforce
+  collection_sources:
+    - rest_api
+    - soap_api
+name: EventLogFile Unique Query Event Type
+description: Tracks normalized SOQL query patterns (unique query keys) for performance and security analysis.
+references:
+  - id: unique_query_event
+    name: EventLogFile Unique Query Event
+    url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_unique_query_event_elf.htm
+retention:
+  duration: 30 Days
+  comments: N/A
+latency:
+  duration: 3 Hours
+  comments: Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of the event to be available in the hourly log file.
+licensing:
+  comments: Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
+mappings:
+  - category: C0004
+    event_type: ET0035
+    attributes:
+      A0001: TIMESTAMP_DERIVED
+      A0003: EVENT_TYPE
+      A0006: USER_ID
+      A0008: SESSION_KEY
+      A0033: QUERY_IDENTIFIER
+    examples:
+      - type: success
+        location: "./event_examples/activity_audit_query_resource_elf_uniquequery.json"

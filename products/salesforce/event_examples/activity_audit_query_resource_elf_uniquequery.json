@@ -1,0 +1,13 @@
+{
+    "EVENT_TYPE": "UniqueQuery",
+    "LOGIN_KEY": "ZMO2mn1AbA1Bcr1A",
+    "ORGANIZATION_ID": "00DDn000001dAbc",
+    "QUERY_IDENTIFIER": "SELECT ReportsTo.LastModifiedById, ReportsTo.Name, ReportsTo.Id, ReportsTo.SystemModstamp, ReportsTo.LastModifiedDate, Languages__c, AccountId, Email, Account.LastModifiedById, Account.SystemModstamp, Account.Id, Account.LastModifiedDate, Account.Name, Owner.LastModifiedById, Owner.Id, Owner.LastModifiedDate, Owner.Name, Owner.SystemModstamp, LastModifiedBy.SystemModstamp, LastModifiedBy.LastModifiedDate, LastModifiedBy.Id, LastModifiedBy.LastModifiedById, LastModifiedBy.Name, format(Birthdate)  Birthdate__f, MobilePhone, Name, Department, CreatedById, OtherCity, CreatedBy.Name, CreatedBy.LastModifiedById, CreatedBy.Id, CreatedBy.LastModifiedDate, CreatedBy.SystemModstamp, format(LastModifiedDate)  LastModifiedDate__f, format(CreatedDate)  CreatedDate__f, MailingCity, Birthdate, OtherStreet, toLabel(Level__c)  Level__c__l, LeadSource, CreatedDate, Id, LastName, toLabel(Salutation)  Salutation__l, MailingStreet, AssistantPhone, OtherPhone, Description, AssistantName, MailingCountry, Salutation, OtherState, MailingState, Level__c, OwnerId, Phone, MailingPostalCode, OtherCountry, toLabel(LeadSource)  LeadSource__l, FirstName, OtherPostalCode, Title, SystemModstamp, HomePhone, ReportsToId, Fax, LastModifiedById FROM Contact USING SCOPE EVERYTHING WHERE id = :id",
+    "QUERY_TYPE": "FKJOIN",
+    "REQUEST_ID": "TID:987654300009a12345",
+    "SESSION_KEY": "KyafABkxLMa2abcd",
+    "SQL_ID": "ddaa9876yb2a1",
+    "TIMESTAMP": "20250902101001.350",
+    "TIMESTAMP_DERIVED": "2025-09-02T10:10:01.350Z",
+    "USER_ID": "005Dn000001ab23"
+}
