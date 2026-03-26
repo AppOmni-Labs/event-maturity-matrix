@@ -35,4 +35,4 @@ mappings:
       A0030: URL
     examples:
       - type: success
-        location: "./event_examples/activity_audit_read_resource_apexcallout.json"
+        location: "./event_examples/salesforce_elf_apex_callout_event/activity_audit_read_resource_apexcallout.json"

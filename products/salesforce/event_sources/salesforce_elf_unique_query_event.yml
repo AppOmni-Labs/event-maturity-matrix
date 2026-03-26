@@ -33,4 +33,4 @@ mappings:
       A0033: QUERY_IDENTIFIER
     examples:
       - type: success
-        location: "./event_examples/activity_audit_query_resource_elf_uniquequery.json"
+        location: "./event_examples/salesforce_elf_unique_query_event/activity_audit_query_resource_elf_uniquequery.json"

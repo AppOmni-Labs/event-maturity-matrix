@@ -32,6 +32,6 @@ Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 
 | Category | Event Type | Attributes | Examples |
 | -------- | ---------- | ---------- | -------- |
-| C0004 | ET0030 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> attributes.type<br />A0004 -> PolicyOutcome<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> SessionKey<br />A0009 -> SourceIp<br />A0030 -> Query<br />|[download](/products/salesforce/event_examples/activity_audit_download_resource_bulkapiresulteventstore.json)<br />|
+| C0004 | ET0030 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> attributes.type<br />A0004 -> PolicyOutcome<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> SessionKey<br />A0009 -> SourceIp<br />A0030 -> Query<br />|[download](/products/salesforce/event_examples/salesforce_rtem_bulkapiresulteventstore/activity_audit_download_resource_bulkapiresulteventstore.json)<br />|
 
 

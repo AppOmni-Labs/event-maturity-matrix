@@ -33,7 +33,7 @@ mappings:
       A0006: sfdc_created_by_id
     examples:
       - type: create
-        location: "./event_examples/authorization_create_user.json"
+        location: "./event_examples/setup_audit_trail/authorization_create_user.json"
   - category: C0002
     event_type: ET0006
     attributes:
@@ -45,7 +45,19 @@ mappings:
       A0020: display
     examples:
       - type: update
-        location: "./event_examples/authorization_update_user.json"
+        location: "./event_examples/setup_audit_trail/authorization_update_user.json"
+  - category: C0002
+    event_type: ET0007
+    attributes:
+      A0001: sfdc_created_date
+      A0002: record_id
+      A0003: action
+      A0005: sfdc_created_by_username
+      A0006: sfdc_created_by_id
+      A0020: display
+    examples:
+      - type: disable
+        location: "./event_examples/setup_audit_trail/authorization_update_user.json"
   - category: C0002
     event_type: ET0008
     attributes:
@@ -57,7 +69,7 @@ mappings:
       A0021: display
     examples:
       - type: create
-        location: "./event_examples/authorization_create_group.json"
+        location: "./event_examples/setup_audit_trail/authorization_create_group.json"
   - category: C0002
     event_type: ET0010
     attributes:
@@ -70,7 +82,7 @@ mappings:
       A0020: display
     examples:
       - type: update
-        location: "./event_examples/authorization_update_group.json"
+        location: "./event_examples/setup_audit_trail/authorization_update_group.json"
   - category: C0002
     event_type: ET0011
     attributes:
@@ -82,7 +94,7 @@ mappings:
       A0021: display
     examples:
       - type: delete
-        location: "./event_examples/authorization_delete_group.json"
+        location: "./event_examples/setup_audit_trail/authorization_delete_group.json"
   - category: C0002
     event_type: ET0012
     attributes:
@@ -94,7 +106,7 @@ mappings:
       A0021: display
     examples:
       - type: add
-        location: "./event_examples/authorization_add_to_group.json"
+        location: "./event_examples/setup_audit_trail/authorization_add_to_group.json"
   - category: C0002
     event_type: ET0013
     attributes:
@@ -106,7 +118,7 @@ mappings:
       A0021: display
     examples:
       - type: remove
-        location: "./event_examples/authorization_remove_fom_group.json"
+        location: "./event_examples/setup_audit_trail/authorization_remove_fom_group.json"
   - category: C0002
     event_type: ET0014
     attributes:
@@ -118,7 +130,7 @@ mappings:
       A0022: display
     examples:
       - type: create
-        location: "./event_examples/authorization_create_role.json"
+        location: "./event_examples/setup_audit_trail/authorization_create_role.json"
   - category: C0002
     event_type: ET0016
     attributes:
@@ -131,7 +143,7 @@ mappings:
       A0020: display
     examples:
       - type: update
-        location: "./event_examples/authorization_update_role.json"
+        location: "./event_examples/setup_audit_trail/authorization_update_role.json"
   - category: C0002
     event_type: ET0017
     attributes:
@@ -153,7 +165,7 @@ mappings:
       A0024: display
     examples:
       - type: add
-        location: "./event_examples/authorization_add_permission.json"
+        location: "./event_examples/setup_audit_trail/authorization_add_permission.json"
   - category: C0002
     event_type: ET0019
     attributes:
@@ -166,7 +178,7 @@ mappings:
       A0024: display
     examples:
       - type: remove
-        location: "./event_examples/authorization_remove_permission.json"
+        location: "./event_examples/setup_audit_trail/authorization_remove_permission.json"
   - category: C0002
     event_type: ET0020
     attributes:
@@ -179,7 +191,7 @@ mappings:
       A0019: display
     examples:
       - type: add
-        location: "./event_examples/authorization_add_enrollment.json"
+        location: "./event_examples/setup_audit_trail/authorization_add_enrollment.json"
   - category: C0002
     event_type: ET0021
     attributes:
@@ -192,7 +204,7 @@ mappings:
       A0019: display
     examples:
       - type: remove
-        location: "./event_examples/authorization_remove_enrollment.json"
+        location: "./event_examples/setup_audit_trail/authorization_remove_enrollment.json"
   - category: C0003
     event_type: ET0022
     attributes:
@@ -204,7 +216,7 @@ mappings:
       A0026: display
     examples:
       - type: create
-        location: "./event_examples/system_audit_create_configuration.json"
+        location: "./event_examples/setup_audit_trail/system_audit_create_configuration.json"
   - category: C0003
     event_type: ET0024
     attributes:
@@ -216,7 +228,7 @@ mappings:
       A0026: display
     examples:
       - type: update
-        location: "./event_examples/system_audit_update_configuration.json"
+        location: "./event_examples/setup_audit_trail/system_audit_update_configuration.json"
   - category: C0003
     event_type: ET0025
     attributes:
@@ -228,7 +240,7 @@ mappings:
       A0026: display
     examples:
       - type: delete
-        location: "./event_examples/system_audit_delete_configuration.json"
+        location: "./event_examples/setup_audit_trail/system_audit_delete_configuration.json"
   - category: C0003
     event_type: ET0026
     attributes:
@@ -240,7 +252,7 @@ mappings:
       A0029: display
     examples:
       - type: create
-        location: "./event_examples/system_audit_create_integration.json"
+        location: "./event_examples/setup_audit_trail/system_audit_create_integration.json"
   - category: C0003
     event_type: ET0028
     attributes:
@@ -252,7 +264,7 @@ mappings:
       A0029: display
     examples:
       - type: update
-        location: "./event_examples/system_audit_update_integration.json"
+        location: "./event_examples/setup_audit_trail/system_audit_update_integration.json"
   - category: C0003
     event_type: ET0029
     attributes:
@@ -264,4 +276,4 @@ mappings:
       A0029: display
     examples:
       - type: delete
-        location: "./event_examples/system_audit_delete_integration.json"
+        location: "./event_examples/setup_audit_trail/system_audit_delete_integration.json"

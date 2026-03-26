@@ -32,7 +32,7 @@ Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 
 | Category | Event Type | Attributes | Examples |
 | -------- | ---------- | ---------- | -------- |
-| C0004 | ET0031 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> Operation<br />A0004 -> PolicyOutcome<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> SessionKey<br />A0009 -> SourceIp<br />A0012 -> EventSource<br />A0030 -> Name<br />A0031 -> QueriedEntities<br />|[read](/products/salesforce/event_examples/activity_audit_read_resource_reporteventstream.json)<br />|
-| C0004 | ET0034 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> Operation<br />A0004 -> PolicyOutcome<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> SessionKey<br />A0009 -> SourceIp<br />A0012 -> EventSource<br />A0032 -> RowsProcessed<br />A0030 -> Name<br />A0031 -> QueriedEntities<br />|[download](/products/salesforce/event_examples/activity_audit_download_resource_reporteventstream.json)<br />|
+| C0004 | ET0031 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> Operation<br />A0004 -> PolicyOutcome<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> SessionKey<br />A0009 -> SourceIp<br />A0012 -> EventSource<br />A0030 -> Name<br />A0031 -> QueriedEntities<br />|[read](/products/salesforce/event_examples/salesforce_rtem_reporteventstream/activity_audit_read_resource_reporteventstream.json)<br />|
+| C0004 | ET0034 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> Operation<br />A0004 -> PolicyOutcome<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> SessionKey<br />A0009 -> SourceIp<br />A0012 -> EventSource<br />A0032 -> RowsProcessed<br />A0030 -> Name<br />A0031 -> QueriedEntities<br />|[download](/products/salesforce/event_examples/salesforce_rtem_reporteventstream/activity_audit_download_resource_reporteventstream.json)<br />|
 
 

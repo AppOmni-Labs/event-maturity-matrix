@@ -32,4 +32,4 @@ mappings:
       A0033: SEARCH_QUERY
     examples:
       - type: success
-        location: "./event_examples/activity_audit_query_resource_elf_search.json"
+        location: "./event_examples/salesforce_elf_search_event/activity_audit_query_resource_elf_search.json"
