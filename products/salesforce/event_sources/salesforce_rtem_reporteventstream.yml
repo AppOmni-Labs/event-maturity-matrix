@@ -38,7 +38,7 @@ mappings:
       A0031: QueriedEntities
     examples:
       - type: read
-        location: "./event_examples/activity_audit_read_resource_reporteventstream.json"
+        location: "./event_examples/salesforce_rtem_reporteventstream/activity_audit_read_resource_reporteventstream.json"
   - category: C0004
     event_type: ET0034
     attributes:
@@ -56,4 +56,4 @@ mappings:
       A0031: QueriedEntities
     examples:
       - type: download
-        location: "./event_examples/activity_audit_download_resource_reporteventstream.json"
+        location: "./event_examples/salesforce_rtem_reporteventstream/activity_audit_download_resource_reporteventstream.json"

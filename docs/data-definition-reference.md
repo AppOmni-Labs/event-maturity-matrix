@@ -312,7 +312,7 @@ mappings:
       A0015: AUTHENTICATION_METHOD_REFERENCE
     examples: 
       - type: success
-        location: "./event_examples/authentication_account_login_elf.json"
+        location: "./event_examples/salesforce_elf_login_event/authentication_account_login_elf.json"
 ```
 
 Each event_source should define the following root values:

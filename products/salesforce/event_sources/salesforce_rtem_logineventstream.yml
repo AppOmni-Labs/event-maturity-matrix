@@ -42,4 +42,6 @@ mappings:
       A0015: AuthServiceId
     examples:
       - type: success
-        location: "./event_examples/authentication_account_login.json"
+        location: "./event_examples/salesforce_rtem_logineventstream/authentication_account_login.json"
+      - type: failure
+        location: "./event_examples/salesforce_rtem_logineventstream/authentication_account_login_failure.json"

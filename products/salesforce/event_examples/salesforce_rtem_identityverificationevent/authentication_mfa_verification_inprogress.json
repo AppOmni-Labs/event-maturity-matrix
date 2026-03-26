@@ -1,5 +1,3 @@
-
-// in progress event
 {
     "channel": "/event/IdentityVerificationEvent",
     "data":

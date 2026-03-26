@@ -36,4 +36,4 @@ mappings:
       A0030: Query
     examples:
       - type: download
-        location: "./event_examples/activity_audit_download_resource_bulkapiresulteventstore.json"
+        location: "./event_examples/salesforce_rtem_bulkapiresulteventstore/activity_audit_download_resource_bulkapiresulteventstore.json"

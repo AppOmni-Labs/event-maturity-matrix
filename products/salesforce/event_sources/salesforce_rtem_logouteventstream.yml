@@ -34,4 +34,4 @@ mappings:
       A0009: SourceIp
     examples:
       - type: success
-        location: "./event_examples/authentication_account_logout.json"
+        location: "./event_examples/salesforce_rtem_logouteventstream/authentication_account_logout.json"

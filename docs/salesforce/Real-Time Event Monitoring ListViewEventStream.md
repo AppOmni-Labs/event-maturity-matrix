@@ -32,6 +32,6 @@ Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 
 | Category | Event Type | Attributes | Examples |
 | -------- | ---------- | ---------- | -------- |
-| C0004 | ET0031 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> EventSource<br />A0004 -> PolicyOutcome<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> SessionKey<br />A0009 -> SourceIp<br />A0030 -> Name<br />A0031 -> QueriedEntities<br />|[read](/products/salesforce/event_examples/activity_audit_read_resource_listvieweventstream.json)<br />|
+| C0004 | ET0031 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> EventSource<br />A0004 -> PolicyOutcome<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> SessionKey<br />A0009 -> SourceIp<br />A0030 -> Name<br />A0031 -> QueriedEntities<br />|[read](/products/salesforce/event_examples/salesforce_rtem_listvieweventstream/activity_audit_read_resource_listvieweventstream.json)<br />|
 
 

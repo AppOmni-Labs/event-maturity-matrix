@@ -37,4 +37,4 @@ mappings:
       A0031: QueriedEntities
     examples:
       - type: read
-        location: "./event_examples/activity_audit_read_resource_listvieweventstream.json"
+        location: "./event_examples/salesforce_rtem_listvieweventstream/activity_audit_read_resource_listvieweventstream.json"

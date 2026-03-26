@@ -32,6 +32,6 @@ Available for free with 1 day retention, otherwise requires Salesforce Shield or
 
 | Category | Event Type | Attributes | Examples |
 | -------- | ---------- | ---------- | -------- |
-| C0001 | ET0002 |A0001 -> TIMESTAMP_DERIVED<br />A0003 -> EVENT_TYPE<br />A0006 -> USER_ID<br />A0007 -> USER_TYPE<br />A0008 -> LOGIN_KEY<br />A0009 -> CLIENT_IP<br />A0011 -> BROWSER_TYPE<br />A0012 -> PLATFORM_TYPE<br />|[success](/products/salesforce/event_examples/authentication_account_logout_elf.json)<br />|
+| C0001 | ET0002 |A0001 -> TIMESTAMP_DERIVED<br />A0003 -> EVENT_TYPE<br />A0006 -> USER_ID<br />A0007 -> USER_TYPE<br />A0008 -> LOGIN_KEY<br />A0009 -> CLIENT_IP<br />A0011 -> BROWSER_TYPE<br />A0012 -> PLATFORM_TYPE<br />|[success](/products/salesforce/event_examples/salesforce_elf_logout_event/authentication_account_logout_elf.json)<br />|
 
 

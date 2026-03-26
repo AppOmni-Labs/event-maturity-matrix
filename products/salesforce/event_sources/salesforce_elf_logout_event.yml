@@ -36,4 +36,4 @@ mappings:
       A0012: PLATFORM_TYPE
     examples:
       - type: success
-        location: "./event_examples/authentication_account_logout_elf.json"
+        location: "./event_examples/salesforce_elf_logout_event/authentication_account_logout_elf.json"

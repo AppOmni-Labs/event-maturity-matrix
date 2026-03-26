@@ -8,12 +8,12 @@ product:
   collection_sources:
     - rest_api
     - soap_api
-name: EventLogFile Login Event
-description: This event source is to track login events in Salesforce.
+name: EventLogFile Search Event Type
+description: Tracks Salesforce search requests, including the search string and result counts.
 references:
-  - id: login_event
-    name: EventLogFile Login Event
-    url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_login.htm
+  - id: search_event
+    name: EventLogFile Search Event
+    url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_search.htm
 retention:
   duration: 1 Day
   comments: Available for free with 1 day retention, otherwise requires an add-on subscription for 30 day retention.
@@ -23,21 +23,13 @@ latency:
 licensing:
   comments: Available for free with 1 day retention, otherwise requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-  - category: C0001
-    event_type: ET0001
+  - category: C0004
+    event_type: ET0035
     attributes:
       A0001: TIMESTAMP_DERIVED
       A0003: EVENT_TYPE
-      A0004: LOGIN_STATUS
-      A0005: USER_NAME 
       A0006: USER_ID
-      A0007: USER_TYPE
-      A0008: LOGIN_KEY
-      A0009: SOURCE_IP
-      A0011: BROWSER_TYPE
-      A0013: LOGIN_STATUS
-      A0014: LOGIN_TYPE
-      A0015: AUTHENTICATION_METHOD_REFERENCE
-    examples: 
+      A0033: SEARCH_QUERY
+    examples:
       - type: success
-        location: "./event_examples/salesforce_elf_login_event/authentication_account_login_elf.json"
+        location: "./event_examples/salesforce_elf_search_event/activity_audit_query_resource_elf_search.json"

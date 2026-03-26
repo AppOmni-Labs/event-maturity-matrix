@@ -8,12 +8,12 @@ product:
   collection_sources:
     - rest_api
     - soap_api
-name: EventLogFile Login Event
-description: This event source is to track login events in Salesforce.
+name: EventLogFile Unique Query Event Type
+description: Tracks normalized SOQL query patterns (unique query keys) for performance and security analysis.
 references:
-  - id: login_event
-    name: EventLogFile Login Event
-    url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_login.htm
+  - id: unique_query_event
+    name: EventLogFile Unique Query Event
+    url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_unique_query_event_elf.htm
 retention:
   duration: 1 Day
   comments: Available for free with 1 day retention, otherwise requires an add-on subscription for 30 day retention.
@@ -23,21 +23,14 @@ latency:
 licensing:
   comments: Available for free with 1 day retention, otherwise requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-  - category: C0001
-    event_type: ET0001
+  - category: C0004
+    event_type: ET0035
     attributes:
       A0001: TIMESTAMP_DERIVED
       A0003: EVENT_TYPE
-      A0004: LOGIN_STATUS
-      A0005: USER_NAME 
       A0006: USER_ID
-      A0007: USER_TYPE
-      A0008: LOGIN_KEY
-      A0009: SOURCE_IP
-      A0011: BROWSER_TYPE
-      A0013: LOGIN_STATUS
-      A0014: LOGIN_TYPE
-      A0015: AUTHENTICATION_METHOD_REFERENCE
-    examples: 
+      A0008: SESSION_KEY
+      A0033: QUERY_IDENTIFIER
+    examples:
       - type: success
-        location: "./event_examples/salesforce_elf_login_event/authentication_account_login_elf.json"
+        location: "./event_examples/salesforce_elf_unique_query_event/activity_audit_query_resource_elf_uniquequery.json"

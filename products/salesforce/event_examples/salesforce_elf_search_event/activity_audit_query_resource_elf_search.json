@@ -1,0 +1,12 @@
+{
+    "EVENT_TYPE": "Search",
+    "NUM_RESULTS": "0",
+    "ORGANIZATION_ID": "00DDn000001dAbc",
+    "PREFIXES_SEARCHED": "00B",
+    "QUERY_ID": "15y2aguabcdef",
+    "REQUEST_ID": "",
+    "SEARCH_QUERY": "\"\"\"test_search_string_*\"\"\"",
+    "TIMESTAMP": "20250901101001.510",
+    "TIMESTAMP_DERIVED": "2025-09-01T10:10:01.510Z",
+    "USER_ID": "005Dn000001ab23"
+}

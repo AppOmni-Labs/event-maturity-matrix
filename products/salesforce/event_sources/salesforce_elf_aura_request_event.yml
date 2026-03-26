@@ -37,7 +37,7 @@ mappings:
       A0030: ACTION_MESSAGE
     examples:
       - type: create
-        location: ./event_examples/activity_audit_create_resource_aurarequest.json
+        location: ./event_examples/salesforce_elf_aura_request_event/activity_audit_create_resource_aurarequest.json
   - category: C0004
     event_type: ET0031
     attributes:
@@ -52,7 +52,7 @@ mappings:
       A0030: ACTION_MESSAGE
     examples:
       - type: read
-        location: ./event_examples/activity_audit_read_resource_aurarequest.json
+        location: ./event_examples/salesforce_elf_aura_request_event/activity_audit_read_resource_aurarequest.json
   - category: C0004
     event_type: ET0032
     attributes:
@@ -67,7 +67,7 @@ mappings:
       A0030: ACTION_MESSAGE
     examples:
       - type: update
-        location: ./event_examples/activity_audit_update_resource_aurarequest.json
+        location: ./event_examples/salesforce_elf_aura_request_event/activity_audit_update_resource_aurarequest.json
   - category: C0004
     event_type: ET0033
     attributes:
@@ -82,4 +82,4 @@ mappings:
       A0030: ACTION_MESSAGE
     examples:
       - type: delete
-        location: "./event_examples/activity_audit_delete_resource_aurarequest.json"
+        location: "./event_examples/salesforce_elf_aura_request_event/activity_audit_delete_resource_aurarequest.json"

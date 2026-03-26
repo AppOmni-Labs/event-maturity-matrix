@@ -32,6 +32,6 @@ Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 
 | Category | Event Type | Attributes | Examples |
 | -------- | ---------- | ---------- | -------- |
-| C0004 | ET0031 |A0001 -> TIMESTAMP_DERIVED<br />A0003 -> EVENT_TYPE<br />A0004 -> SUCCESS<br />A0008 -> SESSION_KEY<br />A0009 -> CLIENT_IP<br />A0012 -> TYPE<br />A0030 -> URL<br />|[success](/products/salesforce/event_examples/activity_audit_read_resource_apexcallout.json)<br />|
+| C0004 | ET0031 |A0001 -> TIMESTAMP_DERIVED<br />A0003 -> EVENT_TYPE<br />A0004 -> SUCCESS<br />A0008 -> SESSION_KEY<br />A0009 -> CLIENT_IP<br />A0012 -> TYPE<br />A0030 -> URL<br />|[success](/products/salesforce/event_examples/salesforce_elf_apex_callout_event/activity_audit_read_resource_apexcallout.json)<br />|
 
 
