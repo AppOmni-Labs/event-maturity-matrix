@@ -40,5 +40,7 @@ mappings:
     examples:
       - type: success
         location: "./event_examples/salesforce_rtem_identityverificationevent/authentication_mfa_verification.json"
+      - type: inprogress
+        location: "./event_examples/salesforce_rtem_identityverificationevent/authentication_mfa_verification_inprogress.json"
       - type: failure
         location: "./event_examples/salesforce_rtem_identityverificationevent/authentication_mfa_verification_failure.json"

@@ -57,7 +57,7 @@ mappings:
       A0020: display
     examples:
       - type: disable
-        location: "./event_examples/setup_audit_trail/authorization_update_user.json"
+        location: "./event_examples/setup_audit_trail/authorization_delete_user.json"
   - category: C0002
     event_type: ET0008
     attributes:
