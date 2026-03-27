@@ -13,9 +13,9 @@ def generate():
     docs_path = os.path.join(root, "docs")
     docs_templates_path = os.path.join(docs_path, "templates")
 
-    attributes = os.path.join(schema_path, "attributes.yml")
-    categories = os.path.join(schema_path, "categories.yml")
-    event_types = os.path.join(schema_path, "event_types.yml")
+    attributes = os.path.join(root, "attributes.yml")
+    categories = os.path.join(root, "categories.yml")
+    event_types = os.path.join(root, "event_types.yml")
 
     env = Environment(
         loader=FileSystemLoader(docs_templates_path),
