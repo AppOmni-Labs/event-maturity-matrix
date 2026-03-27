@@ -1,4 +1,4 @@
-# Salesforce - Real-Time Event Monitoring LoginEventStream (0.0.1)
+# Salesforce - Real-Time Event Monitoring LoginEventStream (1.0.0)
 
 > Entity Name: event_source
 
@@ -32,6 +32,6 @@ Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 
 | Category | Event Type | Attributes | Examples |
 | -------- | ---------- | ---------- | -------- |
-| C0001 | ET0001 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> attributes.type<br />A0004 -> Status<br />A0005 -> Username<br />A0006 -> UserId<br />A0007 -> UserType<br />A0008 -> LoginKey<br />A0009 -> SourceIp<br />A0010 -> City<br />A0011 -> Browser<br />A0012 -> Platform<br />A0013 -> Status<br />A0014 -> LoginType<br />A0015 -> AuthServiceId<br />|[success](/products/salesforce/event_examples/salesforce_rtem_logineventstream/authentication_account_login.json)<br />|
+| C0001 | ET0001 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> data.payload.attributes.type<br />A0004 -> Status<br />A0005 -> Username<br />A0006 -> UserId<br />A0007 -> UserType<br />A0008 -> LoginKey<br />A0009 -> SourceIp<br />A0010 -> City<br />A0011 -> Browser<br />A0012 -> Platform<br />A0013 -> Status<br />A0014 -> LoginType<br />A0015 -> AuthServiceId<br />|[success](/products/salesforce/event_examples/salesforce_rtem_logineventstream/authentication_account_login.json)<br />[failure](/products/salesforce/event_examples/salesforce_rtem_logineventstream/authentication_account_login_failure.json)<br />|
 
 

@@ -1,4 +1,4 @@
-# Box (0.0.1)
+# Box (1.0.0)
 
 Box is a cloud-based content management and file sharing service. It's designed to help organizations store, manage, and collaborate on files and documents.
 

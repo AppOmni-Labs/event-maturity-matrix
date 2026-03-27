@@ -1,4 +1,4 @@
-# Salesforce - Real-Time Event Monitoring ReportEventStream (0.0.1)
+# Salesforce - Real-Time Event Monitoring ReportEventStream (1.0.0)
 
 > Entity Name: event_source
 

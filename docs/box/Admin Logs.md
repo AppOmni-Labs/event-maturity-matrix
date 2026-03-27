@@ -1,4 +1,4 @@
-# Box - Admin Logs (0.0.1)
+# Box - Admin Logs (1.0.0)
 
 > Entity Name: event_source
 

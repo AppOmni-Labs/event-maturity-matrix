@@ -1,4 +1,4 @@
-# Slack (0.0.1)
+# Slack (1.0.0)
 
 Slack is a cloud-based collaboration platform that facilitates communication between individuals and groups 
 through channels, direct messaging, file sharing, and integrations with third-party applications.

@@ -1,4 +1,4 @@
-# Salesforce - Real-Time Event Monitoring ListViewEventStream (0.0.1)
+# Salesforce - Real-Time Event Monitoring ListViewEventStream (1.0.0)
 
 > Entity Name: event_source
 

@@ -1,4 +1,4 @@
-# Salesforce - EventLogFile Apex Callout Event Type (0.0.1)
+# Salesforce - EventLogFile Apex Callout Event Type (1.0.0)
 
 > Entity Name: event_source
 

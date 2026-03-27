@@ -1,4 +1,4 @@
-# Salesforce - Real-Time Event Monitoring ApiEventStream (0.0.1)
+# Salesforce - Real-Time Event Monitoring ApiEventStream (1.0.0)
 
 > Entity Name: event_source
 
@@ -33,6 +33,6 @@ Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 | Category | Event Type | Attributes | Examples |
 | -------- | ---------- | ---------- | -------- |
 | C0004 | ET0031 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> Operation<br />A0004 -> PolicyOutcome<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> SessionKey<br />A0009 -> SourceIp<br />A0011 -> UserAgent<br />A0012 -> Platform<br />A0030 -> Query<br />A0031 -> ApiType<br />|[read](/products/salesforce/event_examples/salesforce_rtem_apieventstream/activity_audit_read_resource_apieventstream.json)<br />|
-| C0004 | ET0034 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> Operation<br />A0004 -> PolicyOutcome<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> SessionKey<br />A0009 -> SourceIp<br />A0011 -> UserAgent<br />A0012 -> Platform<br />A0032 -> RowsReturned<br />A0030 -> Query<br />A0031 -> ApiType<br />|[download](/products/salesforce/event_examples/salesforce_rtem_apieventstream/activity_audit_download_resource_apieventstream.json)<br />|
+| C0004 | ET0034 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> Operation<br />A0004 -> PolicyOutcome<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> SessionKey<br />A0009 -> SourceIp<br />A0011 -> UserAgent<br />A0012 -> Platform<br />A0032 -> RowsProcessed<br />A0030 -> Query<br />A0031 -> ApiType<br />|[download](/products/salesforce/event_examples/salesforce_rtem_apieventstream/activity_audit_download_resource_apieventstream.json)<br />|
 
 

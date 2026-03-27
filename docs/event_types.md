@@ -1,4 +1,4 @@
-# event_types (0.0.1)
+# event_types (1.0.0)
 
 Event types represent logical buckets of different types of events. These event types
 are associated with a defined category and will typically have attributes associated with them.
@@ -41,5 +41,7 @@ are associated with a defined category and will typically have attributes associ
 | Update Resource | ET0032 | A resource was updated. | C0004 |
 | Delete Resource | ET0033 | A resource was removed or deleted. | C0004 |
 | Download Resource | ET0034 | A resource was downloaded. | C0004 |
+| Query Resource | ET0035 | A resource was queried or searched. | C0004 |
+
 
 

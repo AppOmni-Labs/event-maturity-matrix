@@ -1,4 +1,4 @@
-# Salesforce - SetupAuditTrail (0.0.1)
+# Salesforce - SetupAuditTrail (1.0.0)
 
 > Entity Name: event_source
 
@@ -34,6 +34,7 @@ Free
 | -------- | ---------- | ---------- | -------- |
 | C0002 | ET0004 |A0001 -> sfdc_created_date<br />A0002 -> record_id<br />A0003 -> action<br />A0005 -> sfdc_created_by_username<br />A0006 -> sfdc_created_by_id<br />|[create](/products/salesforce/event_examples/setup_audit_trail/authorization_create_user.json)<br />|
 | C0002 | ET0006 |A0001 -> sfdc_created_date<br />A0002 -> record_id<br />A0003 -> action<br />A0005 -> sfdc_created_by_username<br />A0006 -> sfdc_created_by_id<br />A0020 -> display<br />|[update](/products/salesforce/event_examples/setup_audit_trail/authorization_update_user.json)<br />|
+| C0002 | ET0007 |A0001 -> sfdc_created_date<br />A0002 -> record_id<br />A0003 -> action<br />A0005 -> sfdc_created_by_username<br />A0006 -> sfdc_created_by_id<br />A0020 -> display<br />|[disable](/products/salesforce/event_examples/setup_audit_trail/authorization_delete_user.json)<br />|
 | C0002 | ET0008 |A0001 -> sfdc_created_date<br />A0002 -> record_id<br />A0003 -> action<br />A0005 -> sfdc_created_by_username<br />A0006 -> sfdc_created_by_id<br />A0021 -> display<br />|[create](/products/salesforce/event_examples/setup_audit_trail/authorization_create_group.json)<br />|
 | C0002 | ET0010 |A0001 -> sfdc_created_date<br />A0002 -> record_id<br />A0003 -> action<br />A0005 -> sfdc_created_by_username<br />A0006 -> sfdc_created_by_id<br />A0021 -> display<br />A0020 -> display<br />|[update](/products/salesforce/event_examples/setup_audit_trail/authorization_update_group.json)<br />|
 | C0002 | ET0011 |A0001 -> sfdc_created_date<br />A0002 -> record_id<br />A0003 -> action<br />A0005 -> sfdc_created_by_username<br />A0006 -> sfdc_created_by_id<br />A0021 -> display<br />|[delete](/products/salesforce/event_examples/setup_audit_trail/authorization_delete_group.json)<br />|

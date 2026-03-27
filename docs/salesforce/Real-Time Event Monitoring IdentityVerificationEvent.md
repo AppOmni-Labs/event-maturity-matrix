@@ -1,4 +1,4 @@
-# Salesforce - Real-Time Event Monitoring IdentityVerificationEvent (0.0.1)
+# Salesforce - Real-Time Event Monitoring IdentityVerificationEvent (1.0.0)
 
 > Entity Name: event_source
 
@@ -32,6 +32,6 @@ Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 
 | Category | Event Type | Attributes | Examples |
 | -------- | ---------- | ---------- | -------- |
-| C0001 | ET0003 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> attributes.type<br />A0004 -> Status<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> LoginKey<br />A0009 -> SourceIp<br />A0010 -> City<br />A0016 -> VerificationMethod<br />A0017 -> Status<br />A0018 -> Activity<br />|[success](/products/salesforce/event_examples/salesforce_rtem_identityverificationevent/authentication_mfa_verification.json)<br />|
+| C0001 | ET0003 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> data.payload.attributes.type<br />A0004 -> Status<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> LoginKey<br />A0009 -> SourceIp<br />A0010 -> City<br />A0016 -> VerificationMethod<br />A0017 -> Status<br />A0018 -> Activity<br />|[success](/products/salesforce/event_examples/salesforce_rtem_identityverificationevent/authentication_mfa_verification.json)<br />[inprogress](/products/salesforce/event_examples/salesforce_rtem_identityverificationevent/authentication_mfa_verification_inprogress.json)<br />[failure](/products/salesforce/event_examples/salesforce_rtem_identityverificationevent/authentication_mfa_verification_failure.json)<br />|
 
 

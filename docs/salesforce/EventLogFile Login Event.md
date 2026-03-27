@@ -1,4 +1,4 @@
-# Salesforce - EventLogFile Login Event (0.0.1)
+# Salesforce - EventLogFile Login Event (1.0.0)
 
 > Entity Name: event_source
 

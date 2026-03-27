@@ -1,4 +1,4 @@
-# attributes (0.0.1)
+# attributes (1.0.0)
 
 Attributes are associated with many event types. These attributes describe logging fields in a source platform.
 
@@ -24,20 +24,21 @@ Attributes are associated with many event types. These attributes describe loggi
 | Verification Method | A0016 | string | The method used for verification. |  | ET0003 |  | MFA Push |
 | Verification Flagged | A0017 | string | Whether or not MFA verification was flagged |  | ET0003 |  | The user denied the verification request and flagged the notification as fraudulent. |
 | Activity Performed | A0018 | string | The activity or operation that required MFA verification. |  | ET0003 |  | Authentication, Resource Access, Configuration Change |
-| Target Username | A0019 | string | The target username of activity within a service provider. |  | C0002 | ET0008, ET0009, ET0010, ET0011, ET0014, ET0015, ET0016, ET0017, ET0018, ET0019, ET0020 | first.lastname, first.lastname@company.com |
-| Target Attribute Context | A0020 | string | Context regarding the target attribute that was changed during a user, group, or role modification. |  | ET0006, ET0010 |  | The user's email address was changed |
+| Target Username | A0019 | string | The target username of activity within a service provider. |  | ET0004, ET0005, ET0006, ET0007, ET0012, ET0013, ET0020, ET0021 |  | first.lastname, first.lastname@company.com |
+| Target Attribute Context | A0020 | string | Context regarding the target attribute that was changed during a user, group, or role modification. |  | ET0006, ET0010, ET0016 |  | The user's email address was changed |
 | Target Group Name | A0021 | string | The target group name of activity within a service provider. A group signifies a collection of users. |  | ET0008, ET0009, ET0010, ET0011, ET0012, ET0013 |  | Administrators |
 | Target Role Name | A0022 | string | The target role name of activity within a service provider. A role signifies a collection of permissions. |  | ET0014, ET0015, ET0016, ET0017 |  | Administrators |
-| Permission Name | A0023 | string | The name of a permission specified within an event. |  | ET0018, ET0019, ET0020 |  | Read, Write |
-| Target Resource Name | A0024 | string | The target resource of an action or operation within a service provider. |  | ET0018, ET0019, ET0020 |  | Report Name, API Name |
-| Enrollment Type | A0025 | string | The enrollment type of MFA authentication within a service provider. |  | ET0021, ET0023 |  | Authenticator App, Time-based One-time Password (TOTP) |
-| Configuration / Setting Name | A0026 | string | The name of a service setting or configuration option. |  | ET0022, ET0023, ET0024, ET0025 |  | Password Policy, MFA Policy |
-| Configuration / Setting Value | A0027 | string | The value of the setting or configuration that was changed. |  | ET0022, ET0024, ET0025, ET0028 |  | Password expiration policy was changed to 90 days |
+| Permission Name | A0023 | string | The name of a permission specified within an event. |  | ET0018, ET0019 |  | Read, Write |
+| Target Resource Name | A0024 | string | The target resource of an action or operation within a service provider. |  | ET0018, ET0019 |  | Report Name, API Name |
+| Enrollment Type | A0025 | string | The enrollment type of MFA authentication within a service provider. |  | ET0020, ET0021 |  | Authenticator App, Time-based One-time Password (TOTP) |
+| Configuration / Setting Name | A0026 | string | The name of a service setting or configuration option. |  | ET0022, ET0024, ET0025, ET0028 |  | Password Policy, MFA Policy |
+| Configuration / Setting Value | A0027 | string | The value of the setting or configuration that was changed. |  | ET0022, ET0023, ET0024, ET0025 |  | Password expiration policy was changed to 90 days |
 | Previous Configuration / Setting Value | A0028 | string | The previous value of the setting or configuration that was changed. |  | ET0024, ET0028 |  | Password expiration policy was changed from 90 days to 60 days |
 | Integration / App Name | A0029 | string | The name of an integration or OAuth application. |  | ET0026, ET0027, ET0028, ET0029 |  | Slack |
-| Resource Name | A0030 | string | The name of a resource within a service provider. |  | C0004 |  | Report Name, API Name |
-| Resource Type | A0031 | string | The type of resource within a service provider. |  | C0004 |  | Report, API |
+| Resource Name | A0030 | string | The name of a resource within a service provider. |  | ET0030, ET0031, ET0032, ET0033, ET0034 |  | Report Name, API Name |
+| Resource Type | A0031 | string | The type of resource within a service provider. |  | ET0030, ET0031, ET0032, ET0033, ET0034 |  | Report, API |
 | Resource Metadata | A0032 | string | Metadata about the resource that was created, modified, or deleted. |  | ET0034 |  | The report was 1,000 rows and 25Mb in size |
+| Query String | A0033 | string | The query or search string used when querying a resource. |  | ET0035 |  | from:user@example.com, subject:quarterly report |
 
 
 

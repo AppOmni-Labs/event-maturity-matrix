@@ -1,4 +1,4 @@
-# Salesforce - Real-Time Event Monitoring LogoutEventStream (0.0.1)
+# Salesforce - Real-Time Event Monitoring LogoutEventStream (1.0.0)
 
 > Entity Name: event_source
 
@@ -32,6 +32,6 @@ Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 
 | Category | Event Type | Attributes | Examples |
 | -------- | ---------- | ---------- | -------- |
-| C0001 | ET0002 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> attributes.type<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> SessionKey<br />A0009 -> SourceIp<br />|[success](/products/salesforce/event_examples/salesforce_rtem_logouteventstream/authentication_account_logout.json)<br />|
+| C0001 | ET0002 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> data.payload.attributes.type<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> SessionKey<br />A0009 -> SourceIp<br />|[success](/products/salesforce/event_examples/salesforce_rtem_logouteventstream/authentication_account_logout.json)<br />|
 
 
