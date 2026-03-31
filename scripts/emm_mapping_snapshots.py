@@ -36,7 +36,23 @@ def build_snapshot_payload(source_rel_posix: str, data: dict[str, Any]) -> dict[
 
 
 def canonical_json(payload: dict[str, Any]) -> str:
+    """Deterministic JSON: all object keys sorted recursively (matches snapshot files from update_mapping_snapshots)."""
     return json.dumps(payload, sort_keys=True, indent=2) + "\n"
+
+
+def resolved_snapshot_matches_disk(payload: dict[str, Any], on_disk_text: str) -> bool:
+    """
+    True if on-disk JSON is semantically the same resolved snapshot as payload.
+
+    Compares via canonical_json so committed files stay in sync with what
+    ``update_mapping_snapshots.py`` writes; differs only on meaningless key order
+    or whitespace inside the JSON (after parse + re-serialize).
+    """
+    try:
+        on_disk = json.loads(on_disk_text)
+    except json.JSONDecodeError:
+        return False
+    return canonical_json(payload) == canonical_json(on_disk)
 
 
 def load_event_source(path: Path) -> dict[str, Any]:

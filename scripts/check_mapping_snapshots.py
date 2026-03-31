@@ -11,10 +11,10 @@ if str(_scripts) not in sys.path:
 
 from emm_mapping_snapshots import (
     build_snapshot_payload,
-    canonical_json,
     iter_event_source_paths,
     load_event_source,
     repo_relative_posix,
+    resolved_snapshot_matches_disk,
     snapshot_path_for_source,
 )
 
@@ -39,7 +39,6 @@ def main() -> int:
 
         data = load_event_source(yml)
         expected_payload = build_snapshot_payload(rel, data)
-        expected_text = canonical_json(expected_payload)
 
         try:
             on_disk_text = snap.read_text(encoding="utf-8")
@@ -47,13 +46,12 @@ def main() -> int:
             errors.append(f"{rel}: read error {e}")
             continue
 
-        try:
-            on_disk_obj = json.loads(on_disk_text)
-        except json.JSONDecodeError as e:
-            errors.append(f"{rel}: invalid JSON in snapshot: {e}")
-            continue
-
-        if json.loads(expected_text) != on_disk_obj:
+        if not resolved_snapshot_matches_disk(expected_payload, on_disk_text):
+            try:
+                json.loads(on_disk_text)
+            except json.JSONDecodeError as e:
+                errors.append(f"{rel}: invalid JSON in snapshot: {e}")
+                continue
             errors.append(f"{rel}: snapshot differs from resolved mappings (see git diff tests/mapping_snapshots)")
 
     if errors:
