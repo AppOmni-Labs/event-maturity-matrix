@@ -37,19 +37,7 @@ mapping_defaults:
       ip_geolocation_or_asn: client.geographicalContext
       user_agent_name: client.userAgent
       device_client_type: client.device
-  categories:
-    authentication:
-      attributes:
-        result: outcome.result
-    authorization:
-      attributes:
-        result: outcome.result
-    system_audit:
-      attributes:
-        result: outcome.result
-    activity_audit:
-      attributes:
-        result: outcome.result
+      result: outcome.result
 mappings:
 - category: authentication
   event_type: account_login

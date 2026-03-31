@@ -18,16 +18,19 @@ latency:
   comments: Can vary based on system conditions and configurations.
 licensing:
   comments: Included with ServiceNow instances.
+mapping_defaults:
+  source:
+    attributes:
+      timestamp: sys_created_on
+      event_id: event
+      event_code_or_type: sys_class_name
+      username: user_name
+      user_id: user
+      resource_name: table
 mappings:
 - category: activity_audit
   event_type: download_resource
-  attributes:
-    timestamp: sys_created_on
-    event_id: event
-    event_code_or_type: sys_class_name
-    username: user_name
-    user_id: user
-    resource_name: table
+  attributes: {}
   examples:
   - type: download
     location: ./event_examples/export/activity_audit_download_resource.json

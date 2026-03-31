@@ -19,19 +19,33 @@ latency:
   comments: N/A
 licensing:
   comments: A PingOne license is required to access the Read User Activities API.
+mapping_defaults:
+  source:
+    attributes:
+      timestamp: recordedAt
+      event_id: id
+      event_code_or_type: action.type
+      result: result.status
+      session_id: correlationId
+      ip_address: source.ipAddress
+      user_agent_name: source.userAgent
+  categories:
+    authentication:
+      attributes:
+        username: actors.user.name
+        user_id: actors.user.id
+    authorization:
+      attributes:
+        username: actors.user.name
+        user_id: actors.user.id
+    system_audit:
+      attributes:
+        username: actors.user.name
+        user_id: actors.user.id
 mappings:
 - category: authentication
   event_type: account_login
-  attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
+  attributes: {}
   examples:
   - type: success
     location: ./event_examples/authentication_account_login_session_success.json
@@ -40,30 +54,14 @@ mappings:
 - category: authentication
   event_type: account_logout
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
     username: resources.name
     user_id: resources.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
   examples:
   - type: success
     location: ./event_examples/authentication_account_logout.json
 - category: authentication
   event_type: mfa_verification
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     verification_method: resources.name
   examples:
   - type: success
@@ -71,15 +69,6 @@ mappings:
 - category: authorization
   event_type: create_user
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     target_username: resources[type=USER].name
   examples:
   - type: success
@@ -87,15 +76,6 @@ mappings:
 - category: authorization
   event_type: update_user
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     target_username: resources[type=USER].name
     target_attribute_context: result.description
   examples:
@@ -104,15 +84,6 @@ mappings:
 - category: authorization
   event_type: delete_user
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     target_username: resources[type=USER].name
   examples:
   - type: success
@@ -120,15 +91,6 @@ mappings:
 - category: authorization
   event_type: create_group
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     target_group_name:
     - resources[type=GROUP].name
     - resources[type=MEMBER_OF_GROUP].name
@@ -138,15 +100,6 @@ mappings:
 - category: authorization
   event_type: delete_group
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     target_group_name:
     - resources[type=GROUP].name
     - resources[type=MEMBER_OF_GROUP].name
@@ -156,15 +109,6 @@ mappings:
 - category: authorization
   event_type: add_to_group
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     target_group_name:
     - resources[type=GROUP].name
     - resources[type=MEMBER_OF_GROUP].name
@@ -174,15 +118,6 @@ mappings:
 - category: authorization
   event_type: remove_from_group
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     target_group_name:
     - resources[type=GROUP].name
     - resources[type=MEMBER_OF_GROUP].name
@@ -192,15 +127,6 @@ mappings:
 - category: authorization
   event_type: add_permission
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     permission_name: result.description
     target_resource_name: resources[type=USER].name
   examples:
@@ -209,15 +135,6 @@ mappings:
 - category: authorization
   event_type: remove_permission
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     permission_name: result.description
     target_resource_name: resources[type=USER].name
   examples:
@@ -226,46 +143,19 @@ mappings:
 - category: authorization
   event_type: add_enrollment
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     target_username: resources[type=USER].name
   examples:
   - type: success
     location: ./event_examples/authorization_add_enrollment.json
 - category: authorization
   event_type: remove_enrollment
-  attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
+  attributes: {}
   examples:
   - type: success
     location: ./event_examples/authorization_remove_enrollment.json
 - category: system_audit
   event_type: create_security_configuration
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     configuration_setting_name:
     - action.type
     - resources[0].name
@@ -275,15 +165,6 @@ mappings:
 - category: system_audit
   event_type: update_security_configuration
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     configuration_setting_name:
     - action.type
     - resources[0].name
@@ -293,15 +174,6 @@ mappings:
 - category: system_audit
   event_type: delete_security_configuration
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     configuration_setting_name:
     - action.type
     - resources[0].name
@@ -311,15 +183,6 @@ mappings:
 - category: system_audit
   event_type: create_integration
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     integration_app_name:
     - resources[type=IDENTITY_PROVIDER].name
     - resources[type=APPLICATION].name
@@ -329,15 +192,6 @@ mappings:
 - category: system_audit
   event_type: update_integration
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     integration_app_name:
     - resources[type=IDENTITY_PROVIDER].name
     - resources[type=APPLICATION].name
@@ -347,15 +201,6 @@ mappings:
 - category: system_audit
   event_type: delete_integration
   attributes:
-    timestamp: recordedAt
-    event_id: id
-    event_code_or_type: action.type
-    result: result.status
-    username: actors.user.name
-    user_id: actors.user.id
-    session_id: correlationId
-    ip_address: source.ipAddress
-    user_agent_name: source.userAgent
     integration_app_name:
     - resources[type=IDENTITY_PROVIDER].name
     - resources[type=APPLICATION].name

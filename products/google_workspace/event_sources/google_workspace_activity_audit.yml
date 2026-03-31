@@ -20,16 +20,38 @@ licensing:
   comments: Admin logs are available for all Google Workspace plans. Drive audit logs and Device events may not be available
     as these are not available for the Business Starter plan. Additional configuration is required to get the full set of
     monitoring capabilities for Devices.
+mapping_defaults:
+  source:
+    attributes:
+      timestamp: id.time
+      event_id: etag
+      event_code_or_type: event.name
+  categories:
+    authentication:
+      attributes:
+        username: actor.email
+        user_id: actor.profileId
+        ip_address: ipAddress
+    authorization:
+      attributes:
+        username: actor.email
+        user_id: actor.profileId
+        user_type_or_role: actor.callerType
+        ip_address: ipAddress
+    system_audit:
+      attributes:
+        username: actor.email
+        user_id: actor.profileId
+    activity_audit:
+      attributes:
+        username: actor.email
+        user_id: actor.profileId
+        user_type_or_role: actor.callerType
+        ip_address: ipAddress
 mappings:
 - category: authentication
   event_type: account_login
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    ip_address: ipAddress
     failure_context:
     - event.name
     - event.parameters[name=login_failure_type]
@@ -40,26 +62,14 @@ mappings:
 - category: authentication
   event_type: account_logout
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
     result: event.name
-    username: actor.email
-    user_id: actor.profileId
-    ip_address: ipAddress
   examples:
   - type: success
     location: ./event_examples/authentication_account_logout.json
 - category: authentication
   event_type: mfa_verification
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
     result: event.name
-    username: actor.email
-    user_id: actor.profileId
-    ip_address: ipAddress
     verification_method: event.parameters[name=login_challenge_method]
     verification_flagged: event.parameters[name=is_suspicious]
     activity_performed: event.name
@@ -69,13 +79,6 @@ mappings:
 - category: authorization
   event_type: create_user
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     target_username: event.parameters[name=USER_EMAIL]
   examples:
   - type: success
@@ -83,13 +86,6 @@ mappings:
 - category: authorization
   event_type: update_user
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     target_username: event.parameters[name=USER_EMAIL]
     target_attribute_context: event.parameters[]
   examples:
@@ -98,13 +94,6 @@ mappings:
 - category: authorization
   event_type: delete_user
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     target_username: event.parameters[name=USER_EMAIL]
   examples:
   - type: success
@@ -112,13 +101,6 @@ mappings:
 - category: authorization
   event_type: create_group
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     target_group_name: event.parameters[name=GROUP_EMAIL]
   examples:
   - type: success
@@ -126,12 +108,7 @@ mappings:
 - category: authorization
   event_type: update_group
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
+    ip_address: null
     target_group_name: event.parameters[name=GROUP_EMAIL]
     target_attribute_context: event.parameters[name=SETTING_NAME]
   examples:
@@ -140,13 +117,6 @@ mappings:
 - category: authorization
   event_type: delete_group
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     target_group_name: event.parameters[name=GROUP_EMAIL]
   examples:
   - type: success
@@ -154,13 +124,6 @@ mappings:
 - category: authorization
   event_type: add_to_group
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     target_group_name: event.parameters[name=GROUP_EMAIL]
     target_username: event.parameters[name=USER_EMAIL]
   examples:
@@ -169,13 +132,6 @@ mappings:
 - category: authorization
   event_type: remove_from_group
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     target_group_name: event.parameters[name=GROUP_EMAIL]
     target_username: event.parameters[name=USER_EMAIL]
   examples:
@@ -184,13 +140,6 @@ mappings:
 - category: authorization
   event_type: create_role
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     target_role_name: event.parameters[name=ROLE_NAME]
   examples:
   - type: success
@@ -198,13 +147,6 @@ mappings:
 - category: authorization
   event_type: update_role
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     target_role_name: event.parameters[name=ROLE_NAME]
     target_attribute_context: event.parameters
   examples:
@@ -213,13 +155,6 @@ mappings:
 - category: authorization
   event_type: delete_role
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     target_role_name: event.parameters[name=ROLE_NAME]
   examples:
   - type: success
@@ -227,13 +162,6 @@ mappings:
 - category: authorization
   event_type: add_permission
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     permission_name: event.parameters[name=PRIVILEGE_NAME]
     target_resource_name: event.parameters[name=ROLE_NAME]
   examples:
@@ -242,25 +170,11 @@ mappings:
 - category: authorization
   event_type: remove_permission
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     permission_name: event.parameters[name=PRIVILEGE_NAME]
     target_resource_name: event.parameters[name=ROLE_NAME]
 - category: authorization
   event_type: add_enrollment
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     target_username: event.parameters[name=USER_EMAIL]
   examples:
   - type: success
@@ -268,13 +182,6 @@ mappings:
 - category: authorization
   event_type: remove_enrollment
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     target_username: event.parameters[name=USER_EMAIL]
   examples:
   - type: success
@@ -282,11 +189,6 @@ mappings:
 - category: system_audit
   event_type: create_security_configuration
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
     configuration_setting_name: event.parameters
     configuration_setting_value: event.parameters
   examples:
@@ -295,33 +197,18 @@ mappings:
 - category: system_audit
   event_type: update_security_configuration
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
     user_type_or_role: actor.callerType
     configuration_setting_name: event.parameters[name=*]
     configuration_setting_value: event.parameters[name=*]
 - category: system_audit
   event_type: delete_security_configuration
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
     user_type_or_role: actor.callerType
     configuration_setting_name: event.parameters[name=*]
     configuration_setting_value: event.parameters[name=*]
 - category: system_audit
   event_type: create_integration
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
     user_type_or_role: actor.callerType
     integration_app_name: event.parameters[name=APPLICATION_NAME]
   examples:
@@ -330,11 +217,6 @@ mappings:
 - category: system_audit
   event_type: update_integration
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
     user_type_or_role: actor.callerType
     ip_address: ipAddress
     integration_app_name: event.parameters[name=APPLICATION_NAME]
@@ -346,11 +228,6 @@ mappings:
 - category: system_audit
   event_type: delete_integration
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
     user_type_or_role: actor.callerType
     integration_app_name: event.parameters[name=APPLICATION_NAME]
   examples:
@@ -359,13 +236,6 @@ mappings:
 - category: activity_audit
   event_type: create_resource
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     resource_name: event.parameters[].name
     resource_type: event.type
   examples:
@@ -374,13 +244,6 @@ mappings:
 - category: activity_audit
   event_type: update_resource
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     resource_name: event.parameters[].name
     resource_type: event.type
   examples:
@@ -389,13 +252,6 @@ mappings:
 - category: activity_audit
   event_type: delete_resource
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
     resource_name: event.parameters[].name
     resource_type: event.type
   examples:
@@ -404,12 +260,7 @@ mappings:
 - category: activity_audit
   event_type: download_resource
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    ip_address: ipAddress
+    user_type_or_role: null
     resource_metadata: event.parameters[].name
     resource_name: event.parameters[name=doc_title]
     resource_type: event.parameters[name=doc_type]
@@ -419,12 +270,7 @@ mappings:
 - category: activity_audit
   event_type: query_resource
   attributes:
-    timestamp: id.time
-    event_id: etag
-    event_code_or_type: event.name
-    username: actor.email
-    user_id: actor.profileId
-    ip_address: ipAddress
+    user_type_or_role: null
     query_string: event.parameters[name=user_query]
   examples:
   - type: success

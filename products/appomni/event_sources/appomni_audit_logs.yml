@@ -23,18 +23,40 @@ latency:
   comments: Logs are available in near real-time.
 licensing:
   comments: N/A
+mapping_defaults:
+  source:
+    attributes:
+      timestamp: action_at
+      event_id: log_id
+      event_code_or_type: action_type
+  categories:
+    authentication:
+      attributes:
+        username: action_data.user_username
+        user_id: user_id
+        ip_address: action_data.user_ip
+        user_agent_name: action_data.user_agent
+    authorization:
+      attributes:
+        username: action_data.user_username
+        user_id: user_id
+        ip_address: action_data.user_ip
+        user_agent_name: action_data.user_agent
+    system_audit:
+      attributes:
+        username: action_data.user_username
+        user_id: user_id
+        ip_address: action_data.user_ip
+        user_agent_name: action_data.user_agent
+    activity_audit:
+      attributes:
+        username: action_data.user_username
+        user_id: user_id
 mappings:
 - category: authentication
   event_type: account_login
   attributes:
-    timestamp: action_at
-    event_id: log_id
-    event_code_or_type: action_type
     result: action_type
-    username: action_data.user_username
-    user_id: user_id
-    ip_address: action_data.user_ip
-    user_agent_name: action_data.user_agent
     identity_service_provider_context: action_type
   examples:
   - type: success
@@ -44,27 +66,13 @@ mappings:
 - category: authentication
   event_type: account_logout
   attributes:
-    timestamp: action_at
-    event_id: log_id
-    event_code_or_type: action_type
     result: action_type
-    username: action_data.user_username
-    user_id: user_id
-    ip_address: action_data.user_ip
-    user_agent_name: action_data.user_agent
   examples:
   - type: success
     location: ./event_examples/authentication_account_logout.json
 - category: authentication
   event_type: mfa_verification
   attributes:
-    timestamp: action_at
-    event_id: log_id
-    event_code_or_type: action_type
-    username: action_data.user_username
-    user_id: user_id
-    ip_address: action_data.user_ip
-    user_agent_name: action_data.user_agent
     verification_method: action_type
   examples:
   - type: challenge
@@ -72,13 +80,6 @@ mappings:
 - category: authorization
   event_type: create_user
   attributes:
-    timestamp: action_at
-    event_id: log_id
-    event_code_or_type: action_type
-    username: action_data.user_username
-    user_id: user_id
-    ip_address: action_data.user_ip
-    user_agent_name: action_data.user_agent
     target_username: action_data.target_user_username
   examples:
   - type: success
@@ -86,13 +87,7 @@ mappings:
 - category: authorization
   event_type: delete_user
   attributes:
-    timestamp: action_at
-    event_id: log_id
-    event_code_or_type: action_type
     username: user_username
-    user_id: user_id
-    ip_address: action_data.user_ip
-    user_agent_name: action_data.user_agent
     target_username: action_data.user_username
   examples:
   - type: success
@@ -100,13 +95,6 @@ mappings:
 - category: authorization
   event_type: add_enrollment
   attributes:
-    timestamp: action_at
-    event_id: log_id
-    event_code_or_type: action_type
-    username: action_data.user_username
-    user_id: user_id
-    ip_address: action_data.user_ip
-    user_agent_name: action_data.user_agent
     enrollment_type: action_data.detail_str
     target_username: action_data.target_user_username
   examples:
@@ -115,13 +103,7 @@ mappings:
 - category: authorization
   event_type: remove_enrollment
   attributes:
-    timestamp: action_at
-    event_id: log_id
-    event_code_or_type: action_type
     username: action_data.target_user_username
-    user_id: user_id
-    ip_address: action_data.user_ip
-    user_agent_name: action_data.user_agent
     target_username: action_data.target_user_username
   examples:
   - type: success
@@ -129,13 +111,6 @@ mappings:
 - category: system_audit
   event_type: update_security_configuration
   attributes:
-    timestamp: action_at
-    event_id: log_id
-    event_code_or_type: action_type
-    username: action_data.user_username
-    user_id: user_id
-    ip_address: action_data.user_ip
-    user_agent_name: action_data.user_agent
     configuration_setting_name: action_data.setting_name
     configuration_setting_value: action_data.new_value
     previous_configuration_setting_value: action_data.old_value
@@ -145,11 +120,6 @@ mappings:
 - category: activity_audit
   event_type: create_resource
   attributes:
-    timestamp: action_at
-    event_id: log_id
-    event_code_or_type: action_type
-    username: action_data.user_username
-    user_id: user_id
     ip_address: action_data.user_ip
     user_agent_name: action_data.user_agent
     resource_name: service_name
@@ -160,11 +130,6 @@ mappings:
 - category: activity_audit
   event_type: update_resource
   attributes:
-    timestamp: action_at
-    event_id: log_id
-    event_code_or_type: action_type
-    username: action_data.user_username
-    user_id: user_id
     resource_name: service_name
     resource_type: service_type
   examples:
@@ -173,11 +138,6 @@ mappings:
 - category: activity_audit
   event_type: delete_resource
   attributes:
-    timestamp: action_at
-    event_id: log_id
-    event_code_or_type: action_type
-    username: action_data.user_username
-    user_id: user_id
     ip_address: action_data.user_ip
     user_agent_name: action_data.user_agent
     resource_name: policy_name

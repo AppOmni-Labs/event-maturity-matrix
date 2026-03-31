@@ -18,24 +18,24 @@ latency:
   comments: Can vary based on system conditions and configurations.
 licensing:
   comments: Must be enabled and configured by an instance admin.
+mapping_defaults:
+  categories:
+    authorization:
+      attributes:
+        timestamp: sys_created_on
+        event_code_or_type: operation
+        username: user\.name
+        user_id: user\.name
 mappings:
 - category: authorization
   event_type: add_permission
-  attributes:
-    timestamp: sys_created_on
-    event_code_or_type: operation
-    username: user\.name
-    user_id: user\.name
+  attributes: {}
   examples:
   - type: add
     location: ./event_examples/audit_role/authorization_add_permission.json
 - category: authorization
   event_type: remove_permission
-  attributes:
-    timestamp: sys_created_on
-    event_code_or_type: operation
-    username: user\.name
-    user_id: user\.name
+  attributes: {}
   examples:
   - type: add
     location: ./event_examples/audit_role/authorization_remove_permission.json

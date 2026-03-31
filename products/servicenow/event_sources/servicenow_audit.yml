@@ -18,24 +18,24 @@ latency:
   comments: Can vary based on system conditions and configurations.
 licensing:
   comments: Included with ServiceNow instances.
+mapping_defaults:
+  categories:
+    activity_audit:
+      attributes:
+        timestamp: sys_created_on
+        event_code_or_type: fieldname
+        username: user
+        resource_name: tablename
 mappings:
 - category: activity_audit
   event_type: update_resource
-  attributes:
-    timestamp: sys_created_on
-    event_code_or_type: fieldname
-    username: user
-    resource_name: tablename
+  attributes: {}
   examples:
   - type: update
     location: ./event_examples/audit/activity_audit_update_resource.json
 - category: activity_audit
   event_type: delete_resource
-  attributes:
-    timestamp: sys_created_on
-    event_code_or_type: fieldname
-    username: user
-    resource_name: tablename
+  attributes: {}
   examples:
   - type: delete
     location: ./event_examples/audit/activity_audit_delete_resource.json

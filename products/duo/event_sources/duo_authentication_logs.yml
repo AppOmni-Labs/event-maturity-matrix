@@ -23,27 +23,30 @@ latency:
 licensing:
   comments: The Duo Admin API is available to Duo Premier, Duo Advantage, and Duo Essentials customers, and new customers
     with an Advantage or Premier trial. For more information, see https://duo.com/docs/adminapi#about-the-admin-api
+mapping_defaults:
+  source:
+    attributes:
+      timestamp:
+      - timestamp
+      - isotimestamp
+      result: result
+      username: username
+      ip_address: ip
+      ip_geolocation_or_asn:
+      - location.city
+      - location.country
+      - location.state
+      user_agent_name: access_device.browser
+      device_client_type: access_device.os
+      verification_method:
+      - factor
+      - device
+      verification_flagged: reason
+      activity_performed: integration
 mappings:
 - category: authentication
   event_type: mfa_verification
-  attributes:
-    timestamp:
-    - timestamp
-    - isotimestamp
-    result: result
-    username: username
-    ip_address: ip
-    ip_geolocation_or_asn:
-    - location.city
-    - location.country
-    - location.state
-    user_agent_name: access_device.browser
-    device_client_type: access_device.os
-    verification_method:
-    - factor
-    - device
-    verification_flagged: reason
-    activity_performed: integration
+  attributes: {}
   examples:
   - type: success
     location: ./event_examples/authentication_mfa_verification_success_auth.json

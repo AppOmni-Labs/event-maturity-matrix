@@ -277,7 +277,7 @@ To avoid repeating the same attribute map on every `mappings` entry, an event_so
 
 Later steps override earlier keys. To **remove** an inherited default for one event type, set that attribute key to YAML **`null`** in the mapping delta—after merge, that attribute is absent (and example validation will not expect it). This is useful when a category default adds a field that one event type should not map.
 
-Defaults are fully optional. With no `mapping_defaults`, behavior is unchanged: each mapping lists the full attribute map. See [Okta System Log API](../products/okta/event_sources/okta_system_log.yml) for a layered example.
+Defaults are fully optional. With no `mapping_defaults`, behavior is unchanged: each mapping lists the full attribute map. See [Okta System Log API](../products/okta/event_sources/okta_system_log.yml) (source-wide defaults plus per-category layers) and [Microsoft 365 Azure AD audit](../products/microsoft_365/event_sources/audit_azure_ad_logging.yml) (shared `source` triplet and category client/authorization blocks) for layered examples.
 
 Below is an example event_source for [Salesforce EventLogFile Login Event](../products/salesforce/event_sources/salesforce_elf_login_event.yml) which we will use as an example to explain the structure of an event_source data content definition file.
 

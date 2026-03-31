@@ -27,18 +27,21 @@ latency:
   comments: NA
 licensing:
   comments: The Audit Logs API is only available to Slack workspaces on an Enterprise Grid plan.
+mapping_defaults:
+  source:
+    attributes:
+      timestamp: date_create
+      event_id: id
+      event_code_or_type: action
+      session_id: context.session_id
+      ip_address: context.ip_address
+      user_agent_name: context.ua
 mappings:
 - category: authentication
   event_type: account_login
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: entity.user.email
     user_id: entity.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
   examples:
   - type: success
     location: ./event_examples/authentication_account_login_success.json
@@ -47,28 +50,16 @@ mappings:
 - category: authentication
   event_type: account_logout
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: entity.user.email
     user_id: entity.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
   examples:
   - type: success
     location: ./event_examples/authentication_account_logout.json
 - category: authorization
   event_type: create_user
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: entity.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     target_username: entity.user.email
   examples:
   - type: member
@@ -78,14 +69,8 @@ mappings:
 - category: authorization
   event_type: update_user
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: entity.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     target_username: entity.user.email
     target_attribute_context: details
   examples:
@@ -94,14 +79,8 @@ mappings:
 - category: authorization
   event_type: delete_user
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: entity.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     target_username: entity.user.email
   examples:
   - type: success
@@ -109,14 +88,8 @@ mappings:
 - category: authorization
   event_type: add_to_group
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: details.inviter.user.email
     user_id: details.inviter.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     target_username: entity.usergroup.name
   examples:
   - type: success
@@ -124,14 +97,8 @@ mappings:
 - category: authorization
   event_type: remove_from_group
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: details.kicker.user.email
     user_id: details.kicker.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     target_group_name: entity.usergroup.name
     target_username: actor.user.email
   examples:
@@ -140,14 +107,8 @@ mappings:
 - category: authorization
   event_type: create_role
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     target_role_name: entity.role.name
   examples:
   - type: success
@@ -155,14 +116,8 @@ mappings:
 - category: authorization
   event_type: update_role
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     target_role_name: entity.role.name
   examples:
   - type: success
@@ -170,14 +125,8 @@ mappings:
 - category: authorization
   event_type: delete_role
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     target_role_name: entity.role.name
   examples:
   - type: success
@@ -185,14 +134,8 @@ mappings:
 - category: authorization
   event_type: add_permission
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     permission_name: entity.role.name
     target_resource_name: details.target_user
   examples:
@@ -203,14 +146,8 @@ mappings:
 - category: authorization
   event_type: remove_permission
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     permission_name: details.changed_permissions
     target_resource_name: entity.account_type_role.name
   examples:
@@ -219,42 +156,24 @@ mappings:
 - category: authorization
   event_type: add_enrollment
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
   examples:
   - type: success
     location: ./event_examples/authorization_add_enrollment.json
 - category: authorization
   event_type: remove_enrollment
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
   examples:
   - type: success
     location: ./event_examples/authorization_remove_enrollment.json
 - category: system_audit
   event_type: create_security_configuration
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     configuration_setting_name: action
     configuration_setting_value: details
   examples:
@@ -263,14 +182,8 @@ mappings:
 - category: system_audit
   event_type: update_security_configuration
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     configuration_setting_name: action
     configuration_setting_value: details.new_value
     previous_configuration_setting_value: details.previous_value
@@ -282,14 +195,8 @@ mappings:
 - category: system_audit
   event_type: delete_security_configuration
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     configuration_setting_name: action
     configuration_setting_value: details
   examples:
@@ -298,14 +205,8 @@ mappings:
 - category: system_audit
   event_type: create_integration
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     integration_app_name: entity.app.name
   examples:
   - type: success
@@ -313,14 +214,8 @@ mappings:
 - category: system_audit
   event_type: update_integration
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     integration_app_name: entity.app.name
     previous_configuration_setting_value: details.previous_scopes
   examples:
@@ -329,14 +224,8 @@ mappings:
 - category: system_audit
   event_type: delete_integration
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     integration_app_name: entity.app.name
   examples:
   - type: success
@@ -344,14 +233,8 @@ mappings:
 - category: activity_audit
   event_type: create_resource
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     resource_name: entity.file.name
     resource_type: action
   examples:
@@ -360,14 +243,8 @@ mappings:
 - category: activity_audit
   event_type: update_resource
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     resource_name: entity.channel.name
     resource_type: entity.type
   examples:
@@ -376,14 +253,8 @@ mappings:
 - category: activity_audit
   event_type: delete_resource
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     resource_name: entity.file.name
     resource_type: entity.type
   examples:
@@ -392,14 +263,8 @@ mappings:
 - category: activity_audit
   event_type: download_resource
   attributes:
-    timestamp: date_create
-    event_id: id
-    event_code_or_type: action
     username: actor.user.email
     user_id: actor.user.id
-    session_id: context.session_id
-    ip_address: context.ip_address
-    user_agent_name: context.ua
     resource_name: entity.file.name
     resource_type: entity.type
   examples:

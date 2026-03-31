@@ -6,32 +6,29 @@ latency:
   duration: up to 120 minutes
 licensing:
   comments: Contact Sales
+mapping_defaults:
+  source:
+    attributes:
+      timestamp: EVENT_TIMESTAMP
+      event_id: EVENT_ID
+      event_code_or_type: EVENT_TYPE
+      username: USER_NAME
+      ip_address: CLIENT_IP
+      device_client_type: REPORTED_CLIENT_TYPE
 mappings:
-- attributes:
-    timestamp: EVENT_TIMESTAMP
-    event_id: EVENT_ID
-    event_code_or_type: EVENT_TYPE
-    username: USER_NAME
-    ip_address: CLIENT_IP
-    device_client_type: REPORTED_CLIENT_TYPE
-    credential_context: FIRST_AUTHENTICATION_FACTOR
-  category: authentication
+- category: authentication
   event_type: account_login
+  attributes:
+    credential_context: FIRST_AUTHENTICATION_FACTOR
   examples:
   - location: ./event_examples/login_history/authentication_account_login.json
     type: success
-- attributes:
-    timestamp: EVENT_TIMESTAMP
-    event_id: EVENT_ID
-    event_code_or_type: EVENT_TYPE
+- category: authentication
+  event_type: mfa_verification
+  attributes:
     result: IS_SUCCESS
-    username: USER_NAME
-    ip_address: CLIENT_IP
-    device_client_type: REPORTED_CLIENT_TYPE
     verification_method: SECOND_AUTHENTICATION_FACTOR
     verification_flagged: IS_SUCCESS
-  category: authentication
-  event_type: mfa_verification
   examples:
   - location: ./event_examples/login_history/authentication_mfa_verification.json
     type: success
