@@ -1,10 +1,14 @@
 """Load EMM root definitions and resolve category / event_type / attribute keys."""
 from __future__ import annotations
 
+import copy
 import os
 from typing import Any
 
 import yaml
+
+# Reserved path value in YAML mappings (must match validate-definitions).
+EMM_UPDATE = "EMM_UPDATE"
 
 
 def _load_yaml(path: str) -> dict[str, Any]:
@@ -72,3 +76,73 @@ def validate_mapping(model: dict[str, Any], mapping: dict[str, Any], *, path: st
     for ak in (mapping.get("attributes") or {}).keys():
         if ak not in model["attributes_by_key"]:
             raise ValueError(f"{path}: unknown attribute key {ak!r}")
+
+
+def validate_mapping_defaults(model: dict[str, Any], data: dict[str, Any], *, path: str) -> None:
+    """Raise ValueError if mapping_defaults references unknown category keys."""
+    md = data.get("mapping_defaults")
+    if not md:
+        return
+    categories_block = md.get("categories") or {}
+    if not isinstance(categories_block, dict):
+        raise ValueError(f"{path}: mapping_defaults.categories must be a mapping")
+    for ck in categories_block:
+        if ck not in model["categories_by_key"]:
+            raise ValueError(f"{path}: mapping_defaults.categories has unknown category key {ck!r}")
+
+
+def validate_raw_mapping_delta(model: dict[str, Any], raw_mapping: dict[str, Any], *, path: str) -> None:
+    """Ensure delta attribute keys (before merge) are known; ``null`` values are allowed (removals)."""
+    for ak in (raw_mapping.get("attributes") or {}).keys():
+        if ak not in model["attributes_by_key"]:
+            raise ValueError(f"{path}: unknown attribute key {ak!r} in mapping delta")
+
+
+def merge_mapping_attributes(data: dict[str, Any], raw_mapping: dict[str, Any]) -> dict[str, Any]:
+    """
+    Merge mapping_defaults (source → category) with raw_mapping.attributes (delta).
+    Delta keys set to YAML null remove that attribute from the merged result (even if set in defaults).
+    """
+    md = data.get("mapping_defaults") or {}
+    src_layer = (md.get("source") or {}).get("attributes") or {}
+    cat_key = raw_mapping.get("category")
+    cat_block = (md.get("categories") or {}).get(cat_key) or {}
+    cat_layer = cat_block.get("attributes") or {}
+    delta = raw_mapping.get("attributes") or {}
+
+    merged: dict[str, Any] = {}
+    merged.update(copy.deepcopy(src_layer))
+    merged.update(copy.deepcopy(cat_layer))
+
+    for attr_key, value in delta.items():
+        if value is None:
+            merged.pop(attr_key, None)
+        else:
+            merged[attr_key] = value
+    return merged
+
+
+def resolved_mapping_for_examples(raw_mapping: dict[str, Any], merged_attrs: dict[str, Any]) -> dict[str, Any]:
+    """Build a mapping dict like the on-disk YAML but with resolved attributes (for validation / docs)."""
+    out = dict(raw_mapping)
+    out["attributes"] = merged_attrs
+    return out
+
+
+def resolve_event_source_mappings(data: dict[str, Any]) -> list[dict[str, Any]]:
+    """Return one resolved mapping dict per ``mappings`` item (same order) with merged attributes."""
+    return [
+        resolved_mapping_for_examples(m, merge_mapping_attributes(data, m)) for m in data.get("mappings") or []
+    ]
+
+
+def count_mapped_attributes_for_examples(attrs: dict[str, Any]) -> int:
+    """Attributes that participate in example coverage (exclude EMM_UPDATE placeholders)."""
+    n = 0
+    for v in attrs.values():
+        if isinstance(v, str) and v == EMM_UPDATE:
+            continue
+        if isinstance(v, list) and len(v) > 0 and v[-1] == EMM_UPDATE:
+            continue
+        n += 1
+    return n

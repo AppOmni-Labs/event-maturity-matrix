@@ -25,7 +25,14 @@ _scripts_dir = os.path.join(os.getenv("GITHUB_WORKSPACE") or os.getcwd(), "scrip
 if _scripts_dir not in sys.path:
     sys.path.insert(0, _scripts_dir)
 
-from emm_definitions import load_model, validate_mapping
+from emm_definitions import (
+    load_model,
+    validate_mapping,
+    validate_mapping_defaults,
+    validate_raw_mapping_delta,
+    resolve_event_source_mappings,
+    count_mapped_attributes_for_examples,
+)
 from emm_json_paths import item_generator
 
 
@@ -128,9 +135,21 @@ def validate():
             event_source_name = data.get("name") or os.path.basename(event_source)
             parent_path = _product_dir(event_source)
 
-            for mapping in data.get("mappings", []):
+            validate_mapping_defaults(model, data, path=event_source)
+            resolved_mappings = resolve_event_source_mappings(data)
+            raw_mappings = data.get("mappings") or []
+            if len(resolved_mappings) != len(raw_mappings):
+                raise RuntimeError(f"{event_source}: resolved vs raw mapping count mismatch")
+
+            for raw_mapping, mapping in zip(raw_mappings, resolved_mappings):
                 try:
+                    validate_raw_mapping_delta(model, raw_mapping, path=event_source)
                     validate_mapping(model, mapping, path=event_source)
+                    if count_mapped_attributes_for_examples(mapping.get("attributes") or {}) < 1:
+                        raise ValueError(
+                            f"{event_source}: mapping {mapping.get('category')}/{mapping.get('event_type')} "
+                            "has no attributes after merging mapping_defaults (excluding EMM_UPDATE placeholders)"
+                        )
                 except ValueError as e:
                     logger.error("[{}] {}: {}", product_name, event_source_name, e)
                     raise

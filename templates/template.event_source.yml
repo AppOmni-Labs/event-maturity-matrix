@@ -21,6 +21,16 @@ latency:
   comments: [Provide any additional context regarding audit log collection latency]
 licensing:
   comments: [Provide context regarding licensing, cost, and general availability regarding audit logs]
+# Optional layered defaults (merge: source → categories[category] → each mapping’s attributes).
+# Use YAML null on a key in mapping.attributes to drop an inherited default for that event type.
+# mapping_defaults:
+#   source:
+#     attributes:
+#       timestamp: [field path]
+#   categories:
+#     authorization:
+#       attributes:
+#         result: [field path]
 mappings:
   - category: authentication
     event_type: account_login

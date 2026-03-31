@@ -12,7 +12,7 @@ _scripts_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)))
 if _scripts_dir not in sys.path:
     sys.path.insert(0, _scripts_dir)
 
-from emm_definitions import load_model
+from emm_definitions import load_model, resolve_event_source_mappings
 from emm_json_paths import item_generator
 
 EMM_UPDATE = "EMM_UPDATE"
@@ -79,7 +79,7 @@ def build_event_source_doc(data: dict, model: dict, root: str, event_source_path
 
     parent_path = os.path.dirname(os.path.dirname(event_source_path))
 
-    for mapping in data.get("mappings") or []:
+    for mapping in resolve_event_source_mappings(data):
         cat_key = mapping.get("category", "")
         et_key = mapping.get("event_type", "")
         cat_item = model["categories_by_key"].get(cat_key, {})

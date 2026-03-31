@@ -4,6 +4,10 @@ Each sheet row's ``EMM Mapping Final`` column must use semantic keys joined by d
 ``category.event_type.attribute`` (e.g. ``authentication.account_login.timestamp``),
 matching ``key`` fields in categories.yml, event_types.yml, and attributes.yml.
 The ``EMM Mapping for Event Source YAML`` column is ``field_name: json.path`` as before.
+
+When an event source uses ``mapping_defaults``, only keys present under ``mappings[].attributes``
+can be updated by this script; inherited keys are not in the delta and will not match until you
+add that attribute key to the relevant mapping block.
 """
 import os
 import csv

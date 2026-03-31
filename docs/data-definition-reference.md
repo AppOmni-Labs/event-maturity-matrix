@@ -267,6 +267,18 @@ The `collection` key takes an array of properties which define each collection p
 
 Each event_source uniquely describes the event collection source used to detect threats. Each event_source itself has a relationship to a product but also describes the collection method, retention, latency, licensing and more. Each event_source (should) also have one or more mappings which describe the data which is collected by the event_source. These mappings map EMM attribute fields to the actual data fields within the event_source.
 
+#### mapping_defaults (optional)
+
+To avoid repeating the same attribute map on every `mappings` entry, an event_source may define **`mapping_defaults`**. Merge order for each mapping is:
+
+1. `mapping_defaults.source.attributes` (shared across the whole file)
+2. `mapping_defaults.categories.<category_key>.attributes` (shared for every mapping in that category)
+3. `mappings[].attributes` (**delta** on top of the above)
+
+Later steps override earlier keys. To **remove** an inherited default for one event type, set that attribute key to YAML **`null`** in the mapping delta—after merge, that attribute is absent (and example validation will not expect it). This is useful when a category default adds a field that one event type should not map.
+
+Defaults are fully optional. With no `mapping_defaults`, behavior is unchanged: each mapping lists the full attribute map. See [Okta System Log API](../products/okta/event_sources/okta_system_log.yml) for a layered example.
+
 Below is an example event_source for [Salesforce EventLogFile Login Event](../products/salesforce/event_sources/salesforce_elf_login_event.yml) which we will use as an example to explain the structure of an event_source data content definition file.
 
 ```yaml
@@ -376,11 +388,7 @@ Licensing is complex, that being said at this time EMM is only tracking any `com
 
 Mappings are the key component of an event_source. `mappings` are a list of objects which define which categories, event_types and attributes are supported by a given event_source.
 
-Each `mapping` object must contain a [category](#categories) ID and [event_type](#event-types) ID which is defined as a core data definition. Additionally, each `mapping` must define a list of [attributes](#attributes) which are supported by the event_source. Each attribute maps to a value within the provided example JSON event.
-
-The `attribute` map must be in the format of `A000X` (which is the ID of an attribute) and the value must be the actual name of the field within the provided example.
-
-To reiterate, this map contains the ID of a defined attribute and the value matches the value within an example JSON file.
+Each `mapping` object must contain a [category](#categories) **key** and [event types](#event-types) **key** (`categories.yml` / `event_types.yml`). Each mapping has an `attributes` object: either the **full** map of attribute keys to JSON field path(s), or—when [`mapping_defaults`](#mapping_defaults-optional) is present—a **delta** that applies on top of defaults (possibly including `null` removals). Each attribute key must match `attributes.yml`. Values are field names or paths in the example JSON.
 
 If a field value is within nested JSON you can use dot notation. Using the below example, the map attribute value would be `product.name`.
 
