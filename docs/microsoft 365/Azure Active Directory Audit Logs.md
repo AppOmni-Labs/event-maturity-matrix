@@ -96,8 +96,8 @@ Includes logs from Azure Active Directory including authentication and user mana
 | Authorization | Add To Group | User ID | UserKey |
 | Authorization | Add To Group | User Type / Role | Actor[ID=User].Type, Actor[ID=ServicePrincipal].Type |
 | Authorization | Add To Group | Device/Client Type | ExtendedProperties[Name=additionalDetails].Value |
-| Authorization | Add To Group | Target Group Name | ModifiedProperties[Name=Group.DisplayName].NewValue |
 | Authorization | Add To Group | Target Username | Target.ID |
+| Authorization | Add To Group | Target Group Name | ModifiedProperties[Name=Group.DisplayName].NewValue |
 | Authorization | Remove From Group | Timestamp | CreationTime |
 | Authorization | Remove From Group | Event ID | Id |
 | Authorization | Remove From Group | Event Code / Type | Operation |
@@ -106,8 +106,8 @@ Includes logs from Azure Active Directory including authentication and user mana
 | Authorization | Remove From Group | User ID | UserKey |
 | Authorization | Remove From Group | User Type / Role | Actor[ID=User].Type, Actor[ID=ServicePrincipal].Type |
 | Authorization | Remove From Group | User Agent Name | ExtendedProperties[Name=additionalDetails].Value |
-| Authorization | Remove From Group | Target Group Name | ModifiedProperties[Name=Group.DisplayName].NewValue |
 | Authorization | Remove From Group | Target Username | Target.ID |
+| Authorization | Remove From Group | Target Group Name | ModifiedProperties[Name=Group.DisplayName].NewValue |
 | Authorization | Create Role | Timestamp | CreationTime |
 | Authorization | Create Role | Event ID | Id |
 | Authorization | Create Role | Event Code / Type | Operation |
@@ -125,8 +125,8 @@ Includes logs from Azure Active Directory including authentication and user mana
 | Authorization | Update Role | User ID | UserKey |
 | Authorization | Update Role | User Type / Role | Actor[ID=User].Type, Actor[ID=ServicePrincipal].Type |
 | Authorization | Update Role | User Agent Name | ExtendedProperties[Name=additionalDetails].Value |
-| Authorization | Update Role | Target Role Name | Target.ID |
 | Authorization | Update Role | Target Attribute Context | ModifiedProperties[Name=GrantedPermissions].NewValue |
+| Authorization | Update Role | Target Role Name | Target.ID |
 | Authorization | Delete Role | Timestamp | CreationTime |
 | Authorization | Delete Role | Event ID | Id |
 | Authorization | Delete Role | Event Code / Type | Operation |
@@ -161,8 +161,8 @@ Includes logs from Azure Active Directory including authentication and user mana
 | Authorization | Add Enrollment | Username | UserId |
 | Authorization | Add Enrollment | User ID | UserKey |
 | Authorization | Add Enrollment | User Type / Role | Actor[ID=User].Type, Actor[ID=ServicePrincipal].Type |
-| Authorization | Add Enrollment | Enrollment Type | ModifiedProperties[Name=StrongAuthenticationUserDetails].NewValue |
 | Authorization | Add Enrollment | Target Username | Target.ID |
+| Authorization | Add Enrollment | Enrollment Type | ModifiedProperties[Name=StrongAuthenticationUserDetails].NewValue |
 | Authorization | Remove Enrollment | Timestamp | CreationTime |
 | Authorization | Remove Enrollment | Event ID | Id |
 | Authorization | Remove Enrollment | Event Code / Type | Operation |
@@ -170,8 +170,8 @@ Includes logs from Azure Active Directory including authentication and user mana
 | Authorization | Remove Enrollment | Username | UserId |
 | Authorization | Remove Enrollment | User ID | UserKey |
 | Authorization | Remove Enrollment | User Type / Role | Actor[ID=User].Type, Actor[ID=ServicePrincipal].Type |
-| Authorization | Remove Enrollment | Enrollment Type | ModifiedProperties[Name=StrongAuthenticationPhoneAppDetail].OldValue |
 | Authorization | Remove Enrollment | Target Username | Target.ID |
+| Authorization | Remove Enrollment | Enrollment Type | ModifiedProperties[Name=StrongAuthenticationPhoneAppDetail].OldValue |
 | System Audit | Create Security Configuration | Timestamp | CreationTime |
 | System Audit | Create Security Configuration | Event ID | Id |
 | System Audit | Create Security Configuration | Event Code / Type | Operation |
@@ -217,9 +217,9 @@ Includes logs from Azure Active Directory including authentication and user mana
 | System Audit | Update Integration | Username | UserId |
 | System Audit | Update Integration | User ID | UserKey |
 | System Audit | Update Integration | User Type / Role | Actor[ID=User].Type, Actor[ID=ServicePrincipal].Type |
-| System Audit | Update Integration | Integration / App Name | Target.ID |
 | System Audit | Update Integration | Configuration / Setting Name | ModifiedProperties |
 | System Audit | Update Integration | Previous Configuration / Setting Value | ModifiedProperties[Name=Entitlement].OldValue |
+| System Audit | Update Integration | Integration / App Name | Target.ID |
 | System Audit | Delete Integration | Timestamp | CreationTime |
 | System Audit | Delete Integration | Event ID | Id |
 | System Audit | Delete Integration | Event Code / Type | Operation |

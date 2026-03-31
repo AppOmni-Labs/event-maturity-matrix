@@ -38,9 +38,9 @@ Tracks report-related actions, such as when a user runs or exports a report.
 | Activity Audit | Download Resource | Session ID | SessionKey |
 | Activity Audit | Download Resource | IP Address | SourceIp |
 | Activity Audit | Download Resource | Device/Client Type | EventSource |
-| Activity Audit | Download Resource | Resource Metadata | RowsProcessed |
 | Activity Audit | Download Resource | Resource Name | Name |
 | Activity Audit | Download Resource | Resource Type | QueriedEntities |
+| Activity Audit | Download Resource | Resource Metadata | RowsProcessed |
 
 ## Example logs
 

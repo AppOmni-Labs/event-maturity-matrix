@@ -34,8 +34,8 @@ Includes logs for Sharepoint and OneDrive.
 | Authorization | Add To Group | IP Address | ClientIP |
 | Authorization | Add To Group | User Agent Name | UserAgent |
 | Authorization | Add To Group | Device/Client Type | Platform |
-| Authorization | Add To Group | Target Group Name | EventData |
 | Authorization | Add To Group | Target Username | TargetUserOrGroupName |
+| Authorization | Add To Group | Target Group Name | EventData |
 | Authorization | Remove From Group | Timestamp | CreationTime |
 | Authorization | Remove From Group | Event ID | Id |
 | Authorization | Remove From Group | Event Code / Type | Operation |
@@ -44,8 +44,8 @@ Includes logs for Sharepoint and OneDrive.
 | Authorization | Remove From Group | IP Address | ClientIP |
 | Authorization | Remove From Group | User Agent Name | UserAgent |
 | Authorization | Remove From Group | Device/Client Type | Platform |
-| Authorization | Remove From Group | Target Group Name | EventData |
 | Authorization | Remove From Group | Target Username | TargetUserOrGroupName |
+| Authorization | Remove From Group | Target Group Name | EventData |
 | Authorization | Add Permission | Timestamp | CreationTime |
 | Authorization | Add Permission | Event ID | Id |
 | Authorization | Add Permission | Event Code / Type | Operation |

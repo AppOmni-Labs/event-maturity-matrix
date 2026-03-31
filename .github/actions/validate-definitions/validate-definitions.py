@@ -156,8 +156,12 @@ def validate():
 
                 mappings_checked += 1
                 raw_attrs = mapping.get("attributes") or {}
+                # Iterate in sorted attribute-key order so example checks match snapshot-style ordering
+                # (mapping_snapshots sort attribute keys alphabetically). Validation is order-independent
+                # for pass/fail; this only stabilizes logs and debugging.
                 attribute_names = []
-                for v in raw_attrs.values():
+                for ak in sorted(raw_attrs.keys()):
+                    v = raw_attrs[ak]
                     if isinstance(v, str) and v == EMM_UPDATE:
                         attributes_ignored += 1
                         continue

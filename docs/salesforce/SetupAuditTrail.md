@@ -46,8 +46,8 @@ The SetupAuditTrail object provides an audit trail of changes to user profiles, 
 | Authorization | Update Group | Event Code / Type | action |
 | Authorization | Update Group | Username | sfdc_created_by_username |
 | Authorization | Update Group | User ID | sfdc_created_by_id |
-| Authorization | Update Group | Target Group Name | display |
 | Authorization | Update Group | Target Attribute Context | display |
+| Authorization | Update Group | Target Group Name | display |
 | Authorization | Delete Group | Timestamp | sfdc_created_date |
 | Authorization | Delete Group | Event ID | record_id |
 | Authorization | Delete Group | Event Code / Type | action |
@@ -77,8 +77,8 @@ The SetupAuditTrail object provides an audit trail of changes to user profiles, 
 | Authorization | Update Role | Event Code / Type | action |
 | Authorization | Update Role | Username | sfdc_created_by_username |
 | Authorization | Update Role | User ID | sfdc_created_by_id |
-| Authorization | Update Role | Target Role Name | display |
 | Authorization | Update Role | Target Attribute Context | display |
+| Authorization | Update Role | Target Role Name | display |
 | Authorization | Delete Role | Timestamp | sfdc_created_date |
 | Authorization | Delete Role | Event ID | record_id |
 | Authorization | Delete Role | Event Code / Type | action |
@@ -104,15 +104,15 @@ The SetupAuditTrail object provides an audit trail of changes to user profiles, 
 | Authorization | Add Enrollment | Event Code / Type | action |
 | Authorization | Add Enrollment | Username | sfdc_created_by_username |
 | Authorization | Add Enrollment | User ID | sfdc_created_by_id |
-| Authorization | Add Enrollment | Enrollment Type | display |
 | Authorization | Add Enrollment | Target Username | display |
+| Authorization | Add Enrollment | Enrollment Type | display |
 | Authorization | Remove Enrollment | Timestamp | sfdc_created_date |
 | Authorization | Remove Enrollment | Event ID | record_id |
 | Authorization | Remove Enrollment | Event Code / Type | action |
 | Authorization | Remove Enrollment | Username | sfdc_created_by_username |
 | Authorization | Remove Enrollment | User ID | sfdc_created_by_id |
-| Authorization | Remove Enrollment | Enrollment Type | display |
 | Authorization | Remove Enrollment | Target Username | display |
+| Authorization | Remove Enrollment | Enrollment Type | display |
 | System Audit | Create Security Configuration | Timestamp | sfdc_created_date |
 | System Audit | Create Security Configuration | Event ID | record_id |
 | System Audit | Create Security Configuration | Event Code / Type | action |

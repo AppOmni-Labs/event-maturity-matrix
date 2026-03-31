@@ -82,8 +82,8 @@ The activity audit log provides log events for actions occurring with your Googl
 | Authorization | Update Group | Username | actor.email |
 | Authorization | Update Group | User ID | actor.profileId |
 | Authorization | Update Group | User Type / Role | actor.callerType |
-| Authorization | Update Group | Target Group Name | event.parameters[name=GROUP_EMAIL] |
 | Authorization | Update Group | Target Attribute Context | event.parameters[name=SETTING_NAME] |
+| Authorization | Update Group | Target Group Name | event.parameters[name=GROUP_EMAIL] |
 | Authorization | Delete Group | Timestamp | id.time |
 | Authorization | Delete Group | Event ID | etag |
 | Authorization | Delete Group | Event Code / Type | event.name |
@@ -99,8 +99,8 @@ The activity audit log provides log events for actions occurring with your Googl
 | Authorization | Add To Group | User ID | actor.profileId |
 | Authorization | Add To Group | User Type / Role | actor.callerType |
 | Authorization | Add To Group | IP Address | ipAddress |
-| Authorization | Add To Group | Target Group Name | event.parameters[name=GROUP_EMAIL] |
 | Authorization | Add To Group | Target Username | event.parameters[name=USER_EMAIL] |
+| Authorization | Add To Group | Target Group Name | event.parameters[name=GROUP_EMAIL] |
 | Authorization | Remove From Group | Timestamp | id.time |
 | Authorization | Remove From Group | Event ID | etag |
 | Authorization | Remove From Group | Event Code / Type | event.name |
@@ -108,8 +108,8 @@ The activity audit log provides log events for actions occurring with your Googl
 | Authorization | Remove From Group | User ID | actor.profileId |
 | Authorization | Remove From Group | User Type / Role | actor.callerType |
 | Authorization | Remove From Group | IP Address | ipAddress |
-| Authorization | Remove From Group | Target Group Name | event.parameters[name=GROUP_EMAIL] |
 | Authorization | Remove From Group | Target Username | event.parameters[name=USER_EMAIL] |
+| Authorization | Remove From Group | Target Group Name | event.parameters[name=GROUP_EMAIL] |
 | Authorization | Create Role | Timestamp | id.time |
 | Authorization | Create Role | Event ID | etag |
 | Authorization | Create Role | Event Code / Type | event.name |
@@ -125,8 +125,8 @@ The activity audit log provides log events for actions occurring with your Googl
 | Authorization | Update Role | User ID | actor.profileId |
 | Authorization | Update Role | User Type / Role | actor.callerType |
 | Authorization | Update Role | IP Address | ipAddress |
-| Authorization | Update Role | Target Role Name | event.parameters[name=ROLE_NAME] |
 | Authorization | Update Role | Target Attribute Context | event.parameters |
+| Authorization | Update Role | Target Role Name | event.parameters[name=ROLE_NAME] |
 | Authorization | Delete Role | Timestamp | id.time |
 | Authorization | Delete Role | Event ID | etag |
 | Authorization | Delete Role | Event Code / Type | event.name |
@@ -206,9 +206,9 @@ The activity audit log provides log events for actions occurring with your Googl
 | System Audit | Update Integration | User ID | actor.profileId |
 | System Audit | Update Integration | User Type / Role | actor.callerType |
 | System Audit | Update Integration | IP Address | ipAddress |
-| System Audit | Update Integration | Integration / App Name | event.parameters[name=APPLICATION_NAME] |
 | System Audit | Update Integration | Configuration / Setting Name | event.parameters[name=NEW_VALUE] |
 | System Audit | Update Integration | Previous Configuration / Setting Value | event.parameters[name=OLD_VALUE] |
+| System Audit | Update Integration | Integration / App Name | event.parameters[name=APPLICATION_NAME] |
 | System Audit | Delete Integration | Timestamp | id.time |
 | System Audit | Delete Integration | Event ID | etag |
 | System Audit | Delete Integration | Event Code / Type | event.name |
@@ -249,9 +249,9 @@ The activity audit log provides log events for actions occurring with your Googl
 | Activity Audit | Download Resource | Username | actor.email |
 | Activity Audit | Download Resource | User ID | actor.profileId |
 | Activity Audit | Download Resource | IP Address | ipAddress |
-| Activity Audit | Download Resource | Resource Metadata | event.parameters[].name |
 | Activity Audit | Download Resource | Resource Name | event.parameters[name=doc_title] |
 | Activity Audit | Download Resource | Resource Type | event.parameters[name=doc_type] |
+| Activity Audit | Download Resource | Resource Metadata | event.parameters[].name |
 | Activity Audit | Query Resource | Timestamp | id.time |
 | Activity Audit | Query Resource | Event ID | etag |
 | Activity Audit | Query Resource | Event Code / Type | event.name |

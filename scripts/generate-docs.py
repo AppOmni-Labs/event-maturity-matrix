@@ -18,6 +18,19 @@ from emm_json_paths import item_generator
 EMM_UPDATE = "EMM_UPDATE"
 
 
+def _attribute_items_in_decl_order(attributes: dict[str, Any], model: dict) -> list[tuple[str, Any]]:
+    """Stable order: `attributes.yml` item sequence, then unknown keys alphabetically."""
+    order = model.get("attributes_key_order") or []
+    rank = {k: i for i, k in enumerate(order)}
+    items = list((attributes or {}).items())
+
+    def sort_key(item: tuple[str, Any]) -> tuple[int, str]:
+        k = item[0]
+        return (rank.get(k, 1 << 30), k)
+
+    return sorted(items, key=sort_key)
+
+
 def _field_paths(spec: Any) -> list[str]:
     if isinstance(spec, list):
         return [p for p in spec if isinstance(p, str)]
@@ -54,7 +67,7 @@ def _sample_snippet(example_path: str, mapping: dict, model: dict) -> str:
     except OSError:
         return "—"
     parts: list[str] = []
-    for attr_key, spec in (mapping.get("attributes") or {}).items():
+    for attr_key, spec in _attribute_items_in_decl_order(mapping.get("attributes") or {}, model):
         if spec == EMM_UPDATE:
             continue
         if isinstance(spec, list) and spec and spec[-1] == EMM_UPDATE:
@@ -87,7 +100,7 @@ def build_event_source_doc(data: dict, model: dict, root: str, event_source_path
         cat_name = cat_item.get("name", cat_key)
         et_name = et_item.get("name", et_key)
 
-        for attr_key, spec in (mapping.get("attributes") or {}).items():
+        for attr_key, spec in _attribute_items_in_decl_order(mapping.get("attributes") or {}, model):
             if spec == EMM_UPDATE:
                 continue
             if isinstance(spec, list) and spec and spec[-1] == EMM_UPDATE:

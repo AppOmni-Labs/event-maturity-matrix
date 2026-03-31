@@ -62,8 +62,8 @@ Provides details about a Salesforce org's SOAP API request activity.
 | Activity Audit | Download Resource | Session ID | SESSION_KEY |
 | Activity Audit | Download Resource | IP Address | CLIENT_IP |
 | Activity Audit | Download Resource | Device/Client Type | API_TYPE |
-| Activity Audit | Download Resource | Resource Metadata | ROWS_PROCESSED |
 | Activity Audit | Download Resource | Resource Type | ENTITY_NAME |
+| Activity Audit | Download Resource | Resource Metadata | ROWS_PROCESSED |
 
 ## Example logs
 

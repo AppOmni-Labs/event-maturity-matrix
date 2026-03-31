@@ -41,11 +41,13 @@ def load_model(base: str) -> dict[str, Any]:
         event_types_by_key[k] = item
 
     attributes_by_key: dict[str, dict[str, Any]] = {}
+    attributes_key_order: list[str] = []
     for item in attributes_data.get("items", []):
         k = item.get("key")
         if not k:
             raise ValueError(f"Attribute missing key: {item!r}")
         attributes_by_key[k] = item
+        attributes_key_order.append(k)
 
     return {
         "categories": categories_data,
@@ -54,6 +56,7 @@ def load_model(base: str) -> dict[str, Any]:
         "categories_by_key": categories_by_key,
         "event_types_by_key": event_types_by_key,
         "attributes_by_key": attributes_by_key,
+        "attributes_key_order": attributes_key_order,
     }
 
 

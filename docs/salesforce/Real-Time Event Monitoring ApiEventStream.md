@@ -40,9 +40,9 @@ Tracks the user-initiated read-only API calls "query()", "queryMore()", and "cou
 | Activity Audit | Download Resource | IP Address | SourceIp |
 | Activity Audit | Download Resource | User Agent Name | UserAgent |
 | Activity Audit | Download Resource | Device/Client Type | Platform |
-| Activity Audit | Download Resource | Resource Metadata | RowsProcessed |
 | Activity Audit | Download Resource | Resource Name | Query |
 | Activity Audit | Download Resource | Resource Type | ApiType |
+| Activity Audit | Download Resource | Resource Metadata | RowsProcessed |
 
 ## Example logs
 

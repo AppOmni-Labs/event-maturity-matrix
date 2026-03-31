@@ -81,8 +81,8 @@ Slack enterprise audit logs that provide an audit trail of user and system activ
 | Authorization | Remove From Group | Session ID | context.session_id |
 | Authorization | Remove From Group | IP Address | context.ip_address |
 | Authorization | Remove From Group | User Agent Name | context.ua |
-| Authorization | Remove From Group | Target Group Name | entity.usergroup.name |
 | Authorization | Remove From Group | Target Username | actor.user.email |
+| Authorization | Remove From Group | Target Group Name | entity.usergroup.name |
 | Authorization | Create Role | Timestamp | date_create |
 | Authorization | Create Role | Event ID | id |
 | Authorization | Create Role | Event Code / Type | action |
@@ -194,8 +194,8 @@ Slack enterprise audit logs that provide an audit trail of user and system activ
 | System Audit | Update Integration | Session ID | context.session_id |
 | System Audit | Update Integration | IP Address | context.ip_address |
 | System Audit | Update Integration | User Agent Name | context.ua |
-| System Audit | Update Integration | Integration / App Name | entity.app.name |
 | System Audit | Update Integration | Previous Configuration / Setting Value | details.previous_scopes |
+| System Audit | Update Integration | Integration / App Name | entity.app.name |
 | System Audit | Delete Integration | Timestamp | date_create |
 | System Audit | Delete Integration | Event ID | id |
 | System Audit | Delete Integration | Event Code / Type | action |

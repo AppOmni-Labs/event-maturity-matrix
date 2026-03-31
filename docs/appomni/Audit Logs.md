@@ -66,8 +66,8 @@ AppOmni audit logs that provide a record of user activity.
 | Authorization | Add Enrollment | User ID | user_id |
 | Authorization | Add Enrollment | IP Address | action_data.user_ip |
 | Authorization | Add Enrollment | User Agent Name | action_data.user_agent |
-| Authorization | Add Enrollment | Enrollment Type | action_data.detail_str |
 | Authorization | Add Enrollment | Target Username | action_data.target_user_username |
+| Authorization | Add Enrollment | Enrollment Type | action_data.detail_str |
 | Authorization | Remove Enrollment | Timestamp | action_at |
 | Authorization | Remove Enrollment | Event ID | log_id |
 | Authorization | Remove Enrollment | Event Code / Type | action_type |

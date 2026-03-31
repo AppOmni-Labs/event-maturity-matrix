@@ -55,8 +55,8 @@ Provides an audit trail of administrative actions taken within the Duo Security 
 | Authorization | Update Group | Timestamp | isotimestamp, timestamp |
 | Authorization | Update Group | Event Code / Type | action |
 | Authorization | Update Group | Username | username |
-| Authorization | Update Group | Target Group Name | object |
 | Authorization | Update Group | Target Attribute Context | description |
+| Authorization | Update Group | Target Group Name | object |
 | Authorization | Delete Group | Timestamp | isotimestamp, timestamp |
 | Authorization | Delete Group | Event Code / Type | action |
 | Authorization | Delete Group | Username | username |
@@ -64,8 +64,8 @@ Provides an audit trail of administrative actions taken within the Duo Security 
 | Authorization | Add To Group | Timestamp | isotimestamp, timestamp |
 | Authorization | Add To Group | Event Code / Type | action |
 | Authorization | Add To Group | Username | username |
-| Authorization | Add To Group | Target Group Name | description.groups.name |
 | Authorization | Add To Group | Target Username | object |
+| Authorization | Add To Group | Target Group Name | description.groups.name |
 | Authorization | Remove From Group | Timestamp | isotimestamp, timestamp |
 | Authorization | Remove From Group | Event Code / Type | action |
 | Authorization | Remove From Group | Username | username |
@@ -74,13 +74,13 @@ Provides an audit trail of administrative actions taken within the Duo Security 
 | Authorization | Add Enrollment | Event Code / Type | action |
 | Authorization | Add Enrollment | Username | username |
 | Authorization | Add Enrollment | User Agent Name | description.user_agent |
-| Authorization | Add Enrollment | Enrollment Type | description.authenticator_type |
 | Authorization | Add Enrollment | Target Username | description.owner_name |
+| Authorization | Add Enrollment | Enrollment Type | description.authenticator_type |
 | Authorization | Remove Enrollment | Timestamp | isotimestamp, timestamp |
 | Authorization | Remove Enrollment | Event Code / Type | action |
 | Authorization | Remove Enrollment | Username | username |
-| Authorization | Remove Enrollment | Enrollment Type | description |
 | Authorization | Remove Enrollment | Target Username | object |
+| Authorization | Remove Enrollment | Enrollment Type | description |
 | System Audit | Create Security Configuration | Timestamp | isotimestamp, timestamp |
 | System Audit | Create Security Configuration | Event Code / Type | action |
 | System Audit | Create Security Configuration | Username | username |
@@ -102,8 +102,8 @@ Provides an audit trail of administrative actions taken within the Duo Security 
 | System Audit | Update Integration | Timestamp | isotimestamp |
 | System Audit | Update Integration | Event Code / Type | action |
 | System Audit | Update Integration | Username | username |
-| System Audit | Update Integration | Integration / App Name | object |
 | System Audit | Update Integration | Configuration / Setting Name | description |
+| System Audit | Update Integration | Integration / App Name | object |
 | System Audit | Delete Integration | Timestamp | isotimestamp |
 | System Audit | Delete Integration | Event Code / Type | action |
 | System Audit | Delete Integration | Username | username |
@@ -139,18 +139,18 @@ Provides an audit trail of administrative actions taken within the Duo Security 
 | Authorization | Delete User | [user](/products/duo/event_examples/authorization_delete_user_admin.json) | Timestamp=2024-05-17T17:30:04+00:00; Event Code / Type=user_pending_delete; Username=John Doe; Target Username=sally.smith@example.com |
 | Authorization | Delete User | [admin](/products/duo/event_examples/authorization_delete_user_admin_admin.json) | Timestamp=2024-05-23T20:16:36+00:00; Event Code / Type=admin_delete; Username=Jane Doe; User Type / Role=Administrator; Target Username=Bob Smith |
 | Authorization | Create Group | [success](/products/duo/event_examples/authorization_create_group_admin.json) | Timestamp=2024-05-17T17:31:18+00:00; Event Code / Type=group_create; Username=Jane Doe; Target Group Name=custom_admin_group_east |
-| Authorization | Update Group | [success](/products/duo/event_examples/authorization_update_group_admin.json) | Timestamp=2024-05-23T19:42:49+00:00; Event Code / Type=group_update; Username=John Doe; Target Group Name=custom_group_bypass_users; Target Attribute Context={'_status': 'Disabled'} |
+| Authorization | Update Group | [success](/products/duo/event_examples/authorization_update_group_admin.json) | Timestamp=2024-05-23T19:42:49+00:00; Event Code / Type=group_update; Username=John Doe; Target Attribute Context={'_status': 'Disabled'}; Target Group Name=custom_group_bypass_users |
 | Authorization | Delete Group | [success](/products/duo/event_examples/authorization_delete_group_admin.json) | Timestamp=2024-05-23T19:43:09+00:00; Event Code / Type=group_delete; Username=John Doe; Target Group Name=custom_group_west_users |
-| Authorization | Add To Group | [success](/products/duo/event_examples/authorization_add_to_group_admin.json) | Timestamp=2024-05-23T19:43:23+00:00; Event Code / Type=user_update; Username=Jane Doe; Target Group Name=custom_group_user_bypass; Target Username=Mary Smith |
+| Authorization | Add To Group | [success](/products/duo/event_examples/authorization_add_to_group_admin.json) | Timestamp=2024-05-23T19:43:23+00:00; Event Code / Type=user_update; Username=Jane Doe; Target Username=Mary Smith; Target Group Name=custom_group_user_bypass |
 | Authorization | Remove From Group | [success](/products/duo/event_examples/authorization_remove_from_group_admin.json) | Timestamp=2024-05-23T19:43:42+00:00; Event Code / Type=user_update; Username=Jane Doe; Target Username=Steve Smith |
-| Authorization | Add Enrollment | [success](/products/duo/event_examples/authorization_add_enrollment_admin.json) | Timestamp=2024-05-17T17:36:03+00:00; Event Code / Type=webauthncredential_create; Username=Jane Doe; User Agent Name=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit…; Enrollment Type=Security key |
-| Authorization | Remove Enrollment | [user](/products/duo/event_examples/authorization_remove_enrollment_admin.json) | Timestamp=2024-05-28T17:17:58+00:00; Event Code / Type=user_update; Username=John Doe; Enrollment Type={"phones": ""}; Target Username=bob.smith@acme.com |
-| Authorization | Remove Enrollment | [admin](/products/duo/event_examples/authorization_remove_enrollment_admin_admin.json) | Timestamp=2024-05-28T17:18:45+00:00; Event Code / Type=admin_update; Username=Jane Doe; Enrollment Type={"phone": null}; Target Username=Bruce Banner |
+| Authorization | Add Enrollment | [success](/products/duo/event_examples/authorization_add_enrollment_admin.json) | Timestamp=2024-05-17T17:36:03+00:00; Event Code / Type=webauthncredential_create; Username=Jane Doe; User Agent Name=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit…; Target Username=luke.skywalker@republic.com |
+| Authorization | Remove Enrollment | [user](/products/duo/event_examples/authorization_remove_enrollment_admin.json) | Timestamp=2024-05-28T17:17:58+00:00; Event Code / Type=user_update; Username=John Doe; Target Username=bob.smith@acme.com; Enrollment Type={"phones": ""} |
+| Authorization | Remove Enrollment | [admin](/products/duo/event_examples/authorization_remove_enrollment_admin_admin.json) | Timestamp=2024-05-28T17:18:45+00:00; Event Code / Type=admin_update; Username=Jane Doe; Target Username=Bruce Banner; Enrollment Type={"phone": null} |
 | System Audit | Create Security Configuration | [success](/products/duo/event_examples/system_audit_create_security_configuration_admin.json) | Timestamp=2024-05-29T15:03:35+00:00; Event Code / Type=cloudsso_add_saml_authsource; Username=John Doe; Configuration / Setting Name=cloudsso_add_saml_authsource |
 | System Audit | Update Security Configuration | [success](/products/duo/event_examples/system_audit_update_security_configuration_admin.json) | Timestamp=2024-05-29T14:34:59+00:00; Event Code / Type=updated_risk_profile; Username=Jane Doe; Configuration / Setting Name=updated_risk_profile; Configuration / Setting Value={'applications': 'Admin API', 'countries': 'Ascension, Afgh… |
 | System Audit | Delete Security Configuration | [success](/products/duo/event_examples/system_audit_delete_security_configuration_admin.json) | Timestamp=2024-05-29T14:49:14+00:00; Event Code / Type=policy_delete; Username=Jane Doe; Configuration / Setting Name=policy_delete; Configuration / Setting Value={'admin_email': 'jane.doe@example.com', 'anonymous_ip_polic… |
 | System Audit | Create Integration | [success](/products/duo/event_examples/system_audit_create_integration_admin.json) | Timestamp=2024-05-21T15:49:00+00:00; Event Code / Type=integration_create; Username=Jane Doe; Integration / App Name=Salesforce - Single Sign-On |
-| System Audit | Update Integration | [success](/products/duo/event_examples/system_audit_update_integration_admin.json) | Timestamp=2024-05-24T18:51:14+00:00; Event Code / Type=integration_update; Username=John Doe; Integration / App Name=Admin API; Configuration / Setting Name={'adminapi_admins': True, 'adminapi_info': True, 'adminapi_… |
+| System Audit | Update Integration | [success](/products/duo/event_examples/system_audit_update_integration_admin.json) | Timestamp=2024-05-24T18:51:14+00:00; Event Code / Type=integration_update; Username=John Doe; Configuration / Setting Name={'adminapi_admins': True, 'adminapi_info': True, 'adminapi_…; Integration / App Name=Admin API |
 | System Audit | Delete Integration | [success](/products/duo/event_examples/system_audit_delete_integration_admin.json) | Timestamp=2024-05-21T15:52:12+00:00; Event Code / Type=integration_delete; Username=Jane Doe; Integration / App Name=Workday - Single Sign-On |
 | Activity Audit | Create Resource | [success](/products/duo/event_examples/activity_audit_create_resource_admin.json) | Timestamp=2024-05-29T15:55:42+00:00; Event Code / Type=administrative_unit_create; Username=John Doe; Resource Name=Test Admin Unit; Resource Type=administrative_unit_create |
 | Activity Audit | Update Resource | [success](/products/duo/event_examples/activity_audit_update_resource_admin.json) | Timestamp=2024-05-29T16:04:19+00:00; Event Code / Type=custom_messaging_update; Username=John Doe; Resource Name=custom_messaging_update; Resource Type=custom_messaging_update |

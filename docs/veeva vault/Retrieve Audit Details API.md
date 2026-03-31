@@ -51,8 +51,8 @@ The Veeva Vault Retrieve Audit Details API provides near real-time, read-only ac
 | Authorization | Update Group | Event ID | id |
 | Authorization | Update Group | Event Code / Type | action |
 | Authorization | Update Group | Username | user_name |
-| Authorization | Update Group | Target Group Name | item |
 | Authorization | Update Group | Target Attribute Context | field_name |
+| Authorization | Update Group | Target Group Name | item |
 | Authorization | Delete Group | Timestamp | timestamp |
 | Authorization | Delete Group | Event ID | id |
 | Authorization | Delete Group | Event Code / Type | action |
@@ -62,14 +62,14 @@ The Veeva Vault Retrieve Audit Details API provides near real-time, read-only ac
 | Authorization | Add To Group | Event ID | id |
 | Authorization | Add To Group | Event Code / Type | action |
 | Authorization | Add To Group | Username | user_name |
-| Authorization | Add To Group | Target Group Name | item |
 | Authorization | Add To Group | Target Username | new_value |
+| Authorization | Add To Group | Target Group Name | item |
 | Authorization | Remove From Group | Timestamp | timestamp |
 | Authorization | Remove From Group | Event ID | id |
 | Authorization | Remove From Group | Event Code / Type | action |
 | Authorization | Remove From Group | Username | user_name |
-| Authorization | Remove From Group | Target Group Name | item |
 | Authorization | Remove From Group | Target Username | old_value |
+| Authorization | Remove From Group | Target Group Name | item |
 | Authorization | Create Role | Timestamp | timestamp |
 | Authorization | Create Role | Event ID | id |
 | Authorization | Create Role | Event Code / Type | action |
@@ -79,8 +79,8 @@ The Veeva Vault Retrieve Audit Details API provides near real-time, read-only ac
 | Authorization | Update Role | Event ID | id |
 | Authorization | Update Role | Event Code / Type | action |
 | Authorization | Update Role | Username | user_name |
-| Authorization | Update Role | Target Role Name | item |
 | Authorization | Update Role | Target Attribute Context | field_name |
+| Authorization | Update Role | Target Role Name | item |
 | Authorization | Delete Role | Timestamp | timestamp |
 | Authorization | Delete Role | Event ID | id |
 | Authorization | Delete Role | Event Code / Type | action |
@@ -107,8 +107,8 @@ The Veeva Vault Retrieve Audit Details API provides near real-time, read-only ac
 | System Audit | Update Integration | Event ID | id |
 | System Audit | Update Integration | Event Code / Type | action |
 | System Audit | Update Integration | Username | user_name |
-| System Audit | Update Integration | Integration / App Name | item |
 | System Audit | Update Integration | Configuration / Setting Name | new_value |
+| System Audit | Update Integration | Integration / App Name | item |
 | System Audit | Delete Integration | Timestamp | timestamp |
 | System Audit | Delete Integration | Event ID | id |
 | System Audit | Delete Integration | Event Code / Type | action |
@@ -153,17 +153,17 @@ The Veeva Vault Retrieve Audit Details API provides near real-time, read-only ac
 | Authorization | Create User | [success](/products/veeva_vault/event_examples/authorization_create_user.json) | Timestamp=2024-05-07T23:19:06Z; Event ID=123188; Event Code / Type=Create; Username=bbunny@acme.com; Target Username=User : example_firstname example_lastname |
 | Authorization | Update User | [success](/products/veeva_vault/event_examples/authorization_update_user.json) | Timestamp=2024-05-07T23:19:35Z; Event ID=123193; Event Code / Type=Edit; Username=bbunny@acme.com; Target Username=User : example_firstname example_lastname |
 | Authorization | Create Group | [success](/products/veeva_vault/event_examples/authorization_create_group.json) | Timestamp=2024-05-07T23:21:12Z; Event ID=726727; Event Code / Type=Create; Username=bbunny@acme.com; Target Group Name=example_group_123 |
-| Authorization | Update Group | [success](/products/veeva_vault/event_examples/authorization_update_group.json) | Timestamp=2024-05-07T23:21:28Z; Event ID=726729; Event Code / Type=Edit; Username=bbunny@acme.com; Target Group Name=example_group_123 |
+| Authorization | Update Group | [success](/products/veeva_vault/event_examples/authorization_update_group.json) | Timestamp=2024-05-07T23:21:28Z; Event ID=726729; Event Code / Type=Edit; Username=bbunny@acme.com; Target Attribute Context=groupDescr |
 | Authorization | Delete Group | [success](/products/veeva_vault/event_examples/authorization_delete_group.json) | Timestamp=2024-05-07T23:21:49Z; Event ID=726731; Event Code / Type=Delete; Username=bbunny@acme.com; Target Group Name=example_group_123 |
-| Authorization | Add To Group | [success](/products/veeva_vault/event_examples/authorization_add_to_group.json) | Timestamp=2024-05-07T22:20:50Z; Event ID=726692; Event Code / Type=Edit_ListProperty; Username=bbunny@acme.com; Target Group Name=Report Administrators |
-| Authorization | Remove From Group | [success](/products/veeva_vault/event_examples/authorization_remove_from_group.json) | Timestamp=2024-05-07T23:20:35Z; Event ID=726721; Event Code / Type=Edit_ListProperty; Username=System; Target Group Name=External Inspectors |
+| Authorization | Add To Group | [success](/products/veeva_vault/event_examples/authorization_add_to_group.json) | Timestamp=2024-05-07T22:20:50Z; Event ID=726692; Event Code / Type=Edit_ListProperty; Username=bbunny@acme.com; Target Username=jdoe@acme.com |
+| Authorization | Remove From Group | [success](/products/veeva_vault/event_examples/authorization_remove_from_group.json) | Timestamp=2024-05-07T23:20:35Z; Event ID=726721; Event Code / Type=Edit_ListProperty; Username=System; Target Username=example_user_123@acme.com |
 | Authorization | Create Role | [success](/products/veeva_vault/event_examples/authorization_create_role.json) | Timestamp=2024-05-08T20:24:13Z; Event ID=123212; Event Code / Type=Create; Username=bbunny@acme.com; Target Role Name=Application Role : example_new_role |
-| Authorization | Update Role | [success](/products/veeva_vault/event_examples/authorization_update_role.json) | Timestamp=2024-05-08T21:16:31Z; Event ID=123221; Event Code / Type=Edit; Username=bbunny@acme.com; Target Role Name=Application Role : example_new_role_123 |
+| Authorization | Update Role | [success](/products/veeva_vault/event_examples/authorization_update_role.json) | Timestamp=2024-05-08T21:16:31Z; Event ID=123221; Event Code / Type=Edit; Username=bbunny@acme.com; Target Attribute Context=Permission Set |
 | Authorization | Delete Role | [success](/products/veeva_vault/event_examples/authorization_delete_role.json) | Timestamp=2024-05-08T20:24:33Z; Event ID=123214; Event Code / Type=Delete; Username=bbunny@acme.com; Target Role Name=Application Role : example_new_role |
 | Authorization | Add Permission | [success](/products/veeva_vault/event_examples/authorization_add_permission.json) | Timestamp=2024-05-10T13:53:39Z; Event ID=731223; Event Code / Type=Edit; Username=pbunyan@acme.com; Permission Name=Vault Owner |
 | Authorization | Remove Permission | [success](/products/veeva_vault/event_examples/authorization_remove_permission.json) | Timestamp=2024-05-08T23:03:03Z; Event ID=726747; Event Code / Type=RemovePermission; Username=bbunny@acme.com; Permission Name=Admin > Configuration > Pages > Edit |
 | System Audit | Create Integration | [success](/products/veeva_vault/event_examples/system_audit_create_integration.json) | Timestamp=2024-05-09T18:23:21Z; Event ID=123225; Event Code / Type=Create; Username=System; Integration / App Name=Connection Client : example_external_connection |
-| System Audit | Update Integration | [success](/products/veeva_vault/event_examples/system_audit_update_integration.json) | Timestamp=2024-05-09T18:42:23Z; Event ID=123226; Event Code / Type=Edit; Username=bbunny@acme.com; Integration / App Name=Connection : External : example_external_connection |
+| System Audit | Update Integration | [success](/products/veeva_vault/event_examples/system_audit_update_integration.json) | Timestamp=2024-05-09T18:42:23Z; Event ID=123226; Event Code / Type=Edit; Username=bbunny@acme.com; Configuration / Setting Name=https://appomni.test_url.com |
 | System Audit | Delete Integration | [success](/products/veeva_vault/event_examples/system_audit_delete_integration.json) | Timestamp=2024-05-09T18:50:15Z; Event ID=123232; Event Code / Type=Delete; Username=bbunny@acme.com; Integration / App Name=Connection : External : example_external_connection |
 | Activity Audit | Create Resource | [success](/products/veeva_vault/event_examples/activity_audit_create_resource.json) | Timestamp=2024-05-09T20:18:54Z; Event ID=123244; Event Code / Type=Create; Username=bbunny@acme.com; Resource Name=Study : example_study_1337 |
 | Activity Audit | Read Resource | [success](/products/veeva_vault/event_examples/activity_audit_read_resource.json) | Timestamp=2024-05-14T21:37:10Z; Event ID=729; Event Code / Type=GetDocumentVersion; Username=jdoe@acme.com; Resource Name=VV-TMF-12345 |

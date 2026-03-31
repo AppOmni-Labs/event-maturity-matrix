@@ -29,8 +29,8 @@ Includes workloads not included in other audit log types.
 | Authorization | Update Group | Event Code / Type | Operation |
 | Authorization | Update Group | Username | UserId |
 | Authorization | Update Group | User ID | UserKey |
-| Authorization | Update Group | Target Group Name | TeamName |
 | Authorization | Update Group | Target Attribute Context | NewValue |
+| Authorization | Update Group | Target Group Name | TeamName |
 | Authorization | Delete Group | Timestamp | CreationTime |
 | Authorization | Delete Group | Event ID | Id |
 | Authorization | Delete Group | Event Code / Type | Operation |
@@ -42,15 +42,15 @@ Includes workloads not included in other audit log types.
 | Authorization | Add To Group | Event Code / Type | Operation |
 | Authorization | Add To Group | Username | UserId |
 | Authorization | Add To Group | User ID | UserKey |
-| Authorization | Add To Group | Target Group Name | TeamName |
 | Authorization | Add To Group | Target Username | Members.DisplayName |
+| Authorization | Add To Group | Target Group Name | TeamName |
 | Authorization | Remove From Group | Timestamp | CreationTime |
 | Authorization | Remove From Group | Event ID | Id |
 | Authorization | Remove From Group | Event Code / Type | Operation |
 | Authorization | Remove From Group | Username | UserId |
 | Authorization | Remove From Group | User ID | UserKey |
-| Authorization | Remove From Group | Target Group Name | TeamName |
 | Authorization | Remove From Group | Target Username | Members.DisplayName |
+| Authorization | Remove From Group | Target Group Name | TeamName |
 | System Audit | Create Integration | Timestamp | CreationTime |
 | System Audit | Create Integration | Event ID | Id |
 | System Audit | Create Integration | Event Code / Type | Operation |

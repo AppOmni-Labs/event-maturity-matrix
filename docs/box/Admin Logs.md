@@ -81,8 +81,8 @@ Box enterprise logs that provide an audit trail of user activity.
 | Authorization | Add To Group | User ID | created_by.id |
 | Authorization | Add To Group | Session ID | session_id |
 | Authorization | Add To Group | IP Address | ip_address |
-| Authorization | Add To Group | Target Group Name | additional_details.group_name |
 | Authorization | Add To Group | Target Username | source.login |
+| Authorization | Add To Group | Target Group Name | additional_details.group_name |
 | Authorization | Remove From Group | Timestamp | created_at |
 | Authorization | Remove From Group | Event ID | event_id |
 | Authorization | Remove From Group | Event Code / Type | event_type |
@@ -90,8 +90,8 @@ Box enterprise logs that provide an audit trail of user activity.
 | Authorization | Remove From Group | User ID | created_by.id |
 | Authorization | Remove From Group | Session ID | session_id |
 | Authorization | Remove From Group | IP Address | ip_address |
-| Authorization | Remove From Group | Target Group Name | additional_details.group_name |
 | Authorization | Remove From Group | Target Username | source.login |
+| Authorization | Remove From Group | Target Group Name | additional_details.group_name |
 | Authorization | Add Permission | Timestamp | created_at |
 | Authorization | Add Permission | Event ID | event_id |
 | Authorization | Add Permission | Event Code / Type | event_type |
@@ -168,9 +168,9 @@ Box enterprise logs that provide an audit trail of user activity.
 | Activity Audit | Download Resource | User ID | created_by.id |
 | Activity Audit | Download Resource | Session ID | session_id |
 | Activity Audit | Download Resource | IP Address | ip_address |
-| Activity Audit | Download Resource | Resource Metadata | additional_details.size |
 | Activity Audit | Download Resource | Resource Name | source.item_name |
 | Activity Audit | Download Resource | Resource Type | source.item_type |
+| Activity Audit | Download Resource | Resource Metadata | additional_details.size |
 
 ## Example logs
 
