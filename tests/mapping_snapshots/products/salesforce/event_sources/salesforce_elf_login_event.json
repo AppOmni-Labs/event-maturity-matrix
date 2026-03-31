@@ -1,0 +1,23 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "credential_context": "LOGIN_TYPE",
+        "event_code_or_type": "EVENT_TYPE",
+        "failure_context": "LOGIN_STATUS",
+        "identity_service_provider_context": "AUTHENTICATION_METHOD_REFERENCE",
+        "ip_address": "SOURCE_IP",
+        "result": "LOGIN_STATUS",
+        "session_id": "LOGIN_KEY",
+        "timestamp": "TIMESTAMP_DERIVED",
+        "user_agent_name": "BROWSER_TYPE",
+        "user_id": "USER_ID",
+        "user_type_or_role": "USER_TYPE",
+        "username": "USER_NAME"
+      },
+      "category": "authentication",
+      "event_type": "account_login"
+    }
+  ],
+  "source": "products/salesforce/event_sources/salesforce_elf_login_event.yml"
+}

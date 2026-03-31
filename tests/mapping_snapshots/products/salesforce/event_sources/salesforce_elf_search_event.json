@@ -1,0 +1,15 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "event_code_or_type": "EVENT_TYPE",
+        "query_string": "SEARCH_QUERY",
+        "timestamp": "TIMESTAMP_DERIVED",
+        "user_id": "USER_ID"
+      },
+      "category": "activity_audit",
+      "event_type": "query_resource"
+    }
+  ],
+  "source": "products/salesforce/event_sources/salesforce_elf_search_event.yml"
+}

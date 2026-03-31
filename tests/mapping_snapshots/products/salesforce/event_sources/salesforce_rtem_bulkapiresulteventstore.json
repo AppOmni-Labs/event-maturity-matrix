@@ -1,0 +1,20 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "event_code_or_type": "data.payload.attributes.type",
+        "event_id": "EventIdentifier",
+        "ip_address": "SourceIp",
+        "resource_name": "Query",
+        "result": "PolicyOutcome",
+        "session_id": "SessionKey",
+        "timestamp": "EventDate",
+        "user_id": "UserId",
+        "username": "Username"
+      },
+      "category": "activity_audit",
+      "event_type": "create_resource"
+    }
+  ],
+  "source": "products/salesforce/event_sources/salesforce_rtem_bulkapiresulteventstore.yml"
+}

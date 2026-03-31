@@ -1,0 +1,26 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "credential_context": "LoginType",
+        "device_client_type": "Platform",
+        "event_code_or_type": "data.payload.attributes.type",
+        "event_id": "EventIdentifier",
+        "failure_context": "Status",
+        "identity_service_provider_context": "AuthServiceId",
+        "ip_address": "SourceIp",
+        "ip_geolocation_or_asn": "City",
+        "result": "Status",
+        "session_id": "LoginKey",
+        "timestamp": "EventDate",
+        "user_agent_name": "Browser",
+        "user_id": "UserId",
+        "user_type_or_role": "UserType",
+        "username": "Username"
+      },
+      "category": "authentication",
+      "event_type": "account_login"
+    }
+  ],
+  "source": "products/salesforce/event_sources/salesforce_rtem_logineventstream.yml"
+}

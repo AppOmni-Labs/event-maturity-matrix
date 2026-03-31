@@ -1,0 +1,292 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "credential_context": "action",
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "identity_service_provider_context": "issuer",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "authentication",
+      "event_type": "account_login"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "target_group_name": [
+          "org",
+          "team"
+        ],
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "authorization",
+      "event_type": "create_group"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "target_group_name": [
+          "org",
+          "team"
+        ],
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "authorization",
+      "event_type": "update_group"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "target_group_name": [
+          "org",
+          "team"
+        ],
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "authorization",
+      "event_type": "delete_group"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "target_group_name": [
+          "org",
+          "team",
+          "repo"
+        ],
+        "target_username": "user",
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "authorization",
+      "event_type": "add_to_group"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "target_group_name": [
+          "org",
+          "team",
+          "repo"
+        ],
+        "target_username": "user",
+        "timestamp": "created_at",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "authorization",
+      "event_type": "remove_from_group"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "permission_name": "new_repo_permission",
+        "target_resource_name": [
+          "org",
+          "team",
+          "repo"
+        ],
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "authorization",
+      "event_type": "add_permission"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "permission_name": "old_repo_permission",
+        "target_resource_name": [
+          "org",
+          "team",
+          "repo"
+        ],
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "authorization",
+      "event_type": "remove_permission"
+    },
+    {
+      "attributes": {
+        "configuration_setting_name": "action",
+        "configuration_setting_value": "action",
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "system_audit",
+      "event_type": "create_security_configuration"
+    },
+    {
+      "attributes": {
+        "configuration_setting_name": "name",
+        "configuration_setting_value": "config",
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "previous_configuration_setting_value": "config_was",
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "system_audit",
+      "event_type": "update_security_configuration"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "integration_app_name": "integration",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "system_audit",
+      "event_type": "create_integration"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "integration_app_name": "integration",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "system_audit",
+      "event_type": "delete_integration"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "resource_name": [
+          "org",
+          "business",
+          "repo"
+        ],
+        "resource_type": "action",
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "activity_audit",
+      "event_type": "create_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "resource_name": [
+          "org",
+          "business",
+          "repo"
+        ],
+        "resource_type": "action",
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "activity_audit",
+      "event_type": "update_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "resource_name": [
+          "org",
+          "business",
+          "repo"
+        ],
+        "resource_type": "action",
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "activity_audit",
+      "event_type": "delete_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action",
+        "event_id": "_document_id",
+        "ip_address": "actor_ip",
+        "ip_geolocation_or_asn": "actor_location.country_code",
+        "resource_name": "repo",
+        "resource_type": "action",
+        "timestamp": "created_at",
+        "user_agent_name": "user_agent",
+        "user_id": "actor_id",
+        "username": "actor"
+      },
+      "category": "activity_audit",
+      "event_type": "download_resource"
+    }
+  ],
+  "source": "products/github/event_sources/github_audit_events.yml"
+}

@@ -1,0 +1,405 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "target_username": "target.descriptor",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "create_user"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "target_username": "target.descriptor",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "read_user"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "target_username": "target.descriptor",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "update_user"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "target_group_name": "target.descriptor",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "create_group"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "target_group_name": "target.descriptor",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "read_group"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "target_group_name": "target.descriptor",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "update_group"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "delete_group"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "target_group_name": "target.descriptor",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "add_to_group"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "target_group_name": "target.descriptor",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "remove_from_group"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "read_role"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "target_role_name": "target.descriptor",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "update_role"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "target_resource_name": "target.descriptor",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "add_permission"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "target_resource_name": "target.descriptor",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "remove_permission"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "enrollment_type": "taskDisplayName",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "add_enrollment"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "enrollment_type": "taskDisplayName",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "authorization",
+      "event_type": "remove_enrollment"
+    },
+    {
+      "attributes": {
+        "configuration_setting_name": "target.descriptor",
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "system_audit",
+      "event_type": "create_security_configuration"
+    },
+    {
+      "attributes": {
+        "configuration_setting_value": "target.descriptor",
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "system_audit",
+      "event_type": "read_security_configuration"
+    },
+    {
+      "attributes": {
+        "configuration_setting_name": "target.descriptor",
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "system_audit",
+      "event_type": "update_security_configuration"
+    },
+    {
+      "attributes": {
+        "configuration_setting_name": "target.descriptor",
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "system_audit",
+      "event_type": "delete_security_configuration"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "integration_app_name": "target.descriptor",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "system_audit",
+      "event_type": "create_integration"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "system_audit",
+      "event_type": "read_integration"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "integration_app_name": "target.descriptor",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "system_audit",
+      "event_type": "update_integration"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "resource_name": "target.descriptor",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "activity_audit",
+      "event_type": "create_resource"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "resource_name": "target.descriptor",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "activity_audit",
+      "event_type": "read_resource"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "resource_name": "target.descriptor",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "activity_audit",
+      "event_type": "update_resource"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "event_code_or_type": "taskDisplayName",
+        "ip_address": "ipAddress",
+        "result": "activityAction",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "activity_audit",
+      "event_type": "delete_resource"
+    },
+    {
+      "attributes": {
+        "device_client_type": "deviceType",
+        "ip_address": "ipAddress",
+        "resource_name": "target.descriptor",
+        "result": "taskDisplayName",
+        "session_id": "sessionId",
+        "timestamp": "requestTime",
+        "user_agent_name": "userAgent",
+        "username": "systemAccount"
+      },
+      "category": "activity_audit",
+      "event_type": "download_resource"
+    }
+  ],
+  "source": "products/workday/event_sources/user_activity_logging.yml"
+}

@@ -1,0 +1,23 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "activity_performed": "Activity",
+        "event_code_or_type": "data.payload.attributes.type",
+        "event_id": "EventIdentifier",
+        "ip_address": "SourceIp",
+        "ip_geolocation_or_asn": "City",
+        "result": "Status",
+        "session_id": "LoginKey",
+        "timestamp": "EventDate",
+        "user_id": "UserId",
+        "username": "Username",
+        "verification_flagged": "Status",
+        "verification_method": "VerificationMethod"
+      },
+      "category": "authentication",
+      "event_type": "mfa_verification"
+    }
+  ],
+  "source": "products/salesforce/event_sources/salesforce_rtem_identityverificationevent.yml"
+}

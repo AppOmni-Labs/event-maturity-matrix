@@ -1,0 +1,25 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "event_code_or_type": "operation",
+        "timestamp": "sys_created_on",
+        "user_id": "user\\.name",
+        "username": "user\\.name"
+      },
+      "category": "authorization",
+      "event_type": "add_permission"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "operation",
+        "timestamp": "sys_created_on",
+        "user_id": "user\\.name",
+        "username": "user\\.name"
+      },
+      "category": "authorization",
+      "event_type": "remove_permission"
+    }
+  ],
+  "source": "products/servicenow/event_sources/servicenow_audit_role.yml"
+}

@@ -22,3 +22,6 @@ jobs:
           pip install jmespath
       - name: Validate
         uses: ./.github/actions/validate-definitions
+
+      - name: Check resolved mapping snapshots
+        run: python scripts/check_mapping_snapshots.py

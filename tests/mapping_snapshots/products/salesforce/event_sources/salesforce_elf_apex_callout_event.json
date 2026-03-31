@@ -1,0 +1,18 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "device_client_type": "TYPE",
+        "event_code_or_type": "EVENT_TYPE",
+        "ip_address": "CLIENT_IP",
+        "resource_name": "URL",
+        "result": "SUCCESS",
+        "session_id": "SESSION_KEY",
+        "timestamp": "TIMESTAMP_DERIVED"
+      },
+      "category": "activity_audit",
+      "event_type": "read_resource"
+    }
+  ],
+  "source": "products/salesforce/event_sources/salesforce_elf_apex_callout_event.yml"
+}

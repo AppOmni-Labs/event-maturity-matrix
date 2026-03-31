@@ -1,0 +1,355 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "target_username": "QUERY_TEXT",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "authorization",
+      "event_type": "create_user"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "target_username": "QUERY_TEXT",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "authorization",
+      "event_type": "read_user"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "target_attribute_context": "QUERY_TEXT",
+        "target_username": "QUERY_TEXT",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "authorization",
+      "event_type": "update_user"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "authorization",
+      "event_type": "delete_user"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "target_role_name": "QUERY_TEXT",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "authorization",
+      "event_type": "create_role"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "target_role_name": "QUERY_TEXT",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "authorization",
+      "event_type": "read_role"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "target_attribute_context": "QUERY_TEXT",
+        "target_role_name": "QUERY_TEXT",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "authorization",
+      "event_type": "update_role"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "target_role_name": "QUERY_TEXT",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "authorization",
+      "event_type": "delete_role"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "permission_name": "QUERY_TEXT",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "target_resource_name": "QUERY_TEXT",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "authorization",
+      "event_type": "add_permission"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "permission_name": "QUERY_TEXT",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "target_resource_name": "QUERY_TEXT",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "authorization",
+      "event_type": "remove_permission"
+    },
+    {
+      "attributes": {
+        "enrollment_type": "QUERY_TEXT",
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "target_username": "QUERY_TEXT",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "authorization",
+      "event_type": "remove_enrollment"
+    },
+    {
+      "attributes": {
+        "configuration_setting_name": "QUERY_TEXT",
+        "configuration_setting_value": "QUERY_TEXT",
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "system_audit",
+      "event_type": "create_security_configuration"
+    },
+    {
+      "attributes": {
+        "configuration_setting_value": "QUERY_TEXT",
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "system_audit",
+      "event_type": "read_security_configuration"
+    },
+    {
+      "attributes": {
+        "configuration_setting_name": "QUERY_TEXT",
+        "configuration_setting_value": "QUERY_TEXT",
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "system_audit",
+      "event_type": "update_security_configuration"
+    },
+    {
+      "attributes": {
+        "configuration_setting_name": "QUERY_TEXT",
+        "configuration_setting_value": "QUERY_TEXT",
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "system_audit",
+      "event_type": "delete_security_configuration"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "integration_app_name": "QUERY_TEXT",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "system_audit",
+      "event_type": "create_integration"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "integration_app_name": "QUERY_TEXT",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "system_audit",
+      "event_type": "read_integration"
+    },
+    {
+      "attributes": {
+        "configuration_setting_name": "QUERY_TEXT",
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "integration_app_name": "QUERY_TEXT",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "system_audit",
+      "event_type": "update_integration"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "integration_app_name": "QUERY_TEXT",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "system_audit",
+      "event_type": "delete_integration"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "resource_name": "QUERY_TEXT",
+        "resource_type": "QUERY_TEXT",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "activity_audit",
+      "event_type": "create_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "resource_name": "QUERY_TEXT",
+        "resource_type": "QUERY_TEXT",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "activity_audit",
+      "event_type": "read_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "resource_name": "QUERY_TEXT",
+        "resource_type": "QUERY_TEXT",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "activity_audit",
+      "event_type": "update_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "resource_name": "QUERY_TEXT",
+        "resource_type": "QUERY_TEXT",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "activity_audit",
+      "event_type": "delete_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "QUERY_TYPE",
+        "event_id": "QUERY_ID",
+        "resource_metadata": "QUERY_TEXT",
+        "resource_name": "QUERY_TEXT",
+        "resource_type": "QUERY_TEXT",
+        "result": "ERROR_CODE",
+        "session_id": "SESSION_ID",
+        "timestamp": "START_TIME",
+        "user_type_or_role": "ROLE_NAME",
+        "username": "USER_NAME"
+      },
+      "category": "activity_audit",
+      "event_type": "download_resource"
+    }
+  ],
+  "source": "products/snowflake/event_sources/snowflake_query_history.event_source.yml"
+}

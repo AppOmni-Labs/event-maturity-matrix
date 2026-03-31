@@ -1,0 +1,42 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "device_client_type": "Platform",
+        "event_code_or_type": "Operation",
+        "event_id": "EventIdentifier",
+        "ip_address": "SourceIp",
+        "resource_name": "Query",
+        "resource_type": "ApiType",
+        "result": "PolicyOutcome",
+        "session_id": "SessionKey",
+        "timestamp": "EventDate",
+        "user_agent_name": "UserAgent",
+        "user_id": "UserId",
+        "username": "Username"
+      },
+      "category": "activity_audit",
+      "event_type": "read_resource"
+    },
+    {
+      "attributes": {
+        "device_client_type": "Platform",
+        "event_code_or_type": "Operation",
+        "event_id": "EventIdentifier",
+        "ip_address": "SourceIp",
+        "resource_metadata": "RowsProcessed",
+        "resource_name": "Query",
+        "resource_type": "ApiType",
+        "result": "PolicyOutcome",
+        "session_id": "SessionKey",
+        "timestamp": "EventDate",
+        "user_agent_name": "UserAgent",
+        "user_id": "UserId",
+        "username": "Username"
+      },
+      "category": "activity_audit",
+      "event_type": "download_resource"
+    }
+  ],
+  "source": "products/salesforce/event_sources/salesforce_rtem_apieventstream.yml"
+}

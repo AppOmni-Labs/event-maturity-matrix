@@ -1,0 +1,21 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "event_code_or_type": "EventSource",
+        "event_id": "EventIdentifier",
+        "ip_address": "SourceIp",
+        "resource_name": "Name",
+        "resource_type": "QueriedEntities",
+        "result": "PolicyOutcome",
+        "session_id": "SessionKey",
+        "timestamp": "EventDate",
+        "user_id": "UserId",
+        "username": "Username"
+      },
+      "category": "activity_audit",
+      "event_type": "read_resource"
+    }
+  ],
+  "source": "products/salesforce/event_sources/salesforce_rtem_listvieweventstream.yml"
+}
