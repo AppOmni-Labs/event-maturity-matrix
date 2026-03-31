@@ -1,3 +1,10 @@
+"""Sync EMM mappings from Google Sheets into event_source YAML.
+
+Each sheet row's ``EMM Mapping Final`` column must use semantic keys joined by dots:
+``category.event_type.attribute`` (e.g. ``authentication.account_login.timestamp``),
+matching ``key`` fields in categories.yml, event_types.yml, and attributes.yml.
+The ``EMM Mapping for Event Source YAML`` column is ``field_name: json.path`` as before.
+"""
 import os
 import csv
 import urllib.request
@@ -39,14 +46,20 @@ def process_data(csv_data, yaml_file):
     for row in csv_data:
         emm_mapping_final, emm_mapping_yaml = row
 
-        category, event_type, attribute = emm_mapping_final.split('.')
-        attribute_name, attribute_value = emm_mapping_yaml.split(':')
+        parts = emm_mapping_final.split(".")
+        if len(parts) != 3:
+            raise ValueError(f"Expected category.event_type.attribute, got {emm_mapping_final!r}")
+        category, event_type, attribute = (x.strip() for x in parts)
+        attribute_name, _, attribute_value = emm_mapping_yaml.partition(":")
+        attribute_name = attribute_name.strip()
+        attribute_value = attribute_value.strip()
 
         # Find the mapping in YAML data
-        for mapping in yaml_data['mappings']:
-            if mapping['category'] == category and mapping['event_type'] == event_type:
-                if attribute in mapping['attributes']:
-                    mapping['attributes'][attribute] = attribute_value.strip()
+        for mapping in yaml_data["mappings"]:
+            if mapping["category"] == category and mapping["event_type"] == event_type:
+                key = attribute_name or attribute
+                if key in mapping["attributes"]:
+                    mapping["attributes"][key] = attribute_value
 
     # Cleanup data before dumping
     mappings_to_remove = []

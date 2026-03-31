@@ -1,37 +1,37 @@
-# Salesforce - Real-Time Event Monitoring BulkApiResultEventStore (1.0.0)
+# Salesforce — Real-Time Event Monitoring BulkApiResultEventStore
 
-> Entity Name: event_source
+📌 **v1.0.0** · 🗄 **Retention:** 6 Months · ⚡ **Latency:** Real-Time
+
+🗄 N/A
+
+
+⚡ N/A
+
+
+📜 **Licensing:** Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
+
 
 Tracks when a user downloads the results of a Bulk API request.
-
 ## References
 * [BulkApiResultEventStore](https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_bulkapiresulteventstore.htm)
+## Field mappings
 
-## Retention
+| Category | Event type | Attribute | Source field(s) |
+| -------- | ---------- | --------- | ---------------- |
+| Activity Audit | Create Resource | Timestamp | EventDate |
+| Activity Audit | Create Resource | Event ID | EventIdentifier |
+| Activity Audit | Create Resource | Event Code / Type | data.payload.attributes.type |
+| Activity Audit | Create Resource | Result | PolicyOutcome |
+| Activity Audit | Create Resource | Username | Username |
+| Activity Audit | Create Resource | User ID | UserId |
+| Activity Audit | Create Resource | Session ID | SessionKey |
+| Activity Audit | Create Resource | IP Address | SourceIp |
+| Activity Audit | Create Resource | Resource Name | Query |
 
-Based on our research, Salesforce retains audit logs for 6 Months.
+## Example logs
 
-
-### Comments
-N/A
-
-
-## Latency
-
-Based on our research, Salesforce has a latency of Real-Time.
-
-### Comments
-N/A
-
-
-## Licensing
-
-Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
-
-## Mappings
-
-| Category | Event Type | Attributes | Examples |
-| -------- | ---------- | ---------- | -------- |
-| C0004 | ET0030 |A0001 -> EventDate<br />A0002 -> EventIdentifier<br />A0003 -> data.payload.attributes.type<br />A0004 -> PolicyOutcome<br />A0005 -> Username<br />A0006 -> UserId<br />A0008 -> SessionKey<br />A0009 -> SourceIp<br />A0030 -> Query<br />|[download](/products/salesforce/event_examples/salesforce_rtem_bulkapiresulteventstore/activity_audit_download_resource_bulkapiresulteventstore.json)<br />|
+| Category | Event type | Log | Sample field values |
+| -------- | ---------- | --- | ------------------- |
+| Activity Audit | Create Resource | [download](/products/salesforce/event_examples/salesforce_rtem_bulkapiresulteventstore/activity_audit_download_resource_bulkapiresulteventstore.json) | Timestamp=2023-03-22T15:07:16.240+0000; Event ID=abcdefgh-1234-0000-0000-000000000001; Event Code / Type=BulkApiResultEventStore; Result=None; Username=john@example.com |
 
 

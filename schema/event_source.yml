@@ -111,21 +111,25 @@ $defs:
       - attributes
     properties:
       category:
-        description: The category ID of this mapping
+        description: The category key for this mapping (matches categories.yml items[].key).
         type: string
+        pattern: "^[a-z][a-z0-9_]*$"
       event_type:
-        description: The event_type ID of this mapping
+        description: The event type key for this mapping (matches event_types.yml items[].key).
         type: string
+        pattern: "^[a-z][a-z0-9_]*$"
       attributes:
         unique: true
-        description: A list of attributes mapped to the name of the actual field in the provided example file.
+        description: Attribute keys (attributes.yml items[].key) mapped to field path(s) in example JSON.
         type: object
-        patternProperties:
-          "^A[0-9]{4}$":
-            description: Starts with an attribute id.
-            type: ["array", "string"]
-            items:
-              type: string
+        minProperties: 1
+        additionalProperties:
+          oneOf:
+            - type: string
+            - type: array
+              items:
+                type: string
+              minItems: 1
       examples:
         type: array
         items:

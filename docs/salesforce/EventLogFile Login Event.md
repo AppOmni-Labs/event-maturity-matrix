@@ -1,37 +1,40 @@
-# Salesforce - EventLogFile Login Event (1.0.0)
+# Salesforce — EventLogFile Login Event
 
-> Entity Name: event_source
+📌 **v1.0.0** · 🗄 **Retention:** 1 Day · ⚡ **Latency:** 3 Hours
+
+🗄 Available for free with 1 day retention, otherwise requires an add-on subscription for 30 day retention.
+
+
+⚡ Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of the event to be available in the hourly log file.
+
+
+📜 **Licensing:** Available for free with 1 day retention, otherwise requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
+
 
 This event source is to track login events in Salesforce.
-
 ## References
 * [EventLogFile Login Event](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_login.htm)
+## Field mappings
 
-## Retention
+| Category | Event type | Attribute | Source field(s) |
+| -------- | ---------- | --------- | ---------------- |
+| Authentication | Account Login | Timestamp | TIMESTAMP_DERIVED |
+| Authentication | Account Login | Event Code / Type | EVENT_TYPE |
+| Authentication | Account Login | Result | LOGIN_STATUS |
+| Authentication | Account Login | Username | USER_NAME |
+| Authentication | Account Login | User ID | USER_ID |
+| Authentication | Account Login | User Type / Role | USER_TYPE |
+| Authentication | Account Login | Session ID | LOGIN_KEY |
+| Authentication | Account Login | IP Address | SOURCE_IP |
+| Authentication | Account Login | User Agent Name | BROWSER_TYPE |
+| Authentication | Account Login | Failure Context | LOGIN_STATUS |
+| Authentication | Account Login | Credential Context | LOGIN_TYPE |
+| Authentication | Account Login | Identity Service Provider Context | AUTHENTICATION_METHOD_REFERENCE |
 
-Based on our research, Salesforce retains audit logs for 1 Day.
+## Example logs
 
-
-### Comments
-Available for free with 1 day retention, otherwise requires an add-on subscription for 30 day retention.
-
-
-## Latency
-
-Based on our research, Salesforce has a latency of 3 Hours.
-
-### Comments
-Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of the event to be available in the hourly log file.
-
-
-## Licensing
-
-Available for free with 1 day retention, otherwise requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
-
-## Mappings
-
-| Category | Event Type | Attributes | Examples |
-| -------- | ---------- | ---------- | -------- |
-| C0001 | ET0001 |A0001 -> TIMESTAMP_DERIVED<br />A0003 -> EVENT_TYPE<br />A0004 -> LOGIN_STATUS<br />A0005 -> USER_NAME<br />A0006 -> USER_ID<br />A0007 -> USER_TYPE<br />A0008 -> LOGIN_KEY<br />A0009 -> SOURCE_IP<br />A0011 -> BROWSER_TYPE<br />A0013 -> LOGIN_STATUS<br />A0014 -> LOGIN_TYPE<br />A0015 -> AUTHENTICATION_METHOD_REFERENCE<br />|[success](/products/salesforce/event_examples/salesforce_elf_login_event/authentication_account_login_elf.json)<br />|
+| Category | Event type | Log | Sample field values |
+| -------- | ---------- | --- | ------------------- |
+| Authentication | Account Login | [success](/products/salesforce/event_examples/salesforce_elf_login_event/authentication_account_login_elf.json) | Timestamp=2023-03-15T01:38:19.151Z; Event Code / Type=Login; Result=LOGIN_OAUTH_NO_CONSUMER; Username=john@example.com; User ID=000000000000123 |
 
 

@@ -35,15 +35,20 @@ $defs:
     type: object
     required:
       - id
+      - key
       - name
       - description
     properties:
       id:
-        description: A unique ID for the attribute which starts with A and contains 4 numbers sequentially.
+        description: Legacy stable ID (e.g. C0001).
         type: string
+      key:
+        description: Stable snake_case key used in event source mappings.
+        type: string
+        pattern: "^[a-z][a-z0-9_]*$"
       name:
-        description: Name of a field attribute found in telemetry and audit logging.
+        description: Display name of the category.
         type: string
       description:
-        description: The description of the attribute
+        description: The description of the category.
         type: string

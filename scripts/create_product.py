@@ -135,41 +135,41 @@ def normalize_name(name):
 # Create empty JSON files for each event source directory
 def create_json_event_examples(directory, event_source_name):
     event_type_mapping = [
-        "authentication_account_login_success.json",  # C0001_ET0001
-        "authentication_account_login_failure.json",  # C0001_ET0001
-        "authentication_account_logout.json",  # C0001_ET0002
-        "authentication_mfa_verification.json",  # C0001_ET0003
-        "authorization_create_user.json",  # C0002_ET0004
-        "authorization_read_user.json",  # C0002_ET0005
-        "authorization_update_user.json",  # C0002_ET0006
-        "authorization_delete_user.json",  # C0002_ET0007
-        "authorization_create_group.json",  # C0002_ET0008
-        "authorization_read_group.json",  # C0002_ET0009
-        "authorization_update_group.json",  # C0002_ET0010
-        "authorization_delete_group.json",  # C0002_ET0011
-        "authorization_add_to_group.json",  # C0002_ET0012
-        "authorization_remove_from_group.json",  # C0002_ET0013
-        "authorization_create_role.json",  # C0002_ET0014
-        "authorization_read_role.json",  # C0002_ET0015
-        "authorization_update_role.json",  # C0002_ET0016
-        "authorization_delete_role.json",  # C0002_ET0017
-        "authorization_add_permission.json",  # C0002_ET0018
-        "authorization_remove_permission.json",  # C0002_ET0019
-        "authorization_add_enrollment.json",  # C0002_ET0020
-        "authorization_remove_enrollment.json",  # C0002_ET0021
-        "system_audit_create_security_configuration.json",  # C0003_ET0022
-        "system_audit_read_security_configuration.json",  # C0003_ET0023
-        "system_audit_update_security_configuration.json",  # C0003_ET0024
-        "system_audit_delete_security_configuration.json",  # C0003_ET0025
-        "system_audit_create_integration.json",  # C0003_ET0026
-        "system_audit_read_integration.json",  # C0003_ET0027
-        "system_audit_update_integration.json",  # C0003_ET0028
-        "system_audit_delete_integration.json",  # C0003_ET0029
-        "activity_audit_create_resource.json",  # C0004_ET0030
-        "activity_audit_read_resource.json",  # C0004_ET0031
-        "activity_audit_update_resource.json",  # C0004_ET0032
-        "activity_audit_delete_resource.json",  # C0004_ET0033
-        "activity_audit_download_resource.json"  # C0004_ET0034
+        "authentication_account_login_success.json",  # authentication / account_login
+        "authentication_account_login_failure.json",  # authentication / account_login
+        "authentication_account_logout.json",  # authentication / account_logout
+        "authentication_mfa_verification.json",  # authentication / mfa_verification
+        "authorization_create_user.json",  # authorization / create_user
+        "authorization_read_user.json",  # authorization / read_user
+        "authorization_update_user.json",  # authorization / update_user
+        "authorization_delete_user.json",  # authorization / delete_user
+        "authorization_create_group.json",  # authorization / create_group
+        "authorization_read_group.json",  # authorization / read_group
+        "authorization_update_group.json",  # authorization / update_group
+        "authorization_delete_group.json",  # authorization / delete_group
+        "authorization_add_to_group.json",  # authorization / add_to_group
+        "authorization_remove_from_group.json",  # authorization / remove_from_group
+        "authorization_create_role.json",  # authorization / create_role
+        "authorization_read_role.json",  # authorization / read_role
+        "authorization_update_role.json",  # authorization / update_role
+        "authorization_delete_role.json",  # authorization / delete_role
+        "authorization_add_permission.json",  # authorization / add_permission
+        "authorization_remove_permission.json",  # authorization / remove_permission
+        "authorization_add_enrollment.json",  # authorization / add_enrollment
+        "authorization_remove_enrollment.json",  # authorization / remove_enrollment
+        "system_audit_create_security_configuration.json",  # system_audit / create_security_configuration
+        "system_audit_read_security_configuration.json",  # system_audit / read_security_configuration
+        "system_audit_update_security_configuration.json",  # system_audit / update_security_configuration
+        "system_audit_delete_security_configuration.json",  # system_audit / delete_security_configuration
+        "system_audit_create_integration.json",  # system_audit / create_integration
+        "system_audit_read_integration.json",  # system_audit / read_integration
+        "system_audit_update_integration.json",  # system_audit / update_integration
+        "system_audit_delete_integration.json",  # system_audit / delete_integration
+        "activity_audit_create_resource.json",  # activity_audit / create_resource
+        "activity_audit_read_resource.json",  # activity_audit / read_resource
+        "activity_audit_update_resource.json",  # activity_audit / update_resource
+        "activity_audit_delete_resource.json",  # activity_audit / delete_resource
+        "activity_audit_download_resource.json"  # activity_audit / download_resource
     ]
 
     for event_type_file in event_type_mapping:

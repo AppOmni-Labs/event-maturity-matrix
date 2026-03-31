@@ -2,17 +2,17 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 entity_name: event_source
-version: "1.0.0"
+version: 1.0.0
 product:
   name: Salesforce
   collection_sources:
-    - streaming_api
+  - streaming_api
 name: Real-Time Event Monitoring LogoutEventStream
 description: A logout event records a successful user logout from the Salesforce user interface.
-references: 
-  - id: logout_event_stream
-    name: LogoutEventStream
-    url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_logouteventstream.htm
+references:
+- id: logout_event_stream
+  name: LogoutEventStream
+  url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_logouteventstream.htm
 retention:
   duration: 6 Months
   comments: N/A
@@ -22,16 +22,16 @@ latency:
 licensing:
   comments: Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-  - category: C0001
-    event_type: ET0002
-    attributes:
-      A0001: EventDate
-      A0002: EventIdentifier
-      A0003: data.payload.attributes.type
-      A0005: Username
-      A0006: UserId
-      A0008: SessionKey
-      A0009: SourceIp
-    examples:
-      - type: success
-        location: "./event_examples/salesforce_rtem_logouteventstream/authentication_account_logout.json"
+- category: authentication
+  event_type: account_logout
+  attributes:
+    timestamp: EventDate
+    event_id: EventIdentifier
+    event_code_or_type: data.payload.attributes.type
+    username: Username
+    user_id: UserId
+    session_id: SessionKey
+    ip_address: SourceIp
+  examples:
+  - type: success
+    location: ./event_examples/salesforce_rtem_logouteventstream/authentication_account_logout.json

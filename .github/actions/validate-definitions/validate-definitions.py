@@ -6,7 +6,6 @@ from typing import Dict, Any
 from glob import glob
 
 import yaml
-import jmespath
 from jsonschema.exceptions import ValidationError
 from jsonschema.validators import Draft202012Validator
 from loguru import logger
@@ -22,126 +21,12 @@ logger.add(
 # Reserved value: attribute paths with this value are skipped for validation (e.g. EMM_UPDATE placeholders).
 EMM_UPDATE = "EMM_UPDATE"
 
+_scripts_dir = os.path.join(os.getenv("GITHUB_WORKSPACE") or os.getcwd(), "scripts")
+if _scripts_dir not in sys.path:
+    sys.path.insert(0, _scripts_dir)
 
-def _path_segments(path_str: str) -> list[str]:
-    """Split path string by '.' but not inside brackets or when escaped (\\.). E.g. 'context.session_id' -> ['context', 'session_id']; 'user\\.name' -> ['user.name']."""
-    segments = []
-    current = []
-    depth = 0
-    i = 0
-    while i < len(path_str):
-        c = path_str[i]
-        if depth > 0:
-            current.append(c)
-            if c == "[":
-                depth += 1
-            elif c == "]":
-                depth -= 1
-            i += 1
-            continue
-        if c == "[":
-            depth += 1
-            current.append(c)
-            i += 1
-        elif c == "\\" and i + 1 < len(path_str):
-            nxt = path_str[i + 1]
-            if nxt == ".":
-                current.append(".")
-                i += 2
-            elif nxt == "\\":
-                current.append("\\")
-                i += 2
-            else:
-                current.append(c)
-                i += 1
-        elif c == ".":
-            segments.append("".join(current))
-            current = []
-            i += 1
-        else:
-            current.append(c)
-            i += 1
-    if current:
-        segments.append("".join(current))
-    return segments
-
-
-def _path_to_jmespath(path_str: str) -> str:
-    """Convert our path format to JMESPath. Our bracket filter key[filter_key=filter_value] becomes key[?filter_key=='filter_value']."""
-    segments = _path_segments(path_str)
-
-    jmespath_parts = []
-    for seg in segments:
-        if "[" in seg and seg.endswith("]") and "=" in seg:
-            key = seg[: seg.index("[")]
-            filter_part = seg[seg.index("[") + 1 : -1]
-            filter_key, _, filter_value = filter_part.partition("=")
-            # JMESPath literal: escape single quotes in value
-            escaped = filter_value.replace("\\", "\\\\").replace("'", "\\'")
-            jmespath_parts.append(f"{key}[?{filter_key}=='{escaped}']")
-        elif "." in seg:
-            # Key contains a literal dot (e.g. "user.name"); JMESPath needs bracket notation
-            escaped = seg.replace("\\", "\\\\").replace("'", "\\'")
-            jmespath_parts.append(f"['{escaped}']")
-        else:
-            jmespath_parts.append(seg)
-    return ".".join(jmespath_parts)
-
-
-def _values_for_key_recursive(obj: Any, key: str):
-    """Recursively find all values for key anywhere in obj (dict/list tree). Used for bare keys like 'user_id'."""
-    if isinstance(obj, dict):
-        if key in obj:
-            yield obj[key]
-        for v in obj.values():
-            yield from _values_for_key_recursive(v, key)
-    elif isinstance(obj, list):
-        for item in obj:
-            yield from _values_for_key_recursive(item, key)
-
-
-def item_generator(json_input: Any, lookup_key: str):
-    """Yield values for lookup_key in json_input. Uses JMESPath for paths with dots/brackets; recursive search for bare keys."""
-    # Bare key (no dots, no brackets): JMESPath only looks at root, but data often has keys nested (e.g. user_id inside action_data)
-    if "." not in lookup_key and "[" not in lookup_key:
-        yield from _values_for_key_recursive(json_input, lookup_key)
-        return
-    expr = _path_to_jmespath(lookup_key)
-    try:
-        result = jmespath.search(expr, json_input)
-    except jmespath.exceptions.JMESPathError:
-        return
-    if result is None:
-        # JMESPath returns None for "not found" and for "value is null". For simple dotted paths, try two fallbacks:
-        if "[" not in lookup_key:
-            segs = _path_segments(lookup_key)
-            if len(segs) >= 2:
-                # 1) Key exists with null value: parent is dict and has the key
-                parent_expr = _path_to_jmespath(".".join(segs[:-1]))
-                try:
-                    parent_result = jmespath.search(parent_expr, json_input)
-                    if isinstance(parent_result, dict) and segs[-1] in parent_result:
-                        yield parent_result[segs[-1]]
-                        return
-                except jmespath.exceptions.JMESPathError:
-                    pass
-                # 2) Some segment is an array: try [*] after each segment (e.g. target.alternateId -> target[*].alternateId; description.groups.name -> description.groups[*].name)
-                for i in range(len(segs) - 1):
-                    projection_expr = _path_to_jmespath(".".join(segs[: i + 1]) + "[*]." + ".".join(segs[i + 1 :]))
-                    try:
-                        proj_result = jmespath.search(projection_expr, json_input)
-                        if isinstance(proj_result, list):
-                            for item in proj_result:
-                                yield item
-                            return
-                    except jmespath.exceptions.JMESPathError:
-                        continue
-        return
-    if isinstance(result, list):
-        for item in result:
-            yield item
-    else:
-        yield result
+from emm_definitions import load_model, validate_mapping
+from emm_json_paths import item_generator
 
 
 def load(path: str) -> Dict[str, Any] | None:
@@ -179,6 +64,7 @@ def validate():
     schema_folder = os.path.join(base, "schema")
 
     logger.info("Validation starting; base path = {}", base)
+    model = load_model(base)
 
     # Summary counts for final report
     products_validated = 0
@@ -243,6 +129,12 @@ def validate():
             parent_path = _product_dir(event_source)
 
             for mapping in data.get("mappings", []):
+                try:
+                    validate_mapping(model, mapping, path=event_source)
+                except ValueError as e:
+                    logger.error("[{}] {}: {}", product_name, event_source_name, e)
+                    raise
+
                 mappings_checked += 1
                 raw_attrs = mapping.get("attributes") or {}
                 attribute_names = []

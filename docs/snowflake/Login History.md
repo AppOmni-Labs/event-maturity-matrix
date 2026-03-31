@@ -1,38 +1,45 @@
-# Snowflake - Login History (1.0.0)
+# Snowflake — Login History
 
-> Entity Name: event_source
+📌 **v1.0.0** · 🗄 **Retention:** 365 days · ⚡ **Latency:** up to 120 minutes
+
+🗄 No comments
+
+
+⚡ No comments
+
+
+📜 **Licensing:** Contact Sales
+
 
 This Account Usage view can be used to query login attempts by Snowflake users within the last 365 days (1 year).
-
 ## References
 * [About the Login History View](https://docs.snowflake.com/en/sql-reference/account-usage/login_history)
+## Field mappings
 
-## Retention
+| Category | Event type | Attribute | Source field(s) |
+| -------- | ---------- | --------- | ---------------- |
+| Authentication | Account Login | Timestamp | EVENT_TIMESTAMP |
+| Authentication | Account Login | Event ID | EVENT_ID |
+| Authentication | Account Login | Event Code / Type | EVENT_TYPE |
+| Authentication | Account Login | Username | USER_NAME |
+| Authentication | Account Login | IP Address | CLIENT_IP |
+| Authentication | Account Login | Device/Client Type | REPORTED_CLIENT_TYPE |
+| Authentication | Account Login | Credential Context | FIRST_AUTHENTICATION_FACTOR |
+| Authentication | MFA Verification | Timestamp | EVENT_TIMESTAMP |
+| Authentication | MFA Verification | Event ID | EVENT_ID |
+| Authentication | MFA Verification | Event Code / Type | EVENT_TYPE |
+| Authentication | MFA Verification | Result | IS_SUCCESS |
+| Authentication | MFA Verification | Username | USER_NAME |
+| Authentication | MFA Verification | IP Address | CLIENT_IP |
+| Authentication | MFA Verification | Device/Client Type | REPORTED_CLIENT_TYPE |
+| Authentication | MFA Verification | Verification Method | SECOND_AUTHENTICATION_FACTOR |
+| Authentication | MFA Verification | Verification Flagged | IS_SUCCESS |
 
-Based on our research, Snowflake retains audit logs for 365 days.
+## Example logs
 
-
-### Comments
-No comments
-
-
-## Latency
-
-Based on our research, Snowflake has a latency of up to 120 minutes.
-
-### Comments
-No comments
-
-
-## Licensing
-
-Contact Sales
-
-## Mappings
-
-| Category | Event Type | Attributes | Examples |
-| -------- | ---------- | ---------- | -------- |
-| C0001 | ET0001 |A0001 -> EVENT_TIMESTAMP<br />A0002 -> EVENT_ID<br />A0003 -> EVENT_TYPE<br />A0005 -> USER_NAME<br />A0009 -> CLIENT_IP<br />A0012 -> REPORTED_CLIENT_TYPE<br />A0014 -> FIRST_AUTHENTICATION_FACTOR<br />|[success](/products/snowflake/event_examples/login_history/authentication_account_login.json)<br />|
-| C0001 | ET0003 |A0001 -> EVENT_TIMESTAMP<br />A0002 -> EVENT_ID<br />A0003 -> EVENT_TYPE<br />A0004 -> IS_SUCCESS<br />A0005 -> USER_NAME<br />A0009 -> CLIENT_IP<br />A0012 -> REPORTED_CLIENT_TYPE<br />A0016 -> SECOND_AUTHENTICATION_FACTOR<br />A0017 -> IS_SUCCESS<br />|[success](/products/snowflake/event_examples/login_history/authentication_mfa_verification.json)<br />|
+| Category | Event type | Log | Sample field values |
+| -------- | ---------- | --- | ------------------- |
+| Authentication | Account Login | [success](/products/snowflake/event_examples/login_history/authentication_account_login.json) | Timestamp=1717764280.813000; Event ID=53754033158915655; Event Code / Type=LOGIN; Username=bruce-wayne; IP Address=12.3.4.56 |
+| Authentication | MFA Verification | [success](/products/snowflake/event_examples/login_history/authentication_mfa_verification.json) | Timestamp=1717633886.401000; Event ID=12042414114134585; Event Code / Type=LOGIN; Result=YES; Username=bruce-wayne |
 
 

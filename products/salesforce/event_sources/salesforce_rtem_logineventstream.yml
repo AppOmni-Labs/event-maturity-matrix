@@ -2,17 +2,17 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 entity_name: event_source
-version: "1.0.0"
+version: 1.0.0
 product:
   name: Salesforce
   collection_sources:
-    - streaming_api
+  - streaming_api
 name: Real-Time Event Monitoring LoginEventStream
 description: Tracks login activity of users who log in to Salesforce.
-references: 
-  - id: login_event_stream
-    name: LoginEventStream
-    url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_logineventstream.htm
+references:
+- id: login_event_stream
+  name: LoginEventStream
+  url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_logineventstream.htm
 retention:
   duration: 10 Years
   comments: N/A
@@ -22,26 +22,26 @@ latency:
 licensing:
   comments: Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-  - category: C0001
-    event_type: ET0001
-    attributes:
-      A0001: EventDate
-      A0002: EventIdentifier
-      A0003: data.payload.attributes.type
-      A0004: Status
-      A0005: Username
-      A0006: UserId
-      A0007: UserType
-      A0008: LoginKey
-      A0009: SourceIp
-      A0010: City
-      A0011: Browser
-      A0012: Platform
-      A0013: Status
-      A0014: LoginType
-      A0015: AuthServiceId
-    examples:
-      - type: success
-        location: "./event_examples/salesforce_rtem_logineventstream/authentication_account_login.json"
-      - type: failure
-        location: "./event_examples/salesforce_rtem_logineventstream/authentication_account_login_failure.json"
+- category: authentication
+  event_type: account_login
+  attributes:
+    timestamp: EventDate
+    event_id: EventIdentifier
+    event_code_or_type: data.payload.attributes.type
+    result: Status
+    username: Username
+    user_id: UserId
+    user_type_or_role: UserType
+    session_id: LoginKey
+    ip_address: SourceIp
+    ip_geolocation_or_asn: City
+    user_agent_name: Browser
+    device_client_type: Platform
+    failure_context: Status
+    credential_context: LoginType
+    identity_service_provider_context: AuthServiceId
+  examples:
+  - type: success
+    location: ./event_examples/salesforce_rtem_logineventstream/authentication_account_login.json
+  - type: failure
+    location: ./event_examples/salesforce_rtem_logineventstream/authentication_account_login_failure.json

@@ -8,30 +8,30 @@ licensing:
   comments: Contact Sales
 mappings:
 - attributes:
-    A0001: EVENT_TIMESTAMP
-    A0002: EVENT_ID
-    A0003: EVENT_TYPE
-    A0005: USER_NAME
-    A0009: CLIENT_IP
-    A0012: REPORTED_CLIENT_TYPE
-    A0014: FIRST_AUTHENTICATION_FACTOR
-  category: C0001
-  event_type: ET0001
+    timestamp: EVENT_TIMESTAMP
+    event_id: EVENT_ID
+    event_code_or_type: EVENT_TYPE
+    username: USER_NAME
+    ip_address: CLIENT_IP
+    device_client_type: REPORTED_CLIENT_TYPE
+    credential_context: FIRST_AUTHENTICATION_FACTOR
+  category: authentication
+  event_type: account_login
   examples:
   - location: ./event_examples/login_history/authentication_account_login.json
     type: success
 - attributes:
-    A0001: EVENT_TIMESTAMP
-    A0002: EVENT_ID
-    A0003: EVENT_TYPE
-    A0004: IS_SUCCESS
-    A0005: USER_NAME
-    A0009: CLIENT_IP
-    A0012: REPORTED_CLIENT_TYPE
-    A0016: SECOND_AUTHENTICATION_FACTOR
-    A0017: IS_SUCCESS
-  category: C0001
-  event_type: ET0003
+    timestamp: EVENT_TIMESTAMP
+    event_id: EVENT_ID
+    event_code_or_type: EVENT_TYPE
+    result: IS_SUCCESS
+    username: USER_NAME
+    ip_address: CLIENT_IP
+    device_client_type: REPORTED_CLIENT_TYPE
+    verification_method: SECOND_AUTHENTICATION_FACTOR
+    verification_flagged: IS_SUCCESS
+  category: authentication
+  event_type: mfa_verification
   examples:
   - location: ./event_examples/login_history/authentication_mfa_verification.json
     type: success
