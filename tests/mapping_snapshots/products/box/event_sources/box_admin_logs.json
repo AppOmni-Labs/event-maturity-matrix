@@ -1,0 +1,266 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "result": "event_type",
+        "session_id": "session_id",
+        "timestamp": "created_at",
+        "user_id": "source.id",
+        "username": "source.login"
+      },
+      "category": "authentication",
+      "event_type": "account_login"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "session_id": "session_id",
+        "target_username": "source.login",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "authorization",
+      "event_type": "create_user"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "session_id": "session_id",
+        "target_username": "source.login",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "authorization",
+      "event_type": "update_user"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "session_id": "session_id",
+        "target_username": "source.login",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "authorization",
+      "event_type": "delete_user"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "session_id": "session_id",
+        "target_group_name": "source.group_name",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "authorization",
+      "event_type": "create_group"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "session_id": "session_id",
+        "target_group_name": "source.group_name",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "authorization",
+      "event_type": "update_group"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "session_id": "session_id",
+        "target_group_name": "source.group_name",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "authorization",
+      "event_type": "delete_group"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "session_id": "session_id",
+        "target_group_name": "additional_details.group_name",
+        "target_username": "source.login",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "authorization",
+      "event_type": "add_to_group"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "session_id": "session_id",
+        "target_group_name": "additional_details.group_name",
+        "target_username": "source.login",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "authorization",
+      "event_type": "remove_from_group"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "permission_name": "additional_details.role",
+        "session_id": "session_id",
+        "target_resource_name": "source.file_name",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "authorization",
+      "event_type": "add_permission"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "session_id": "session_id",
+        "target_resource_name": "source.file_name",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "authorization",
+      "event_type": "remove_permission"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "session_id": "session_id",
+        "target_username": "source.login",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "authorization",
+      "event_type": "add_enrollment"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "session_id": "session_id",
+        "target_username": "source.login",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "authorization",
+      "event_type": "remove_enrollment"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "resource_name": "source.item_name",
+        "resource_type": "source.item_type",
+        "session_id": "session_id",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "activity_audit",
+      "event_type": "create_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "resource_name": "source.item_name",
+        "resource_type": "source.item_type",
+        "session_id": "session_id",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "activity_audit",
+      "event_type": "read_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "resource_name": "source.item_name",
+        "resource_type": "source.item_type",
+        "session_id": "session_id",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "activity_audit",
+      "event_type": "update_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "resource_name": "source.item_name",
+        "resource_type": "source.item_type",
+        "session_id": "session_id",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "activity_audit",
+      "event_type": "delete_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "event_type",
+        "event_id": "event_id",
+        "ip_address": "ip_address",
+        "resource_metadata": "additional_details.size",
+        "resource_name": "source.item_name",
+        "resource_type": "source.item_type",
+        "session_id": "session_id",
+        "timestamp": "created_at",
+        "user_id": "created_by.id",
+        "username": "created_by.login"
+      },
+      "category": "activity_audit",
+      "event_type": "download_resource"
+    }
+  ],
+  "source": "products/box/event_sources/box_admin_logs.yml"
+}

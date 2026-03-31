@@ -71,6 +71,30 @@ properties:
     items:
       $ref: "#/$defs/mapping"
     uniqueItems: true
+  mapping_defaults:
+    description: |
+      Optional layered defaults for attribute maps. Merge order per mapping is
+      source.attributes → categories[category].attributes → mapping.attributes.
+      YAML null on a key in mapping.attributes removes that attribute from the merged result.
+    type: object
+    additionalProperties: false
+    properties:
+      source:
+        type: object
+        additionalProperties: false
+        properties:
+          attributes:
+            $ref: "#/$defs/attribute_map"
+      categories:
+        type: object
+        propertyNames:
+          pattern: "^[a-z][a-z0-9_]*$"
+        additionalProperties:
+          type: object
+          additionalProperties: false
+          properties:
+            attributes:
+              $ref: "#/$defs/attribute_map"
   meta:
     description: An object that contains meta information about the definition.
     type: ["null", "object"]
@@ -94,6 +118,29 @@ required:
   - mappings
   # - examples
 $defs:
+  attribute_map:
+    description: Attribute key to JSON field path(s); same shape as a resolved mapping.attributes.
+    type: object
+    minProperties: 0
+    additionalProperties:
+      oneOf:
+        - type: string
+        - type: array
+          items:
+            type: string
+          minItems: 1
+  attribute_map_delta:
+    description: Like attribute_map but YAML null removes an inherited key when merging defaults.
+    type: object
+    minProperties: 0
+    additionalProperties:
+      oneOf:
+        - type: "null"
+        - type: string
+        - type: array
+          items:
+            type: string
+          minItems: 1
   base:
     type: object
     properties:
@@ -111,21 +158,19 @@ $defs:
       - attributes
     properties:
       category:
-        description: The category ID of this mapping
+        description: The category key for this mapping (matches categories.yml items[].key).
         type: string
+        pattern: "^[a-z][a-z0-9_]*$"
       event_type:
-        description: The event_type ID of this mapping
+        description: The event type key for this mapping (matches event_types.yml items[].key).
         type: string
+        pattern: "^[a-z][a-z0-9_]*$"
       attributes:
         unique: true
-        description: A list of attributes mapped to the name of the actual field in the provided example file.
-        type: object
-        patternProperties:
-          "^A[0-9]{4}$":
-            description: Starts with an attribute id.
-            type: ["array", "string"]
-            items:
-              type: string
+        description: |
+          Delta on top of mapping_defaults. May be empty if defaults supply all paths.
+          Use YAML null for a key to drop an inherited default for this event type.
+        $ref: "#/$defs/attribute_map_delta"
       examples:
         type: array
         items:

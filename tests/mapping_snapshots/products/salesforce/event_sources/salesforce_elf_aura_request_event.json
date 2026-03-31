@@ -1,0 +1,65 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "event_code_or_type": "EVENT_TYPE",
+        "ip_address": "CLIENT_IP",
+        "resource_name": "ACTION_MESSAGE",
+        "result": "REQUEST_STATUS",
+        "session_id": "SESSION_KEY",
+        "timestamp": "TIMESTAMP_DERIVED",
+        "user_agent_name": "USER_AGENT",
+        "user_id": "USER_ID",
+        "user_type_or_role": "USER_TYPE"
+      },
+      "category": "activity_audit",
+      "event_type": "create_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "EVENT_TYPE",
+        "ip_address": "CLIENT_IP",
+        "resource_name": "ACTION_MESSAGE",
+        "result": "REQUEST_STATUS",
+        "session_id": "SESSION_KEY",
+        "timestamp": "TIMESTAMP_DERIVED",
+        "user_agent_name": "USER_AGENT",
+        "user_id": "USER_ID",
+        "user_type_or_role": "USER_TYPE"
+      },
+      "category": "activity_audit",
+      "event_type": "read_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "EVENT_TYPE",
+        "ip_address": "CLIENT_IP",
+        "resource_name": "ACTION_MESSAGE",
+        "result": "REQUEST_STATUS",
+        "session_id": "SESSION_KEY",
+        "timestamp": "TIMESTAMP_DERIVED",
+        "user_agent_name": "USER_AGENT",
+        "user_id": "USER_ID",
+        "user_type_or_role": "USER_TYPE"
+      },
+      "category": "activity_audit",
+      "event_type": "update_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "EVENT_TYPE",
+        "ip_address": "CLIENT_IP",
+        "resource_name": "ACTION_MESSAGE",
+        "result": "REQUEST_STATUS",
+        "session_id": "SESSION_KEY",
+        "timestamp": "TIMESTAMP_DERIVED",
+        "user_agent_name": "USER_AGENT",
+        "user_id": "USER_ID",
+        "user_type_or_role": "USER_TYPE"
+      },
+      "category": "activity_audit",
+      "event_type": "delete_resource"
+    }
+  ],
+  "source": "products/salesforce/event_sources/salesforce_elf_aura_request_event.yml"
+}

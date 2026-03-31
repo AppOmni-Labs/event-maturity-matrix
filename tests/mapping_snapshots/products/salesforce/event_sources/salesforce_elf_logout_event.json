@@ -1,0 +1,19 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "device_client_type": "PLATFORM_TYPE",
+        "event_code_or_type": "EVENT_TYPE",
+        "ip_address": "CLIENT_IP",
+        "session_id": "LOGIN_KEY",
+        "timestamp": "TIMESTAMP_DERIVED",
+        "user_agent_name": "BROWSER_TYPE",
+        "user_id": "USER_ID",
+        "user_type_or_role": "USER_TYPE"
+      },
+      "category": "authentication",
+      "event_type": "account_logout"
+    }
+  ],
+  "source": "products/salesforce/event_sources/salesforce_elf_logout_event.yml"
+}

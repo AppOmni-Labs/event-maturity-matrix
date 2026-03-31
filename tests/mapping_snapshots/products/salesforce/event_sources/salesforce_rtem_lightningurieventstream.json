@@ -1,0 +1,73 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "device_client_type": "DevicePlatform",
+        "event_code_or_type": "Operation",
+        "event_id": "EventIdentifier",
+        "ip_address": "SourceIp",
+        "resource_name": "PageUrl",
+        "resource_type": "QueriedEntities",
+        "session_id": "SessionKey",
+        "timestamp": "EventDate",
+        "user_id": "UserId",
+        "user_type_or_role": "UserType",
+        "username": "Username"
+      },
+      "category": "activity_audit",
+      "event_type": "create_resource"
+    },
+    {
+      "attributes": {
+        "device_client_type": "DevicePlatform",
+        "event_code_or_type": "Operation",
+        "event_id": "EventIdentifier",
+        "ip_address": "SourceIp",
+        "resource_name": "PageUrl",
+        "resource_type": "QueriedEntities",
+        "session_id": "SessionKey",
+        "timestamp": "EventDate",
+        "user_id": "UserId",
+        "user_type_or_role": "UserType",
+        "username": "Username"
+      },
+      "category": "activity_audit",
+      "event_type": "read_resource"
+    },
+    {
+      "attributes": {
+        "device_client_type": "DevicePlatform",
+        "event_code_or_type": "Operation",
+        "event_id": "EventIdentifier",
+        "ip_address": "SourceIp",
+        "resource_name": "PageUrl",
+        "resource_type": "QueriedEntities",
+        "session_id": "SessionKey",
+        "timestamp": "EventDate",
+        "user_id": "UserId",
+        "user_type_or_role": "UserType",
+        "username": "Username"
+      },
+      "category": "activity_audit",
+      "event_type": "update_resource"
+    },
+    {
+      "attributes": {
+        "device_client_type": "DevicePlatform",
+        "event_code_or_type": "Operation",
+        "event_id": "EventIdentifier",
+        "ip_address": "SourceIp",
+        "resource_name": "PageUrl",
+        "resource_type": "QueriedEntities",
+        "session_id": "SessionKey",
+        "timestamp": "EventDate",
+        "user_id": "UserId",
+        "user_type_or_role": "UserType",
+        "username": "Username"
+      },
+      "category": "activity_audit",
+      "event_type": "delete_resource"
+    }
+  ],
+  "source": "products/salesforce/event_sources/salesforce_rtem_lightningurieventstream.yml"
+}

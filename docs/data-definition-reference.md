@@ -103,13 +103,14 @@ For example, a single event_type item is defined as:
 
 ```yaml
 - id: ET0001
+  key: account_login
   name: Account Login
   categories:
-    - C0001
+    - authentication
   description: An account attempted to login to a system.
 ```
 
-When defining a new `event_type` you must have unique values for the `id`, `name` and `description` fields. Additionally, you must associate this event_type to a defined category. You can associate this event_type to more than one category but many times there is no need to do so.
+When defining a new `event_type` you must have unique values for the `id`, `key`, `name` and `description` fields. Additionally, you must associate this event_type to a defined category. You can associate this event_type to more than one category but many times there is no need to do so.
 
 ### Attributes
 
@@ -119,7 +120,7 @@ When defining a new `event_type` you must have unique values for the `id`, `name
 
 Attributes represent the individual fields within an event. We've normalized these field names to allow for easier mapping of data from different SaaS services.
 
-Each attribute must have a unique `id`, `name`, and `description`. Additionally, each attribute must have a `type` defined. The `type` field is used to define the data type of the attribute. The available types are:
+Each attribute must have a unique `id`, `key`, `name`, and `description`. Additionally, each attribute must have a `type` defined. The `type` field is used to define the data type of the attribute. The available types are:
 
 * string
 * integer
@@ -133,6 +134,7 @@ In the example below we define an attribute with an `id`, `name`, `description`,
 
 ```yaml
 - id: A0001
+  key: timestamp
   name: Timestamp
   description: The timestamp of when the event first occurred.
   type: string
@@ -142,26 +144,21 @@ In the example below we define an attribute with an `id`, `name`, `description`,
 
 Additionally, you can `include` or `exclude` event_types or categories.
 
-Here is an example of attribute `A0019 - Target Username` excluding itself from a list of event types.
-Also this attribute is only defined for event_types which are associated with the category `C0002 - Authorization`.
+Here is an example of attribute `A0019 - Target Username`, scoped to specific event types via `include`:
 
 ```yaml
 - id: A0019
+  key: target_username
   name: Target Username
   include:
-    - C0002
-  exclude:
-    - ET0008
-    - ET0009
-    - ET0010
-    - ET0011
-    - ET0014
-    - ET0015
-    - ET0016
-    - ET0017
-    - ET0018
-    - ET0019
-    - ET0020
+    - create_user
+    - read_user
+    - update_user
+    - delete_user
+    - add_to_group
+    - remove_from_group
+    - add_enrollment
+    - remove_enrollment
   description: The target username of activity within a service provider.
   type: string
   examples:
@@ -270,7 +267,19 @@ The `collection` key takes an array of properties which define each collection p
 
 Each event_source uniquely describes the event collection source used to detect threats. Each event_source itself has a relationship to a product but also describes the collection method, retention, latency, licensing and more. Each event_source (should) also have one or more mappings which describe the data which is collected by the event_source. These mappings map EMM attribute fields to the actual data fields within the event_source.
 
-Below is an example event_source for [Salesforce EventLogFile Login Event](../products/salesforce/event_sources/elf_login_event.yml) which we will use as an example to explain the structure of an event_source data content definition file.
+#### mapping_defaults (optional)
+
+To avoid repeating the same attribute map on every `mappings` entry, an event_source may define **`mapping_defaults`**. Merge order for each mapping is:
+
+1. `mapping_defaults.source.attributes` (shared across the whole file)
+2. `mapping_defaults.categories.<category_key>.attributes` (shared for every mapping in that category)
+3. `mappings[].attributes` (**delta** on top of the above)
+
+Later steps override earlier keys. To **remove** an inherited default for one event type, set that attribute key to YAML **`null`** in the mapping delta—after merge, that attribute is absent (and example validation will not expect it). This is useful when a category default adds a field that one event type should not map.
+
+Defaults are fully optional. With no `mapping_defaults`, behavior is unchanged: each mapping lists the full attribute map. See [Okta System Log API](../products/okta/event_sources/okta_system_log.yml) (source-wide defaults plus per-category layers) and [Microsoft 365 Azure AD audit](../products/microsoft_365/event_sources/audit_azure_ad_logging.yml) (shared `source` triplet and category client/authorization blocks) for layered examples.
+
+Below is an example event_source for [Salesforce EventLogFile Login Event](../products/salesforce/event_sources/salesforce_elf_login_event.yml) which we will use as an example to explain the structure of an event_source data content definition file.
 
 ```yaml
 entity_name: event_source
@@ -295,22 +304,22 @@ latency:
 licensing:
   comments: Available for free with 1 day retention, otherwise requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-  - category: C0001
-    event_type: ET0001
+  - category: authentication
+    event_type: account_login
     attributes:
-      A0001: TIMESTAMP_DERIVED
-      A0003: EVENT_TYPE
-      A0004: LOGIN_STATUS
-      A0005: USER_NAME 
-      A0006: USER_ID
-      A0007: USER_TYPE
-      A0008: LOGIN_KEY
-      A0009: SOURCE_IP
-      A0011: BROWSER_TYPE
-      A0013: LOGIN_STATUS
-      A0014: LOGIN_TYPE
-      A0015: AUTHENTICATION_METHOD_REFERENCE
-    examples: 
+      timestamp: TIMESTAMP_DERIVED
+      event_code_or_type: EVENT_TYPE
+      result: LOGIN_STATUS
+      username: USER_NAME
+      user_id: USER_ID
+      user_type_or_role: USER_TYPE
+      session_id: LOGIN_KEY
+      ip_address: SOURCE_IP
+      user_agent_name: BROWSER_TYPE
+      failure_context: LOGIN_STATUS
+      credential_context: LOGIN_TYPE
+      identity_service_provider_context: AUTHENTICATION_METHOD_REFERENCE
+    examples:
       - type: success
         location: "./event_examples/salesforce_elf_login_event/authentication_account_login_elf.json"
 ```
@@ -379,11 +388,7 @@ Licensing is complex, that being said at this time EMM is only tracking any `com
 
 Mappings are the key component of an event_source. `mappings` are a list of objects which define which categories, event_types and attributes are supported by a given event_source.
 
-Each `mapping` object must contain a [category](#categories) ID and [event_type](#event-types) ID which is defined as a core data definition. Additionally, each `mapping` must define a list of [attributes](#attributes) which are supported by the event_source. Each attribute maps to a value within the provided example JSON event.
-
-The `attribute` map must be in the format of `A000X` (which is the ID of an attribute) and the value must be the actual name of the field within the provided example.
-
-To reiterate, this map contains the ID of a defined attribute and the value matches the value within an example JSON file.
+Each `mapping` object must contain a [category](#categories) **key** and [event types](#event-types) **key** (`categories.yml` / `event_types.yml`). Each mapping has an `attributes` object: either the **full** map of attribute keys to JSON field path(s), or—when [`mapping_defaults`](#mapping_defaults-optional) is present—a **delta** that applies on top of defaults (possibly including `null` removals). Each attribute key must match `attributes.yml`. Values are field names or paths in the example JSON.
 
 If a field value is within nested JSON you can use dot notation. Using the below example, the map attribute value would be `product.name`.
 

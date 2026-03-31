@@ -21,676 +21,686 @@ latency:
   comments: [Provide any additional context regarding audit log collection latency]
 licensing:
   comments: [Provide context regarding licensing, cost, and general availability regarding audit logs]
+# Optional layered defaults (merge: source → categories[category] → each mapping’s attributes).
+# Use YAML null on a key in mapping.attributes to drop an inherited default for that event type.
+# mapping_defaults:
+#   source:
+#     attributes:
+#       timestamp: [field path]
+#   categories:
+#     authorization:
+#       attributes:
+#         result: [field path]
 mappings:
-  - category: C0001
-    event_type: ET0001
+  - category: authentication
+    event_type: account_login
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0013:
-      A0014:
-      A0015:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      failure_context:
+      credential_context:
+      identity_service_provider_context:
     examples: 
       - type: success
         location: "./event_examples/{event_source_name}/authentication_account_login_success.json"
       - type: failure
         location: "./event_examples/{event_source_name}/authentication_account_login_failure.json"
-  - category: C0001
-    event_type: ET0002
+  - category: authentication
+    event_type: account_logout
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authentication_account_logout.json"
-  - category: C0001
-    event_type: ET0003
+  - category: authentication
+    event_type: mfa_verification
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0016:
-      A0017:
-      A0018:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      verification_method:
+      verification_flagged:
+      activity_performed:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authentication_mfa_verification.json"
-  - category: C0002
-    event_type: ET0004
+  - category: authorization
+    event_type: create_user
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0019:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      target_username:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_create_user.json"
-  - category: C0002
-    event_type: ET0005
+  - category: authorization
+    event_type: read_user
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0019:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      target_username:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_read_user.json"
-  - category: C0002
-    event_type: ET0006
+  - category: authorization
+    event_type: update_user
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0019:
-      A0020:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      target_username:
+      target_attribute_context:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_update_user.json"
-  - category: C0002
-    event_type: ET0007
+  - category: authorization
+    event_type: delete_user
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0019:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      target_username:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_delete_user.json"
-  - category: C0002
-    event_type: ET0008
+  - category: authorization
+    event_type: create_group
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0021:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      target_group_name:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_create_group.json"
-  - category: C0002
-    event_type: ET0009
+  - category: authorization
+    event_type: read_group
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0021:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      target_group_name:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_read_group.json"
-  - category: C0002
-    event_type: ET0010
+  - category: authorization
+    event_type: update_group
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0021:
-      A0020:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      target_group_name:
+      target_attribute_context:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_update_group.json"
-  - category: C0002
-    event_type: ET0011
+  - category: authorization
+    event_type: delete_group
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0021:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      target_group_name:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_delete_group.json"
-  - category: C0002
-    event_type: ET0012
+  - category: authorization
+    event_type: add_to_group
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0021:
-      A0019:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      target_group_name:
+      target_username:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_add_to_group.json"
-  - category: C0002
-    event_type: ET0013
+  - category: authorization
+    event_type: remove_from_group
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0021:
-      A0019:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      target_group_name:
+      target_username:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_remove_from_group.json"
-  - category: C0002
-    event_type: ET0014
+  - category: authorization
+    event_type: create_role
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0022:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      target_role_name:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_create_role.json"
-  - category: C0002
-    event_type: ET0015
+  - category: authorization
+    event_type: read_role
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0022:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      target_role_name:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_read_role.json"
-  - category: C0002
-    event_type: ET0016
+  - category: authorization
+    event_type: update_role
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0022:
-      A0020:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      target_role_name:
+      target_attribute_context:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_update_role.json"
-  - category: C0002
-    event_type: ET0017
+  - category: authorization
+    event_type: delete_role
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0022:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      target_role_name:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_delete_role.json"
-  - category: C0002
-    event_type: ET0018
+  - category: authorization
+    event_type: add_permission
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0023:
-      A0024:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      permission_name:
+      target_resource_name:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_add_permission.json"
-  - category: C0002
-    event_type: ET0019
+  - category: authorization
+    event_type: remove_permission
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0023:
-      A0024:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      permission_name:
+      target_resource_name:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_remove_permission.json"
-  - category: C0002
-    event_type: ET0020
+  - category: authorization
+    event_type: add_enrollment
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0025:
-      A0019:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      enrollment_type:
+      target_username:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_add_enrollment.json"
-  - category: C0002
-    event_type: ET0021
+  - category: authorization
+    event_type: remove_enrollment
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0025:
-      A0019:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      enrollment_type:
+      target_username:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/authorization_remove_enrollment.json"
-  - category: C0003
-    event_type: ET0022
+  - category: system_audit
+    event_type: create_security_configuration
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0026:
-      A0027:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      configuration_setting_name:
+      configuration_setting_value:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/system_audit_create_security_configuration.json"
-  - category: C0003
-    event_type: ET0023
+  - category: system_audit
+    event_type: read_security_configuration
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0027:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      configuration_setting_value:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/system_audit_read_security_configuration.json"
-  - category: C0003
-    event_type: ET0024
+  - category: system_audit
+    event_type: update_security_configuration
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0026:
-      A0027:
-      A0028:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      configuration_setting_name:
+      configuration_setting_value:
+      previous_configuration_setting_value:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/system_audit_update_security_configuration.json"
-  - category: C0003
-    event_type: ET0025
+  - category: system_audit
+    event_type: delete_security_configuration
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0026:
-      A0027:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      configuration_setting_name:
+      configuration_setting_value:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/system_audit_delete_security_configuration.json"
-  - category: C0003
-    event_type: ET0026
+  - category: system_audit
+    event_type: create_integration
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0029:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      integration_app_name:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/system_audit_create_integration.json"
-  - category: C0003
-    event_type: ET0027
+  - category: system_audit
+    event_type: read_integration
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0029:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      integration_app_name:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/system_audit_read_integration.json"
-  - category: C0003
-    event_type: ET0028
+  - category: system_audit
+    event_type: update_integration
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0029:
-      A0026:
-      A0028:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      integration_app_name:
+      configuration_setting_name:
+      previous_configuration_setting_value:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/system_audit_update_integration.json"
-  - category: C0003
-    event_type: ET0029
+  - category: system_audit
+    event_type: delete_integration
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0029:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      integration_app_name:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/system_audit_delete_integration.json"
-  - category: C0004
-    event_type: ET0030
+  - category: activity_audit
+    event_type: create_resource
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0030:
-      A0031:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      resource_name:
+      resource_type:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/activity_audit_create_resource.json"
-  - category: C0004
-    event_type: ET0031
+  - category: activity_audit
+    event_type: read_resource
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0030:
-      A0031:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      resource_name:
+      resource_type:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/activity_audit_read_resource.json"
-  - category: C0004
-    event_type: ET0032
+  - category: activity_audit
+    event_type: update_resource
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0030:
-      A0031:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      resource_name:
+      resource_type:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/activity_audit_update_resource.json"
-  - category: C0004
-    event_type: ET0033
+  - category: activity_audit
+    event_type: delete_resource
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0030:
-      A0031:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      resource_name:
+      resource_type:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/activity_audit_delete_resource.json"
-  - category: C0004
-    event_type: ET0034
+  - category: activity_audit
+    event_type: download_resource
     attributes:
-      A0001:
-      A0002:
-      A0003:
-      A0004:
-      A0005:
-      A0006:
-      A0007:
-      A0008:
-      A0009:
-      A0010:
-      A0011:
-      A0012:
-      A0032:
-      A0030:
-      A0031:
+      timestamp:
+      event_id:
+      event_code_or_type:
+      result:
+      username:
+      user_id:
+      user_type_or_role:
+      session_id:
+      ip_address:
+      ip_geolocation_or_asn:
+      user_agent_name:
+      device_client_type:
+      resource_metadata:
+      resource_name:
+      resource_type:
     examples:
       - type: success
         location: "./event_examples/{event_source_name}/activity_audit_download_resource.json"

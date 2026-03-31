@@ -1,30 +1,39 @@
-name: Documentation Generation
+name: Documentation Check
 
 on:
+  pull_request:
   push:
     branches:
-      - master
       - main
+      - master
+
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
+
 jobs:
-  doc_generation:
-    name: Doc Generation
+  doc_check:
+    name: Check generated docs
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out repo
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install Jinja2
-          pip install PyYAML
+          pip install Jinja2 PyYAML jmespath
 
-      - name: Generate Docs
-        uses: ./.github/actions/generate-docs
+      - name: Generate docs
+        run: |
+          python scripts/generate-docs.py
+
+      - name: Check for uncommitted generated changes
+        run: |
+          git diff -- docs
+          git diff --exit-code -- docs

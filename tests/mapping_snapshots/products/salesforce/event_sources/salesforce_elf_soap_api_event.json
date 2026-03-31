@@ -1,0 +1,81 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "device_client_type": "API_TYPE",
+        "event_code_or_type": "EVENT_TYPE",
+        "ip_address": "CLIENT_IP",
+        "resource_type": "ENTITY_NAME",
+        "result": "REQUEST_STATUS",
+        "session_id": "SESSION_KEY",
+        "timestamp": "TIMESTAMP_DERIVED",
+        "user_id": "USER_ID",
+        "user_type_or_role": "USER_TYPE"
+      },
+      "category": "activity_audit",
+      "event_type": "create_resource"
+    },
+    {
+      "attributes": {
+        "device_client_type": "API_TYPE",
+        "event_code_or_type": "EVENT_TYPE",
+        "ip_address": "CLIENT_IP",
+        "resource_type": "ENTITY_NAME",
+        "result": "REQUEST_STATUS",
+        "session_id": "SESSION_KEY",
+        "timestamp": "TIMESTAMP_DERIVED",
+        "user_id": "USER_ID",
+        "user_type_or_role": "USER_TYPE"
+      },
+      "category": "activity_audit",
+      "event_type": "read_resource"
+    },
+    {
+      "attributes": {
+        "device_client_type": "API_TYPE",
+        "event_code_or_type": "EVENT_TYPE",
+        "ip_address": "CLIENT_IP",
+        "resource_type": "ENTITY_NAME",
+        "result": "REQUEST_STATUS",
+        "session_id": "SESSION_KEY",
+        "timestamp": "TIMESTAMP_DERIVED",
+        "user_id": "USER_ID",
+        "user_type_or_role": "USER_TYPE"
+      },
+      "category": "activity_audit",
+      "event_type": "update_resource"
+    },
+    {
+      "attributes": {
+        "device_client_type": "API_TYPE",
+        "event_code_or_type": "EVENT_TYPE",
+        "ip_address": "CLIENT_IP",
+        "resource_type": "ENTITY_NAME",
+        "result": "REQUEST_STATUS",
+        "session_id": "SESSION_KEY",
+        "timestamp": "TIMESTAMP_DERIVED",
+        "user_id": "USER_ID",
+        "user_type_or_role": "USER_TYPE"
+      },
+      "category": "activity_audit",
+      "event_type": "delete_resource"
+    },
+    {
+      "attributes": {
+        "device_client_type": "API_TYPE",
+        "event_code_or_type": "EVENT_TYPE",
+        "ip_address": "CLIENT_IP",
+        "resource_metadata": "ROWS_PROCESSED",
+        "resource_type": "ENTITY_NAME",
+        "result": "REQUEST_STATUS",
+        "session_id": "SESSION_KEY",
+        "timestamp": "TIMESTAMP_DERIVED",
+        "user_id": "USER_ID",
+        "user_type_or_role": "USER_TYPE"
+      },
+      "category": "activity_audit",
+      "event_type": "download_resource"
+    }
+  ],
+  "source": "products/salesforce/event_sources/salesforce_elf_soap_api_event.yml"
+}

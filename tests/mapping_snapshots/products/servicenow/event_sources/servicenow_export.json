@@ -1,0 +1,17 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "event_code_or_type": "sys_class_name",
+        "event_id": "event",
+        "resource_name": "table",
+        "timestamp": "sys_created_on",
+        "user_id": "user",
+        "username": "user_name"
+      },
+      "category": "activity_audit",
+      "event_type": "download_resource"
+    }
+  ],
+  "source": "products/servicenow/event_sources/servicenow_export.yml"
+}

@@ -1,4 +1,4 @@
-# Salesforce (0.0.1)
+# Salesforce (1.0.0)
 
 Salesforce is a cloud-based customer relationship management (CRM) platform. It is designed to help organizations manage their customer relationships, sales processes, marketing activities, and more.
 

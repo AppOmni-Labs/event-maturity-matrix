@@ -1,0 +1,18 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "event_code_or_type": "data.payload.attributes.type",
+        "event_id": "EventIdentifier",
+        "ip_address": "SourceIp",
+        "session_id": "SessionKey",
+        "timestamp": "EventDate",
+        "user_id": "UserId",
+        "username": "Username"
+      },
+      "category": "authentication",
+      "event_type": "account_logout"
+    }
+  ],
+  "source": "products/salesforce/event_sources/salesforce_rtem_logouteventstream.yml"
+}

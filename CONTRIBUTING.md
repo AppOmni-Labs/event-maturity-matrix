@@ -65,3 +65,16 @@ This will prompt you for:
 
 ### Validation
 When a pull request is opened in the EMM repository, GitHub Actions will automatically validate the YAML files against the schema files. If any of the files are invalid, the pipeline will fail and you will be required to fix the issue before the pull request can be merged.
+
+### Resolved mapping snapshots
+Event sources may use optional [`mapping_defaults`](schema/event_source.yml); the **effective** attribute map is produced by merging defaults with each `mappings[]` entry. To catch unintentional changes to that merged result, the repo keeps **snapshots** under `tests/mapping_snapshots/` (one JSON file per event source, mirroring `products/*/event_sources/`).
+
+CI runs `python scripts/check_mapping_snapshots.py` after schema validation.
+
+Snapshot JSON is written in a **canonical** form (`json.dumps(..., sort_keys=True)`), and each mapping’s `attributes` object uses **alphabetically sorted** keys. That is only for stable diffs: it does not change the merged semantics. The snapshot check re-canonicalizes the on-disk file before comparing, so harmless differences in key order or whitespace are ignored. Path **lists** inside an attribute value keep their order (lists can be meaningful).
+
+If you change `products/**/event_sources/*.yml` (including `mapping_defaults`) and the **resolved** mappings are correct but differ from the committed snapshots, refresh them locally, review the diff, and commit together with your YAML change:
+
+```bash
+python scripts/update_mapping_snapshots.py
+```

@@ -35,15 +35,20 @@ $defs:
     type: object
     required:
       - id
+      - key
       - name
       - type
       - description
     properties:
       id:
-        description: A unique ID for the attribute which starts with A and contains 4 numbers sequentially.
+        description: Legacy stable ID (e.g. A0001).
         type: string
+      key:
+        description: Stable snake_case key used in event source mappings.
+        type: string
+        pattern: "^[a-z][a-z0-9_]*$"
       name:
-        description: Name of a field attribute found in telemetry and audit logging.
+        description: Display name of the attribute.
         type: string
       type:
         description: Defines the value type for the given attribute field.
@@ -65,14 +70,16 @@ $defs:
         description: A maturity score.
         type: integer
       include:
-        description: A list of categories this field would be included in.
+        description: Event type keys (event_types.yml items[].key) this attribute applies to.
         type: array
         unique: true
         items:
           type: string
+          pattern: "^[a-z][a-z0-9_]*$"
       exclude:
-        description: A list of event types this field is excluded from.
+        description: Event type keys this field is excluded from.
         type: array
         unique: true
         items:
           type: string
+          pattern: "^[a-z][a-z0-9_]*$"

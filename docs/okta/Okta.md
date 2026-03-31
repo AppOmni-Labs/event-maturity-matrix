@@ -1,4 +1,4 @@
-# Okta (0.0.1)
+# Okta (1.0.0)
 
 Okta is a cloud-based identity and access management (IAM) platform that provides centralized authentication, management of user identities, and access control to applications and data.
 

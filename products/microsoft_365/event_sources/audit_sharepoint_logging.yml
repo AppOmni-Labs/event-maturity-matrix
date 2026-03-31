@@ -2,192 +2,149 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 entity_name: event_source
-version: "1.0.0"
+version: 1.0.0
 product:
   name: Microsoft 365
   collection_sources:
-    -  m365_mgmt_api
+  - m365_mgmt_api
 name: Sharepoint Audit Logs
 description: Includes logs for Sharepoint and OneDrive.
 references:
-  - id: audit_sharepoint_schema
-    name: SharePoint Base Schema
-    url: https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#sharepoint-base-schema
+- id: audit_sharepoint_schema
+  name: SharePoint Base Schema
+  url: https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#sharepoint-base-schema
 retention:
   duration: 180 days
-  comments: Minimum retention is 180 days, but organizations can set a retention policy up to 10 years dependent on licensing, reference https://learn.microsoft.com/en-us/purview/audit-log-retention-policies
+  comments: Minimum retention is 180 days, but organizations can set a retention policy up to 10 years dependent on licensing,
+    reference https://learn.microsoft.com/en-us/purview/audit-log-retention-policies
 latency:
   duration: Typically 60 to 90 minutes after an event occurs.
   comments: Microsoft does not provide a specific audit logging latency SLA, reference https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
 licensing:
-  comments: Standard and Premium audit licenses are available, with log availability and retention dependent on the license level. For more information, see https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
+  comments: Standard and Premium audit licenses are available, with log availability and retention dependent on the license
+    level. For more information, see https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
+mapping_defaults:
+  source:
+    attributes:
+      timestamp: CreationTime
+      event_id: Id
+      event_code_or_type: Operation
+  categories:
+    authentication:
+      attributes:
+        username: UserId
+        session_id: AppAccessContext.AADSessionId
+        ip_address: ClientIP
+        user_agent_name: UserAgent
+        device_client_type: Platform
+    authorization:
+      attributes:
+        username: UserId
+        session_id: AppAccessContext.AADSessionId
+        ip_address: ClientIP
+        user_agent_name: UserAgent
+        device_client_type: Platform
+    activity_audit:
+      attributes:
+        username: UserId
+        session_id: AppAccessContext.AADSessionId
+        ip_address: ClientIP
+        user_agent_name: UserAgent
+        device_client_type: Platform
 mappings:
-  - category: C0001
-    event_type: ET0001
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0005: UserId
-      A0008: AppAccessContext.AADSessionId
-      A0009: ClientIP
-      A0011: UserAgent
-      A0012: Platform
-    examples:
-      - type: success
-        location: "./event_examples/sharepoint/authentication_account_login.json"
-  - category: C0002
-    event_type: ET0012
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0005: UserId
-      A0008: AppAccessContext.AADSessionId
-      A0009: ClientIP
-      A0011: UserAgent
-      A0012: Platform
-      A0021: EventData
-      A0019: TargetUserOrGroupName
-    examples:
-      - type: success
-        location: "./event_examples/sharepoint/authorization_add_member_to_group.json"
-  - category: C0002
-    event_type: ET0013
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0005: UserId
-      A0008: AppAccessContext.AADSessionId
-      A0009: ClientIP
-      A0011: UserAgent
-      A0012: Platform
-      A0021: EventData
-      A0019: TargetUserOrGroupName
-    examples:
-      - type: success
-        location: "./event_examples/sharepoint/authorization_remove_member_from_group.json"
-  - category: C0002
-    event_type: ET0018
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0005: UserId
-      A0008: AppAccessContext.AADSessionId
-      A0009: ClientIP
-      A0011: UserAgent
-      A0012: Platform
-      A0023: TargetUserOrGroupType
-      A0024: TargetUserOrGroupName
-    examples:
-      - type: success
-        location: "./event_examples/sharepoint/authorization_add_permission.json"
-  - category: C0002
-    event_type: ET0019
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0005: UserId
-      A0008: AppAccessContext.AADSessionId
-      A0009: ClientIP
-      A0011: UserAgent
-      A0012: Platform
-      A0023: TargetUserOrGroupType
-      A0024: TargetUserOrGroupName
-    examples:
-      - type: success
-        location: "./event_examples/sharepoint/authorization_remove_permission.json"
-  - category: C0003
-    event_type: ET0024
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0005: UserId
-      A0009: ClientIP
-      A0011: UserAgent
-      A0026: ModifiedProperties
-      A0027: ModifiedProperties
-      A0028: ModifiedProperties
-    examples:
-      - type: success
-        location: "./event_examples/sharepoint/system_audit_update_security_configuration.json"
-  - category: C0004
-    event_type: ET0030
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0005: UserId
-      A0008: AppAccessContext.AADSessionId
-      A0009: ClientIP
-      A0011: UserAgent
-      A0012: Platform
-      A0030: EventData
-      A0031: ItemType
-    examples:
-      - type: success
-        location: "./event_examples/sharepoint/activity_audit_create_resource_site.json"
-  - category: C0004
-    event_type: ET0031
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0005: UserId
-      A0008: AppAccessContext.AADSessionId
-      A0009: ClientIP
-      A0011: UserAgent
-      A0012: Platform
-      A0030: ObjectId
-      A0031: ItemType
-    examples:
-      - type: success
-        location: "./event_examples/sharepoint/activity_audit_read_resource_page.json"
-  - category: C0004
-    event_type: ET0033
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0005: UserId
-      A0009: ClientIP
-      A0011: UserAgent
-      A0030: ObjectId
-      A0031: ItemType
-    examples:
-      - type: success
-        location: "./event_examples/sharepoint/activity_audit_delete_resource_site.json"
-  - category: C0004
-    event_type: ET0034
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0005: UserId
-      A0008: AppAccessContext.AADSessionId
-      A0009: ClientIP
-      A0011: UserAgent
-      A0012: Platform
-      A0030: ItemType
-    examples:
-      - type: success
-        location: "./event_examples/sharepoint/activity_audit_download_resource_file.json"
-  - category: C0004
-    event_type: ET0035
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0009: ClientIP
-      A0030: QuerySource
-      A0033: QueryText
-    examples:
-      - type: success
-        location: "./event_examples/sharepoint/activity_audit_query_resource.json"
+- category: authentication
+  event_type: account_login
+  attributes: {}
+  examples:
+  - type: success
+    location: ./event_examples/sharepoint/authentication_account_login.json
+- category: authorization
+  event_type: add_to_group
+  attributes:
+    target_group_name: EventData
+    target_username: TargetUserOrGroupName
+  examples:
+  - type: success
+    location: ./event_examples/sharepoint/authorization_add_member_to_group.json
+- category: authorization
+  event_type: remove_from_group
+  attributes:
+    target_group_name: EventData
+    target_username: TargetUserOrGroupName
+  examples:
+  - type: success
+    location: ./event_examples/sharepoint/authorization_remove_member_from_group.json
+- category: authorization
+  event_type: add_permission
+  attributes:
+    permission_name: TargetUserOrGroupType
+    target_resource_name: TargetUserOrGroupName
+  examples:
+  - type: success
+    location: ./event_examples/sharepoint/authorization_add_permission.json
+- category: authorization
+  event_type: remove_permission
+  attributes:
+    permission_name: TargetUserOrGroupType
+    target_resource_name: TargetUserOrGroupName
+  examples:
+  - type: success
+    location: ./event_examples/sharepoint/authorization_remove_permission.json
+- category: system_audit
+  event_type: update_security_configuration
+  attributes:
+    username: UserId
+    ip_address: ClientIP
+    user_agent_name: UserAgent
+    configuration_setting_name: ModifiedProperties
+    configuration_setting_value: ModifiedProperties
+    previous_configuration_setting_value: ModifiedProperties
+  examples:
+  - type: success
+    location: ./event_examples/sharepoint/system_audit_update_security_configuration.json
+- category: activity_audit
+  event_type: create_resource
+  attributes:
+    resource_name: EventData
+    resource_type: ItemType
+  examples:
+  - type: success
+    location: ./event_examples/sharepoint/activity_audit_create_resource_site.json
+- category: activity_audit
+  event_type: read_resource
+  attributes:
+    resource_name: ObjectId
+    resource_type: ItemType
+  examples:
+  - type: success
+    location: ./event_examples/sharepoint/activity_audit_read_resource_page.json
+- category: activity_audit
+  event_type: delete_resource
+  attributes:
+    session_id: null
+    device_client_type: null
+    resource_name: ObjectId
+    resource_type: ItemType
+  examples:
+  - type: success
+    location: ./event_examples/sharepoint/activity_audit_delete_resource_site.json
+- category: activity_audit
+  event_type: download_resource
+  attributes:
+    resource_name: ItemType
+  examples:
+  - type: success
+    location: ./event_examples/sharepoint/activity_audit_download_resource_file.json
+- category: activity_audit
+  event_type: query_resource
+  attributes:
+    session_id: null
+    user_agent_name: null
+    device_client_type: null
+    user_id: UserKey
+    user_type_or_role: UserType
+    resource_name: QuerySource
+    query_string: QueryText
+  examples:
+  - type: success
+    location: ./event_examples/sharepoint/activity_audit_query_resource.json

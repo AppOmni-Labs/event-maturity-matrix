@@ -1,4 +1,4 @@
-# AppOmni (0.0.1)
+# AppOmni (1.0.0)
 
 AppOmni is a cloud-based platform designed to help organizations assess, monitor, and protect their data and configurations within SaaS applications.
 

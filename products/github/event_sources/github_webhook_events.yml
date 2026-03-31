@@ -2,17 +2,17 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 entity_name: event_source
-version: "1.0.0"
+version: 1.0.0
 product:
   name: GitHub
   collection_sources:
-    - webhook_events
+  - webhook_events
 name: Webhook Events
 description: GitHub webhook events are delivered whenever certain events occur on GitHub.
 references:
-  - id: webhook_event_schema
-    name: Webhook Event Schema
-    url: https://docs.github.com/en/webhooks-and-events/webhooks/webhook-events-and-payloads
+- id: webhook_event_schema
+  name: Webhook Event Schema
+  url: https://docs.github.com/en/webhooks-and-events/webhooks/webhook-events-and-payloads
 retention:
   duration: N/A
   comments: GitHub does not officially retain webhook events. Recent webhook events can be accessed at `https://github.com/<ORGANIZATION>/<REPOSITORY>/settings/hooks`.
@@ -21,98 +21,96 @@ latency:
   comments: N/A
 licensing:
   comments: Included with all GitHub accounts.
+mapping_defaults:
+  source:
+    attributes:
+      event_code_or_type: action
+  categories:
+    authorization:
+      attributes:
+        username: sender.login
+        user_id: sender.id
+        user_type_or_role: sender.type
+    activity_audit:
+      attributes:
+        username: sender.login
+        user_id: sender.id
+        user_type_or_role: sender.type
 mappings:
-  - category: C0002
-    event_type: ET0006
-    attributes:
-      A0003: action
-      A0005: sender.login
-      A0006: sender.id
-      A0007: sender.type
-      A0019: member.login
-      A0020: changes
-    examples:
-      - type: success
-        location: "./event_examples/webhook/authorization_update_user.json"
-  - category: C0002
-    event_type: ET0008
-    attributes:
-      A0003: action
-      A0005: sender.login
-      A0006: sender.id
-      A0007: sender.type
-      A0021: [organization.login, team.name, repository.name]
-    examples:
-      - type: success
-        location: "./event_examples/webhook/authorization_create_group.json"
-  - category: C0002
-    event_type: ET0010
-    attributes:
-      A0003: action
-      A0005: sender.login
-      A0006: sender.id
-      A0007: sender.type
-      A0020: changes
-      A0021: [organization.login, team.name, repository.name]
-    examples:
-      - type: success
-        location: "./event_examples/webhook/authorization_update_group.json"
-  - category: C0002
-    event_type: ET0011
-    attributes:
-      A0003: action
-      A0005: sender.login
-      A0006: sender.id
-      A0007: sender.type
-      A0021: [organization.login, team.name, repository.name]
-    examples:
-      - type: success
-        location: "./event_examples/webhook/authorization_delete_group.json"
-  - category: C0002
-    event_type: ET0012
-    attributes:
-      A0003: action
-      A0005: sender.login
-      A0006: sender.id
-      A0007: sender.type
-      A0019: membership.user.login
-      A0021: [organization.login, team.name, repository.name]
-    examples:
-      - type: success
-        location: "./event_examples/webhook/authorization_add_to_group.json"
-  - category: C0002
-    event_type: ET0013
-    attributes:
-      A0003: action
-      A0005: sender.login
-      A0006: sender.id
-      A0007: sender.type
-      A0019: membership.user.login
-      A0021: [organization.login, team.name, repository.name]
-    examples:
-      - type: success
-        location: "./event_examples/webhook/authorization_remove_from_group.json"
-  - category: C0004
-    event_type: ET0030
-    attributes:
-      A0003: action
-      A0005: sender.login
-      A0006: sender.id
-      A0007: sender.type
-      A0030: repository.name
-      A0031: X-GitHub-Event
-    examples:
-      - type: success
-        location: "./event_examples/webhook/activity_audit_create_resource_repo.json"
-  - category: C0004
-    event_type: ET0033
-    attributes:
-      A0003: action
-      A0005: sender.login
-      A0006: sender.id
-      A0007: sender.type
-      A0030: repository.name
-      A0031: X-GitHub-Event
-    examples:
-      - type: success
-        location: "./event_examples/webhook/activity_audit_delete_resource_repo.json"
+- category: authorization
+  event_type: update_user
+  attributes:
+    target_username: member.login
+    target_attribute_context: changes
+  examples:
+  - type: success
+    location: ./event_examples/webhook/authorization_update_user.json
+- category: authorization
+  event_type: create_group
+  attributes:
+    target_group_name:
+    - organization.login
+    - team.name
+    - repository.name
+  examples:
+  - type: success
+    location: ./event_examples/webhook/authorization_create_group.json
+- category: authorization
+  event_type: update_group
+  attributes:
+    target_attribute_context: changes
+    target_group_name:
+    - organization.login
+    - team.name
+    - repository.name
+  examples:
+  - type: success
+    location: ./event_examples/webhook/authorization_update_group.json
+- category: authorization
+  event_type: delete_group
+  attributes:
+    target_group_name:
+    - organization.login
+    - team.name
+    - repository.name
+  examples:
+  - type: success
+    location: ./event_examples/webhook/authorization_delete_group.json
+- category: authorization
+  event_type: add_to_group
+  attributes:
+    target_username: membership.user.login
+    target_group_name:
+    - organization.login
+    - team.name
+    - repository.name
+  examples:
+  - type: success
+    location: ./event_examples/webhook/authorization_add_to_group.json
+- category: authorization
+  event_type: remove_from_group
+  attributes:
+    target_username: membership.user.login
+    target_group_name:
+    - organization.login
+    - team.name
+    - repository.name
+  examples:
+  - type: success
+    location: ./event_examples/webhook/authorization_remove_from_group.json
+- category: activity_audit
+  event_type: create_resource
+  attributes:
+    resource_name: repository.name
+    resource_type: X-GitHub-Event
+  examples:
+  - type: success
+    location: ./event_examples/webhook/activity_audit_create_resource_repo.json
+- category: activity_audit
+  event_type: delete_resource
+  attributes:
+    resource_name: repository.name
+    resource_type: X-GitHub-Event
+  examples:
+  - type: success
+    location: ./event_examples/webhook/activity_audit_delete_resource_repo.json

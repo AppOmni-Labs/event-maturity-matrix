@@ -1,0 +1,25 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "event_code_or_type": "fieldname",
+        "resource_name": "tablename",
+        "timestamp": "sys_created_on",
+        "username": "user"
+      },
+      "category": "activity_audit",
+      "event_type": "update_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "fieldname",
+        "resource_name": "tablename",
+        "timestamp": "sys_created_on",
+        "username": "user"
+      },
+      "category": "activity_audit",
+      "event_type": "delete_resource"
+    }
+  ],
+  "source": "products/servicenow/event_sources/servicenow_audit.yml"
+}

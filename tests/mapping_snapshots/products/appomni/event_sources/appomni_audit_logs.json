@@ -1,0 +1,164 @@
+{
+  "mappings": [
+    {
+      "attributes": {
+        "event_code_or_type": "action_type",
+        "event_id": "log_id",
+        "identity_service_provider_context": "action_type",
+        "ip_address": "action_data.user_ip",
+        "result": "action_type",
+        "timestamp": "action_at",
+        "user_agent_name": "action_data.user_agent",
+        "user_id": "user_id",
+        "username": "action_data.user_username"
+      },
+      "category": "authentication",
+      "event_type": "account_login"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action_type",
+        "event_id": "log_id",
+        "ip_address": "action_data.user_ip",
+        "result": "action_type",
+        "timestamp": "action_at",
+        "user_agent_name": "action_data.user_agent",
+        "user_id": "user_id",
+        "username": "action_data.user_username"
+      },
+      "category": "authentication",
+      "event_type": "account_logout"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action_type",
+        "event_id": "log_id",
+        "ip_address": "action_data.user_ip",
+        "timestamp": "action_at",
+        "user_agent_name": "action_data.user_agent",
+        "user_id": "user_id",
+        "username": "action_data.user_username",
+        "verification_method": "action_type"
+      },
+      "category": "authentication",
+      "event_type": "mfa_verification"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action_type",
+        "event_id": "log_id",
+        "ip_address": "action_data.user_ip",
+        "target_username": "action_data.target_user_username",
+        "timestamp": "action_at",
+        "user_agent_name": "action_data.user_agent",
+        "user_id": "user_id",
+        "username": "action_data.user_username"
+      },
+      "category": "authorization",
+      "event_type": "create_user"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action_type",
+        "event_id": "log_id",
+        "ip_address": "action_data.user_ip",
+        "target_username": "action_data.user_username",
+        "timestamp": "action_at",
+        "user_agent_name": "action_data.user_agent",
+        "user_id": "user_id",
+        "username": "user_username"
+      },
+      "category": "authorization",
+      "event_type": "delete_user"
+    },
+    {
+      "attributes": {
+        "enrollment_type": "action_data.detail_str",
+        "event_code_or_type": "action_type",
+        "event_id": "log_id",
+        "ip_address": "action_data.user_ip",
+        "target_username": "action_data.target_user_username",
+        "timestamp": "action_at",
+        "user_agent_name": "action_data.user_agent",
+        "user_id": "user_id",
+        "username": "action_data.user_username"
+      },
+      "category": "authorization",
+      "event_type": "add_enrollment"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action_type",
+        "event_id": "log_id",
+        "ip_address": "action_data.user_ip",
+        "target_username": "action_data.target_user_username",
+        "timestamp": "action_at",
+        "user_agent_name": "action_data.user_agent",
+        "user_id": "user_id",
+        "username": "action_data.target_user_username"
+      },
+      "category": "authorization",
+      "event_type": "remove_enrollment"
+    },
+    {
+      "attributes": {
+        "configuration_setting_name": "action_data.setting_name",
+        "configuration_setting_value": "action_data.new_value",
+        "event_code_or_type": "action_type",
+        "event_id": "log_id",
+        "ip_address": "action_data.user_ip",
+        "previous_configuration_setting_value": "action_data.old_value",
+        "timestamp": "action_at",
+        "user_agent_name": "action_data.user_agent",
+        "user_id": "user_id",
+        "username": "action_data.user_username"
+      },
+      "category": "system_audit",
+      "event_type": "update_security_configuration"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action_type",
+        "event_id": "log_id",
+        "ip_address": "action_data.user_ip",
+        "resource_name": "service_name",
+        "resource_type": "service_type",
+        "timestamp": "action_at",
+        "user_agent_name": "action_data.user_agent",
+        "user_id": "user_id",
+        "username": "action_data.user_username"
+      },
+      "category": "activity_audit",
+      "event_type": "create_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action_type",
+        "event_id": "log_id",
+        "resource_name": "service_name",
+        "resource_type": "service_type",
+        "timestamp": "action_at",
+        "user_id": "user_id",
+        "username": "action_data.user_username"
+      },
+      "category": "activity_audit",
+      "event_type": "update_resource"
+    },
+    {
+      "attributes": {
+        "event_code_or_type": "action_type",
+        "event_id": "log_id",
+        "ip_address": "action_data.user_ip",
+        "resource_name": "policy_name",
+        "resource_type": "service_type",
+        "timestamp": "action_at",
+        "user_agent_name": "action_data.user_agent",
+        "user_id": "user_id",
+        "username": "action_data.user_username"
+      },
+      "category": "activity_audit",
+      "event_type": "delete_resource"
+    }
+  ],
+  "source": "products/appomni/event_sources/appomni_audit_logs.yml"
+}

@@ -1,37 +1,36 @@
-# Salesforce - EventLogFile Logout Event (0.0.1)
+# Salesforce — EventLogFile Logout Event
 
-> Entity Name: event_source
+📌 **v1.0.0** · 🗄 **Retention:** 1 Day · ⚡ **Latency:** 3 Hours
+
+🗄 Available for free with 1 day retention, otherwise requires an add-on subscription for 30 day retention.
+
+
+⚡ Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of the event to be available in the hourly log file.
+
+
+📜 **Licensing:** Available for free with 1 day retention, otherwise requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
+
 
 This event source is to track logout events in Salesforce.
-
 ## References
 * [EventLogFile Logout Event](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_logout.htm)
+## Field mappings
 
-## Retention
+| Category | Event type | Attribute | Source field(s) |
+| -------- | ---------- | --------- | ---------------- |
+| Authentication | Account Logout | Timestamp | TIMESTAMP_DERIVED |
+| Authentication | Account Logout | Event Code / Type | EVENT_TYPE |
+| Authentication | Account Logout | User ID | USER_ID |
+| Authentication | Account Logout | User Type / Role | USER_TYPE |
+| Authentication | Account Logout | Session ID | LOGIN_KEY |
+| Authentication | Account Logout | IP Address | CLIENT_IP |
+| Authentication | Account Logout | User Agent Name | BROWSER_TYPE |
+| Authentication | Account Logout | Device/Client Type | PLATFORM_TYPE |
 
-Based on our research, Salesforce retains audit logs for 1 Day.
+## Example logs
 
-
-### Comments
-Available for free with 1 day retention, otherwise requires an add-on subscription for 30 day retention.
-
-
-## Latency
-
-Based on our research, Salesforce has a latency of 3 Hours.
-
-### Comments
-Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of the event to be available in the hourly log file.
-
-
-## Licensing
-
-Available for free with 1 day retention, otherwise requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
-
-## Mappings
-
-| Category | Event Type | Attributes | Examples |
-| -------- | ---------- | ---------- | -------- |
-| C0001 | ET0002 |A0001 -> TIMESTAMP_DERIVED<br />A0003 -> EVENT_TYPE<br />A0006 -> USER_ID<br />A0007 -> USER_TYPE<br />A0008 -> LOGIN_KEY<br />A0009 -> CLIENT_IP<br />A0011 -> BROWSER_TYPE<br />A0012 -> PLATFORM_TYPE<br />|[success](/products/salesforce/event_examples/salesforce_elf_logout_event/authentication_account_logout_elf.json)<br />|
+| Category | Event type | Log | Sample field values |
+| -------- | ---------- | --- | ------------------- |
+| Authentication | Account Logout | [success](/products/salesforce/event_examples/salesforce_elf_logout_event/authentication_account_logout_elf.json) | Timestamp=2023-03-16T21:07:47.645Z; Event Code / Type=Logout; User ID=000000000000123; User Type / Role=Standard(db=S,api=Standard); Session ID=9870000000012300 |
 
 

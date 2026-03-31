@@ -2,380 +2,226 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 entity_name: event_source
-version: "1.0.0"
+version: 1.0.0
 product:
   name: Microsoft 365
   collection_sources:
-    -  m365_mgmt_api
+  - m365_mgmt_api
 name: Exchange Audit Logs
 description: Includes logs for Exchange administration and mailbox activities.
 references:
-  - id: audit_exchange_admin_schema
-    name: Exchange Admin Schema
-    url: https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#exchange-admin-schema
-  - id: audit_exchange_mailbox_schema
-    name: Exchange Mailbox Schema
-    url: https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#exchange-mailbox-schema
+- id: audit_exchange_admin_schema
+  name: Exchange Admin Schema
+  url: https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#exchange-admin-schema
+- id: audit_exchange_mailbox_schema
+  name: Exchange Mailbox Schema
+  url: https://learn.microsoft.com/en-us/office/office-365-management-api/office-365-management-activity-api-schema#exchange-mailbox-schema
 retention:
   duration: 180 days
-  comments: Minimum retention is 180 days, but organizations can set a retention policy up to 10 years dependent on licensing, reference https://learn.microsoft.com/en-us/purview/audit-log-retention-policies
+  comments: Minimum retention is 180 days, but organizations can set a retention policy up to 10 years dependent on licensing,
+    reference https://learn.microsoft.com/en-us/purview/audit-log-retention-policies
 latency:
   duration: Typically 60 to 90 minutes after an event occurs.
   comments: Microsoft does not provide a specific audit logging latency SLA, reference https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
 licensing:
-  comments: Standard and Premium audit licenses are available, with log availability and retention dependent on the license level. For more information, see https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
+  comments: Standard and Premium audit licenses are available, with log availability and retention dependent on the license
+    level. For more information, see https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
+mapping_defaults:
+  source:
+    attributes:
+      timestamp: CreationTime
+      event_id: Id
+      event_code_or_type: Operation
+  categories:
+    authorization:
+      attributes:
+        result: ResultStatus
+        username: UserId
+        user_id: UserKey
+        user_type_or_role: UserType
+        session_id: SessionId
+        ip_address: ClientIP
+    system_audit:
+      attributes:
+        result: ResultStatus
+        username: UserId
+        user_id: UserKey
+        user_type_or_role: UserType
+        session_id: SessionId
+        ip_address: ClientIP
+    activity_audit:
+      attributes:
+        result: ResultStatus
+        username: UserId
+        user_id: UserKey
+        user_type_or_role: UserType
+        session_id: SessionId
+        ip_address: ClientIP
 mappings:
-  - category: C0001
-    event_type: ET0001
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0005: UserId
-      A0006: LogonUserSid
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-      A0011: ClientInfoString
-      A0012: ClientInfoString
-    examples:
-      - type: success
-        location: "./event_examples/exchange/authentication_account_login.json"
-  - category: C0002
-    event_type: ET0008
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-      A0021: Parameters[Name=DisplayName].Value
-    examples:
-      - type: success
-        location: "./event_examples/exchange/authorization_create_group_distro.json"
-  - category: C0002
-    event_type: ET0010
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-      A0021: Parameters[Name=DisplayName].Value
-    examples:
-      - type: success
-        location: "./event_examples/exchange/authorization_update_group_distro.json"
-  - category: C0002
-    event_type: ET0011
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-    examples:
-      - type: success
-        location: "./event_examples/exchange/authorization_delete_group_distro.json"
-  - category: C0002
-    event_type: ET0012
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-    examples:
-      - type: success
-        location: "./event_examples/exchange/authorization_add_to_group_distro.json"
-  - category: C0002
-    event_type: ET0013
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-    examples:
-      - type: success
-        location: "./event_examples/exchange/authorization_remove_from_group_distro.json"
-  - category: C0002
-    event_type: ET0014
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-      A0022: Parameters.Name
-    examples:
-      - type: success
-        location: "./event_examples/exchange/authorization_create_role.json"
-  - category: C0002
-    event_type: ET0016
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-      A0022: Parameters.Name
-    examples:
-      - type: success
-        location: "./event_examples/exchange/authorization_update_role.json"
-  - category: C0002
-    event_type: ET0017
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-    examples:
-      - type: success
-        location: "./event_examples/exchange/authorization_delete_role.json"
-  - category: C0002
-    event_type: ET0018
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-    examples:
-      - type: success
-        location: "./event_examples/exchange/authorization_add_permission.json"
-  - category: C0002
-    event_type: ET0019
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-      A0023: ObjectId
-    examples:
-      - type: success
-        location: "./event_examples/exchange/authorization_remove_permission.json"
-  - category: C0003
-    event_type: ET0022
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-      A0026: Parameters.Name
-      A0027: Parameters.Value
-    examples:
-      - type: success
-        location: "./event_examples/exchange/system_audit_create_security_configuration_spam.json"
-  - category: C0003
-    event_type: ET0024
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-      A0026: Parameters.Name
-      A0027: Parameters.Value
-    examples:
-      - type: success
-        location: "./event_examples/exchange/system_audit_update_security_configuration_spam.json"
-  - category: C0003
-    event_type: ET0025
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-      A0026: Parameters.Name
-    examples:
-      - type: success
-        location: "./event_examples/exchange/system_audit_delete_security_configuration_spam.json"
-  - category: C0003
-    event_type: ET0026
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-      A0029: AppId
-    examples:
-      - type: success
-        location: "./event_examples/exchange/system_audit_create_integration.json"
-  - category: C0003
-    event_type: ET0028
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-      A0029: AppId
-    examples:
-      - type: success
-        location: "./event_examples/exchange/system_audit_update_integration.json"
-  - category: C0003
-    event_type: ET0029
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-      A0029: AppId
-    examples:
-      - type: success
-        location: "./event_examples/exchange/system_audit_delete_integration.json"
-  - category: C0004
-    event_type: ET0030
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-      A0030: Item
-      A0031: Item.Subject
-    examples:
-      - type: success - email
-        location: "./event_examples/exchange/activity_audit_create_resource_msg.json"
-      - type: success - calendar
-        location: "./event_examples/exchange/activity_audit_create_resource_calendar.json"
-  - category: C0004
-    event_type: ET0031
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIPAddress
-      A0030: OperationProperties
-      A0031: Operation
-    examples:
-      - type: success
-        location: "./event_examples/exchange/activity_audit_read_resource.json"
-  - category: C0004
-    event_type: ET0032
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-    examples:
-      - type: success
-        location: "./event_examples/exchange/activity_audit_update_resource_calendar.json"
-  - category: C0004
-    event_type: ET0033
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0004: ResultStatus
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0008: SessionId
-      A0009: ClientIP
-      A0030: AffectedItems
-      A0031: AffectedItems
-    examples:
-      - type: success - email
-        location: "./event_examples/exchange/activity_audit_delete_resource_msg.json"
-      - type: success - calendar
-        location: "./event_examples/exchange/activity_audit_delete_resource_calendar.json"
-  - category: C0004
-    event_type: ET0035
-    attributes:
-      A0001: CreationTime
-      A0002: Id
-      A0003: Operation
-      A0005: UserId
-      A0006: UserKey
-      A0007: UserType
-      A0009: ClientIP
-      A0030: QuerySource
-      A0033: QueryText
-    examples:
-      - type: success
-        location: "./event_examples/exchange/activity_audit_query_resource.json"
+- category: authentication
+  event_type: account_login
+  attributes:
+    username: UserId
+    user_id: LogonUserSid
+    user_type_or_role: UserType
+    session_id: SessionId
+    ip_address: ClientIP
+    user_agent_name: ClientInfoString
+    device_client_type: ClientInfoString
+  examples:
+  - type: success
+    location: ./event_examples/exchange/authentication_account_login.json
+- category: authorization
+  event_type: create_group
+  attributes:
+    target_group_name: Parameters[Name=DisplayName].Value
+  examples:
+  - type: success
+    location: ./event_examples/exchange/authorization_create_group_distro.json
+- category: authorization
+  event_type: update_group
+  attributes:
+    target_group_name: Parameters[Name=DisplayName].Value
+  examples:
+  - type: success
+    location: ./event_examples/exchange/authorization_update_group_distro.json
+- category: authorization
+  event_type: delete_group
+  attributes: {}
+  examples:
+  - type: success
+    location: ./event_examples/exchange/authorization_delete_group_distro.json
+- category: authorization
+  event_type: add_to_group
+  attributes: {}
+  examples:
+  - type: success
+    location: ./event_examples/exchange/authorization_add_to_group_distro.json
+- category: authorization
+  event_type: remove_from_group
+  attributes: {}
+  examples:
+  - type: success
+    location: ./event_examples/exchange/authorization_remove_from_group_distro.json
+- category: authorization
+  event_type: create_role
+  attributes:
+    target_role_name: Parameters.Name
+  examples:
+  - type: success
+    location: ./event_examples/exchange/authorization_create_role.json
+- category: authorization
+  event_type: update_role
+  attributes:
+    target_role_name: Parameters.Name
+  examples:
+  - type: success
+    location: ./event_examples/exchange/authorization_update_role.json
+- category: authorization
+  event_type: delete_role
+  attributes: {}
+  examples:
+  - type: success
+    location: ./event_examples/exchange/authorization_delete_role.json
+- category: authorization
+  event_type: add_permission
+  attributes: {}
+  examples:
+  - type: success
+    location: ./event_examples/exchange/authorization_add_permission.json
+- category: authorization
+  event_type: remove_permission
+  attributes:
+    permission_name: ObjectId
+  examples:
+  - type: success
+    location: ./event_examples/exchange/authorization_remove_permission.json
+- category: system_audit
+  event_type: create_security_configuration
+  attributes:
+    configuration_setting_name: Parameters.Name
+    configuration_setting_value: Parameters.Value
+  examples:
+  - type: success
+    location: ./event_examples/exchange/system_audit_create_security_configuration_spam.json
+- category: system_audit
+  event_type: update_security_configuration
+  attributes:
+    configuration_setting_name: Parameters.Name
+    configuration_setting_value: Parameters.Value
+  examples:
+  - type: success
+    location: ./event_examples/exchange/system_audit_update_security_configuration_spam.json
+- category: system_audit
+  event_type: delete_security_configuration
+  attributes:
+    configuration_setting_name: Parameters.Name
+  examples:
+  - type: success
+    location: ./event_examples/exchange/system_audit_delete_security_configuration_spam.json
+- category: system_audit
+  event_type: create_integration
+  attributes:
+    integration_app_name: AppId
+  examples:
+  - type: success
+    location: ./event_examples/exchange/system_audit_create_integration.json
+- category: system_audit
+  event_type: update_integration
+  attributes:
+    integration_app_name: AppId
+  examples:
+  - type: success
+    location: ./event_examples/exchange/system_audit_update_integration.json
+- category: system_audit
+  event_type: delete_integration
+  attributes:
+    integration_app_name: AppId
+  examples:
+  - type: success
+    location: ./event_examples/exchange/system_audit_delete_integration.json
+- category: activity_audit
+  event_type: create_resource
+  attributes:
+    resource_name: Item
+    resource_type: Item.Subject
+  examples:
+  - type: success - email
+    location: ./event_examples/exchange/activity_audit_create_resource_msg.json
+  - type: success - calendar
+    location: ./event_examples/exchange/activity_audit_create_resource_calendar.json
+- category: activity_audit
+  event_type: read_resource
+  attributes:
+    ip_address: ClientIPAddress
+    resource_name: OperationProperties
+    resource_type: Operation
+  examples:
+  - type: success
+    location: ./event_examples/exchange/activity_audit_read_resource.json
+- category: activity_audit
+  event_type: update_resource
+  attributes: {}
+  examples:
+  - type: success
+    location: ./event_examples/exchange/activity_audit_update_resource_calendar.json
+- category: activity_audit
+  event_type: delete_resource
+  attributes:
+    resource_name: AffectedItems
+    resource_type: AffectedItems
+  examples:
+  - type: success - email
+    location: ./event_examples/exchange/activity_audit_delete_resource_msg.json
+  - type: success - calendar
+    location: ./event_examples/exchange/activity_audit_delete_resource_calendar.json
+- category: activity_audit
+  event_type: query_resource
+  attributes:
+    result: null
+    session_id: null
+    resource_name: QuerySource
+    query_string: QueryText
+  examples:
+  - type: success
+    location: ./event_examples/exchange/activity_audit_query_resource.json
