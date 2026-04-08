@@ -1,7 +1,7 @@
 # Workday (1.0.0)
 
 Workday is a cloud-based enterprise resource planning (ERP) platform that offers financial management,
-human resources management, and workforce planning.
+human resources management, and workforce planning.<br>
 The User Activity Logging REST API enables organizations to retrieve an audit trail for Workday user activities.
 
 ## Collections
