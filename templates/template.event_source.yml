@@ -50,7 +50,7 @@ mappings:
       failure_context:
       credential_context:
       identity_service_provider_context:
-    examples: 
+    examples:
       - type: success
         location: "./event_examples/{event_source_name}/authentication_account_login_success.json"
       - type: failure

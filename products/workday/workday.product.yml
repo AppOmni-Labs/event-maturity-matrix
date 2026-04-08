@@ -6,9 +6,9 @@ version: "1.0.0"
 name: Workday
 logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/workday_square.svg
 description: |
-  Workday is a cloud-based enterprise resource planning (ERP) platform that offers financial management, 
+  Workday is a cloud-based enterprise resource planning (ERP) platform that offers financial management,
   human resources management, and workforce planning.
-  
+
   The User Activity Logging REST API enables organizations to retrieve an audit trail for Workday user activities.
 collection:
   - id: user_activity_logs
@@ -27,4 +27,3 @@ collection:
         name: REST API Python Example
         description: Call the User Activity Logging REST API Using Python
         url: https://doc.workday.com/admin-guide/en-us/integrations/workday-rest-api/rest-api-guides/user-activity-logging-rest-api/hsq1650324712301.html
-

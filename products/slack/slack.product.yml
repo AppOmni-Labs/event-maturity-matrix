@@ -6,9 +6,9 @@ version: "1.0.0"
 name: Slack
 logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/slack_square.svg
 description: |
-  Slack is a cloud-based collaboration platform that facilitates communication between individuals and groups 
+  Slack is a cloud-based collaboration platform that facilitates communication between individuals and groups
   through channels, direct messaging, file sharing, and integrations with third-party applications.
-  
+
   The Slack Audit Logs API allows organizations to access and retrieve audit logs related to user activity and security events within their Slack workspaces.
 collection:
   - id: slack_audit_logs
@@ -27,6 +27,3 @@ collection:
         name: Calling the Audit Logs API
         description: Audit Logs API endpoint documentation
         url: https://api.slack.com/admins/audit-logs-call
-
-
-
