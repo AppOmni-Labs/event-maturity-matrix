@@ -7,9 +7,9 @@ version: 1.0.0
 name: Workday
 logo_link: https://storage.googleapis.com/appomni-demo-public/service_logos/workday_square.svg
 description: |
-  Workday is a cloud-based enterprise resource planning (ERP) platform that offers financial management,
-  human resources management, and workforce planning.<br>
-  The User Activity Logging REST API enables organizations to retrieve an audit trail for Workday user activities.
+  <p>Workday is a cloud-based enterprise resource planning (ERP) platform that offers financial management,
+  human resources management, and workforce planning.</p>
+  <p>The User Activity Logging REST API enables organizations to retrieve an audit trail for Workday user activities.</p>
 collection:
   - id: user_activity_logs
     name: User Activity Logs
