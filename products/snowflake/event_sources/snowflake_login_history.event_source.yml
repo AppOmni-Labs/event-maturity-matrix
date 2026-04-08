@@ -1,3 +1,4 @@
+---
 description: This Account Usage view can be used to query login attempts by Snowflake
   users within the last 365 days (1 year).
 entity_name: event_source
@@ -16,31 +17,30 @@ mapping_defaults:
       ip_address: CLIENT_IP
       device_client_type: REPORTED_CLIENT_TYPE
 mappings:
-- category: authentication
-  event_type: account_login
-  attributes:
-    credential_context: FIRST_AUTHENTICATION_FACTOR
-  examples:
-  - location: ./event_examples/login_history/authentication_account_login.json
-    type: success
-- category: authentication
-  event_type: mfa_verification
-  attributes:
-    result: IS_SUCCESS
-    verification_method: SECOND_AUTHENTICATION_FACTOR
-    verification_flagged: IS_SUCCESS
-  examples:
-  - location: ./event_examples/login_history/authentication_mfa_verification.json
-    type: success
+  - category: authentication
+    event_type: account_login
+    attributes:
+      credential_context: FIRST_AUTHENTICATION_FACTOR
+    examples:
+      - location: ./event_examples/login_history/authentication_account_login.json
+        type: success
+  - category: authentication
+    event_type: mfa_verification
+    attributes:
+      result: IS_SUCCESS
+      verification_method: SECOND_AUTHENTICATION_FACTOR
+      verification_flagged: IS_SUCCESS
+    examples:
+      - location: ./event_examples/login_history/authentication_mfa_verification.json
+        type: success
 name: Login History
 product:
-  collection_sources:
-  - login_history
+  collection_sources: [login_history]
   name: Snowflake
 references:
-- id: about_login_history
-  name: About the Login History View
-  url: https://docs.snowflake.com/en/sql-reference/account-usage/login_history
+  - id: about_login_history
+    name: About the Login History View
+    url: https://docs.snowflake.com/en/sql-reference/account-usage/login_history
 retention:
   comments: No comments
   duration: 365 days

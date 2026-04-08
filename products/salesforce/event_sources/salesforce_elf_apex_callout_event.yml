@@ -1,3 +1,4 @@
+---
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -5,35 +6,35 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: Salesforce
-  collection_sources:
-  - rest_api
-  - soap_api
+  collection_sources: [rest_api, soap_api]
 name: EventLogFile Apex Callout Event Type
-description: Provides details about callouts (external requests) during Apex code execution.
+description: Provides details about callouts (external requests) during Apex code
+  execution.
 references:
-- id: apex_event
-  name: EventLogFile Apex Event
-  url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_apexcallout.htm
+  - id: apex_event
+    name: EventLogFile Apex Event
+    url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_apexcallout.htm
 retention:
   duration: 30 Days
   comments: N/A
 latency:
   duration: 3 Hours
-  comments: Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of
-    the event to be available in the hourly log file.
+  comments: Event log files are accessible via hourly and 24 hour log files. It can
+    take between 3–6 hours from the time of the event to be available in the hourly
+    log file.
 licensing:
   comments: Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-- category: activity_audit
-  event_type: read_resource
-  attributes:
-    timestamp: TIMESTAMP_DERIVED
-    event_code_or_type: EVENT_TYPE
-    result: SUCCESS
-    session_id: SESSION_KEY
-    ip_address: CLIENT_IP
-    device_client_type: TYPE
-    resource_name: URL
-  examples:
-  - type: success
-    location: ./event_examples/salesforce_elf_apex_callout_event/activity_audit_read_resource_apexcallout.json
+  - category: activity_audit
+    event_type: read_resource
+    attributes:
+      timestamp: TIMESTAMP_DERIVED
+      event_code_or_type: EVENT_TYPE
+      result: SUCCESS
+      session_id: SESSION_KEY
+      ip_address: CLIENT_IP
+      device_client_type: TYPE
+      resource_name: URL
+    examples:
+      - type: success
+        location: ./event_examples/salesforce_elf_apex_callout_event/activity_audit_read_resource_apexcallout.json

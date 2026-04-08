@@ -1,3 +1,4 @@
+---
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -5,14 +6,13 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: Salesforce
-  collection_sources:
-  - streaming_api
+  collection_sources: [streaming_api]
 name: Real-Time Event Monitoring BulkApiResultEventStore
 description: Tracks when a user downloads the results of a Bulk API request.
 references:
-- id: bulk_api_result_event_store
-  name: BulkApiResultEventStore
-  url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_bulkapiresulteventstore.htm
+  - id: bulk_api_result_event_store
+    name: BulkApiResultEventStore
+    url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_bulkapiresulteventstore.htm
 retention:
   duration: 6 Months
   comments: N/A
@@ -22,18 +22,18 @@ latency:
 licensing:
   comments: Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-- category: activity_audit
-  event_type: create_resource
-  attributes:
-    timestamp: EventDate
-    event_id: EventIdentifier
-    event_code_or_type: data.payload.attributes.type
-    result: PolicyOutcome
-    username: Username
-    user_id: UserId
-    session_id: SessionKey
-    ip_address: SourceIp
-    resource_name: Query
-  examples:
-  - type: download
-    location: ./event_examples/salesforce_rtem_bulkapiresulteventstore/activity_audit_download_resource_bulkapiresulteventstore.json
+  - category: activity_audit
+    event_type: create_resource
+    attributes:
+      timestamp: EventDate
+      event_id: EventIdentifier
+      event_code_or_type: data.payload.attributes.type
+      result: PolicyOutcome
+      username: Username
+      user_id: UserId
+      session_id: SessionKey
+      ip_address: SourceIp
+      resource_name: Query
+    examples:
+      - type: download
+        location: ./event_examples/salesforce_rtem_bulkapiresulteventstore/activity_audit_download_resource_bulkapiresulteventstore.json

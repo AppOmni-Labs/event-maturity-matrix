@@ -1,3 +1,4 @@
+---
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -5,14 +6,13 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: Box
-  collection_sources:
-  - enterprise_events
+  collection_sources: [enterprise_events]
 name: Admin Logs
 description: Box enterprise logs that provide an audit trail of user activity.
 references:
-- id: enterprise_event_schema
-  name: Enterprise Event Schema
-  url: https://developer.box.com/reference/resources/event/
+  - id: enterprise_event_schema
+    name: Enterprise Event Schema
+    url: https://developer.box.com/reference/resources/event/
 retention:
   duration: 365 Days
   comments: Based on the admin_logs stream type.
@@ -48,139 +48,139 @@ mapping_defaults:
         session_id: session_id
         ip_address: ip_address
 mappings:
-- category: authentication
-  event_type: account_login
-  attributes: {}
-  examples:
-  - type: success
-    location: ./event_examples/authentication_account_login_success.json
-  - type: failure
-    location: ./event_examples/authentication_account_login_failure.json
-- category: authorization
-  event_type: create_user
-  attributes:
-    target_username: source.login
-  examples:
-  - type: create
-    location: ./event_examples/authorization_create_user.json
-- category: authorization
-  event_type: update_user
-  attributes:
-    target_username: source.login
-  examples:
-  - type: update
-    location: ./event_examples/authorization_update_user.json
-- category: authorization
-  event_type: delete_user
-  attributes:
-    target_username: source.login
-  examples:
-  - type: delete
-    location: ./event_examples/authorization_delete_user.json
-- category: authorization
-  event_type: create_group
-  attributes:
-    target_group_name: source.group_name
-  examples:
-  - type: create
-    location: ./event_examples/authorization_create_group.json
-- category: authorization
-  event_type: update_group
-  attributes:
-    target_group_name: source.group_name
-  examples:
-  - type: update
-    location: ./event_examples/authorization_update_group.json
-- category: authorization
-  event_type: delete_group
-  attributes:
-    target_group_name: source.group_name
-  examples:
-  - type: delete
-    location: ./event_examples/authorization_delete_group.json
-- category: authorization
-  event_type: add_to_group
-  attributes:
-    target_group_name: additional_details.group_name
-    target_username: source.login
-  examples:
-  - type: add
-    location: ./event_examples/authorization_add_to_group.json
-- category: authorization
-  event_type: remove_from_group
-  attributes:
-    target_group_name: additional_details.group_name
-    target_username: source.login
-  examples:
-  - type: remove
-    location: ./event_examples/authorization_remove_from_group.json
-- category: authorization
-  event_type: add_permission
-  attributes:
-    permission_name: additional_details.role
-    target_resource_name: source.file_name
-  examples:
-  - type: add
-    location: ./event_examples/authorization_add_permission.json
-- category: authorization
-  event_type: remove_permission
-  attributes:
-    target_resource_name: source.file_name
-  examples:
-  - type: remove
-    location: ./event_examples/authorization_remove_permission.json
-- category: authorization
-  event_type: add_enrollment
-  attributes:
-    target_username: source.login
-  examples:
-  - type: add
-    location: ./event_examples/authorization_add_enrollment.json
-- category: authorization
-  event_type: remove_enrollment
-  attributes:
-    target_username: source.login
-  examples:
-  - type: remove
-    location: ./event_examples/authorization_remove_enrollment.json
-- category: activity_audit
-  event_type: create_resource
-  attributes:
-    resource_name: source.item_name
-    resource_type: source.item_type
-  examples:
-  - type: create
-    location: ./event_examples/activity_audit_create_resource.json
-- category: activity_audit
-  event_type: read_resource
-  attributes:
-    resource_name: source.item_name
-    resource_type: source.item_type
-  examples:
-  - type: read
-    location: ./event_examples/activity_audit_read_resource.json
-- category: activity_audit
-  event_type: update_resource
-  attributes:
-    resource_name: source.item_name
-    resource_type: source.item_type
-  examples:
-  - type: update
-    location: ./event_examples/activity_audit_update_resource.json
-- category: activity_audit
-  event_type: delete_resource
-  attributes:
-    resource_name: source.item_name
-    resource_type: source.item_type
-  examples:
-  - type: delete
-    location: ./event_examples/activity_audit_delete_resource.json
-- category: activity_audit
-  event_type: download_resource
-  attributes:
-    resource_metadata: additional_details.size
-    resource_name: source.item_name
-    resource_type: source.item_type
-  examples:
-  - type: download
-    location: ./event_examples/activity_audit_download_resource.json
+  - category: authentication
+    event_type: account_login
+    attributes: {}
+    examples:
+      - type: success
+        location: ./event_examples/authentication_account_login_success.json
+      - type: failure
+        location: ./event_examples/authentication_account_login_failure.json
+  - category: authorization
+    event_type: create_user
+    attributes:
+      target_username: source.login
+    examples:
+      - type: create
+        location: ./event_examples/authorization_create_user.json
+  - category: authorization
+    event_type: update_user
+    attributes:
+      target_username: source.login
+    examples:
+      - type: update
+        location: ./event_examples/authorization_update_user.json
+  - category: authorization
+    event_type: delete_user
+    attributes:
+      target_username: source.login
+    examples:
+      - type: delete
+        location: ./event_examples/authorization_delete_user.json
+  - category: authorization
+    event_type: create_group
+    attributes:
+      target_group_name: source.group_name
+    examples:
+      - type: create
+        location: ./event_examples/authorization_create_group.json
+  - category: authorization
+    event_type: update_group
+    attributes:
+      target_group_name: source.group_name
+    examples:
+      - type: update
+        location: ./event_examples/authorization_update_group.json
+  - category: authorization
+    event_type: delete_group
+    attributes:
+      target_group_name: source.group_name
+    examples:
+      - type: delete
+        location: ./event_examples/authorization_delete_group.json
+  - category: authorization
+    event_type: add_to_group
+    attributes:
+      target_group_name: additional_details.group_name
+      target_username: source.login
+    examples:
+      - type: add
+        location: ./event_examples/authorization_add_to_group.json
+  - category: authorization
+    event_type: remove_from_group
+    attributes:
+      target_group_name: additional_details.group_name
+      target_username: source.login
+    examples:
+      - type: remove
+        location: ./event_examples/authorization_remove_from_group.json
+  - category: authorization
+    event_type: add_permission
+    attributes:
+      permission_name: additional_details.role
+      target_resource_name: source.file_name
+    examples:
+      - type: add
+        location: ./event_examples/authorization_add_permission.json
+  - category: authorization
+    event_type: remove_permission
+    attributes:
+      target_resource_name: source.file_name
+    examples:
+      - type: remove
+        location: ./event_examples/authorization_remove_permission.json
+  - category: authorization
+    event_type: add_enrollment
+    attributes:
+      target_username: source.login
+    examples:
+      - type: add
+        location: ./event_examples/authorization_add_enrollment.json
+  - category: authorization
+    event_type: remove_enrollment
+    attributes:
+      target_username: source.login
+    examples:
+      - type: remove
+        location: ./event_examples/authorization_remove_enrollment.json
+  - category: activity_audit
+    event_type: create_resource
+    attributes:
+      resource_name: source.item_name
+      resource_type: source.item_type
+    examples:
+      - type: create
+        location: ./event_examples/activity_audit_create_resource.json
+  - category: activity_audit
+    event_type: read_resource
+    attributes:
+      resource_name: source.item_name
+      resource_type: source.item_type
+    examples:
+      - type: read
+        location: ./event_examples/activity_audit_read_resource.json
+  - category: activity_audit
+    event_type: update_resource
+    attributes:
+      resource_name: source.item_name
+      resource_type: source.item_type
+    examples:
+      - type: update
+        location: ./event_examples/activity_audit_update_resource.json
+  - category: activity_audit
+    event_type: delete_resource
+    attributes:
+      resource_name: source.item_name
+      resource_type: source.item_type
+    examples:
+      - type: delete
+        location: ./event_examples/activity_audit_delete_resource.json
+  - category: activity_audit
+    event_type: download_resource
+    attributes:
+      resource_metadata: additional_details.size
+      resource_name: source.item_name
+      resource_type: source.item_type
+    examples:
+      - type: download
+        location: ./event_examples/activity_audit_download_resource.json

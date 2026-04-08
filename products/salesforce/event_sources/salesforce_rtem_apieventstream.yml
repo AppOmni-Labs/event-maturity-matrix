@@ -1,3 +1,4 @@
+---
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -5,15 +6,14 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: Salesforce
-  collection_sources:
-  - streaming_api
+  collection_sources: [streaming_api]
 name: Real-Time Event Monitoring ApiEventStream
-description: Tracks the user-initiated read-only API calls "query()", "queryMore()", and "count()". Captures API requests
-  through SOAP API and Bulk API.
+description: Tracks the user-initiated read-only API calls "query()", "queryMore()",
+  and "count()". Captures API requests through SOAP API and Bulk API.
 references:
-- id: api_event_stream
-  name: ApiEventStream
-  url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_apieventstream.htm
+  - id: api_event_stream
+    name: ApiEventStream
+    url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_apieventstream.htm
 retention:
   duration: 6 Months
   comments: N/A
@@ -23,40 +23,40 @@ latency:
 licensing:
   comments: Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-- category: activity_audit
-  event_type: read_resource
-  attributes:
-    timestamp: EventDate
-    event_id: EventIdentifier
-    event_code_or_type: Operation
-    result: PolicyOutcome
-    username: Username
-    user_id: UserId
-    session_id: SessionKey
-    ip_address: SourceIp
-    user_agent_name: UserAgent
-    device_client_type: Platform
-    resource_name: Query
-    resource_type: ApiType
-  examples:
-  - type: read
-    location: ./event_examples/salesforce_rtem_apieventstream/activity_audit_read_resource_apieventstream.json
-- category: activity_audit
-  event_type: download_resource
-  attributes:
-    timestamp: EventDate
-    event_id: EventIdentifier
-    event_code_or_type: Operation
-    result: PolicyOutcome
-    username: Username
-    user_id: UserId
-    session_id: SessionKey
-    ip_address: SourceIp
-    user_agent_name: UserAgent
-    device_client_type: Platform
-    resource_metadata: RowsProcessed
-    resource_name: Query
-    resource_type: ApiType
-  examples:
-  - type: download
-    location: ./event_examples/salesforce_rtem_apieventstream/activity_audit_download_resource_apieventstream.json
+  - category: activity_audit
+    event_type: read_resource
+    attributes:
+      timestamp: EventDate
+      event_id: EventIdentifier
+      event_code_or_type: Operation
+      result: PolicyOutcome
+      username: Username
+      user_id: UserId
+      session_id: SessionKey
+      ip_address: SourceIp
+      user_agent_name: UserAgent
+      device_client_type: Platform
+      resource_name: Query
+      resource_type: ApiType
+    examples:
+      - type: read
+        location: ./event_examples/salesforce_rtem_apieventstream/activity_audit_read_resource_apieventstream.json
+  - category: activity_audit
+    event_type: download_resource
+    attributes:
+      timestamp: EventDate
+      event_id: EventIdentifier
+      event_code_or_type: Operation
+      result: PolicyOutcome
+      username: Username
+      user_id: UserId
+      session_id: SessionKey
+      ip_address: SourceIp
+      user_agent_name: UserAgent
+      device_client_type: Platform
+      resource_metadata: RowsProcessed
+      resource_name: Query
+      resource_type: ApiType
+    examples:
+      - type: download
+        location: ./event_examples/salesforce_rtem_apieventstream/activity_audit_download_resource_apieventstream.json

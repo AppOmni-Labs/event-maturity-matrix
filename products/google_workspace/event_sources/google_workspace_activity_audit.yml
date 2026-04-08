@@ -1,15 +1,16 @@
+---
 entity_name: event_source
 version: 0.0.1
 product:
   name: Google Workspace
-  collection_sources:
-  - activity_audit
+  collection_sources: [activity_audit]
 name: Workspace Activity Audit
-description: The activity audit log provides log events for actions occurring with your Google Workspace deployment.
+description: The activity audit log provides log events for actions occurring with
+  your Google Workspace deployment.
 references:
-- id: activity_rest_api_documentation
-  name: Google Workspace Activity Report
-  url: https://developers.google.com/admin-sdk/reports/reference/rest
+  - id: activity_rest_api_documentation
+    name: Google Workspace Activity Report
+    url: https://developers.google.com/admin-sdk/reports/reference/rest
 retention:
   duration: Typically 6 months
   comments: Service dependant - see https://support.google.com/a/answer/7061566?hl=en
@@ -17,9 +18,10 @@ latency:
   duration: Near real time up to a couple hours
   comments: Service dependant - see https://support.google.com/a/answer/7061566?hl=en
 licensing:
-  comments: Admin logs are available for all Google Workspace plans. Drive audit logs and Device events may not be available
-    as these are not available for the Business Starter plan. Additional configuration is required to get the full set of
-    monitoring capabilities for Devices.
+  comments: Admin logs are available for all Google Workspace plans. Drive audit logs
+    and Device events may not be available as these are not available for the Business
+    Starter plan. Additional configuration is required to get the full set of monitoring
+    capabilities for Devices.
 mapping_defaults:
   source:
     attributes:
@@ -49,229 +51,227 @@ mapping_defaults:
         user_type_or_role: actor.callerType
         ip_address: ipAddress
 mappings:
-- category: authentication
-  event_type: account_login
-  attributes:
-    failure_context:
-    - event.name
-    - event.parameters[name=login_failure_type]
-    credential_context: event.parameters[name=login_type]
-  examples:
-  - type: success
-    location: ./event_examples/authentication_account_login.json
-- category: authentication
-  event_type: account_logout
-  attributes:
-    result: event.name
-  examples:
-  - type: success
-    location: ./event_examples/authentication_account_logout.json
-- category: authentication
-  event_type: mfa_verification
-  attributes:
-    result: event.name
-    verification_method: event.parameters[name=login_challenge_method]
-    verification_flagged: event.parameters[name=is_suspicious]
-    activity_performed: event.name
-  examples:
-  - type: success
-    location: ./event_examples/authentication_mfa_verification.json
-- category: authorization
-  event_type: create_user
-  attributes:
-    target_username: event.parameters[name=USER_EMAIL]
-  examples:
-  - type: success
-    location: ./event_examples/authorization_create_user.json
-- category: authorization
-  event_type: update_user
-  attributes:
-    target_username: event.parameters[name=USER_EMAIL]
-    target_attribute_context: event.parameters[]
-  examples:
-  - type: success
-    location: ./event_examples/authorization_update_user.json
-- category: authorization
-  event_type: delete_user
-  attributes:
-    target_username: event.parameters[name=USER_EMAIL]
-  examples:
-  - type: success
-    location: ./event_examples/authorization_delete_user.json
-- category: authorization
-  event_type: create_group
-  attributes:
-    target_group_name: event.parameters[name=GROUP_EMAIL]
-  examples:
-  - type: success
-    location: ./event_examples/authorization_create_group.json
-- category: authorization
-  event_type: update_group
-  attributes:
-    ip_address: null
-    target_group_name: event.parameters[name=GROUP_EMAIL]
-    target_attribute_context: event.parameters[name=SETTING_NAME]
-  examples:
-  - type: success
-    location: ./event_examples/authorization_update_group.json
-- category: authorization
-  event_type: delete_group
-  attributes:
-    target_group_name: event.parameters[name=GROUP_EMAIL]
-  examples:
-  - type: success
-    location: ./event_examples/authorization_delete_group.json
-- category: authorization
-  event_type: add_to_group
-  attributes:
-    target_group_name: event.parameters[name=GROUP_EMAIL]
-    target_username: event.parameters[name=USER_EMAIL]
-  examples:
-  - type: success
-    location: ./event_examples/authorization_add_to_group.json
-- category: authorization
-  event_type: remove_from_group
-  attributes:
-    target_group_name: event.parameters[name=GROUP_EMAIL]
-    target_username: event.parameters[name=USER_EMAIL]
-  examples:
-  - type: success
-    location: ./event_examples/authorization_remove_from_group.json
-- category: authorization
-  event_type: create_role
-  attributes:
-    target_role_name: event.parameters[name=ROLE_NAME]
-  examples:
-  - type: success
-    location: ./event_examples/authorization_create_role.json
-- category: authorization
-  event_type: update_role
-  attributes:
-    target_role_name: event.parameters[name=ROLE_NAME]
-    target_attribute_context: event.parameters
-  examples:
-  - type: success
-    location: ./event_examples/authorization_update_role.json
-- category: authorization
-  event_type: delete_role
-  attributes:
-    target_role_name: event.parameters[name=ROLE_NAME]
-  examples:
-  - type: success
-    location: ./event_examples/authorization_delete_role.json
-- category: authorization
-  event_type: add_permission
-  attributes:
-    permission_name: event.parameters[name=PRIVILEGE_NAME]
-    target_resource_name: event.parameters[name=ROLE_NAME]
-  examples:
-  - type: success
-    location: ./event_examples/authorization_add_permission.json
-- category: authorization
-  event_type: remove_permission
-  attributes:
-    permission_name: event.parameters[name=PRIVILEGE_NAME]
-    target_resource_name: event.parameters[name=ROLE_NAME]
-- category: authorization
-  event_type: add_enrollment
-  attributes:
-    target_username: event.parameters[name=USER_EMAIL]
-  examples:
-  - type: success
-    location: ./event_examples/authorization_add_enrollment.json
-- category: authorization
-  event_type: remove_enrollment
-  attributes:
-    target_username: event.parameters[name=USER_EMAIL]
-  examples:
-  - type: success
-    location: ./event_examples/authorization_remove_enrollment.json
-- category: system_audit
-  event_type: create_security_configuration
-  attributes:
-    configuration_setting_name: event.parameters
-    configuration_setting_value: event.parameters
-  examples:
-  - type: success
-    location: ./event_examples/system_audit_create_security_configuration.json
-- category: system_audit
-  event_type: update_security_configuration
-  attributes:
-    user_type_or_role: actor.callerType
-    configuration_setting_name: event.parameters[name=*]
-    configuration_setting_value: event.parameters[name=*]
-- category: system_audit
-  event_type: delete_security_configuration
-  attributes:
-    user_type_or_role: actor.callerType
-    configuration_setting_name: event.parameters[name=*]
-    configuration_setting_value: event.parameters[name=*]
-- category: system_audit
-  event_type: create_integration
-  attributes:
-    user_type_or_role: actor.callerType
-    integration_app_name: event.parameters[name=APPLICATION_NAME]
-  examples:
-  - type: success
-    location: ./event_examples/system_audit_create_integration.json
-- category: system_audit
-  event_type: update_integration
-  attributes:
-    user_type_or_role: actor.callerType
-    ip_address: ipAddress
-    integration_app_name: event.parameters[name=APPLICATION_NAME]
-    configuration_setting_name: event.parameters[name=NEW_VALUE]
-    previous_configuration_setting_value: event.parameters[name=OLD_VALUE]
-  examples:
-  - type: success
-    location: ./event_examples/system_audit_update_integration.json
-- category: system_audit
-  event_type: delete_integration
-  attributes:
-    user_type_or_role: actor.callerType
-    integration_app_name: event.parameters[name=APPLICATION_NAME]
-  examples:
-  - type: success
-    location: ./event_examples/system_audit_delete_integration.json
-- category: activity_audit
-  event_type: create_resource
-  attributes:
-    resource_name: event.parameters[].name
-    resource_type: event.type
-  examples:
-  - type: success
-    location: ./event_examples/audit_activity_create_resource.json
-- category: activity_audit
-  event_type: update_resource
-  attributes:
-    resource_name: event.parameters[].name
-    resource_type: event.type
-  examples:
-  - type: success
-    location: ./event_examples/audit_activity_update_resource.json
-- category: activity_audit
-  event_type: delete_resource
-  attributes:
-    resource_name: event.parameters[].name
-    resource_type: event.type
-  examples:
-  - type: success
-    location: ./event_examples/audit_activity_delete_resource.json
-- category: activity_audit
-  event_type: download_resource
-  attributes:
-    user_type_or_role: null
-    resource_metadata: event.parameters[].name
-    resource_name: event.parameters[name=doc_title]
-    resource_type: event.parameters[name=doc_type]
-  examples:
-  - type: success
-    location: ./event_examples/audit_activity_download_resource.json
-- category: activity_audit
-  event_type: query_resource
-  attributes:
-    user_type_or_role: null
-    query_string: event.parameters[name=user_query]
-  examples:
-  - type: success
-    location: ./event_examples/audit_activity_query_resource.json
+  - category: authentication
+    event_type: account_login
+    attributes:
+      failure_context: [event.name, 'event.parameters[name=login_failure_type]']
+      credential_context: event.parameters[name=login_type]
+    examples:
+      - type: success
+        location: ./event_examples/authentication_account_login.json
+  - category: authentication
+    event_type: account_logout
+    attributes:
+      result: event.name
+    examples:
+      - type: success
+        location: ./event_examples/authentication_account_logout.json
+  - category: authentication
+    event_type: mfa_verification
+    attributes:
+      result: event.name
+      verification_method: event.parameters[name=login_challenge_method]
+      verification_flagged: event.parameters[name=is_suspicious]
+      activity_performed: event.name
+    examples:
+      - type: success
+        location: ./event_examples/authentication_mfa_verification.json
+  - category: authorization
+    event_type: create_user
+    attributes:
+      target_username: event.parameters[name=USER_EMAIL]
+    examples:
+      - type: success
+        location: ./event_examples/authorization_create_user.json
+  - category: authorization
+    event_type: update_user
+    attributes:
+      target_username: event.parameters[name=USER_EMAIL]
+      target_attribute_context: event.parameters[]
+    examples:
+      - type: success
+        location: ./event_examples/authorization_update_user.json
+  - category: authorization
+    event_type: delete_user
+    attributes:
+      target_username: event.parameters[name=USER_EMAIL]
+    examples:
+      - type: success
+        location: ./event_examples/authorization_delete_user.json
+  - category: authorization
+    event_type: create_group
+    attributes:
+      target_group_name: event.parameters[name=GROUP_EMAIL]
+    examples:
+      - type: success
+        location: ./event_examples/authorization_create_group.json
+  - category: authorization
+    event_type: update_group
+    attributes:
+      ip_address:
+      target_group_name: event.parameters[name=GROUP_EMAIL]
+      target_attribute_context: event.parameters[name=SETTING_NAME]
+    examples:
+      - type: success
+        location: ./event_examples/authorization_update_group.json
+  - category: authorization
+    event_type: delete_group
+    attributes:
+      target_group_name: event.parameters[name=GROUP_EMAIL]
+    examples:
+      - type: success
+        location: ./event_examples/authorization_delete_group.json
+  - category: authorization
+    event_type: add_to_group
+    attributes:
+      target_group_name: event.parameters[name=GROUP_EMAIL]
+      target_username: event.parameters[name=USER_EMAIL]
+    examples:
+      - type: success
+        location: ./event_examples/authorization_add_to_group.json
+  - category: authorization
+    event_type: remove_from_group
+    attributes:
+      target_group_name: event.parameters[name=GROUP_EMAIL]
+      target_username: event.parameters[name=USER_EMAIL]
+    examples:
+      - type: success
+        location: ./event_examples/authorization_remove_from_group.json
+  - category: authorization
+    event_type: create_role
+    attributes:
+      target_role_name: event.parameters[name=ROLE_NAME]
+    examples:
+      - type: success
+        location: ./event_examples/authorization_create_role.json
+  - category: authorization
+    event_type: update_role
+    attributes:
+      target_role_name: event.parameters[name=ROLE_NAME]
+      target_attribute_context: event.parameters
+    examples:
+      - type: success
+        location: ./event_examples/authorization_update_role.json
+  - category: authorization
+    event_type: delete_role
+    attributes:
+      target_role_name: event.parameters[name=ROLE_NAME]
+    examples:
+      - type: success
+        location: ./event_examples/authorization_delete_role.json
+  - category: authorization
+    event_type: add_permission
+    attributes:
+      permission_name: event.parameters[name=PRIVILEGE_NAME]
+      target_resource_name: event.parameters[name=ROLE_NAME]
+    examples:
+      - type: success
+        location: ./event_examples/authorization_add_permission.json
+  - category: authorization
+    event_type: remove_permission
+    attributes:
+      permission_name: event.parameters[name=PRIVILEGE_NAME]
+      target_resource_name: event.parameters[name=ROLE_NAME]
+  - category: authorization
+    event_type: add_enrollment
+    attributes:
+      target_username: event.parameters[name=USER_EMAIL]
+    examples:
+      - type: success
+        location: ./event_examples/authorization_add_enrollment.json
+  - category: authorization
+    event_type: remove_enrollment
+    attributes:
+      target_username: event.parameters[name=USER_EMAIL]
+    examples:
+      - type: success
+        location: ./event_examples/authorization_remove_enrollment.json
+  - category: system_audit
+    event_type: create_security_configuration
+    attributes:
+      configuration_setting_name: event.parameters
+      configuration_setting_value: event.parameters
+    examples:
+      - type: success
+        location: ./event_examples/system_audit_create_security_configuration.json
+  - category: system_audit
+    event_type: update_security_configuration
+    attributes:
+      user_type_or_role: actor.callerType
+      configuration_setting_name: event.parameters[name=*]
+      configuration_setting_value: event.parameters[name=*]
+  - category: system_audit
+    event_type: delete_security_configuration
+    attributes:
+      user_type_or_role: actor.callerType
+      configuration_setting_name: event.parameters[name=*]
+      configuration_setting_value: event.parameters[name=*]
+  - category: system_audit
+    event_type: create_integration
+    attributes:
+      user_type_or_role: actor.callerType
+      integration_app_name: event.parameters[name=APPLICATION_NAME]
+    examples:
+      - type: success
+        location: ./event_examples/system_audit_create_integration.json
+  - category: system_audit
+    event_type: update_integration
+    attributes:
+      user_type_or_role: actor.callerType
+      ip_address: ipAddress
+      integration_app_name: event.parameters[name=APPLICATION_NAME]
+      configuration_setting_name: event.parameters[name=NEW_VALUE]
+      previous_configuration_setting_value: event.parameters[name=OLD_VALUE]
+    examples:
+      - type: success
+        location: ./event_examples/system_audit_update_integration.json
+  - category: system_audit
+    event_type: delete_integration
+    attributes:
+      user_type_or_role: actor.callerType
+      integration_app_name: event.parameters[name=APPLICATION_NAME]
+    examples:
+      - type: success
+        location: ./event_examples/system_audit_delete_integration.json
+  - category: activity_audit
+    event_type: create_resource
+    attributes:
+      resource_name: event.parameters[].name
+      resource_type: event.type
+    examples:
+      - type: success
+        location: ./event_examples/audit_activity_create_resource.json
+  - category: activity_audit
+    event_type: update_resource
+    attributes:
+      resource_name: event.parameters[].name
+      resource_type: event.type
+    examples:
+      - type: success
+        location: ./event_examples/audit_activity_update_resource.json
+  - category: activity_audit
+    event_type: delete_resource
+    attributes:
+      resource_name: event.parameters[].name
+      resource_type: event.type
+    examples:
+      - type: success
+        location: ./event_examples/audit_activity_delete_resource.json
+  - category: activity_audit
+    event_type: download_resource
+    attributes:
+      user_type_or_role:
+      resource_metadata: event.parameters[].name
+      resource_name: event.parameters[name=doc_title]
+      resource_type: event.parameters[name=doc_type]
+    examples:
+      - type: success
+        location: ./event_examples/audit_activity_download_resource.json
+  - category: activity_audit
+    event_type: query_resource
+    attributes:
+      user_type_or_role:
+      query_string: event.parameters[name=user_query]
+    examples:
+      - type: success
+        location: ./event_examples/audit_activity_query_resource.json

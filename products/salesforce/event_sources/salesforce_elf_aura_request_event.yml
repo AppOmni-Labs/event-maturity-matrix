@@ -1,3 +1,4 @@
+---
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -5,82 +6,82 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: Salesforce
-  collection_sources:
-  - rest_api
-  - soap_api
+  collection_sources: [rest_api, soap_api]
 name: EventLogFile Aura Request Event Type
-description: Provides details of requests to Apex methods from Aura and Lightning web components.
+description: Provides details of requests to Apex methods from Aura and Lightning
+  web components.
 references:
-- id: aura_request_event
-  name: EventLogFile Aura Request Event
-  url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_lightning_component.htm
+  - id: aura_request_event
+    name: EventLogFile Aura Request Event
+    url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_lightning_component.htm
 retention:
   duration: 30 Days
   comments: N/A
 latency:
   duration: 3 Hours
-  comments: Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of
-    the event to be available in the hourly log file.
+  comments: Event log files are accessible via hourly and 24 hour log files. It can
+    take between 3–6 hours from the time of the event to be available in the hourly
+    log file.
 licensing:
   comments: Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-- category: activity_audit
-  event_type: create_resource
-  attributes:
-    timestamp: TIMESTAMP_DERIVED
-    event_code_or_type: EVENT_TYPE
-    result: REQUEST_STATUS
-    user_id: USER_ID
-    user_type_or_role: USER_TYPE
-    session_id: SESSION_KEY
-    ip_address: CLIENT_IP
-    user_agent_name: USER_AGENT
-    resource_name: ACTION_MESSAGE
-  examples:
-  - type: create
-    location: ./event_examples/salesforce_elf_aura_request_event/activity_audit_create_resource_aurarequest.json
-- category: activity_audit
-  event_type: read_resource
-  attributes:
-    timestamp: TIMESTAMP_DERIVED
-    event_code_or_type: EVENT_TYPE
-    result: REQUEST_STATUS
-    user_id: USER_ID
-    user_type_or_role: USER_TYPE
-    session_id: SESSION_KEY
-    ip_address: CLIENT_IP
-    user_agent_name: USER_AGENT
-    resource_name: ACTION_MESSAGE
-  examples:
-  - type: read
-    location: ./event_examples/salesforce_elf_aura_request_event/activity_audit_read_resource_aurarequest.json
-- category: activity_audit
-  event_type: update_resource
-  attributes:
-    timestamp: TIMESTAMP_DERIVED
-    event_code_or_type: EVENT_TYPE
-    result: REQUEST_STATUS
-    user_id: USER_ID
-    user_type_or_role: USER_TYPE
-    session_id: SESSION_KEY
-    ip_address: CLIENT_IP
-    user_agent_name: USER_AGENT
-    resource_name: ACTION_MESSAGE
-  examples:
-  - type: update
-    location: ./event_examples/salesforce_elf_aura_request_event/activity_audit_update_resource_aurarequest.json
-- category: activity_audit
-  event_type: delete_resource
-  attributes:
-    timestamp: TIMESTAMP_DERIVED
-    event_code_or_type: EVENT_TYPE
-    result: REQUEST_STATUS
-    user_id: USER_ID
-    user_type_or_role: USER_TYPE
-    session_id: SESSION_KEY
-    ip_address: CLIENT_IP
-    user_agent_name: USER_AGENT
-    resource_name: ACTION_MESSAGE
-  examples:
-  - type: delete
-    location: ./event_examples/salesforce_elf_aura_request_event/activity_audit_delete_resource_aurarequest.json
+  - category: activity_audit
+    event_type: create_resource
+    attributes:
+      timestamp: TIMESTAMP_DERIVED
+      event_code_or_type: EVENT_TYPE
+      result: REQUEST_STATUS
+      user_id: USER_ID
+      user_type_or_role: USER_TYPE
+      session_id: SESSION_KEY
+      ip_address: CLIENT_IP
+      user_agent_name: USER_AGENT
+      resource_name: ACTION_MESSAGE
+    examples:
+      - type: create
+        location: ./event_examples/salesforce_elf_aura_request_event/activity_audit_create_resource_aurarequest.json
+  - category: activity_audit
+    event_type: read_resource
+    attributes:
+      timestamp: TIMESTAMP_DERIVED
+      event_code_or_type: EVENT_TYPE
+      result: REQUEST_STATUS
+      user_id: USER_ID
+      user_type_or_role: USER_TYPE
+      session_id: SESSION_KEY
+      ip_address: CLIENT_IP
+      user_agent_name: USER_AGENT
+      resource_name: ACTION_MESSAGE
+    examples:
+      - type: read
+        location: ./event_examples/salesforce_elf_aura_request_event/activity_audit_read_resource_aurarequest.json
+  - category: activity_audit
+    event_type: update_resource
+    attributes:
+      timestamp: TIMESTAMP_DERIVED
+      event_code_or_type: EVENT_TYPE
+      result: REQUEST_STATUS
+      user_id: USER_ID
+      user_type_or_role: USER_TYPE
+      session_id: SESSION_KEY
+      ip_address: CLIENT_IP
+      user_agent_name: USER_AGENT
+      resource_name: ACTION_MESSAGE
+    examples:
+      - type: update
+        location: ./event_examples/salesforce_elf_aura_request_event/activity_audit_update_resource_aurarequest.json
+  - category: activity_audit
+    event_type: delete_resource
+    attributes:
+      timestamp: TIMESTAMP_DERIVED
+      event_code_or_type: EVENT_TYPE
+      result: REQUEST_STATUS
+      user_id: USER_ID
+      user_type_or_role: USER_TYPE
+      session_id: SESSION_KEY
+      ip_address: CLIENT_IP
+      user_agent_name: USER_AGENT
+      resource_name: ACTION_MESSAGE
+    examples:
+      - type: delete
+        location: ./event_examples/salesforce_elf_aura_request_event/activity_audit_delete_resource_aurarequest.json

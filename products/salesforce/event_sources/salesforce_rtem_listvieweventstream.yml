@@ -1,3 +1,4 @@
+---
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -5,15 +6,15 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: Salesforce
-  collection_sources:
-  - streaming_api
+  collection_sources: [streaming_api]
 name: Real-Time Event Monitoring ListViewEventStream
-description: Tracks actions related to list views in Lightning Experience, Salesforce Classic, or the API. For example, the
-  event captures when a user runs or exports a list view.
+description: Tracks actions related to list views in Lightning Experience, Salesforce
+  Classic, or the API. For example, the event captures when a user runs or exports
+  a list view.
 references:
-- id: list_view_event_stream
-  name: ListViewEventStream
-  url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_listvieweventstream.htm
+  - id: list_view_event_stream
+    name: ListViewEventStream
+    url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_listvieweventstream.htm
 retention:
   duration: 6 Months
   comments: N/A
@@ -23,19 +24,19 @@ latency:
 licensing:
   comments: Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-- category: activity_audit
-  event_type: read_resource
-  attributes:
-    timestamp: EventDate
-    event_id: EventIdentifier
-    event_code_or_type: EventSource
-    result: PolicyOutcome
-    username: Username
-    user_id: UserId
-    session_id: SessionKey
-    ip_address: SourceIp
-    resource_name: Name
-    resource_type: QueriedEntities
-  examples:
-  - type: read
-    location: ./event_examples/salesforce_rtem_listvieweventstream/activity_audit_read_resource_listvieweventstream.json
+  - category: activity_audit
+    event_type: read_resource
+    attributes:
+      timestamp: EventDate
+      event_id: EventIdentifier
+      event_code_or_type: EventSource
+      result: PolicyOutcome
+      username: Username
+      user_id: UserId
+      session_id: SessionKey
+      ip_address: SourceIp
+      resource_name: Name
+      resource_type: QueriedEntities
+    examples:
+      - type: read
+        location: ./event_examples/salesforce_rtem_listvieweventstream/activity_audit_read_resource_listvieweventstream.json

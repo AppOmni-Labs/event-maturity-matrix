@@ -1,15 +1,15 @@
+---
 entity_name: event_source
 version: 0.0.1
 product:
   name: ServiceNow
-  collection_sources:
-  - audit_role
+  collection_sources: [audit_role]
 name: Role Audit Events
 description: The ServiceNow role audit table contains user role assignments.
 references:
-- id: enable_role_auditing
-  name: Enable role auditing
-  url: https://docs.servicenow.com/bundle/utah-platform-security/page/administer/roles/task/enable-audit-roles.html
+  - id: enable_role_auditing
+    name: Enable role auditing
+    url: https://docs.servicenow.com/bundle/utah-platform-security/page/administer/roles/task/enable-audit-roles.html
 retention:
   duration: Infinite
   comments: Can be changed by an instance admin.
@@ -27,15 +27,15 @@ mapping_defaults:
         username: user\.name
         user_id: user\.name
 mappings:
-- category: authorization
-  event_type: add_permission
-  attributes: {}
-  examples:
-  - type: add
-    location: ./event_examples/audit_role/authorization_add_permission.json
-- category: authorization
-  event_type: remove_permission
-  attributes: {}
-  examples:
-  - type: add
-    location: ./event_examples/audit_role/authorization_remove_permission.json
+  - category: authorization
+    event_type: add_permission
+    attributes: {}
+    examples:
+      - type: add
+        location: ./event_examples/audit_role/authorization_add_permission.json
+  - category: authorization
+    event_type: remove_permission
+    attributes: {}
+    examples:
+      - type: add
+        location: ./event_examples/audit_role/authorization_remove_permission.json

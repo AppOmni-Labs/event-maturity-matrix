@@ -1,3 +1,4 @@
+---
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -5,50 +6,48 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: Duo
-  collection_sources:
-  - duo_admin_api
+  collection_sources: [duo_admin_api]
 name: Duo Authentication Logs
-description: Provides an audit trail of authentication activity within the Duo Security platform.
+description: Provides an audit trail of authentication activity within the Duo Security
+  platform.
 references:
-- id: duo_authentication_logs
-  name: Duo Authentication Logs
-  url: https://duo.com/docs/adminapi#authentication-logs
+  - id: duo_authentication_logs
+    name: Duo Authentication Logs
+    url: https://duo.com/docs/adminapi#authentication-logs
 retention:
   duration: 180 days
-  comments: Maximum retention of 180 days, even if the log retention interval is set to a value greater than 180 days, reference
-    https://help.duo.com/s/article/2990?language=en_US
+  comments: Maximum retention of 180 days, even if the log retention interval is set
+    to a value greater than 180 days, reference https://help.duo.com/s/article/2990?language=en_US
 latency:
   duration: Near real-time
-  comments: There is an intentional two minute delay in availability of new authentication events, reference https://duo.com/docs/adminapi#authentication-logs
+  comments: There is an intentional two minute delay in availability of new authentication
+    events, reference https://duo.com/docs/adminapi#authentication-logs
 licensing:
-  comments: The Duo Admin API is available to Duo Premier, Duo Advantage, and Duo Essentials customers, and new customers
-    with an Advantage or Premier trial. For more information, see https://duo.com/docs/adminapi#about-the-admin-api
+  comments: The Duo Admin API is available to Duo Premier, Duo Advantage, and Duo
+    Essentials customers, and new customers with an Advantage or Premier trial. For
+    more information, see https://duo.com/docs/adminapi#about-the-admin-api
 mapping_defaults:
   source:
     attributes:
-      timestamp:
-      - timestamp
-      - isotimestamp
+      timestamp: [timestamp, isotimestamp]
       result: result
       username: username
       ip_address: ip
       ip_geolocation_or_asn:
-      - location.city
-      - location.country
-      - location.state
+        - location.city
+        - location.country
+        - location.state
       user_agent_name: access_device.browser
       device_client_type: access_device.os
-      verification_method:
-      - factor
-      - device
+      verification_method: [factor, device]
       verification_flagged: reason
       activity_performed: integration
 mappings:
-- category: authentication
-  event_type: mfa_verification
-  attributes: {}
-  examples:
-  - type: success
-    location: ./event_examples/authentication_mfa_verification_success_auth.json
-  - type: failure
-    location: ./event_examples/authentication_mfa_verification_failure_auth.json
+  - category: authentication
+    event_type: mfa_verification
+    attributes: {}
+    examples:
+      - type: success
+        location: ./event_examples/authentication_mfa_verification_success_auth.json
+      - type: failure
+        location: ./event_examples/authentication_mfa_verification_failure_auth.json

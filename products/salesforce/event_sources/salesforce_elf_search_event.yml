@@ -1,3 +1,4 @@
+---
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -5,33 +6,34 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: Salesforce
-  collection_sources:
-  - rest_api
-  - soap_api
+  collection_sources: [rest_api, soap_api]
 name: EventLogFile Search Event Type
-description: Tracks Salesforce search requests, including the search string and result counts.
+description: Tracks Salesforce search requests, including the search string and result
+  counts.
 references:
-- id: search_event
-  name: EventLogFile Search Event
-  url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_search.htm
+  - id: search_event
+    name: EventLogFile Search Event
+    url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_search.htm
 retention:
   duration: 1 Day
-  comments: Available for free with 1 day retention, otherwise requires an add-on subscription for 30 day retention.
+  comments: Available for free with 1 day retention, otherwise requires an add-on
+    subscription for 30 day retention.
 latency:
   duration: 3 Hours
-  comments: Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of
-    the event to be available in the hourly log file.
+  comments: Event log files are accessible via hourly and 24 hour log files. It can
+    take between 3–6 hours from the time of the event to be available in the hourly
+    log file.
 licensing:
-  comments: Available for free with 1 day retention, otherwise requires Salesforce Shield or a Salesforce Event Monitoring
-    add-on subscription.
+  comments: Available for free with 1 day retention, otherwise requires Salesforce
+    Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-- category: activity_audit
-  event_type: query_resource
-  attributes:
-    timestamp: TIMESTAMP_DERIVED
-    event_code_or_type: EVENT_TYPE
-    user_id: USER_ID
-    query_string: SEARCH_QUERY
-  examples:
-  - type: success
-    location: ./event_examples/salesforce_elf_search_event/activity_audit_query_resource_elf_search.json
+  - category: activity_audit
+    event_type: query_resource
+    attributes:
+      timestamp: TIMESTAMP_DERIVED
+      event_code_or_type: EVENT_TYPE
+      user_id: USER_ID
+      query_string: SEARCH_QUERY
+    examples:
+      - type: success
+        location: ./event_examples/salesforce_elf_search_event/activity_audit_query_resource_elf_search.json
