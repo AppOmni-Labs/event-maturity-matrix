@@ -1,9 +1,7 @@
 # Veeva Vault (0.0.1)
 
 Veeva Vault is a true cloud enterprise content management platform and suite of applications specifically built for life sciences.
-
 Veeva Vault audit events record logs related to an documents, objects, logins, and systems. The Events can be used to understand platform and user activity, troubleshoot problems, and investigate security incidents.
-
 The Veeva Vault Retrieve Audit Details API allows an organization to programmatically access the Veeva Vault audit logs. The API provides a way to retrieve, filter, and export events.
 
 ## Collections

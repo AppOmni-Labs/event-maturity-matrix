@@ -1,9 +1,7 @@
 # Microsoft 365 (1.0.0)
 
 Microsoft 365 (M365) is a cloud-based productivity platform which provides access to the full suite of office applications including Outlook, SharePoint, OneDrive, Word, Excel, PowerPoint, etc.
-
 Identity and access management is controlled through Microsoft Entra ID (formerly Azure Active Directory), which is also available as an audit log dataset.
-
 M365 provides all audit logs through the Microsoft Purview service via audit log subscriptions. Logging levels and retention are controlled by the license of an organization, as well as the license assigned to each individual user.
 
 ## Collections

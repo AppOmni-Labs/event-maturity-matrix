@@ -1,9 +1,7 @@
 # AppOmni (1.0.0)
 
 AppOmni is a cloud-based platform designed to help organizations assess, monitor, and protect their data and configurations within SaaS applications.
-
 AppOmni audit logs are collected via the *auditlogs* API, and can be streamed to a Threat Detection event sink.
-
 Historical audit logs are also stored for 180 days and can be accessed via the scheduled reports feature.
 There are currently minor formatting differences between API/Event Sink logs, and the logs retrieved via scheduled reports.
 

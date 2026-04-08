@@ -1,9 +1,7 @@
 # GitHub (1.0.0)
 
 GitHub is a cloud-based service that provides a range of services related to version control, software development, and collaboration.
-
 The GitHub audit log API provides a feed for events that have been generated across the enterprise. If an organization does not use Enterprise Managed Users, the audit log only includes events related to the enterprise account and the organizations within the enterprise account. If an organization uses Enterprise Managed Users, the audit log also includes user events for managed user accounts.
-
 GitHub webhooks provide a way for notifications to be delivered to an external web server whenever certain events occur on GitHub.
 
 ## Collections

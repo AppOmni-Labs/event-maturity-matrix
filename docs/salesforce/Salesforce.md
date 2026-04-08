@@ -1,9 +1,7 @@
 # Salesforce (1.0.0)
 
 Salesforce is a cloud-based customer relationship management (CRM) platform. It is designed to help organizations manage their customer relationships, sales processes, marketing activities, and more.
-
 Salesforce audit logs are collected via objects, namely the SetupAuditTrail object, EventLogFile object, or Real-Time Event Monitoring objects. These objects are accessible via the Salesforce API.
-
 Salesforce supports a wide range of APIs, however with regards to audit logs, the primary APIs include the REST API, SOAP API, or Streaming API.
 
 ## Collections
