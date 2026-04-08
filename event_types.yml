@@ -1,224 +1,187 @@
+---
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://www.mozilla.org/MPL/2.0/.
 entity_name: event_types
-description: 'Event types represent logical buckets of different types of events. These event types
-
-  are associated with a defined category and will typically have attributes associated with them.
-
-  '
+description: "Event types represent logical buckets of different types of events.\
+  \ These event types\nare associated with a defined category and will typically have\
+  \ attributes associated with them.\n"
 version: 1.0.0
-meta: null
+meta:
 items:
-- id: ET0001
-  name: Account Login
-  categories:
-  - authentication
-  description: An account attempted to login to a system.
-  tags:
-  - user
-  key: account_login
-- id: ET0002
-  name: Account Logout
-  categories:
-  - authentication
-  description: An account attempted to logout of a system.
-  key: account_logout
-- id: ET0003
-  name: MFA Verification
-  categories:
-  - authentication
-  description: Enter or acknowledge an MFA factor which indicates success or failure.
-  key: mfa_verification
-- id: ET0004
-  name: Create User
-  categories:
-  - authorization
-  description: Creates a user.
-  key: create_user
-- id: ET0005
-  name: Read User
-  categories:
-  - authorization
-  description: Reads information about a user.
-  key: read_user
-- id: ET0006
-  name: Update User
-  categories:
-  - authorization
-  description: Updates information about a user.
-  key: update_user
-- id: ET0007
-  name: Delete User
-  categories:
-  - authorization
-  description: Removes or deletes a user.
-  key: delete_user
-- id: ET0008
-  name: Create Group
-  categories:
-  - authorization
-  description: Creates a logical group.
-  key: create_group
-- id: ET0009
-  name: Read Group
-  categories:
-  - authorization
-  description: Reads a group.
-  key: read_group
-- id: ET0010
-  name: Update Group
-  categories:
-  - authorization
-  description: Updates a group.
-  key: update_group
-- id: ET0011
-  name: Delete Group
-  categories:
-  - authorization
-  description: Removes or deletes a group.
-  key: delete_group
-- id: ET0012
-  name: Add To Group
-  categories:
-  - authorization
-  description: Adds a service, user or account to a group.
-  key: add_to_group
-- id: ET0013
-  name: Remove From Group
-  categories:
-  - authorization
-  description: Removes a service, user or account from a group.
-  key: remove_from_group
-- id: ET0014
-  name: Create Role
-  categories:
-  - authorization
-  description: Creates a new role.
-  key: create_role
-- id: ET0015
-  name: Read Role
-  categories:
-  - authorization
-  description: Reads a role.
-  key: read_role
-- id: ET0016
-  name: Update Role
-  categories:
-  - authorization
-  description: Updates a role.
-  key: update_role
-- id: ET0017
-  name: Delete Role
-  categories:
-  - authorization
-  description: Removes or deletes a role.
-  key: delete_role
-- id: ET0018
-  name: Add Permission
-  categories:
-  - authorization
-  description: Adds a permission to a resource.
-  key: add_permission
-- id: ET0019
-  name: Remove Permission
-  categories:
-  - authorization
-  description: Removes a permission from a resource.
-  key: remove_permission
-- id: ET0020
-  name: Add Enrollment
-  categories:
-  - authorization
-  description: A MFA enrollment was added to an account.
-  key: add_enrollment
-- id: ET0021
-  name: Remove Enrollment
-  categories:
-  - authorization
-  description: A MFA enrollment was removed from an account.
-  key: remove_enrollment
-- id: ET0022
-  name: Create Security Configuration
-  categories:
-  - system_audit
-  description: Creates a security configuration policy or enables settings.
-  key: create_security_configuration
-- id: ET0023
-  name: Read Security Configuration
-  categories:
-  - system_audit
-  description: Reads a security configuration policy or settings.
-  key: read_security_configuration
-- id: ET0024
-  name: Update Security Configuration
-  categories:
-  - system_audit
-  description: Updates a security configuration policy or settings.
-  key: update_security_configuration
-- id: ET0025
-  name: Delete Security Configuration
-  categories:
-  - system_audit
-  description: Removes or deletes a security configuration policy or setting.
-  key: delete_security_configuration
-- id: ET0026
-  name: Create Integration
-  categories:
-  - system_audit
-  description: Creates a new integration.
-  key: create_integration
-- id: ET0027
-  name: Read Integration
-  categories:
-  - system_audit
-  description: Reads an existing integration.
-  key: read_integration
-- id: ET0028
-  name: Update Integration
-  categories:
-  - system_audit
-  description: Updates an existing integration.
-  key: update_integration
-- id: ET0029
-  name: Delete Integration
-  categories:
-  - system_audit
-  description: Removes or deletes an existing integration.
-  key: delete_integration
-- id: ET0030
-  name: Create Resource
-  categories:
-  - activity_audit
-  description: A resource was created.
-  key: create_resource
-- id: ET0031
-  name: Read Resource
-  categories:
-  - activity_audit
-  description: A resource was read.
-  key: read_resource
-- id: ET0032
-  name: Update Resource
-  categories:
-  - activity_audit
-  description: A resource was updated.
-  key: update_resource
-- id: ET0033
-  name: Delete Resource
-  categories:
-  - activity_audit
-  description: A resource was removed or deleted.
-  key: delete_resource
-- id: ET0034
-  name: Download Resource
-  categories:
-  - activity_audit
-  description: A resource was downloaded.
-  key: download_resource
-- id: ET0035
-  name: Query Resource
-  categories:
-  - activity_audit
-  description: A resource was queried or searched.
-  key: query_resource
+  - id: ET0001
+    name: Account Login
+    categories: [authentication]
+    description: An account attempted to login to a system.
+    tags: [user]
+    key: account_login
+  - id: ET0002
+    name: Account Logout
+    categories: [authentication]
+    description: An account attempted to logout of a system.
+    key: account_logout
+  - id: ET0003
+    name: MFA Verification
+    categories: [authentication]
+    description: Enter or acknowledge an MFA factor which indicates success or failure.
+    key: mfa_verification
+  - id: ET0004
+    name: Create User
+    categories: [authorization]
+    description: Creates a user.
+    key: create_user
+  - id: ET0005
+    name: Read User
+    categories: [authorization]
+    description: Reads information about a user.
+    key: read_user
+  - id: ET0006
+    name: Update User
+    categories: [authorization]
+    description: Updates information about a user.
+    key: update_user
+  - id: ET0007
+    name: Delete User
+    categories: [authorization]
+    description: Removes or deletes a user.
+    key: delete_user
+  - id: ET0008
+    name: Create Group
+    categories: [authorization]
+    description: Creates a logical group.
+    key: create_group
+  - id: ET0009
+    name: Read Group
+    categories: [authorization]
+    description: Reads a group.
+    key: read_group
+  - id: ET0010
+    name: Update Group
+    categories: [authorization]
+    description: Updates a group.
+    key: update_group
+  - id: ET0011
+    name: Delete Group
+    categories: [authorization]
+    description: Removes or deletes a group.
+    key: delete_group
+  - id: ET0012
+    name: Add To Group
+    categories: [authorization]
+    description: Adds a service, user or account to a group.
+    key: add_to_group
+  - id: ET0013
+    name: Remove From Group
+    categories: [authorization]
+    description: Removes a service, user or account from a group.
+    key: remove_from_group
+  - id: ET0014
+    name: Create Role
+    categories: [authorization]
+    description: Creates a new role.
+    key: create_role
+  - id: ET0015
+    name: Read Role
+    categories: [authorization]
+    description: Reads a role.
+    key: read_role
+  - id: ET0016
+    name: Update Role
+    categories: [authorization]
+    description: Updates a role.
+    key: update_role
+  - id: ET0017
+    name: Delete Role
+    categories: [authorization]
+    description: Removes or deletes a role.
+    key: delete_role
+  - id: ET0018
+    name: Add Permission
+    categories: [authorization]
+    description: Adds a permission to a resource.
+    key: add_permission
+  - id: ET0019
+    name: Remove Permission
+    categories: [authorization]
+    description: Removes a permission from a resource.
+    key: remove_permission
+  - id: ET0020
+    name: Add Enrollment
+    categories: [authorization]
+    description: A MFA enrollment was added to an account.
+    key: add_enrollment
+  - id: ET0021
+    name: Remove Enrollment
+    categories: [authorization]
+    description: A MFA enrollment was removed from an account.
+    key: remove_enrollment
+  - id: ET0022
+    name: Create Security Configuration
+    categories: [system_audit]
+    description: Creates a security configuration policy or enables settings.
+    key: create_security_configuration
+  - id: ET0023
+    name: Read Security Configuration
+    categories: [system_audit]
+    description: Reads a security configuration policy or settings.
+    key: read_security_configuration
+  - id: ET0024
+    name: Update Security Configuration
+    categories: [system_audit]
+    description: Updates a security configuration policy or settings.
+    key: update_security_configuration
+  - id: ET0025
+    name: Delete Security Configuration
+    categories: [system_audit]
+    description: Removes or deletes a security configuration policy or setting.
+    key: delete_security_configuration
+  - id: ET0026
+    name: Create Integration
+    categories: [system_audit]
+    description: Creates a new integration.
+    key: create_integration
+  - id: ET0027
+    name: Read Integration
+    categories: [system_audit]
+    description: Reads an existing integration.
+    key: read_integration
+  - id: ET0028
+    name: Update Integration
+    categories: [system_audit]
+    description: Updates an existing integration.
+    key: update_integration
+  - id: ET0029
+    name: Delete Integration
+    categories: [system_audit]
+    description: Removes or deletes an existing integration.
+    key: delete_integration
+  - id: ET0030
+    name: Create Resource
+    categories: [activity_audit]
+    description: A resource was created.
+    key: create_resource
+  - id: ET0031
+    name: Read Resource
+    categories: [activity_audit]
+    description: A resource was read.
+    key: read_resource
+  - id: ET0032
+    name: Update Resource
+    categories: [activity_audit]
+    description: A resource was updated.
+    key: update_resource
+  - id: ET0033
+    name: Delete Resource
+    categories: [activity_audit]
+    description: A resource was removed or deleted.
+    key: delete_resource
+  - id: ET0034
+    name: Download Resource
+    categories: [activity_audit]
+    description: A resource was downloaded.
+    key: download_resource
+  - id: ET0035
+    name: Query Resource
+    categories: [activity_audit]
+    description: A resource was queried or searched.
+    key: query_resource
