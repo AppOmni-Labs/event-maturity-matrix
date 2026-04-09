@@ -20,7 +20,7 @@
 | Name | Key | Legacy ID | Description |
 | ---- | --- | --------- | ----------- |
 {% for item in object["items"] -%}
-| {{ item.name }} | {{ item.key }} | {{ item.id }} | {{ item.description | replace('\n','\\n') }} |
+| {{ item.name }} | {{ item.key }} | {{ item.id }} | {{ item.description | trim | replace('\n', '<br>') }} |
 {% endfor %}
 
 {% endif -%}

@@ -1,4 +1,3 @@
----
 description: This Account Usage view can be used to query Snowflake query history
   by various dimensions (time range, session, user, warehouse, etc.) within the last
   365 days (1 year).

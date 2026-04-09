@@ -1,9 +1,9 @@
----
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
-# file, You can obtain one at https://www.mozilla.org/MPL/2.0/.
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
 entity_name: categories
-description: "Categories define the logical buckets of event types.\n"
+description: |
+  Categories define the logical buckets of event types.
 version: 1.0.0
 meta:
 items:
@@ -13,20 +13,22 @@ items:
     key: authentication
   - id: C0002
     name: Authorization
-    description: "This category contains events related to the management of or access\
-      \ of a specific service provider.\n\nYou will often find User, Group and/or\
-      \ Role CRUD (create, read, update, delete, download, etc.) operations\nunder\
-      \ the Authorization category.\n"
+    description: |
+      This category contains events related to the management of or access of a specific service provider.
+
+      You will often find User, Group and/or Role CRUD (create, read, update, delete, download, etc.) operations under the Authorization category.
     key: authorization
   - id: C0003
     name: System Audit
-    description: "Tenant level setting / configuration operations that impact an entire\
-      \ product.\n\nFor example, updating of security configurations at a global level\
-      \ are typically within the System Audit category.\n"
+    description: |
+      Tenant level setting / configuration operations that impact an entire product.
+
+      For example, updating of security configurations at a global level are typically within the System Audit category.
     key: system_audit
   - id: C0004
     name: Activity Audit
-    description: "This category contains events related to general activity within\
-      \ an environment.\n\nEvent types within this category are focused on behavior\
-      \ within a service.\n"
+    description: |
+      This category contains events related to general activity within an environment.
+
+      Event types within this category are focused on behavior within a service.
     key: activity_audit

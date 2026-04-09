@@ -4,15 +4,15 @@
 📌 **v{{ object.version }}**{%- if object.retention %} · 🗄 **Retention:** {{ object.retention.duration }}{% endif %}{%- if object.latency %} · ⚡ **Latency:** {{ object.latency.duration }}{% endif %}
 
 {% if object.retention and object.retention.comments -%}
-🗄 {{ object.retention.comments | replace('\n', ' ') }}
+🗄 {{ object.retention.comments }}
 {% endif %}
 
 {% if object.latency and object.latency.comments -%}
-⚡ {{ object.latency.comments | replace('\n', ' ') }}
+⚡ {{ object.latency.comments }}
 {% endif %}
 
 {% if object.licensing -%}
-📜 **Licensing:** {{ object.licensing.comments | replace('\n', ' ') }}
+📜 **Licensing:** {{ object.licensing.comments }}
 {% endif %}
 
 {{ object.description }}
