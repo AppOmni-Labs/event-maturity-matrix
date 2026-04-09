@@ -2,7 +2,7 @@
 
 📌 **v1.0.0** · 🗄 **Retention:** 365 days · ⚡ **Latency:** up to 45 minutes
 
-🗄 No comments⚡ No comments📜 **Licensing:** Contact sales
+⚡ No comments📜 **Licensing:** Contact sales
 
 This Account Usage view can be used to query Snowflake query history by various dimensions (time range, session, user, warehouse, etc.) within the last 365 days (1 year).
 ## References
