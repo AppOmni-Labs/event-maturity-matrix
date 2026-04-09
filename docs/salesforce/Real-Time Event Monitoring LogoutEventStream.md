@@ -1,19 +1,8 @@
-
-
-
-
-
-
 # Salesforce — Real-Time Event Monitoring LogoutEventStream
 
 📌 **v1.0.0** · 🗄 **Retention:** 6 Months · ⚡ **Latency:** Real-Time
 
-
-
-
-
 📜 **Licensing:** Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
-
 
 A logout event records a successful user logout from the Salesforce user interface.
 ## References

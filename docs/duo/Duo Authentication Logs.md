@@ -1,21 +1,8 @@
-
-
-
-
-
-
 # Duo — Duo Authentication Logs
 
 📌 **v1.0.0** · 🗄 **Retention:** 180 days · ⚡ **Latency:** Near real-time
 
-🗄 Maximum retention of 180 days, even if the log retention interval is set to a value greater than 180 days, reference https://help.duo.com/s/article/2990?language=en_US
-
-
-⚡ There is an intentional two minute delay in availability of new authentication events, reference https://duo.com/docs/adminapi#authentication-logs
-
-
-📜 **Licensing:** The Duo Admin API is available to Duo Premier, Duo Advantage, and Duo Essentials customers, and new customers with an Advantage or Premier trial. For more information, see https://duo.com/docs/adminapi#about-the-admin-api
-
+🗄 Maximum retention of 180 days, even if the log retention interval is set to a value greater than 180 days, reference https://help.duo.com/s/article/2990?language=en_US⚡ There is an intentional two minute delay in availability of new authentication events, reference https://duo.com/docs/adminapi#authentication-logs📜 **Licensing:** The Duo Admin API is available to Duo Premier, Duo Advantage, and Duo Essentials customers, and new customers with an Advantage or Premier trial. For more information, see https://duo.com/docs/adminapi#about-the-admin-api
 
 Provides an audit trail of authentication activity within the Duo Security platform.
 ## References

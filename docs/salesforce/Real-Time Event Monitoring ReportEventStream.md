@@ -1,19 +1,8 @@
-
-
-
-
-
-
 # Salesforce — Real-Time Event Monitoring ReportEventStream
 
 📌 **v1.0.0** · 🗄 **Retention:** 6 Months · ⚡ **Latency:** Real-Time
 
-
-
-
-
 📜 **Licensing:** Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
-
 
 Tracks report-related actions, such as when a user runs or exports a report.
 ## References

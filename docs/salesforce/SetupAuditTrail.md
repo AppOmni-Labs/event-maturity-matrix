@@ -1,19 +1,8 @@
-
-
-
-
-
-
 # Salesforce — SetupAuditTrail
 
 📌 **v1.0.0** · 🗄 **Retention:** 180 Days · ⚡ **Latency:** Real-Time
 
-
-
-
-
 📜 **Licensing:** Free
-
 
 The SetupAuditTrail object provides an audit trail of changes to user profiles, permission sets, security settings, custom objects, and other settings.
 ## References

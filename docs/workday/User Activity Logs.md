@@ -1,20 +1,8 @@
-
-
-
-
-
-
 # Workday — User Activity Logs
 
 📌 **v1.0.0** · 🗄 **Retention:** 30 days · ⚡ **Latency:** Near real-time
 
-🗄 By default, the User Activity Logging REST API retains log entries for 30 days.
-
-
-
-
-📜 **Licensing:** User Activity Logging is available to Workday customers.
-
+🗄 By default, the User Activity Logging REST API retains log entries for 30 days.📜 **Licensing:** User Activity Logging is available to Workday customers.
 
 Workday user activity logs provide an audit trail of user activity over a certain time period.
 ## References

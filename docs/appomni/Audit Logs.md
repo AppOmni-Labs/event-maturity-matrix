@@ -1,20 +1,8 @@
-
-
-
-
-
-
 # AppOmni — Audit Logs
 
 📌 **v1.0.0** · 🗄 **Retention:** 180 days · ⚡ **Latency:** Near Real-Time
 
-🗄 Historical audit logs are stored for 180 days.
-
-
-⚡ Logs are available in near real-time.
-
-
-
+🗄 Historical audit logs are stored for 180 days.⚡ Logs are available in near real-time.📜 **Licensing:** Included for all customers.
 
 AppOmni audit logs that provide a record of user activity.
 ## References

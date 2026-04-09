@@ -19,7 +19,7 @@ latency:
   duration: Near Real-Time
   comments: Logs are available in near real-time.
 licensing:
-  comments: N/A
+  comments: Included for all customers.
 mapping_defaults:
   source:
     attributes:

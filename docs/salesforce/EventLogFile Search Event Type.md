@@ -1,21 +1,8 @@
-
-
-
-
-
-
 # Salesforce — EventLogFile Search Event Type
 
 📌 **v1.0.0** · 🗄 **Retention:** 1 Day · ⚡ **Latency:** 3 Hours
 
-🗄 Available for free with 1 day retention, otherwise requires an add-on subscription for 30 day retention.
-
-
-⚡ Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of the event to be available in the hourly log file.
-
-
-📜 **Licensing:** Available for free with 1 day retention, otherwise requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
-
+🗄 Available for free with 1 day retention, otherwise requires an add-on subscription for 30 day retention.⚡ Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of the event to be available in the hourly log file.📜 **Licensing:** Available for free with 1 day retention, otherwise requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 
 Tracks Salesforce search requests, including the search string and result counts.
 ## References

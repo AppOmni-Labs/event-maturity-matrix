@@ -1,20 +1,8 @@
-
-
-
-
-
-
 # Box — Admin Logs
 
 📌 **v1.0.0** · 🗄 **Retention:** 365 Days · ⚡ **Latency:** Near Real-Time
 
-🗄 Based on the admin_logs stream type.
-
-
-
-
-📜 **Licensing:** Included with Box Business Plus and above.
-
+🗄 Based on the admin_logs stream type.📜 **Licensing:** Included with Box Business Plus and above.
 
 Box enterprise logs that provide an audit trail of user activity.
 ## References

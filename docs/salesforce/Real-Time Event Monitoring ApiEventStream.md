@@ -1,19 +1,8 @@
-
-
-
-
-
-
 # Salesforce — Real-Time Event Monitoring ApiEventStream
 
 📌 **v1.0.0** · 🗄 **Retention:** 6 Months · ⚡ **Latency:** Real-Time
 
-
-
-
-
 📜 **Licensing:** Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
-
 
 Tracks the user-initiated read-only API calls "query()", "queryMore()", and "count()".
 

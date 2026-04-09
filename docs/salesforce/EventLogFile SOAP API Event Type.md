@@ -1,20 +1,8 @@
-
-
-
-
-
-
 # Salesforce — EventLogFile SOAP API Event Type
 
 📌 **v1.0.0** · 🗄 **Retention:** 30 Days · ⚡ **Latency:** 3 Hours
 
-
-
-⚡ Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of the event to be available in the hourly log file.
-
-
-📜 **Licensing:** Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
-
+⚡ Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of the event to be available in the hourly log file.📜 **Licensing:** Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 
 Provides details about a Salesforce org's SOAP API request activity.
 ## References

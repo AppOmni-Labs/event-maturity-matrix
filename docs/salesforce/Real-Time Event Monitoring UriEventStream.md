@@ -1,19 +1,8 @@
-
-
-
-
-
-
 # Salesforce — Real-Time Event Monitoring UriEventStream
 
 📌 **v1.0.0** · 🗄 **Retention:** 6 Months · ⚡ **Latency:** Real-Time
 
-
-
-
-
 📜 **Licensing:** Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
-
 
 Detects when a user creates, accesses, updates, or deletes a record in Salesforce Classic only.
 ## References

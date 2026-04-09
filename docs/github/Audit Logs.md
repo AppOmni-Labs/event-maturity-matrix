@@ -1,20 +1,8 @@
-
-
-
-
-
-
 # GitHub — Audit Logs
 
 📌 **v1.0.0** · 🗄 **Retention:** Infinite · ⚡ **Latency:** Near Real-Time
 
-🗄 Can be changed by an enterprise admin
-
-
-
-
-📜 **Licensing:** Included with GitHub Enterprise accounts.
-
+🗄 Can be changed by an enterprise admin📜 **Licensing:** Included with GitHub Enterprise accounts.
 
 GitHub enterprise audit logs that provide an audit trail of user and system activity.
 ## References

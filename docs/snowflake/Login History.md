@@ -1,21 +1,8 @@
-
-
-
-
-
-
 # Snowflake — Login History
 
 📌 **v1.0.0** · 🗄 **Retention:** 365 days · ⚡ **Latency:** up to 120 minutes
 
-🗄 No comments
-
-
-⚡ No comments
-
-
-📜 **Licensing:** Contact Sales
-
+🗄 No comments⚡ No comments📜 **Licensing:** Contact Sales
 
 This Account Usage view can be used to query login attempts by Snowflake users within the last 365 days (1 year).
 ## References
