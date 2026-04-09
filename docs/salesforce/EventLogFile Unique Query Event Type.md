@@ -1,3 +1,9 @@
+
+
+
+
+
+
 # Salesforce — EventLogFile Unique Query Event Type
 
 📌 **v1.0.0** · 🗄 **Retention:** 1 Day · ⚡ **Latency:** 3 Hours

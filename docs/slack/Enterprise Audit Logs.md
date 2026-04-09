@@ -1,8 +1,14 @@
+
+
+
+
+
+
 # Slack — Enterprise Audit Logs
 
-📌 **v1.0.0** · 🗄 **Retention:** Default 90 days · ⚡ **Latency:** Near real-time
+📌 **v1.0.0** · 🗄 **Retention:** 2 years · ⚡ **Latency:** Near real-time
 
-🗄 Can be customized
+🗄 NA
 
 
 ⚡ NA

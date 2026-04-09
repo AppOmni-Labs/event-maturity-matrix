@@ -1,11 +1,15 @@
+
+
+
+
+
+
 # OneLogin — Get Events API
 
 📌 **v0.0.1** · 🗄 **Retention:** Unknown · ⚡ **Latency:** Near real-time
 
-🗄 N/A
 
 
-⚡ N/A
 
 
 📜 **Licensing:** A OneLogin license is required to access the Get Events API.

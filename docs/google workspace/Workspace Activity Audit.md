@@ -1,3 +1,9 @@
+
+
+
+
+
+
 # Google Workspace — Workspace Activity Audit
 
 📌 **v0.0.1** · 🗄 **Retention:** Typically 6 months · ⚡ **Latency:** Near real time up to a couple hours

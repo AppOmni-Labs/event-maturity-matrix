@@ -1,3 +1,9 @@
+
+
+
+
+
+
 # Microsoft 365 — Sharepoint Audit Logs
 
 📌 **v1.0.0** · 🗄 **Retention:** 180 days · ⚡ **Latency:** Typically 60 to 90 minutes after an event occurs.

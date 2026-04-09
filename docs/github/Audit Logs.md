@@ -1,3 +1,9 @@
+
+
+
+
+
+
 # GitHub — Audit Logs
 
 📌 **v1.0.0** · 🗄 **Retention:** Infinite · ⚡ **Latency:** Near Real-Time
@@ -5,7 +11,6 @@
 🗄 Can be changed by an enterprise admin
 
 
-⚡ N/A
 
 
 📜 **Licensing:** Included with GitHub Enterprise accounts.

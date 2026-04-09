@@ -1,3 +1,9 @@
+
+
+
+
+
+
 # GitHub — Webhook Events
 
 📌 **v1.0.0** · 🗄 **Retention:** N/A · ⚡ **Latency:** Near Real-Time
@@ -5,7 +11,6 @@
 🗄 GitHub does not officially retain webhook events. Recent webhook events can be accessed at `https://github.com/<ORGANIZATION>/<REPOSITORY>/settings/hooks`.
 
 
-⚡ N/A
 
 
 📜 **Licensing:** Included with all GitHub accounts.

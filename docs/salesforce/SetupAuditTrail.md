@@ -1,11 +1,15 @@
+
+
+
+
+
+
 # Salesforce — SetupAuditTrail
 
 📌 **v1.0.0** · 🗄 **Retention:** 180 Days · ⚡ **Latency:** Real-Time
 
-🗄 N/A
 
 
-⚡ N/A
 
 
 📜 **Licensing:** Free

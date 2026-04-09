@@ -1,3 +1,9 @@
+
+
+
+
+
+
 # Snowflake — Login History
 
 📌 **v1.0.0** · 🗄 **Retention:** 365 days · ⚡ **Latency:** up to 120 minutes

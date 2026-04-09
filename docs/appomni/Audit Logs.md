@@ -1,3 +1,9 @@
+
+
+
+
+
+
 # AppOmni — Audit Logs
 
 📌 **v1.0.0** · 🗄 **Retention:** 180 days · ⚡ **Latency:** Near Real-Time
@@ -8,7 +14,6 @@
 ⚡ Logs are available in near real-time.
 
 
-📜 **Licensing:** N/A
 
 
 AppOmni audit logs that provide a record of user activity.

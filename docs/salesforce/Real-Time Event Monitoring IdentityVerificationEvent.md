@@ -1,11 +1,15 @@
+
+
+
+
+
+
 # Salesforce — Real-Time Event Monitoring IdentityVerificationEvent
 
 📌 **v1.0.0** · 🗄 **Retention:** 10 Years · ⚡ **Latency:** Real-Time
 
-🗄 N/A
 
 
-⚡ N/A
 
 
 📜 **Licensing:** Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.

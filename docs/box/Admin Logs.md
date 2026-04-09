@@ -1,3 +1,9 @@
+
+
+
+
+
+
 # Box — Admin Logs
 
 📌 **v1.0.0** · 🗄 **Retention:** 365 Days · ⚡ **Latency:** Near Real-Time
@@ -5,7 +11,6 @@
 🗄 Based on the admin_logs stream type.
 
 
-⚡ N/A
 
 
 📜 **Licensing:** Included with Box Business Plus and above.

@@ -20,8 +20,8 @@ references:
     name: Slack Audit Log Anomaly Events
     url: https://api.slack.com/admins/audit-logs-anomaly
 retention:
-  duration: Default 90 days
-  comments: Can be customized
+  duration: 2 years
+  comments: NA
 latency:
   duration: Near real-time
   comments: NA
