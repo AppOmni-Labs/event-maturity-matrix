@@ -2,13 +2,9 @@
 
 📌 **v1.0.0** · 🗄 **Retention:** 180 days · ⚡ **Latency:** Typically 60 to 90 minutes after an event occurs.
 
-🗄 Minimum retention is 180 days, but organizations can set a retention policy up to 10 years dependent on licensing, reference https://learn.microsoft.com/en-us/purview/audit-log-retention-policies
+🗄 Minimum retention is 180 days, but organizations can set a retention policy up to 10 years dependent on licensing, reference https://learn.microsoft.com/en-us/purview/audit-log-retention-policies⚡ Microsoft does not provide a specific audit logging latency SLA, reference https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal📜 **Licensing:** Standard and Premium audit licenses are available, with log availability and retention dependent on the license level.
 
-
-⚡ Microsoft does not provide a specific audit logging latency SLA, reference https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
-
-
-📜 **Licensing:** Standard and Premium audit licenses are available, with log availability and retention dependent on the license level. For more information, see https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
+For more information, see https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
 
 
 Includes logs for Sharepoint and OneDrive.

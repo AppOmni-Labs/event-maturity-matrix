@@ -2,14 +2,7 @@
 
 📌 **v0.0.1** · 🗄 **Retention:** 30 days · ⚡ **Latency:** Near real-time
 
-🗄 N/A
-
-
-⚡ N/A
-
-
 📜 **Licensing:** A Veeva Vault license is required to access the Retrieve Audit Details API.
-
 
 The Veeva Vault Retrieve Audit Details API provides near real-time, read-only access to an organization's audit log.
 ## References

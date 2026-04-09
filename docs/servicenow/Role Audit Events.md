@@ -2,14 +2,7 @@
 
 📌 **v0.0.1** · 🗄 **Retention:** Infinite · ⚡ **Latency:** Near Real-Time
 
-🗄 Can be changed by an instance admin.
-
-
-⚡ Can vary based on system conditions and configurations.
-
-
-📜 **Licensing:** Must be enabled and configured by an instance admin.
-
+🗄 Can be changed by an instance admin.⚡ Can vary based on system conditions and configurations.📜 **Licensing:** Must be enabled and configured by an instance admin.
 
 The ServiceNow role audit table contains user role assignments.
 ## References

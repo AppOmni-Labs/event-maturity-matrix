@@ -2,14 +2,7 @@
 
 📌 **v1.0.0** · 🗄 **Retention:** 6 Months · ⚡ **Latency:** Real-Time
 
-🗄 N/A
-
-
-⚡ N/A
-
-
 📜 **Licensing:** Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
-
 
 Tracks actions related to list views in Lightning Experience, Salesforce Classic, or the API. For example, the event captures when a user runs or exports a list view.
 ## References

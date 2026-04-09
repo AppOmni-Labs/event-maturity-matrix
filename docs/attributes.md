@@ -1,6 +1,8 @@
 # attributes (1.0.0)
 
-Attributes are associated with many event types. These attributes describe logging fields in a source platform.
+Attributes are associated with many event types.
+
+These attributes describe logging fields in a source platform.
 
 ## Items
 

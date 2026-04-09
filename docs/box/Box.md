@@ -3,7 +3,6 @@
 Box is a cloud-based content management and file sharing service. It's designed to help organizations store, manage, and collaborate on files and documents.
 
 The Box Events API provides an event feed for enterprise events that have been generated within Box across the enterprise.
-
 Depending on the specified stream_type, the Events API can provide real-time monitoring or historical querying of events.
 
 The admin_logs_streaming stream type provides low latency, real-time access to events as they are processed by Box. Only two weeks of events are available via this stream type.

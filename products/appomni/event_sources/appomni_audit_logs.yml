@@ -5,16 +5,13 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: AppOmni
-  collection_sources:
-  - audit_logs_api
-  - event_sink
-  - scheduled_reports
+  collection_sources: [audit_logs_api, event_sink, scheduled_reports]
 name: Audit Logs
 description: AppOmni audit logs that provide a record of user activity.
 references:
-- id: audit_log_schema
-  name: Audit Log Schema
-  url: N/A
+  - id: audit_log_schema
+    name: Audit Log Schema
+    url: N/A
 retention:
   duration: 180 days
   comments: Historical audit logs are stored for 180 days.
@@ -22,7 +19,7 @@ latency:
   duration: Near Real-Time
   comments: Logs are available in near real-time.
 licensing:
-  comments: N/A
+  comments: Included for all customers.
 mapping_defaults:
   source:
     attributes:
@@ -53,95 +50,95 @@ mapping_defaults:
         username: action_data.user_username
         user_id: user_id
 mappings:
-- category: authentication
-  event_type: account_login
-  attributes:
-    result: action_type
-    identity_service_provider_context: action_type
-  examples:
-  - type: success
-    location: ./event_examples/authentication_account_login_google.json
-  - type: failure
-    location: ./event_examples/authentication_account_login_failed.json
-- category: authentication
-  event_type: account_logout
-  attributes:
-    result: action_type
-  examples:
-  - type: success
-    location: ./event_examples/authentication_account_logout.json
-- category: authentication
-  event_type: mfa_verification
-  attributes:
-    verification_method: action_type
-  examples:
-  - type: challenge
-    location: ./event_examples/authentication_account_login_challenge_totp.json
-- category: authorization
-  event_type: create_user
-  attributes:
-    target_username: action_data.target_user_username
-  examples:
-  - type: success
-    location: ./event_examples/authorization_create_user.json
-- category: authorization
-  event_type: delete_user
-  attributes:
-    username: user_username
-    target_username: action_data.user_username
-  examples:
-  - type: success
-    location: ./event_examples/authorization_delete_user.json
-- category: authorization
-  event_type: add_enrollment
-  attributes:
-    enrollment_type: action_data.detail_str
-    target_username: action_data.target_user_username
-  examples:
-  - type: success
-    location: ./event_examples/authorization_add_enrollment_totp_json.json
-- category: authorization
-  event_type: remove_enrollment
-  attributes:
-    username: action_data.target_user_username
-    target_username: action_data.target_user_username
-  examples:
-  - type: success
-    location: ./event_examples/authorization_remove_enrollment_totp.json
-- category: system_audit
-  event_type: update_security_configuration
-  attributes:
-    configuration_setting_name: action_data.setting_name
-    configuration_setting_value: action_data.new_value
-    previous_configuration_setting_value: action_data.old_value
-  examples:
-  - type: success
-    location: ./event_examples/system_audit_update_configuration.json
-- category: activity_audit
-  event_type: create_resource
-  attributes:
-    ip_address: action_data.user_ip
-    user_agent_name: action_data.user_agent
-    resource_name: service_name
-    resource_type: service_type
-  examples:
-  - type: success
-    location: ./event_examples/activity_audit_create_resource_policy.json
-- category: activity_audit
-  event_type: update_resource
-  attributes:
-    resource_name: service_name
-    resource_type: service_type
-  examples:
-  - type: success
-    location: ./event_examples/activity_audit_update_resource_service.json
-- category: activity_audit
-  event_type: delete_resource
-  attributes:
-    ip_address: action_data.user_ip
-    user_agent_name: action_data.user_agent
-    resource_name: policy_name
-    resource_type: service_type
-  examples:
-  - type: success
-    location: ./event_examples/activity_audit_delete_resource_policy.json
+  - category: authentication
+    event_type: account_login
+    attributes:
+      result: action_type
+      identity_service_provider_context: action_type
+    examples:
+      - type: success
+        location: ./event_examples/authentication_account_login_google.json
+      - type: failure
+        location: ./event_examples/authentication_account_login_failed.json
+  - category: authentication
+    event_type: account_logout
+    attributes:
+      result: action_type
+    examples:
+      - type: success
+        location: ./event_examples/authentication_account_logout.json
+  - category: authentication
+    event_type: mfa_verification
+    attributes:
+      verification_method: action_type
+    examples:
+      - type: challenge
+        location: ./event_examples/authentication_account_login_challenge_totp.json
+  - category: authorization
+    event_type: create_user
+    attributes:
+      target_username: action_data.target_user_username
+    examples:
+      - type: success
+        location: ./event_examples/authorization_create_user.json
+  - category: authorization
+    event_type: delete_user
+    attributes:
+      username: user_username
+      target_username: action_data.user_username
+    examples:
+      - type: success
+        location: ./event_examples/authorization_delete_user.json
+  - category: authorization
+    event_type: add_enrollment
+    attributes:
+      enrollment_type: action_data.detail_str
+      target_username: action_data.target_user_username
+    examples:
+      - type: success
+        location: ./event_examples/authorization_add_enrollment_totp_json.json
+  - category: authorization
+    event_type: remove_enrollment
+    attributes:
+      username: action_data.target_user_username
+      target_username: action_data.target_user_username
+    examples:
+      - type: success
+        location: ./event_examples/authorization_remove_enrollment_totp.json
+  - category: system_audit
+    event_type: update_security_configuration
+    attributes:
+      configuration_setting_name: action_data.setting_name
+      configuration_setting_value: action_data.new_value
+      previous_configuration_setting_value: action_data.old_value
+    examples:
+      - type: success
+        location: ./event_examples/system_audit_update_configuration.json
+  - category: activity_audit
+    event_type: create_resource
+    attributes:
+      ip_address: action_data.user_ip
+      user_agent_name: action_data.user_agent
+      resource_name: service_name
+      resource_type: service_type
+    examples:
+      - type: success
+        location: ./event_examples/activity_audit_create_resource_policy.json
+  - category: activity_audit
+    event_type: update_resource
+    attributes:
+      resource_name: service_name
+      resource_type: service_type
+    examples:
+      - type: success
+        location: ./event_examples/activity_audit_update_resource_service.json
+  - category: activity_audit
+    event_type: delete_resource
+    attributes:
+      ip_address: action_data.user_ip
+      user_agent_name: action_data.user_agent
+      resource_name: policy_name
+      resource_type: service_type
+    examples:
+      - type: success
+        location: ./event_examples/activity_audit_delete_resource_policy.json

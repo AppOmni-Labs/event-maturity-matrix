@@ -2,14 +2,7 @@
 
 📌 **v1.0.0** · 🗄 **Retention:** 6 Months · ⚡ **Latency:** Real-Time
 
-🗄 N/A
-
-
-⚡ N/A
-
-
 📜 **Licensing:** Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
-
 
 A logout event records a successful user logout from the Salesforce user interface.
 ## References

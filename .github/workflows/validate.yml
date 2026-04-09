@@ -1,6 +1,6 @@
 name: Validate Schemas
 
-on: 
+on:
   push:
 
 jobs:

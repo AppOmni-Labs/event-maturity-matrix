@@ -59,4 +59,4 @@ $defs:
         items:
           type: string
           pattern: "^[a-z][a-z0-9_]*$"
-        uniqueItems: true    
+        uniqueItems: true

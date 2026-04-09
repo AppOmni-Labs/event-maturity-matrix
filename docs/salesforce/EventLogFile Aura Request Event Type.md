@@ -2,14 +2,7 @@
 
 📌 **v1.0.0** · 🗄 **Retention:** 30 Days · ⚡ **Latency:** 3 Hours
 
-🗄 N/A
-
-
-⚡ Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of the event to be available in the hourly log file.
-
-
-📜 **Licensing:** Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
-
+⚡ Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of the event to be available in the hourly log file.📜 **Licensing:** Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 
 Provides details of requests to Apex methods from Aura and Lightning web components.
 ## References

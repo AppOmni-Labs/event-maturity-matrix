@@ -5,98 +5,97 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: Salesforce
-  collection_sources:
-  - rest_api
-  - soap_api
+  collection_sources: [rest_api, soap_api]
 name: EventLogFile SOAP API Event Type
 description: Provides details about a Salesforce org's SOAP API request activity.
 references:
-- id: soap_api
-  name: EventLogFile SOAP API
-  url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_api.htm
+  - id: soap_api
+    name: EventLogFile SOAP API
+    url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_api.htm
 retention:
   duration: 30 Days
   comments: N/A
 latency:
   duration: 3 Hours
-  comments: Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of
-    the event to be available in the hourly log file.
+  comments: Event log files are accessible via hourly and 24 hour log files. It can
+    take between 3–6 hours from the time of the event to be available in the hourly
+    log file.
 licensing:
   comments: Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-- category: activity_audit
-  event_type: create_resource
-  attributes:
-    timestamp: TIMESTAMP_DERIVED
-    event_code_or_type: EVENT_TYPE
-    result: REQUEST_STATUS
-    user_id: USER_ID
-    user_type_or_role: USER_TYPE
-    session_id: SESSION_KEY
-    ip_address: CLIENT_IP
-    device_client_type: API_TYPE
-    resource_type: ENTITY_NAME
-  examples:
-  - type: create
-    location: ./event_examples/salesforce_elf_soap_api_event/activity_audit_create_resource_soapapi.json
-- category: activity_audit
-  event_type: read_resource
-  attributes:
-    timestamp: TIMESTAMP_DERIVED
-    event_code_or_type: EVENT_TYPE
-    result: REQUEST_STATUS
-    user_id: USER_ID
-    user_type_or_role: USER_TYPE
-    session_id: SESSION_KEY
-    ip_address: CLIENT_IP
-    device_client_type: API_TYPE
-    resource_type: ENTITY_NAME
-  examples:
-  - type: read
-    location: ./event_examples/salesforce_elf_soap_api_event/activity_audit_read_resource_soapapi.json
-- category: activity_audit
-  event_type: update_resource
-  attributes:
-    timestamp: TIMESTAMP_DERIVED
-    event_code_or_type: EVENT_TYPE
-    result: REQUEST_STATUS
-    user_id: USER_ID
-    user_type_or_role: USER_TYPE
-    session_id: SESSION_KEY
-    ip_address: CLIENT_IP
-    device_client_type: API_TYPE
-    resource_type: ENTITY_NAME
-  examples:
-  - type: update
-    location: ./event_examples/salesforce_elf_soap_api_event/activity_audit_update_resource_soapapi.json
-- category: activity_audit
-  event_type: delete_resource
-  attributes:
-    timestamp: TIMESTAMP_DERIVED
-    event_code_or_type: EVENT_TYPE
-    result: REQUEST_STATUS
-    user_id: USER_ID
-    user_type_or_role: USER_TYPE
-    session_id: SESSION_KEY
-    ip_address: CLIENT_IP
-    device_client_type: API_TYPE
-    resource_type: ENTITY_NAME
-  examples:
-  - type: delete
-    location: ./event_examples/salesforce_elf_soap_api_event/activity_audit_delete_resource_soapapi.json
-- category: activity_audit
-  event_type: download_resource
-  attributes:
-    timestamp: TIMESTAMP_DERIVED
-    event_code_or_type: EVENT_TYPE
-    result: REQUEST_STATUS
-    user_id: USER_ID
-    user_type_or_role: USER_TYPE
-    session_id: SESSION_KEY
-    ip_address: CLIENT_IP
-    device_client_type: API_TYPE
-    resource_metadata: ROWS_PROCESSED
-    resource_type: ENTITY_NAME
-  examples:
-  - type: download
-    location: ./event_examples/salesforce_elf_soap_api_event/activity_audit_download_resource_soapapi.json
+  - category: activity_audit
+    event_type: create_resource
+    attributes:
+      timestamp: TIMESTAMP_DERIVED
+      event_code_or_type: EVENT_TYPE
+      result: REQUEST_STATUS
+      user_id: USER_ID
+      user_type_or_role: USER_TYPE
+      session_id: SESSION_KEY
+      ip_address: CLIENT_IP
+      device_client_type: API_TYPE
+      resource_type: ENTITY_NAME
+    examples:
+      - type: create
+        location: ./event_examples/salesforce_elf_soap_api_event/activity_audit_create_resource_soapapi.json
+  - category: activity_audit
+    event_type: read_resource
+    attributes:
+      timestamp: TIMESTAMP_DERIVED
+      event_code_or_type: EVENT_TYPE
+      result: REQUEST_STATUS
+      user_id: USER_ID
+      user_type_or_role: USER_TYPE
+      session_id: SESSION_KEY
+      ip_address: CLIENT_IP
+      device_client_type: API_TYPE
+      resource_type: ENTITY_NAME
+    examples:
+      - type: read
+        location: ./event_examples/salesforce_elf_soap_api_event/activity_audit_read_resource_soapapi.json
+  - category: activity_audit
+    event_type: update_resource
+    attributes:
+      timestamp: TIMESTAMP_DERIVED
+      event_code_or_type: EVENT_TYPE
+      result: REQUEST_STATUS
+      user_id: USER_ID
+      user_type_or_role: USER_TYPE
+      session_id: SESSION_KEY
+      ip_address: CLIENT_IP
+      device_client_type: API_TYPE
+      resource_type: ENTITY_NAME
+    examples:
+      - type: update
+        location: ./event_examples/salesforce_elf_soap_api_event/activity_audit_update_resource_soapapi.json
+  - category: activity_audit
+    event_type: delete_resource
+    attributes:
+      timestamp: TIMESTAMP_DERIVED
+      event_code_or_type: EVENT_TYPE
+      result: REQUEST_STATUS
+      user_id: USER_ID
+      user_type_or_role: USER_TYPE
+      session_id: SESSION_KEY
+      ip_address: CLIENT_IP
+      device_client_type: API_TYPE
+      resource_type: ENTITY_NAME
+    examples:
+      - type: delete
+        location: ./event_examples/salesforce_elf_soap_api_event/activity_audit_delete_resource_soapapi.json
+  - category: activity_audit
+    event_type: download_resource
+    attributes:
+      timestamp: TIMESTAMP_DERIVED
+      event_code_or_type: EVENT_TYPE
+      result: REQUEST_STATUS
+      user_id: USER_ID
+      user_type_or_role: USER_TYPE
+      session_id: SESSION_KEY
+      ip_address: CLIENT_IP
+      device_client_type: API_TYPE
+      resource_metadata: ROWS_PROCESSED
+      resource_type: ENTITY_NAME
+    examples:
+      - type: download
+        location: ./event_examples/salesforce_elf_soap_api_event/activity_audit_download_resource_soapapi.json

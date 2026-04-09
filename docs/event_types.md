@@ -1,7 +1,8 @@
 # event_types (1.0.0)
 
-Event types represent logical buckets of different types of events. These event types
-are associated with a defined category and will typically have attributes associated with them.
+Event types represent logical buckets of different types of events.
+
+These event types are associated with a defined category and will typically have attributes associated with them.
 
 ## Items
 

@@ -1,339 +1,276 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
-# file, You can obtain one at https://www.mozilla.org/MPL/2.0/.
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
 entity_name: attributes
-description: 'Attributes are associated with many event types. These attributes describe logging fields in a source platform.
+description: |
+  Attributes are associated with many event types.
 
-  '
+  These attributes describe logging fields in a source platform.
 version: 1.0.0
-meta: null
+meta:
 items:
-- id: A0001
-  name: Timestamp
-  description: The timestamp of when the event first occurred.
-  type: string
-  examples:
-  - '2022-11-17T06:34:18.429Z'
-  key: timestamp
-- id: A0002
-  name: Event ID
-  description: A unique event ID to describe the event.
-  type: string
-  examples:
-  - 312b0a2d-a7a3-4529-bd61-bf3c2e2ba11d
-  maturity: 1
-  key: event_id
-- id: A0003
-  name: Event Code / Type
-  description: 'Identification code for this event, if one exists. Some event sources use event codes to identify messages
-    unambiguously, regardless of message language or wording adjustments over time.
-
-    '
-  type: string
-  examples:
-  - '8080'
-  key: event_code_or_type
-- id: A0004
-  name: Result
-  description: Describes whether an event action succeeded or failed.
-  type: string
-  examples:
-  - Success
-  - Failure
-  key: result
-- id: A0005
-  name: Username
-  description: The username used when this event occurred.
-  type: string
-  examples:
-  - first.lastname
-  - first.lastname@company.com
-  key: username
-- id: A0006
-  name: User ID
-  description: Unique ID of the user associated with this event.
-  type: string
-  examples:
-  - ABCDEFG123456
-  key: user_id
-- id: A0007
-  name: User Type / Role
-  description: The role of the user at the time of the event.
-  type: string
-  examples:
-  - administrator
-  - guest
-  key: user_type_or_role
-- id: A0008
-  name: Session ID
-  description: Unique ID of the session.
-  type: string
-  examples:
-  - abc123def456
-  key: session_id
-- id: A0009
-  name: IP Address
-  description: The IP address of the source or destination. This is dependent on each service provider.
-  type: string
-  examples:
-  - 192.0.0.1
-  key: ip_address
-- id: A0010
-  name: IP Geolocation / ASN
-  description: General IP geolocation information and unique number assigned to the autonomous system.
-  type: string
-  examples:
-  - '{''lon'': -73.614830, ''lat'': 45.505918}'
-  - '15169'
-  key: ip_geolocation_or_asn
-- id: A0011
-  name: User Agent Name
-  description: Name of the user agent.
-  type: string
-  examples:
-  - Mozilla/5.0 (Macintosh; Intel Mac OS X)
-  key: user_agent_name
-- id: A0012
-  name: Device/Client Type
-  description: The type of device or client used during the event.
-  type: string
-  examples:
-  - Mobile
-  key: device_client_type
-- id: A0013
-  name: Failure Context
-  include:
-  - account_login
-  description: Additional failure context may be provided by the service.
-  type: string
-  examples:
-  - Invalid username or password
-  key: failure_context
-- id: A0014
-  name: Credential Context
-  include:
-  - account_login
-  description: Credential context may provide more details about the credentials used during the event.
-  type: string
-  examples:
-  - Password
-  key: credential_context
-- id: A0015
-  name: Identity Service Provider Context
-  include:
-  - account_login
-  description: Identity service provider (ISP) context related to the request.
-  type: string
-  examples:
-  - Okta Single Sign-On
-  key: identity_service_provider_context
-- id: A0016
-  name: Verification Method
-  include:
-  - mfa_verification
-  description: The method used for verification.
-  type: string
-  examples:
-  - MFA Push
-  key: verification_method
-- id: A0017
-  name: Verification Flagged
-  include:
-  - mfa_verification
-  description: Whether or not MFA verification was flagged
-  type: string
-  examples:
-  - The user denied the verification request and flagged the notification as fraudulent.
-  key: verification_flagged
-- id: A0018
-  name: Activity Performed
-  include:
-  - mfa_verification
-  description: The activity or operation that required MFA verification.
-  type: string
-  examples:
-  - Authentication
-  - Resource Access
-  - Configuration Change
-  key: activity_performed
-- id: A0019
-  name: Target Username
-  include:
-  - create_user
-  - read_user
-  - update_user
-  - delete_user
-  - add_to_group
-  - remove_from_group
-  - add_enrollment
-  - remove_enrollment
-  description: The target username of activity within a service provider.
-  type: string
-  examples:
-  - first.lastname
-  - first.lastname@company.com
-  key: target_username
-- id: A0020
-  name: Target Attribute Context
-  include:
-  - update_user
-  - update_group
-  - update_role
-  description: Context regarding the target attribute that was changed during a user, group, or role modification.
-  type: string
-  examples:
-  - The user's email address was changed
-  key: target_attribute_context
-- id: A0021
-  name: Target Group Name
-  include:
-  - create_group
-  - read_group
-  - update_group
-  - delete_group
-  - add_to_group
-  - remove_from_group
-  description: The target group name of activity within a service provider. A group signifies a collection of users.
-  type: string
-  examples:
-  - Administrators
-  key: target_group_name
-- id: A0022
-  name: Target Role Name
-  include:
-  - create_role
-  - read_role
-  - update_role
-  - delete_role
-  description: The target role name of activity within a service provider. A role signifies a collection of permissions.
-  type: string
-  examples:
-  - Administrators
-  key: target_role_name
-- id: A0023
-  name: Permission Name
-  include:
-  - add_permission
-  - remove_permission
-  description: The name of a permission specified within an event.
-  type: string
-  examples:
-  - Read
-  - Write
-  key: permission_name
-- id: A0024
-  name: Target Resource Name
-  include:
-  - add_permission
-  - remove_permission
-  description: The target resource of an action or operation within a service provider.
-  type: string
-  examples:
-  - Report Name
-  - API Name
-  key: target_resource_name
-- id: A0025
-  name: Enrollment Type
-  include:
-  - add_enrollment
-  - remove_enrollment
-  description: The enrollment type of MFA authentication within a service provider.
-  type: string
-  examples:
-  - Authenticator App
-  - Time-based One-time Password (TOTP)
-  key: enrollment_type
-- id: A0026
-  name: Configuration / Setting Name
-  include:
-  - create_security_configuration
-  - update_security_configuration
-  - delete_security_configuration
-  - update_integration
-  description: The name of a service setting or configuration option.
-  type: string
-  examples:
-  - Password Policy
-  - MFA Policy
-  key: configuration_setting_name
-- id: A0027
-  name: Configuration / Setting Value
-  include:
-  - create_security_configuration
-  - read_security_configuration
-  - update_security_configuration
-  - delete_security_configuration
-  description: The value of the setting or configuration that was changed.
-  type: string
-  examples:
-  - Password expiration policy was changed to 90 days
-  key: configuration_setting_value
-- id: A0028
-  name: Previous Configuration / Setting Value
-  include:
-  - update_security_configuration
-  - update_integration
-  description: The previous value of the setting or configuration that was changed.
-  type: string
-  examples:
-  - Password expiration policy was changed from 90 days to 60 days
-  key: previous_configuration_setting_value
-- id: A0029
-  name: Integration / App Name
-  include:
-  - create_integration
-  - read_integration
-  - update_integration
-  - delete_integration
-  description: The name of an integration or OAuth application.
-  type: string
-  examples:
-  - Slack
-  key: integration_app_name
-- id: A0030
-  name: Resource Name
-  include:
-  - create_resource
-  - read_resource
-  - update_resource
-  - delete_resource
-  - download_resource
-  description: The name of a resource within a service provider.
-  type: string
-  examples:
-  - Report Name
-  - API Name
-  key: resource_name
-- id: A0031
-  name: Resource Type
-  include:
-  - create_resource
-  - read_resource
-  - update_resource
-  - delete_resource
-  - download_resource
-  description: The type of resource within a service provider.
-  type: string
-  examples:
-  - Report
-  - API
-  key: resource_type
-- id: A0032
-  name: Resource Metadata
-  include:
-  - download_resource
-  description: Metadata about the resource that was created, modified, or deleted.
-  type: string
-  examples:
-  - The report was 1,000 rows and 25Mb in size
-  key: resource_metadata
-- id: A0033
-  name: Query String
-  include:
-  - query_resource
-  description: The query or search string used when querying a resource.
-  type: string
-  examples:
-  - from:user@example.com
-  - subject:quarterly report
-  key: query_string
+  - id: A0001
+    name: Timestamp
+    description: The timestamp of when the event first occurred.
+    type: string
+    examples: ['2022-11-17T06:34:18.429Z']
+    key: timestamp
+  - id: A0002
+    name: Event ID
+    description: A unique event ID to describe the event.
+    type: string
+    examples: [312b0a2d-a7a3-4529-bd61-bf3c2e2ba11d]
+    maturity: 1
+    key: event_id
+  - id: A0003
+    name: Event Code / Type
+    description: >-
+      Identification code for this event, if one exists. Some event sources use event codes to identify messages
+      unambiguously, regardless of message language or wording adjustments over time.
+    type: string
+    examples: ['8080']
+    key: event_code_or_type
+  - id: A0004
+    name: Result
+    description: Describes whether an event action succeeded or failed.
+    type: string
+    examples: [Success, Failure]
+    key: result
+  - id: A0005
+    name: Username
+    description: The username used when this event occurred.
+    type: string
+    examples: [first.lastname, first.lastname@company.com]
+    key: username
+  - id: A0006
+    name: User ID
+    description: Unique ID of the user associated with this event.
+    type: string
+    examples: [ABCDEFG123456]
+    key: user_id
+  - id: A0007
+    name: User Type / Role
+    description: The role of the user at the time of the event.
+    type: string
+    examples: [administrator, guest]
+    key: user_type_or_role
+  - id: A0008
+    name: Session ID
+    description: Unique ID of the session.
+    type: string
+    examples: [abc123def456]
+    key: session_id
+  - id: A0009
+    name: IP Address
+    description: The IP address of the source or destination. This is dependent on
+      each service provider.
+    type: string
+    examples: [192.0.0.1]
+    key: ip_address
+  - id: A0010
+    name: IP Geolocation / ASN
+    description: General IP geolocation information and unique number assigned to
+      the autonomous system.
+    type: string
+    examples: ["{'lon': -73.614830, 'lat': 45.505918}", '15169']
+    key: ip_geolocation_or_asn
+  - id: A0011
+    name: User Agent Name
+    description: Name of the user agent.
+    type: string
+    examples: [Mozilla/5.0 (Macintosh; Intel Mac OS X)]
+    key: user_agent_name
+  - id: A0012
+    name: Device/Client Type
+    description: The type of device or client used during the event.
+    type: string
+    examples: [Mobile]
+    key: device_client_type
+  - id: A0013
+    name: Failure Context
+    include: [account_login]
+    description: Additional failure context may be provided by the service.
+    type: string
+    examples: [Invalid username or password]
+    key: failure_context
+  - id: A0014
+    name: Credential Context
+    include: [account_login]
+    description: Credential context may provide more details about the credentials
+      used during the event.
+    type: string
+    examples: [Password]
+    key: credential_context
+  - id: A0015
+    name: Identity Service Provider Context
+    include: [account_login]
+    description: Identity service provider (ISP) context related to the request.
+    type: string
+    examples: [Okta Single Sign-On]
+    key: identity_service_provider_context
+  - id: A0016
+    name: Verification Method
+    include: [mfa_verification]
+    description: The method used for verification.
+    type: string
+    examples: [MFA Push]
+    key: verification_method
+  - id: A0017
+    name: Verification Flagged
+    include: [mfa_verification]
+    description: Whether or not MFA verification was flagged
+    type: string
+    examples:
+      - The user denied the verification request and flagged the notification as fraudulent.
+    key: verification_flagged
+  - id: A0018
+    name: Activity Performed
+    include: [mfa_verification]
+    description: The activity or operation that required MFA verification.
+    type: string
+    examples: [Authentication, Resource Access, Configuration Change]
+    key: activity_performed
+  - id: A0019
+    name: Target Username
+    include:
+      - create_user
+      - read_user
+      - update_user
+      - delete_user
+      - add_to_group
+      - remove_from_group
+      - add_enrollment
+      - remove_enrollment
+    description: The target username of activity within a service provider.
+    type: string
+    examples: [first.lastname, first.lastname@company.com]
+    key: target_username
+  - id: A0020
+    name: Target Attribute Context
+    include: [update_user, update_group, update_role]
+    description: Context regarding the target attribute that was changed during a
+      user, group, or role modification.
+    type: string
+    examples: [The user's email address was changed]
+    key: target_attribute_context
+  - id: A0021
+    name: Target Group Name
+    include:
+      - create_group
+      - read_group
+      - update_group
+      - delete_group
+      - add_to_group
+      - remove_from_group
+    description: The target group name of activity within a service provider. A group
+      signifies a collection of users.
+    type: string
+    examples: [Administrators]
+    key: target_group_name
+  - id: A0022
+    name: Target Role Name
+    include: [create_role, read_role, update_role, delete_role]
+    description: The target role name of activity within a service provider. A role
+      signifies a collection of permissions.
+    type: string
+    examples: [Administrators]
+    key: target_role_name
+  - id: A0023
+    name: Permission Name
+    include: [add_permission, remove_permission]
+    description: The name of a permission specified within an event.
+    type: string
+    examples: [Read, Write]
+    key: permission_name
+  - id: A0024
+    name: Target Resource Name
+    include: [add_permission, remove_permission]
+    description: The target resource of an action or operation within a service provider.
+    type: string
+    examples: [Report Name, API Name]
+    key: target_resource_name
+  - id: A0025
+    name: Enrollment Type
+    include: [add_enrollment, remove_enrollment]
+    description: The enrollment type of MFA authentication within a service provider.
+    type: string
+    examples: [Authenticator App, Time-based One-time Password (TOTP)]
+    key: enrollment_type
+  - id: A0026
+    name: Configuration / Setting Name
+    include:
+      - create_security_configuration
+      - update_security_configuration
+      - delete_security_configuration
+      - update_integration
+    description: The name of a service setting or configuration option.
+    type: string
+    examples: [Password Policy, MFA Policy]
+    key: configuration_setting_name
+  - id: A0027
+    name: Configuration / Setting Value
+    include:
+      - create_security_configuration
+      - read_security_configuration
+      - update_security_configuration
+      - delete_security_configuration
+    description: The value of the setting or configuration that was changed.
+    type: string
+    examples: [Password expiration policy was changed to 90 days]
+    key: configuration_setting_value
+  - id: A0028
+    name: Previous Configuration / Setting Value
+    include: [update_security_configuration, update_integration]
+    description: The previous value of the setting or configuration that was changed.
+    type: string
+    examples: [Password expiration policy was changed from 90 days to 60 days]
+    key: previous_configuration_setting_value
+  - id: A0029
+    name: Integration / App Name
+    include:
+      - create_integration
+      - read_integration
+      - update_integration
+      - delete_integration
+    description: The name of an integration or OAuth application.
+    type: string
+    examples: [Slack]
+    key: integration_app_name
+  - id: A0030
+    name: Resource Name
+    include:
+      - create_resource
+      - read_resource
+      - update_resource
+      - delete_resource
+      - download_resource
+    description: The name of a resource within a service provider.
+    type: string
+    examples: [Report Name, API Name]
+    key: resource_name
+  - id: A0031
+    name: Resource Type
+    include:
+      - create_resource
+      - read_resource
+      - update_resource
+      - delete_resource
+      - download_resource
+    description: The type of resource within a service provider.
+    type: string
+    examples: [Report, API]
+    key: resource_type
+  - id: A0032
+    name: Resource Metadata
+    include: [download_resource]
+    description: Metadata about the resource that was created, modified, or deleted.
+    type: string
+    examples: ['The report was 1,000 rows and 25Mb in size']
+    key: resource_metadata
+  - id: A0033
+    name: Query String
+    include: [query_resource]
+    description: The query or search string used when querying a resource.
+    type: string
+    examples: [from:user@example.com, subject:quarterly report]
+    key: query_string

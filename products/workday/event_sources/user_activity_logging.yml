@@ -5,17 +5,18 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: Workday
-  collection_sources:
-  - user_activity_logs
+  collection_sources: [user_activity_logs]
 name: User Activity Logs
-description: Workday user activity logs provide an audit trail of user activity over a certain time period.
+description: Workday user activity logs provide an audit trail of user activity over
+  a certain time period.
 references:
-- id: workday_activity_log_schema
-  name: Workday Activity Log Schema
-  url: https://doc.workday.com/admin-guide/en-us/human-capital-management/unv1636547598141.html
+  - id: workday_activity_log_schema
+    name: Workday Activity Log Schema
+    url: https://doc.workday.com/admin-guide/en-us/human-capital-management/unv1636547598141.html
 retention:
   duration: 30 days
-  comments: By default, the User Activity Logging REST API retains log entries for 30 days.
+  comments: By default, the User Activity Logging REST API retains log entries for
+    30 days.
 latency:
   duration: Near real-time
   comments: N/A
@@ -33,190 +34,190 @@ mapping_defaults:
       user_agent_name: userAgent
       device_client_type: deviceType
 mappings:
-- category: authorization
-  event_type: create_user
-  attributes:
-    target_username: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/authorization_create_user.json
-- category: authorization
-  event_type: read_user
-  attributes:
-    target_username: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/authorization_read_user.json
-- category: authorization
-  event_type: update_user
-  attributes:
-    target_username: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/authorization_update_user.json
-- category: authorization
-  event_type: create_group
-  attributes:
-    target_group_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/authorization_create_group.json
-- category: authorization
-  event_type: read_group
-  attributes:
-    target_group_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/authorization_read_group.json
-- category: authorization
-  event_type: update_group
-  attributes:
-    target_group_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/authorization_update_group.json
-- category: authorization
-  event_type: delete_group
-  attributes: {}
-  examples:
-  - type: success
-    location: ./event_examples/authorization_delete_group.json
-- category: authorization
-  event_type: add_to_group
-  attributes:
-    target_group_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/authorization_add_to_group.json
-- category: authorization
-  event_type: remove_from_group
-  attributes:
-    target_group_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/authorization_remove_from_group.json
-- category: authorization
-  event_type: read_role
-  attributes: {}
-  examples:
-  - type: success
-    location: ./event_examples/authorization_read_role.json
-- category: authorization
-  event_type: update_role
-  attributes:
-    target_role_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/authorization_update_role.json
-- category: authorization
-  event_type: add_permission
-  attributes:
-    target_resource_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/authorization_add_permission.json
-- category: authorization
-  event_type: remove_permission
-  attributes:
-    target_resource_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/authorization_remove_permission.json
-- category: authorization
-  event_type: add_enrollment
-  attributes:
-    enrollment_type: taskDisplayName
-  examples:
-  - type: success
-    location: ./event_examples/authorization_add_enrollment.json
-- category: authorization
-  event_type: remove_enrollment
-  attributes:
-    enrollment_type: taskDisplayName
-  examples:
-  - type: success
-    location: ./event_examples/authorization_remove_enrollment.json
-- category: system_audit
-  event_type: create_security_configuration
-  attributes:
-    configuration_setting_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/system_audit_create_security_configuration.json
-- category: system_audit
-  event_type: read_security_configuration
-  attributes:
-    configuration_setting_value: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/system_audit_read_security_configuration.json
-- category: system_audit
-  event_type: update_security_configuration
-  attributes:
-    configuration_setting_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/system_audit_update_security_configuration.json
-- category: system_audit
-  event_type: delete_security_configuration
-  attributes:
-    configuration_setting_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/system_audit_delete_security_configuration.json
-- category: system_audit
-  event_type: create_integration
-  attributes:
-    integration_app_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/system_audit_create_integration.json
-- category: system_audit
-  event_type: read_integration
-  attributes: {}
-  examples:
-  - type: success
-    location: ./event_examples/system_audit_read_integration.json
-- category: system_audit
-  event_type: update_integration
-  attributes:
-    integration_app_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/system_audit_update_integration.json
-- category: activity_audit
-  event_type: create_resource
-  attributes:
-    resource_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/activity_audit_create_resource.json
-- category: activity_audit
-  event_type: read_resource
-  attributes:
-    resource_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/activity_audit_read_resource.json
-- category: activity_audit
-  event_type: update_resource
-  attributes:
-    resource_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/activity_audit_update_resource.json
-- category: activity_audit
-  event_type: delete_resource
-  attributes: {}
-  examples:
-  - type: success
-    location: ./event_examples/activity_audit_delete_resource.json
-- category: activity_audit
-  event_type: download_resource
-  attributes:
-    event_code_or_type: null
-    result: taskDisplayName
-    resource_name: target.descriptor
-  examples:
-  - type: success
-    location: ./event_examples/activity_audit_delete_resource.json
+  - category: authorization
+    event_type: create_user
+    attributes:
+      target_username: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/authorization_create_user.json
+  - category: authorization
+    event_type: read_user
+    attributes:
+      target_username: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/authorization_read_user.json
+  - category: authorization
+    event_type: update_user
+    attributes:
+      target_username: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/authorization_update_user.json
+  - category: authorization
+    event_type: create_group
+    attributes:
+      target_group_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/authorization_create_group.json
+  - category: authorization
+    event_type: read_group
+    attributes:
+      target_group_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/authorization_read_group.json
+  - category: authorization
+    event_type: update_group
+    attributes:
+      target_group_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/authorization_update_group.json
+  - category: authorization
+    event_type: delete_group
+    attributes: {}
+    examples:
+      - type: success
+        location: ./event_examples/authorization_delete_group.json
+  - category: authorization
+    event_type: add_to_group
+    attributes:
+      target_group_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/authorization_add_to_group.json
+  - category: authorization
+    event_type: remove_from_group
+    attributes:
+      target_group_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/authorization_remove_from_group.json
+  - category: authorization
+    event_type: read_role
+    attributes: {}
+    examples:
+      - type: success
+        location: ./event_examples/authorization_read_role.json
+  - category: authorization
+    event_type: update_role
+    attributes:
+      target_role_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/authorization_update_role.json
+  - category: authorization
+    event_type: add_permission
+    attributes:
+      target_resource_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/authorization_add_permission.json
+  - category: authorization
+    event_type: remove_permission
+    attributes:
+      target_resource_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/authorization_remove_permission.json
+  - category: authorization
+    event_type: add_enrollment
+    attributes:
+      enrollment_type: taskDisplayName
+    examples:
+      - type: success
+        location: ./event_examples/authorization_add_enrollment.json
+  - category: authorization
+    event_type: remove_enrollment
+    attributes:
+      enrollment_type: taskDisplayName
+    examples:
+      - type: success
+        location: ./event_examples/authorization_remove_enrollment.json
+  - category: system_audit
+    event_type: create_security_configuration
+    attributes:
+      configuration_setting_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/system_audit_create_security_configuration.json
+  - category: system_audit
+    event_type: read_security_configuration
+    attributes:
+      configuration_setting_value: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/system_audit_read_security_configuration.json
+  - category: system_audit
+    event_type: update_security_configuration
+    attributes:
+      configuration_setting_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/system_audit_update_security_configuration.json
+  - category: system_audit
+    event_type: delete_security_configuration
+    attributes:
+      configuration_setting_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/system_audit_delete_security_configuration.json
+  - category: system_audit
+    event_type: create_integration
+    attributes:
+      integration_app_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/system_audit_create_integration.json
+  - category: system_audit
+    event_type: read_integration
+    attributes: {}
+    examples:
+      - type: success
+        location: ./event_examples/system_audit_read_integration.json
+  - category: system_audit
+    event_type: update_integration
+    attributes:
+      integration_app_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/system_audit_update_integration.json
+  - category: activity_audit
+    event_type: create_resource
+    attributes:
+      resource_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/activity_audit_create_resource.json
+  - category: activity_audit
+    event_type: read_resource
+    attributes:
+      resource_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/activity_audit_read_resource.json
+  - category: activity_audit
+    event_type: update_resource
+    attributes:
+      resource_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/activity_audit_update_resource.json
+  - category: activity_audit
+    event_type: delete_resource
+    attributes: {}
+    examples:
+      - type: success
+        location: ./event_examples/activity_audit_delete_resource.json
+  - category: activity_audit
+    event_type: download_resource
+    attributes:
+      event_code_or_type:
+      result: taskDisplayName
+      resource_name: target.descriptor
+    examples:
+      - type: success
+        location: ./event_examples/activity_audit_delete_resource.json

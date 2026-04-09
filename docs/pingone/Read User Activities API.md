@@ -2,14 +2,7 @@
 
 📌 **v0.0.1** · 🗄 **Retention:** Unknown · ⚡ **Latency:** Near real-time
 
-🗄 N/A
-
-
-⚡ N/A
-
-
 📜 **Licensing:** A PingOne license is required to access the Read User Activities API.
-
 
 The PingOne Read User Activities API provides near real-time, read-only access to an organization's audit activity events.
 ## References

@@ -2,14 +2,7 @@
 
 📌 **v1.0.0** · 🗄 **Retention:** System Log events are retained in Okta for a period of 90 days. · ⚡ **Latency:** Near real-time
 
-🗄 https://support.okta.com/help/s/article/Customer-Data-Retention-Policy?language=en_US
-
-
-⚡ N/A
-
-
-📜 **Licensing:** A paid Okta license is required to access the System Log API.
-
+🗄 https://support.okta.com/help/s/article/Customer-Data-Retention-Policy?language=en_US📜 **Licensing:** A paid Okta license is required to access the System Log API.
 
 The Okta System Log API provides near real-time, read-only access to an organization's system log.
 ## References

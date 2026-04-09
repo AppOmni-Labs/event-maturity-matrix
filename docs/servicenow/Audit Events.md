@@ -2,14 +2,7 @@
 
 📌 **v0.0.1** · 🗄 **Retention:** Infinite · ⚡ **Latency:** Near Real-Time
 
-🗄 Can be changed by an instance admin.
-
-
-⚡ Can vary based on system conditions and configurations.
-
-
-📜 **Licensing:** Included with ServiceNow instances.
-
+🗄 Can be changed by an instance admin.⚡ Can vary based on system conditions and configurations.📜 **Licensing:** Included with ServiceNow instances.
 
 ServiceNow audit events track changes to records in audited tables.
 ## References

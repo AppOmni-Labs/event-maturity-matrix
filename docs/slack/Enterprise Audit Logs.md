@@ -1,15 +1,8 @@
 # Slack — Enterprise Audit Logs
 
-📌 **v1.0.0** · 🗄 **Retention:** Default 90 days · ⚡ **Latency:** Near real-time
-
-🗄 Can be customized
-
-
-⚡ NA
-
+📌 **v1.0.0** · 🗄 **Retention:** 2 years · ⚡ **Latency:** Near real-time
 
 📜 **Licensing:** The Audit Logs API is only available to Slack workspaces on an Enterprise Grid plan.
-
 
 Slack enterprise audit logs that provide an audit trail of user and system activity.
 ## References

@@ -2,14 +2,7 @@
 
 📌 **v0.0.1** · 🗄 **Retention:** Unknown · ⚡ **Latency:** Near real-time
 
-🗄 N/A
-
-
-⚡ N/A
-
-
 📜 **Licensing:** A OneLogin license is required to access the Get Events API.
-
 
 The OneLogin events API provides near real-time, read-only access to an organization's activity log.
 ## References

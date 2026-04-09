@@ -5,14 +5,14 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: GitHub
-  collection_sources:
-  - audit_events
+  collection_sources: [audit_events]
 name: Audit Logs
-description: GitHub enterprise audit logs that provide an audit trail of user and system activity.
+description: GitHub enterprise audit logs that provide an audit trail of user and
+  system activity.
 references:
-- id: enterprise_event_schema
-  name: Enterprise Event Schema
-  url: https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/exporting-audit-log-activity-for-your-enterprise
+  - id: enterprise_event_schema
+    name: Enterprise Event Schema
+    url: https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/exporting-audit-log-activity-for-your-enterprise
 retention:
   duration: Infinite
   comments: Can be changed by an enterprise admin
@@ -50,191 +50,164 @@ mapping_defaults:
         ip_geolocation_or_asn: actor_location.country_code
         user_agent_name: user_agent
 mappings:
-- category: authentication
-  event_type: account_login
-  attributes:
-    username: actor
-    user_id: actor_id
-    ip_geolocation_or_asn: actor_location.country_code
-    user_agent_name: user_agent
-    credential_context: action
-    identity_service_provider_context: issuer
-  examples:
-  - type: success
-    location: ./event_examples/audit/authentication_account_login.json
-- category: authorization
-  event_type: create_group
-  attributes:
-    target_group_name:
-    - org
-    - team
-  examples:
-  - type: success
-    location: ./event_examples/audit/authorization_create_group_team.json
-- category: authorization
-  event_type: update_group
-  attributes:
-    target_group_name:
-    - org
-    - team
-  examples:
-  - type: success
-    location: ./event_examples/audit/authorization_update_group_team.json
-- category: authorization
-  event_type: delete_group
-  attributes:
-    target_group_name:
-    - org
-    - team
-  examples:
-  - type: success
-    location: ./event_examples/audit/authorization_delete_group_team.json
-- category: authorization
-  event_type: add_to_group
-  attributes:
-    target_username: user
-    target_group_name:
-    - org
-    - team
-    - repo
-  examples:
-  - type: success
-    location: ./event_examples/audit/authorization_add_to_group_org.json
-  - type: success
-    location: ./event_examples/audit/authorization_add_to_group_repo.json
-  - type: success
-    location: ./event_examples/audit/authorization_add_to_group_team.json
-- category: authorization
-  event_type: remove_from_group
-  attributes:
-    user_agent_name: null
-    target_username: user
-    target_group_name:
-    - org
-    - team
-    - repo
-  examples:
-  - type: success
-    location: ./event_examples/audit/authorization_remove_from_group_org.json
-  - type: success
-    location: ./event_examples/audit/authorization_remove_from_group_repo.json
-  - type: success
-    location: ./event_examples/audit/authorization_remove_from_group_team.json
-- category: authorization
-  event_type: add_permission
-  attributes:
-    permission_name: new_repo_permission
-    target_resource_name:
-    - org
-    - team
-    - repo
-  examples:
-  - type: success
-    location: ./event_examples/audit/authorization_add_permission_team.json
-- category: authorization
-  event_type: remove_permission
-  attributes:
-    permission_name: old_repo_permission
-    target_resource_name:
-    - org
-    - team
-    - repo
-  examples:
-  - type: success
-    location: ./event_examples/audit/authorization_remove_permission_team.json
-- category: system_audit
-  event_type: create_security_configuration
-  attributes:
-    configuration_setting_name: action
-    configuration_setting_value: action
-  examples:
-  - type: success
-    location: ./event_examples/audit/system_audit_create_security_configuration_forking.json
-- category: system_audit
-  event_type: update_security_configuration
-  attributes:
-    configuration_setting_name: name
-    configuration_setting_value: config
-    previous_configuration_setting_value: config_was
-  examples:
-  - type: success
-    location: ./event_examples/audit/system_audit_update_security_configuration_hook_config.json
-  - type: success
-    location: ./event_examples/audit/system_audit_update_security_configuration_merge_setting.json
-- category: system_audit
-  event_type: create_integration
-  attributes:
-    integration_app_name: integration
-  examples:
-  - type: success
-    location: ./event_examples/audit/system_audit_create_integration.json
-- category: system_audit
-  event_type: delete_integration
-  attributes:
-    integration_app_name: integration
-  examples:
-  - type: success
-    location: ./event_examples/audit/system_audit_delete_integration.json
-- category: activity_audit
-  event_type: create_resource
-  attributes:
-    resource_name:
-    - org
-    - business
-    - repo
-    resource_type: action
-  examples:
-  - type: success
-    location: ./event_examples/audit/activity_audit_create_resource_hook.json
-  - type: success
-    location: ./event_examples/audit/activity_audit_create_resource_pull_request.json
-  - type: success
-    location: ./event_examples/audit/activity_audit_create_resource_pull_request_review.json
-  - type: success
-    location: ./event_examples/audit/activity_audit_create_resource_pull_request_review_comment.json
-  - type: success
-    location: ./event_examples/audit/activity_audit_create_resource_repo.json
-  - type: success
-    location: ./event_examples/audit/activity_audit_create_resource_secret.json
-  - type: success
-    location: ./event_examples/audit/activity_audit_create_resource_workflow.json
-- category: activity_audit
-  event_type: update_resource
-  attributes:
-    resource_name:
-    - org
-    - business
-    - repo
-    resource_type: action
-  examples:
-  - type: success
-    location: ./event_examples/audit/activity_audit_update_resource_pull_request.json
-  - type: success
-    location: ./event_examples/audit/activity_audit_update_resource_pull_request_review_comment.json
-  - type: success
-    location: ./event_examples/audit/activity_audit_update_resource_repo.json
-- category: activity_audit
-  event_type: delete_resource
-  attributes:
-    resource_name:
-    - org
-    - business
-    - repo
-    resource_type: action
-  examples:
-  - type: success
-    location: ./event_examples/audit/activity_audit_delete_resource_hook.json
-  - type: success
-    location: ./event_examples/audit/activity_audit_delete_resource_pull_request_review.json
-  - type: success
-    location: ./event_examples/audit/activity_audit_delete_resource_pull_request_review_comment.json
-  - type: success
-    location: ./event_examples/audit/activity_audit_delete_resource_repo.json
-- category: activity_audit
-  event_type: download_resource
-  attributes:
-    resource_name: repo
-    resource_type: action
-  examples:
-  - type: success
-    location: ./event_examples/audit/activity_audit_download_resource_repo.json
+  - category: authentication
+    event_type: account_login
+    attributes:
+      username: actor
+      user_id: actor_id
+      ip_geolocation_or_asn: actor_location.country_code
+      user_agent_name: user_agent
+      credential_context: action
+      identity_service_provider_context: issuer
+    examples:
+      - type: success
+        location: ./event_examples/audit/authentication_account_login.json
+  - category: authorization
+    event_type: create_group
+    attributes:
+      target_group_name: [org, team]
+    examples:
+      - type: success
+        location: ./event_examples/audit/authorization_create_group_team.json
+  - category: authorization
+    event_type: update_group
+    attributes:
+      target_group_name: [org, team]
+    examples:
+      - type: success
+        location: ./event_examples/audit/authorization_update_group_team.json
+  - category: authorization
+    event_type: delete_group
+    attributes:
+      target_group_name: [org, team]
+    examples:
+      - type: success
+        location: ./event_examples/audit/authorization_delete_group_team.json
+  - category: authorization
+    event_type: add_to_group
+    attributes:
+      target_username: user
+      target_group_name: [org, team, repo]
+    examples:
+      - type: success
+        location: ./event_examples/audit/authorization_add_to_group_org.json
+      - type: success
+        location: ./event_examples/audit/authorization_add_to_group_repo.json
+      - type: success
+        location: ./event_examples/audit/authorization_add_to_group_team.json
+  - category: authorization
+    event_type: remove_from_group
+    attributes:
+      user_agent_name:
+      target_username: user
+      target_group_name: [org, team, repo]
+    examples:
+      - type: success
+        location: ./event_examples/audit/authorization_remove_from_group_org.json
+      - type: success
+        location: ./event_examples/audit/authorization_remove_from_group_repo.json
+      - type: success
+        location: ./event_examples/audit/authorization_remove_from_group_team.json
+  - category: authorization
+    event_type: add_permission
+    attributes:
+      permission_name: new_repo_permission
+      target_resource_name: [org, team, repo]
+    examples:
+      - type: success
+        location: ./event_examples/audit/authorization_add_permission_team.json
+  - category: authorization
+    event_type: remove_permission
+    attributes:
+      permission_name: old_repo_permission
+      target_resource_name: [org, team, repo]
+    examples:
+      - type: success
+        location: ./event_examples/audit/authorization_remove_permission_team.json
+  - category: system_audit
+    event_type: create_security_configuration
+    attributes:
+      configuration_setting_name: action
+      configuration_setting_value: action
+    examples:
+      - type: success
+        location: ./event_examples/audit/system_audit_create_security_configuration_forking.json
+  - category: system_audit
+    event_type: update_security_configuration
+    attributes:
+      configuration_setting_name: name
+      configuration_setting_value: config
+      previous_configuration_setting_value: config_was
+    examples:
+      - type: success
+        location: ./event_examples/audit/system_audit_update_security_configuration_hook_config.json
+      - type: success
+        location: ./event_examples/audit/system_audit_update_security_configuration_merge_setting.json
+  - category: system_audit
+    event_type: create_integration
+    attributes:
+      integration_app_name: integration
+    examples:
+      - type: success
+        location: ./event_examples/audit/system_audit_create_integration.json
+  - category: system_audit
+    event_type: delete_integration
+    attributes:
+      integration_app_name: integration
+    examples:
+      - type: success
+        location: ./event_examples/audit/system_audit_delete_integration.json
+  - category: activity_audit
+    event_type: create_resource
+    attributes:
+      resource_name: [org, business, repo]
+      resource_type: action
+    examples:
+      - type: success
+        location: ./event_examples/audit/activity_audit_create_resource_hook.json
+      - type: success
+        location: ./event_examples/audit/activity_audit_create_resource_pull_request.json
+      - type: success
+        location: ./event_examples/audit/activity_audit_create_resource_pull_request_review.json
+      - type: success
+        location: ./event_examples/audit/activity_audit_create_resource_pull_request_review_comment.json
+      - type: success
+        location: ./event_examples/audit/activity_audit_create_resource_repo.json
+      - type: success
+        location: ./event_examples/audit/activity_audit_create_resource_secret.json
+      - type: success
+        location: ./event_examples/audit/activity_audit_create_resource_workflow.json
+  - category: activity_audit
+    event_type: update_resource
+    attributes:
+      resource_name: [org, business, repo]
+      resource_type: action
+    examples:
+      - type: success
+        location: ./event_examples/audit/activity_audit_update_resource_pull_request.json
+      - type: success
+        location: ./event_examples/audit/activity_audit_update_resource_pull_request_review_comment.json
+      - type: success
+        location: ./event_examples/audit/activity_audit_update_resource_repo.json
+  - category: activity_audit
+    event_type: delete_resource
+    attributes:
+      resource_name: [org, business, repo]
+      resource_type: action
+    examples:
+      - type: success
+        location: ./event_examples/audit/activity_audit_delete_resource_hook.json
+      - type: success
+        location: ./event_examples/audit/activity_audit_delete_resource_pull_request_review.json
+      - type: success
+        location: ./event_examples/audit/activity_audit_delete_resource_pull_request_review_comment.json
+      - type: success
+        location: ./event_examples/audit/activity_audit_delete_resource_repo.json
+  - category: activity_audit
+    event_type: download_resource
+    attributes:
+      resource_name: repo
+      resource_type: action
+    examples:
+      - type: success
+        location: ./event_examples/audit/activity_audit_download_resource_repo.json

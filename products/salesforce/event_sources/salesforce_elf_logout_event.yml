@@ -5,37 +5,37 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: Salesforce
-  collection_sources:
-  - rest_api
-  - soap_api
+  collection_sources: [rest_api, soap_api]
 name: EventLogFile Logout Event
 description: This event source is to track logout events in Salesforce.
 references:
-- id: logout_event
-  name: EventLogFile Logout Event
-  url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_logout.htm
+  - id: logout_event
+    name: EventLogFile Logout Event
+    url: https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_eventlogfile_logout.htm
 retention:
   duration: 1 Day
-  comments: Available for free with 1 day retention, otherwise requires an add-on subscription for 30 day retention.
+  comments: Available for free with 1 day retention, otherwise requires an add-on
+    subscription for 30 day retention.
 latency:
   duration: 3 Hours
-  comments: Event log files are accessible via hourly and 24 hour log files. It can take between 3–6 hours from the time of
-    the event to be available in the hourly log file.
+  comments: Event log files are accessible via hourly and 24 hour log files. It can
+    take between 3–6 hours from the time of the event to be available in the hourly
+    log file.
 licensing:
-  comments: Available for free with 1 day retention, otherwise requires Salesforce Shield or a Salesforce Event Monitoring
-    add-on subscription.
+  comments: Available for free with 1 day retention, otherwise requires Salesforce
+    Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-- category: authentication
-  event_type: account_logout
-  attributes:
-    timestamp: TIMESTAMP_DERIVED
-    event_code_or_type: EVENT_TYPE
-    user_id: USER_ID
-    user_type_or_role: USER_TYPE
-    session_id: LOGIN_KEY
-    ip_address: CLIENT_IP
-    user_agent_name: BROWSER_TYPE
-    device_client_type: PLATFORM_TYPE
-  examples:
-  - type: success
-    location: ./event_examples/salesforce_elf_logout_event/authentication_account_logout_elf.json
+  - category: authentication
+    event_type: account_logout
+    attributes:
+      timestamp: TIMESTAMP_DERIVED
+      event_code_or_type: EVENT_TYPE
+      user_id: USER_ID
+      user_type_or_role: USER_TYPE
+      session_id: LOGIN_KEY
+      ip_address: CLIENT_IP
+      user_agent_name: BROWSER_TYPE
+      device_client_type: PLATFORM_TYPE
+    examples:
+      - type: success
+        location: ./event_examples/salesforce_elf_logout_event/authentication_account_logout_elf.json

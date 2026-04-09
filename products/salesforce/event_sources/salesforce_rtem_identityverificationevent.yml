@@ -5,14 +5,13 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: Salesforce
-  collection_sources:
-  - streaming_api
+  collection_sources: [streaming_api]
 name: Real-Time Event Monitoring IdentityVerificationEvent
 description: Tracks user identity verification events in a Salesforce org.
 references:
-- id: identity_verification_event
-  name: IdentityVerificationEvent
-  url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_identityverificationevent.htm
+  - id: identity_verification_event
+    name: IdentityVerificationEvent
+    url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_identityverificationevent.htm
 retention:
   duration: 10 Years
   comments: N/A
@@ -22,25 +21,25 @@ latency:
 licensing:
   comments: Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-- category: authentication
-  event_type: mfa_verification
-  attributes:
-    timestamp: EventDate
-    event_id: EventIdentifier
-    event_code_or_type: data.payload.attributes.type
-    result: Status
-    username: Username
-    user_id: UserId
-    session_id: LoginKey
-    ip_address: SourceIp
-    ip_geolocation_or_asn: City
-    verification_method: VerificationMethod
-    verification_flagged: Status
-    activity_performed: Activity
-  examples:
-  - type: success
-    location: ./event_examples/salesforce_rtem_identityverificationevent/authentication_mfa_verification.json
-  - type: inprogress
-    location: ./event_examples/salesforce_rtem_identityverificationevent/authentication_mfa_verification_inprogress.json
-  - type: failure
-    location: ./event_examples/salesforce_rtem_identityverificationevent/authentication_mfa_verification_failure.json
+  - category: authentication
+    event_type: mfa_verification
+    attributes:
+      timestamp: EventDate
+      event_id: EventIdentifier
+      event_code_or_type: data.payload.attributes.type
+      result: Status
+      username: Username
+      user_id: UserId
+      session_id: LoginKey
+      ip_address: SourceIp
+      ip_geolocation_or_asn: City
+      verification_method: VerificationMethod
+      verification_flagged: Status
+      activity_performed: Activity
+    examples:
+      - type: success
+        location: ./event_examples/salesforce_rtem_identityverificationevent/authentication_mfa_verification.json
+      - type: inprogress
+        location: ./event_examples/salesforce_rtem_identityverificationevent/authentication_mfa_verification_inprogress.json
+      - type: failure
+        location: ./event_examples/salesforce_rtem_identityverificationevent/authentication_mfa_verification_failure.json

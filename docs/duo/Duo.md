@@ -1,7 +1,7 @@
 # Duo (1.0.0)
 
 Duo is a cloud-based security platform which provides multi-factor authentication, identity and device verification, and single sign-on to company resources.
-  
+
 The Duo Admin API provides programmatic access to the Duo platform. The Admin API can be used to to manage users, tokens, bypass codes, and retrieve audit logs.
 
 ## Collections

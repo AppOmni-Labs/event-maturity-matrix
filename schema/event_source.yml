@@ -100,11 +100,10 @@ properties:
     type: ["null", "object"]
   examples:
     description: References one or more example files (relative path expected) containing a JSON response from the defined service.
-    type: ["array", "null"] # This means it is NOT required.
+    type: ["array", "null"]  # This means it is NOT required.
     items:
       type: string
-    uniqueItems: true
-     # pattern: "file:file2.json"
+    uniqueItems: true  # pattern: "file:file2.json"
 additionalProperties: false
 required:
   - entity_name

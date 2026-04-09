@@ -5,14 +5,14 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: Salesforce
-  collection_sources:
-  - streaming_api
+  collection_sources: [streaming_api]
 name: Real-Time Event Monitoring UriEventStream
-description: Detects when a user creates, accesses, updates, or deletes a record in Salesforce Classic only.
+description: Detects when a user creates, accesses, updates, or deletes a record in
+  Salesforce Classic only.
 references:
-- id: uri_event_stream
-  name: UriEventStream
-  url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_urieventstream.htm
+  - id: uri_event_stream
+    name: UriEventStream
+    url: https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_urieventstream.htm
 retention:
   duration: 6 Months
   comments: N/A
@@ -22,71 +22,71 @@ latency:
 licensing:
   comments: Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 mappings:
-- category: activity_audit
-  event_type: create_resource
-  attributes:
-    timestamp: EventDate
-    event_id: EventIdentifier
-    event_code_or_type: Operation
-    result: OperationStatus
-    username: Username
-    user_id: UserId
-    user_type_or_role: UserType
-    session_id: SessionKey
-    ip_address: SourceIp
-    resource_name: Name
-    resource_type: QueriedEntities
-  examples:
-  - type: create
-    location: ./event_examples/salesforce_rtem_urieventstream/activity_audit_create_resource_urieventstream.json
-- category: activity_audit
-  event_type: read_resource
-  attributes:
-    timestamp: EventDate
-    event_id: EventIdentifier
-    event_code_or_type: Operation
-    result: OperationStatus
-    username: Username
-    user_id: UserId
-    user_type_or_role: UserType
-    session_id: SessionKey
-    ip_address: SourceIp
-    resource_name: Name
-    resource_type: QueriedEntities
-  examples:
-  - type: read
-    location: ./event_examples/salesforce_rtem_urieventstream/activity_audit_read_resource_urieventstream.json
-- category: activity_audit
-  event_type: update_resource
-  attributes:
-    timestamp: EventDate
-    event_id: EventIdentifier
-    event_code_or_type: Operation
-    result: OperationStatus
-    username: Username
-    user_id: UserId
-    user_type_or_role: UserType
-    session_id: SessionKey
-    ip_address: SourceIp
-    resource_name: Name
-    resource_type: QueriedEntities
-  examples:
-  - type: update
-    location: ./event_examples/salesforce_rtem_urieventstream/activity_audit_update_resource_urieventstream.json
-- category: activity_audit
-  event_type: delete_resource
-  attributes:
-    timestamp: EventDate
-    event_id: EventIdentifier
-    event_code_or_type: Operation
-    result: OperationStatus
-    username: Username
-    user_id: UserId
-    user_type_or_role: UserType
-    session_id: SessionKey
-    ip_address: SourceIp
-    resource_name: Name
-    resource_type: QueriedEntities
-  examples:
-  - type: delete
-    location: ./event_examples/salesforce_rtem_urieventstream/activity_audit_delete_resource_urieventstream.json
+  - category: activity_audit
+    event_type: create_resource
+    attributes:
+      timestamp: EventDate
+      event_id: EventIdentifier
+      event_code_or_type: Operation
+      result: OperationStatus
+      username: Username
+      user_id: UserId
+      user_type_or_role: UserType
+      session_id: SessionKey
+      ip_address: SourceIp
+      resource_name: Name
+      resource_type: QueriedEntities
+    examples:
+      - type: create
+        location: ./event_examples/salesforce_rtem_urieventstream/activity_audit_create_resource_urieventstream.json
+  - category: activity_audit
+    event_type: read_resource
+    attributes:
+      timestamp: EventDate
+      event_id: EventIdentifier
+      event_code_or_type: Operation
+      result: OperationStatus
+      username: Username
+      user_id: UserId
+      user_type_or_role: UserType
+      session_id: SessionKey
+      ip_address: SourceIp
+      resource_name: Name
+      resource_type: QueriedEntities
+    examples:
+      - type: read
+        location: ./event_examples/salesforce_rtem_urieventstream/activity_audit_read_resource_urieventstream.json
+  - category: activity_audit
+    event_type: update_resource
+    attributes:
+      timestamp: EventDate
+      event_id: EventIdentifier
+      event_code_or_type: Operation
+      result: OperationStatus
+      username: Username
+      user_id: UserId
+      user_type_or_role: UserType
+      session_id: SessionKey
+      ip_address: SourceIp
+      resource_name: Name
+      resource_type: QueriedEntities
+    examples:
+      - type: update
+        location: ./event_examples/salesforce_rtem_urieventstream/activity_audit_update_resource_urieventstream.json
+  - category: activity_audit
+    event_type: delete_resource
+    attributes:
+      timestamp: EventDate
+      event_id: EventIdentifier
+      event_code_or_type: Operation
+      result: OperationStatus
+      username: Username
+      user_id: UserId
+      user_type_or_role: UserType
+      session_id: SessionKey
+      ip_address: SourceIp
+      resource_name: Name
+      resource_type: QueriedEntities
+    examples:
+      - type: delete
+        location: ./event_examples/salesforce_rtem_urieventstream/activity_audit_delete_resource_urieventstream.json

@@ -2,14 +2,7 @@
 
 📌 **v1.0.0** · 🗄 **Retention:** 10 Years · ⚡ **Latency:** Real-Time
 
-🗄 N/A
-
-
-⚡ N/A
-
-
 📜 **Licensing:** Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
-
 
 Tracks login activity of users who log in to Salesforce.
 ## References
