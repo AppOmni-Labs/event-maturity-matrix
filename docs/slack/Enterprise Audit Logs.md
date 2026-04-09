@@ -2,7 +2,7 @@
 
 📌 **v1.0.0** · 🗄 **Retention:** 2 years · ⚡ **Latency:** Near real-time
 
-🗄 NA⚡ NA📜 **Licensing:** The Audit Logs API is only available to Slack workspaces on an Enterprise Grid plan.
+📜 **Licensing:** The Audit Logs API is only available to Slack workspaces on an Enterprise Grid plan.
 
 Slack enterprise audit logs that provide an audit trail of user and system activity.
 ## References
