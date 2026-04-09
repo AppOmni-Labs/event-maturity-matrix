@@ -8,7 +8,10 @@
 ⚡ Service dependant - see https://support.google.com/a/answer/7061566?hl=en
 
 
-📜 **Licensing:** Admin logs are available for all Google Workspace plans. Drive audit logs and Device events may not be available as these are not available for the Business Starter plan. Additional configuration is required to get the full set of monitoring capabilities for Devices.
+📜 **Licensing:** Admin logs are available for all Google Workspace plans. Drive audit logs and Device events may not be available as these are not available for the Business Starter plan.
+
+Additional configuration is required to get the full set of monitoring capabilities for Devices.
+
 
 
 The activity audit log provides log events for actions occurring with your Google Workspace deployment.

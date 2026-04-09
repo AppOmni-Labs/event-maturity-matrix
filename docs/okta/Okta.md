@@ -1,7 +1,9 @@
 # Okta (1.0.0)
 
 Okta is a cloud-based identity and access management (IAM) platform that provides centralized authentication, management of user identities, and access control to applications and data.
+
 The Okta System Log records events related to an organization, such as user logins, password changes, and application access. The System Log can be used to understand platform and user activity,  troubleshoot problems, and investigate security incidents.
+
 The Okta System Log API is a RESTful API that allows an organization to programmatically access the Okta System Log. The API provides a way to retrieve, filter, and export events.
 
 ## Collections

@@ -8,7 +8,10 @@
 ⚡ Microsoft does not provide a specific audit logging latency SLA, reference https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
 
 
-📜 **Licensing:** Standard and Premium audit licenses are available, with log availability and retention dependent on the license level. For more information, see https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
+📜 **Licensing:** Standard and Premium audit licenses are available, with log availability and retention dependent on the license level.
+
+For more information, see https://learn.microsoft.com/en-us/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal
+
 
 
 Includes workloads not included in other audit log types.

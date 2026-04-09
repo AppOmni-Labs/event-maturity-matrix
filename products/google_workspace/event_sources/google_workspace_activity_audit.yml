@@ -17,10 +17,10 @@ latency:
   duration: Near real time up to a couple hours
   comments: Service dependant - see https://support.google.com/a/answer/7061566?hl=en
 licensing:
-  comments: Admin logs are available for all Google Workspace plans. Drive audit logs
-    and Device events may not be available as these are not available for the Business
-    Starter plan. Additional configuration is required to get the full set of monitoring
-    capabilities for Devices.
+  comments: |
+    Admin logs are available for all Google Workspace plans. Drive audit logs and Device events may not be available as these are not available for the Business Starter plan.
+
+    Additional configuration is required to get the full set of monitoring capabilities for Devices.
 mapping_defaults:
   source:
     attributes:

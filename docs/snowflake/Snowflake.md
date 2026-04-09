@@ -1,6 +1,8 @@
 # Snowflake (1.0.0)
 
-Snowflake is a cloud-based Software as a Service (SaaS) platform that provides data warehousing, data lake, data sharing, and data integration services to customers. It stores a wide variety of data types, including structured and semi-structured data, enabling organizations to perform complex data analytics and gain insights from their data.
+Snowflake is a cloud-based Software as a Service (SaaS) platform that provides data warehousing, data lake, data sharing, and data integration services to customers.
+
+It stores a wide variety of data types, including structured and semi-structured data, enabling organizations to perform complex data analytics and gain insights from their data.
 
 ## Collections
 

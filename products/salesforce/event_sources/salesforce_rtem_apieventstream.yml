@@ -7,8 +7,10 @@ product:
   name: Salesforce
   collection_sources: [streaming_api]
 name: Real-Time Event Monitoring ApiEventStream
-description: Tracks the user-initiated read-only API calls "query()", "queryMore()",
-  and "count()". Captures API requests through SOAP API and Bulk API.
+description: |
+  Tracks the user-initiated read-only API calls "query()", "queryMore()", and "count()".
+
+  Captures API requests through SOAP API and Bulk API.
 references:
   - id: api_event_stream
     name: ApiEventStream

@@ -2,6 +2,7 @@
 
 Slack is a cloud-based collaboration platform that facilitates communication between individuals and groups
 through channels, direct messaging, file sharing, and integrations with third-party applications.
+
 The Slack Audit Logs API allows organizations to access and retrieve audit logs related to user activity and security events within their Slack workspaces.
 
 ## Collections

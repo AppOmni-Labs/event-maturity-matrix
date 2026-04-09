@@ -11,7 +11,10 @@
 📜 **Licensing:** Requires Salesforce Shield or a Salesforce Event Monitoring add-on subscription.
 
 
-Tracks the user-initiated read-only API calls "query()", "queryMore()", and "count()". Captures API requests through SOAP API and Bulk API.
+Tracks the user-initiated read-only API calls "query()", "queryMore()", and "count()".
+
+Captures API requests through SOAP API and Bulk API.
+
 ## References
 * [ApiEventStream](https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/sforce_api_objects_apieventstream.htm)
 ## Field mappings
