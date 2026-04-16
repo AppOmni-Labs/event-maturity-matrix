@@ -121,8 +121,8 @@
         "event_code_or_type": "action_type",
         "event_id": "log_id",
         "ip_address": "action_data.user_ip",
-        "resource_name": "service_name",
-        "resource_type": "service_type",
+        "resource_name": "action_data.policy_name",
+        "resource_type": "action_type",
         "timestamp": "action_at",
         "user_agent_name": "action_data.user_agent",
         "user_id": "user_id",
@@ -135,8 +135,8 @@
       "attributes": {
         "event_code_or_type": "action_type",
         "event_id": "log_id",
-        "resource_name": "service_name",
-        "resource_type": "service_type",
+        "resource_name": "action_data.eventsource_name",
+        "resource_type": "action_type",
         "timestamp": "action_at",
         "user_id": "user_id",
         "username": "action_data.user_username"

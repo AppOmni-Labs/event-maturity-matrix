@@ -26,12 +26,3 @@ Audit logs are delivered to all Threat Detection event sinks.
 ### Event Sink Documentation (event_sink_documentation) Reference
 
 Threat Detection Event Sink DocumentationURL Reference: [https://appomni.com/](https://appomni.com/)
-
-
-## Scheduled Reports (scheduled_reports) Collection
-
-Create a scheduled report of type "AppOmni Audit Logs" to download audit logs.
-
-### Scheduled Reports (scheduled_reports_documentation) Reference
-
-Scheduled Reports Event Sink DocumentationURL Reference: [https://appomni.com/](https://appomni.com/)

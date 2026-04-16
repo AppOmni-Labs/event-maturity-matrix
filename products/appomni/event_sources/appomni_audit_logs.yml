@@ -5,7 +5,7 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: AppOmni
-  collection_sources: [audit_logs_api, event_sink, scheduled_reports]
+  collection_sources: [audit_logs_api, event_sink]
 name: Audit Logs
 description: AppOmni audit logs that provide a record of user activity.
 references:
@@ -96,7 +96,7 @@ mappings:
       target_username: action_data.target_user_username
     examples:
       - type: success
-        location: ./event_examples/authorization_add_enrollment_totp_json.json
+        location: ./event_examples/authorization_add_enrollment_totp.json
   - category: authorization
     event_type: remove_enrollment
     attributes:
@@ -119,19 +119,19 @@ mappings:
     attributes:
       ip_address: action_data.user_ip
       user_agent_name: action_data.user_agent
-      resource_name: service_name
-      resource_type: service_type
+      resource_name: action_data.policy_name
+      resource_type: action_type
     examples:
       - type: success
         location: ./event_examples/activity_audit_create_resource_policy.json
   - category: activity_audit
     event_type: update_resource
     attributes:
-      resource_name: service_name
-      resource_type: service_type
+      resource_name: action_data.eventsource_name
+      resource_type: action_type
     examples:
       - type: success
-        location: ./event_examples/activity_audit_update_resource_service.json
+        location: ./event_examples/activity_audit_update_resource_event_source.json
   - category: activity_audit
     event_type: delete_resource
     attributes:

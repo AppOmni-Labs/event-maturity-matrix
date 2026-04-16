@@ -1,0 +1,19 @@
+{
+    "action_at": "2026-04-16T09:17:48.681362+00:00",
+    "action_data":
+    {
+        "eventsource_dataset": "okta_syslog",
+        "eventsource_id": "1c38199c-a249-4e9c-b11c-c4a2637054f0",
+        "eventsource_name": "AppOmni - okta_syslog",
+        "eventsource_type": "pull",
+        "md_kind": "core.aoaudit.auditdata",
+        "md_version": 2,
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+        "user_ip": "198.51.100.1",
+        "user_username": "john@example.com"
+    },
+    "action_type": "event_source_updated",
+    "log_id": "1a944a69-3503-4705-ac57-4a14c57431dc",
+    "org_id": 12,
+    "user_id": 3456
+}

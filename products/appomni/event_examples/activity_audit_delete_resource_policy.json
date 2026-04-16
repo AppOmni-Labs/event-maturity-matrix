@@ -12,7 +12,7 @@
     },
     "action_type": "policy_deleted",
     "log_id": "d4b105e8-d29b-436e-947e-52a6be5f58de",
-    "org_id": 176,
+    "org_id": 17,
     "service_type": "sfdc",
     "user_id": 3187
 }

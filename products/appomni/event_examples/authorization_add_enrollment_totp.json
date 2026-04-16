@@ -1,19 +1,18 @@
 {
-    "action_at": "2026-02-23T00:36:11.547662+00:00",
+    "action_at": "2026-03-17T21:15:35.154828+00:00",
     "action_data":
     {
+        "detail_str": "TOTP",
         "md_kind": "core.aoaudit.auditdata",
         "md_version": 1,
-        "policy_id": 738765,
-        "policy_name": "test-policy-Box-Functional",
+        "target_user_id": 98765,
+        "target_user_username": "alice@example.com",
         "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
         "user_ip": "198.51.100.1",
         "user_username": "alice@example.com"
     },
-    "action_type": "policy_created",
-    "log_id": "2679bd8f-d94f-4293-9959-878045c668cd",
-    "org_id": 12,
-    "policy_id": 735432,
-    "service_type": "box",
-    "user_id": 34
+    "action_type": "user_mfa_enabled",
+    "log_id": "6dc9e1fb-b865-3e01-8ced-3f4cebcc95bd",
+    "org_id": 10,
+    "user_id": 98765
 }
