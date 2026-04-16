@@ -9,7 +9,7 @@
         "user_username": "jane@example.com"
     },
     "action_type": "user_login_google",
-    "log_id": "a53b195a-f855-49c1-8640-bb77f1497579",
+    "log_id": "a53b195a-f845-49c1-8640-bb77f1497579",
     "org_id": 123,
     "user_id": 5432
 }

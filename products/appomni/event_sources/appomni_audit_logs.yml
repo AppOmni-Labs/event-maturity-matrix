@@ -5,7 +5,7 @@ entity_name: event_source
 version: 1.0.0
 product:
   name: AppOmni
-  collection_sources: [audit_logs_api, event_sink, scheduled_reports]
+  collection_sources: [audit_logs_api, event_sink]
 name: Audit Logs
 description: AppOmni audit logs that provide a record of user activity.
 references:
@@ -131,7 +131,7 @@ mappings:
       resource_type: service_type
     examples:
       - type: success
-        location: ./event_examples/activity_audit_update_resource_service.json
+        location: ./event_examples/activity_audit_update_resource_event_source.json
   - category: activity_audit
     event_type: delete_resource
     attributes:

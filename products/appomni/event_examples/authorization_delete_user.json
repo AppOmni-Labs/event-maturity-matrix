@@ -7,7 +7,7 @@
         "target_user_id": 457,
         "target_user_username": "bob@example.com",
         "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
-        "user_ip": "198.51.100.1",
+        "user_ip": "198.51.100.2",
         "user_username": "alice"
     },
     "action_type": "user_disabled",

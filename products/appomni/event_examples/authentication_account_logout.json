@@ -5,7 +5,7 @@
         "md_kind": "core.aoaudit.auditdata",
         "md_version": 1,
         "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
-        "user_ip": "198.51.100.3",
+        "user_ip": "198.51.100.2",
         "user_username": "bob@example.com"
     },
     "action_type": "user_logout",

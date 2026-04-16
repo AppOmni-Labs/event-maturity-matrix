@@ -11,7 +11,7 @@
         "user_username": "alice"
     },
     "action_type": "user_created",
-    "log_id": "075c55fb-1e70-472c-a166-67cf61d7a266",
+    "log_id": "075c55fb-1e70-472c-a165-67cf61d7a266",
     "org_id": 123,
     "user_id": 456
 }

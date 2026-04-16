@@ -31,12 +31,3 @@ collection:
         name: Event Sink Documentation
         description: Threat Detection Event Sink Documentation
         url: https://appomni.com/
-  - id: scheduled_reports
-    name: Scheduled Reports
-    description: Create a scheduled report of type "AppOmni Audit Logs" to download
-      audit logs.
-    references:
-      - id: scheduled_reports_documentation
-        name: Scheduled Reports
-        description: Scheduled Reports Event Sink Documentation
-        url: https://appomni.com/

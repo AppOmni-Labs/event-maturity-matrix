@@ -12,7 +12,7 @@
         "user_username": "alice@example.com"
     },
     "action_type": "user_mfa_enabled",
-    "log_id": "6dc9e1fb-b865-4e01-8ced-3f4cebcc95bd",
+    "log_id": "6dc9e1fb-b865-3e01-8ced-3f4cebcc95bd",
     "org_id": 10,
     "user_id": 98765
 }
