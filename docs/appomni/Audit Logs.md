@@ -86,15 +86,15 @@ AppOmni audit logs that provide a record of user activity.
 | Activity Audit | Create Resource | User ID | user_id |
 | Activity Audit | Create Resource | IP Address | action_data.user_ip |
 | Activity Audit | Create Resource | User Agent Name | action_data.user_agent |
-| Activity Audit | Create Resource | Resource Name | service_name |
-| Activity Audit | Create Resource | Resource Type | service_type |
+| Activity Audit | Create Resource | Resource Name | action_data.policy_name |
+| Activity Audit | Create Resource | Resource Type | action_type |
 | Activity Audit | Update Resource | Timestamp | action_at |
 | Activity Audit | Update Resource | Event ID | log_id |
 | Activity Audit | Update Resource | Event Code / Type | action_type |
 | Activity Audit | Update Resource | Username | action_data.user_username |
 | Activity Audit | Update Resource | User ID | user_id |
-| Activity Audit | Update Resource | Resource Name | service_name |
-| Activity Audit | Update Resource | Resource Type | service_type |
+| Activity Audit | Update Resource | Resource Name | action_data.eventsource_name |
+| Activity Audit | Update Resource | Resource Type | action_type |
 | Activity Audit | Delete Resource | Timestamp | action_at |
 | Activity Audit | Delete Resource | Event ID | log_id |
 | Activity Audit | Delete Resource | Event Code / Type | action_type |
@@ -115,7 +115,7 @@ AppOmni audit logs that provide a record of user activity.
 | Authentication | MFA Verification | [challenge](/products/appomni/event_examples/authentication_account_login_challenge_totp.json) | Timestamp=2026-03-17T21:13:50.353268+00:00; Event ID=f382d720-1f5d-4d88-90db-65cc8eba1be8; Event Code / Type=user_mfa_totp_challenge; Username=jane@example.com; User ID=5432 |
 | Authorization | Create User | [success](/products/appomni/event_examples/authorization_create_user.json) | Timestamp=2026-04-09T12:33:22.843747+00:00; Event ID=075c55fb-1e70-472c-a165-67cf61d7a266; Event Code / Type=user_created; Username=alice; User ID=456 |
 | Authorization | Delete User | [success](/products/appomni/event_examples/authorization_delete_user.json) | Timestamp=2026-04-12T12:21:01.625083+00:00; Event ID=9ec8c688-5de1-4910-8c0b-2304838ad01f; Event Code / Type=user_disabled; Username=alice; User ID=456 |
-| Authorization | Add Enrollment | [success](/products/appomni/event_examples/authorization_add_enrollment_totp_json.json) | — |
+| Authorization | Add Enrollment | [success](/products/appomni/event_examples/authorization_add_enrollment_totp.json) | Timestamp=2026-03-17T21:15:35.154828+00:00; Event ID=6dc9e1fb-b865-3e01-8ced-3f4cebcc95bd; Event Code / Type=user_mfa_enabled; Username=alice@example.com; User ID=98765 |
 | Authorization | Remove Enrollment | [success](/products/appomni/event_examples/authorization_remove_enrollment_totp.json) | Timestamp=2026-04-16T09:12:37.178135+00:00; Event ID=7482d820-a068-4c9a-810d-0f9e4396ba01; Event Code / Type=user_mfa_disabled; Username=alice@example.com; User ID=3456 |
 | System Audit | Update Security Configuration | [success](/products/appomni/event_examples/system_audit_update_configuration.json) | Timestamp=2026-03-19T06:51:54.773871+00:00; Event ID=0ef8a486-600b-46fa-bf5b-0a91b3941083; Event Code / Type=ao_sys_setting_change; Username=john@example.com; User ID=456 |
 | Activity Audit | Create Resource | [success](/products/appomni/event_examples/activity_audit_create_resource_policy.json) | Timestamp=2026-02-23T00:36:11.547662+00:00; Event ID=2679bd8f-d94f-4293-9959-878045c668cd; Event Code / Type=policy_created; Username=alice@example.com; User ID=34 |
