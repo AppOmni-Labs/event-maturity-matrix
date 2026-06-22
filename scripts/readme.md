@@ -17,3 +17,5 @@ Short overview of Python modules and runnable tools in this folder.
 - **`update_event_sources.py`** — Pulls mapping columns from a published Google Sheet (CSV export) and updates attributes in a chosen `event_source` YAML file using semantic keys (`category.event_type.attribute`).
 
 - **`update_mapping_snapshots.py`** — Regenerates all files in `tests/mapping_snapshots/` from the current YAML and removes orphan snapshot files when sources are deleted.
+
+- **`validate-definitions.py`** — Validates EMM data definitions against the JSON schemas and checks that each mapping's example files contain the mapped attributes (used in CI by `validate.yml`).
